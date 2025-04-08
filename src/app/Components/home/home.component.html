@@ -1,0 +1,311 @@
+<!-- Recently Viewed Products -->
+
+<div class="container-fluid marginTopFirst">
+  <div class="row margin">
+    <h2 class="sectionOne">Recently Viewed Products</h2>
+    <div class="container-fluid">
+      <div id="course-container" class="row">
+
+        @for(prod of filterArray.slice(0, visibleCount); track prod.id){
+        <div class="col-12 col-sm-6 col-lg-3 mt-5">
+          <div class="custom-card">
+            <img class="card-image" [src]="prod.imgUrl" alt="Course Image" (click)="goToDetails(prod.id)">
+            <div class="CardBody">
+              <div class="card-header">
+                <img class="logo-card" [src]="prod.logoImage" alt="">
+                <a class="card-link" href="#">{{prod.description}}</a>
+              </div>
+              <h6 class="card-text">{{prod.name}}</h6>
+              <p class="last-section">Course</p>
+            </div>
+          </div>
+        </div>
+        }
+      </div>
+      @if(visibleCount < filterArray.length){ <button class="showBtn" (click)="showMore()">Show 4 more</button>
+        } @else {
+        <button class="showBtn" (click)="showfewer()">Show fewer</button>
+        }
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- start -->
+<div class="container marginTop ">
+  <div class="row StartCard">
+
+    <div class="col-12 col-lg-3 StartText">
+      <h2>Get started with GenAI</h2>
+      <p>Identify, develop and execute impactful GenAI business strategies</p>
+      <button type="button" class="btn btn-primary">View all GenAI</button>
+    </div>
+
+    <div class="col-12 col-lg-9 ">
+      <div class="StartBTN">
+        <button type="button" class="btn btnStart">Beginner</button>
+        <button type="button" class="btn btnStart">Popular</button>
+        <button type="button" class="btn btnStart">New</button>
+        <button type="button" class="btn btnStart">Tools</button>
+      </div>
+
+      <div class="container-fluid">
+        <div class="row">
+          <div class="container-fluid">
+            <div id="startedSection" class="row">
+
+              <div class="col-12 col-md-6 col-lg-4 MultCard">
+
+                <!-- for -->
+                <div class="custom-card">
+                  <img class="img-fluid CardImageStar"
+                    src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://d15cw65ipctsrr.cloudfront.net/61/edc4c8538e49fd97efecab1665e969/GenAI_Logo-Image_1200x1200pxl-copy.jpg?auto=format%2Ccompress%2C%20enhance&dpr=1&w=265&h=204&fit=crop&q=50"
+                    alt="...">
+                  <div class="CardBody">
+                    <div class="card-header">
+                      <img class="img-fluid logo-card"
+                        src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/bb/f5ced2bdd4437aa79f00eb1bf7fbf0/IBM-Logo-Blk---Square.png?auto=format%2Ccompress&dpr=3&w=24&h=24"
+                        alt="">
+                      <a class="CardLink" href="">IBM</a>
+                    </div>
+                    <h6 class="card-text">Generative AI Fundamentals</h6>
+                    <p class="last-section">Specialization</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- كرر باقي الكروت بنفس الطريقة -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+<!-- Most Popular Certificates -->
+<div class="container-fluid marginTop">
+  <div class="row">
+    <h2 class="sectionOne">Most Popular Certificates</h2>
+    <div class="container-fluid">
+      <div id="PopularSection" class="row">
+        @for(prod of filterArray.slice(0, visibleCount2) ; track prod.id){
+        <div class="col-12 col-sm-6 col-lg-3  mt-5">
+          <div class="custom-card">
+            <img class="card-image" [src]="prod.imgUrl" alt="Course Image">
+            <div class="CardBody">
+              <div class="card-header">
+                <img class="logo-card" [src]="prod.logoImage" alt="">
+                <a class="card-link" href="#">{{prod.description}}</a>
+              </div>
+              <h6 class="card-text">{{prod.name}}</h6>
+              <p class="last-section">Course</p>
+            </div>
+          </div>
+        </div>
+        }
+
+      </div>
+      @if(visibleCount2 < filterArray.length){ <button class="showBtn" (click)="showMoreCard2()">Show 4 more</button>
+        } @else {
+        <button class="showBtn" (click)="showfewerCard2()">Show fewer</button>
+        }
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Personalized Specializations for You -->
+<div class="container-fluid marginTop">
+  <div class="row">
+    <h2 class="sectionOne">Personalized Specializations for You</h2>
+    <div class="container-fluid">
+      <div id="PersonalizedSection" class="row">
+        @for(prod of filterArray.slice(0, visibleCount3) ; track prod.id){
+        <div class="col-12 col-sm-6 col-lg-3  mt-5">
+          <div class="custom-card">
+            <img class="card-image" [src]="prod.imgUrl" alt="Course Image">
+            <div class="CardBody">
+              <div class="card-header">
+                <img class="logo-card" [src]="prod.logoImage" alt="">
+                <a class="card-link" href="#">{{prod.description}}</a>
+              </div>
+              <h6 class="card-text">{{prod.name}}</h6>
+              <p class="last-section">Course</p>
+            </div>
+          </div>
+        </div>
+        }
+
+      </div>
+      @if(visibleCount < filterArray.length){ <button class="showBtn" (click)="showMoreCard3()">Show 4 more</button>
+        } @else {
+        <button class="showBtn" (click)="showfewerCard3()">Show fewer</button>
+        }
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Build In-Demand Business Analysis Skills -->
+<div class="container-fluid marginTop">
+  <div class="row">
+    <h2 class="sectionOne">Build In-Demand Business Analysis Skills</h2>
+    <div class="container-fluid">
+      <div id="BusinessSection" class="row">
+        @for(prod of filterArray.slice(0, visibleCount4) ; track prod.id){
+        <div class="col-12 col-sm-6 col-lg-3  mt-5">
+          <div class="custom-card">
+            <img class="card-image" [src]="prod.imgUrl" alt="Course Image">
+            <div class="CardBody">
+              <div class="card-header">
+                <img class="logo-card" [src]="prod.logoImage" alt="">
+                <a class="card-link" href="#">{{prod.description}}</a>
+              </div>
+              <h6 class="card-text">{{prod.name}}</h6>
+              <p class="last-section">Course</p>
+            </div>
+          </div>
+        </div>
+        }
+
+      </div>
+      @if(visibleCount < filterArray.length){ <button class="showBtn" (click)="showMoreCard4()">Show 4 more</button>
+        } @else {
+        <button class="showBtn" (click)="showfewerCard4()">Show fewer</button>
+        }
+    </div>
+  </div>
+</div>
+
+
+<!-- Explore with a Coursera Plus Subscription -->
+<div class="container-fluid marginTop">
+  <div class="row">
+    <h2 class="sectionOne">Explore with a Coursera Plus Subscription</h2>
+    <div class="container-fluid">
+      <div id="SubscriptionSection" class="row">
+        @for(prod of filterArray.slice(0, visibleCount5) ; track prod.id){
+        <div class="col-12 col-sm-6 col-lg-3  mt-5">
+          <div class="custom-card">
+            <img class="card-image" [src]="prod.imgUrl" alt="Course Image">
+            <div class="CardBody">
+              <div class="card-header">
+                <img class="logo-card" [src]="prod.logoImage" alt="">
+                <a class="card-link" href="#">{{prod.description}}</a>
+              </div>
+              <h6 class="card-text">{{prod.name}}</h6>
+              <p class="last-section">Course</p>
+            </div>
+          </div>
+        </div>
+        }
+
+      </div>
+      @if(visibleCount < filterArray.length){ <button class="showBtn" (click)="showMoreCard5()">Show 4 more</button>
+        } @else {
+        <button class="showBtn" (click)="showfewerCard5()">Show fewer</button>
+        }
+    </div>
+  </div>
+</div>
+
+
+<!-- University of London -->
+<div class="container UniversitySection">
+  <div class="row">
+    <div class="col-12  col-lg-6">
+      <div class="CustomCard">
+        <div class="CustomCardContent">
+          <div class="CardText">
+            <h6 class="FoterCoursera"><a href="">University of London</a></h6>
+            <h5 class="card-title Coursera"><a class="FoterCoursera" href="">Ready to advance your career in
+                cybersecurity?</a></h5>
+            <p class="card-text">Gain practical experience through lab sessions that simulate real-life scenarios.</p>
+            <button type="button" class="CustomButton">Learn more</button>
+          </div>
+          <div class="">
+            <img class="UniversityImg"
+              src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-promounit-images.s3.amazonaws.com/06/417353aaa248bdbd3af06dfa4268a8/BC-3723_BC-3801_EMEA-programmes-Promo-Units_UofL_MSc-Cyber-Security-1.jpg?auto=format%2Ccompress&dpr=1&w=172"
+              alt="...">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-lg-6">
+      <div class="CustomCard">
+        <div class="CustomCardContent">
+          <div class="CardText">
+            <h6 class="FoterCoursera"><a href="">Coursera Coach</a></h6>
+            <h5 class="card-title Coursera"><a class="FoterCoursera" href="">Master new skills with AI-powered
+                guidance</a></h5>
+            <p class="card-text">Get interactive, on-demand assistance that’s tailored to your unique goals.</p>
+            <button type="button" class="CustomButton">Learn more</button>
+          </div>
+          <div class="">
+            <img class="UniversityImg"
+              src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-promounit-images.s3.amazonaws.com/99/e8e0a6725d4e989070ed62df951af0/coach-1-.jpg?auto=format%2Ccompress&dpr=1&w=172"
+              alt="...">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Categories -->
+<div class="container-fluid">
+  <div class="row CategoriesCenter">
+    <h2>Categories</h2>
+    <div class="col-12 col-lg-5 Categories CategoriesLink rightSide">
+      <h5><a href="">Arts and Humanities</a></h5>
+    </div>
+
+    <div class="col-12 col-lg-5 Categories CategoriesLink leftSide">
+      <h5><a href="">Business</a></h5>
+    </div>
+
+    <div class="col-12 col-lg-5 Categories CategoriesLink rightSide">
+      <h5><a href="">Computer Science</a></h5>
+    </div>
+
+    <div class="col-12 col-lg-5 Categories CategoriesLink leftSide">
+      <h5 class="CardLink"><a href="">Data Science</a></h5>
+    </div>
+
+    <div class="col-12 col-lg-5 Categories CategoriesLink rightSide">
+      <h5><a href="">Information Technology</a></h5>
+    </div>
+
+    <div class="col-12 col-lg-5 Categories CategoriesLink leftSide">
+      <h5><a href="">Health</a></h5>
+    </div>
+
+    <div class="col-12 col-lg-5 Categories CategoriesLink rightSide">
+      <h5><a href="">Math and Logic</a></h5>
+    </div>
+
+    <div class="col-12 col-lg-5 Categories CategoriesLink leftSide">
+      <h5><a href="">Personal Development</a></h5>
+    </div>
+    <div class="col-12 col-lg-5 Categories CategoriesLink rightSide">
+      <h5><a href="">Physical Science and Engineering</a></h5>
+    </div>
+
+    <div class="col-12 col-lg-5 Categories CategoriesLink leftSide">
+      <h5><a href="">Social Science</a></h5>
+    </div>
+
+
+  </div>
+</div>

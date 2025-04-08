@@ -1,0 +1,48 @@
+<div class="container-fluid ps-0 ">
+    <div class="row mt-5 ">
+      @for (course of filteredList.slice(0, visibleCoursesCount); track course.id)
+      {
+      <div
+        class="col-12 col-md-6 col-lg-3 mb-4 course"
+        [routerLink]="['/courseDetails', course.id]"
+      >
+        <div class="CourseParent rounded-4 d-flex flex-column">
+          <div class="imageContainer">
+            <img src="{{ course.imgUrl }}" alt="" class="w-100" />
+          </div>
+          <div class="CourseContent">
+            <h5 >{{ course.name }}</h5>
+            <p>{{ course.description }}</p>
+            <h6>
+              if you like:
+              <p>{{ course.IfYouLikeValue }}</p>
+            </h6>
+            <div class="CredentialContainer pb-3">
+              <p class="fw-bold fs-6 text-dark">Credentials</p>
+              <a href="#" class="CredentialLink mb-2">
+                <div class="credentialImage p-1 rounded">
+                  <img
+                    src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/4YgA9i6O79eZxdUK345q55/b4e7041b0f0d92e0da7d3c835e168c8f/Google-G_360x360.jpeg?auto=format%2Ccompress&dpr=1"
+                    class="img-fluid"
+                    alt=""
+                  />
+                </div>
+                <div class="d-flex align-items-center ms-2">Google UX Design</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      }
+  
+      <div class="container-fluid my-4 show8 mb-5 pb-5">
+        <button
+          class="px-3 py-2 rounded text-primary border border-primary"
+          (click)="showMore8()"
+        >
+          Show 8 more
+        </button>
+      </div>
+    </div>
+  </div>
+  

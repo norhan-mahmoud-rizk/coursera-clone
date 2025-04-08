@@ -1,0 +1,62 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-white NavScroll">
+  <div class="container-fluid">
+    <a class="navbar-brand ms-4" href="#">
+      <h3 class="text-primary">Coursera</h3>
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarContent">
+      <button type="button" class="btn btn-outline-primary explore me-4">
+        Explore <i class="fa-solid fa-caret-down"></i>
+      </button>
+
+      <div class="input-group search-container">
+        <input type="search" class="form-control search" placeholder="What do you want to learn?">
+        <span class="input-group-text SearchIcon">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </span>
+      </div>
+
+      <div class="ms-auto d-flex align-items-center">
+        <a href="#" class="me-3 text-reset">
+          <i class="fas fa-bell IconWidth"></i>
+        </a>
+
+        <div class="dropdown">
+          <a routerLink="profile" class="d-flex align-items-center hidden-arrow" id="profileDropdown" role="button" data-bs-toggle="dropdown">
+            <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle ProgImg" alt="Profile">
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="#">My Profile</a></li>
+            <li><a class="dropdown-item" href="#">Settings</a></li>
+            <li><a class="dropdown-item" href="#">Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary NavScroll2">
+  <div class="container-fluid ">
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item SecondNav">
+          <a class="nav-link" routerLink="/home" routerLinkActive="active">Home</a> <!-- Home Link -->
+        </li>
+        <li class="nav-item SecondNav">
+          <a class="nav-link" >My learning</a> <!-- Home Link -->
+        </li>
+        <li class="nav-item SecondNav">
+          <a class="nav-link" routerLink="/onlinedegree" routerLinkActive="active">Online Degrees</a> <!-- Online Degrees Link -->
+        </li>
+        <li class="nav-item SecondNav">
+          <a class="nav-link" routerLink="/careercourses" routerLinkActive="active">Careers</a> <!-- Careers Link -->
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

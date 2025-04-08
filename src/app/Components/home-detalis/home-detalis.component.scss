@@ -1,0 +1,106 @@
+/* --cds-color-green-100: #b8f2e1;
+--cds-color-green-50: #cffaed;
+--cds-color-green-25: #ebfdf8; */
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+}
+.navSection{
+  background-color: #ebfdf8;
+  padding-top: 50px;
+  padding-left: 50px;
+  margin-top: 90px;
+}
+
+.textBTN{
+  font-size: 12px;
+}
+.NavButton{
+  width: 100%;
+}
+
+.salary{
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.link{
+  text-decoration: none;
+  color: #000;
+}
+.link:hover{
+  text-decoration: underline;
+
+}
+
+.skillsLI{
+  background-color: #e8eef7;
+  border-color: #e8eef7;
+  padding: 8px 12px;
+  border-radius: 5px;
+  white-space: nowrap;
+  display: inline-block;
+  font-size: 12px;
+}
+.allSkils{
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.linkedIn{
+  color: #5b6780;
+}
+
+.fa-language{
+  font-size: 28px;
+}
+
+.languagesLink{
+  text-decoration: none;
+}
+
+.languagesLink:hover{
+  text-decoration: underline;
+}
+
+.employees{
+  margin-left: 50px;
+  margin-right: 50px;
+  border: 1px solid #ebfdf8;
+  border-radius: 8px;
+}
+
+.borderIMG{
+  border-radius: 8px;
+}
+.people{
+  border: 2px solid #ebfdf8;
+  border-radius: 8px;
+  padding: 15px;
+  height: 100%;
+}
+
+.CardWidth{
+  width: 25%;
+  padding: 15px;
+  /* box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 10px; */
+}
+
+@media screen and (max-width:1020px){
+  .NavImage{
+    display: none;
+  }
+  .borderIMG{
+    width: 100%;
+  }
+  .CardWidth
+  {
+    width: 50%;
+  }
+
+}

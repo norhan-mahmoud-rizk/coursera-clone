@@ -1,0 +1,154 @@
+<div class="container-fluid px-0 pt-5 mt-5">
+    <div class="DetailFirstContainer border-bottom mt-4">
+      <div class="row px-5">
+        <div class="col-12 col-md-6 pb-5">
+          <div class="my-3">
+            <a href=""> <i class="fa-solid fa-house me-4 text-primary"></i></a>
+            <i class="fa-solid fa-chevron-right me-3"></i>
+            <a class="text-decoration-none" routerLink="/careercourses">Career</a>
+
+          </div>
+          <h1>{{ CareerCourse?.name }}</h1>
+          <div class="pe-5 me-5 pb-4">
+            <p>{{ CareerCourse?.IfYouLike }}</p>
+            <p>{{ CareerCourse?.IfYouLikeValue }}</p>
+            <span>{{ CareerCourse?.SkillsNeeded }}</span>
+            <span> {{ CareerCourse?.SkillsNeededValue }}</span>
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <img
+            src="{{ CareerCourse?.imgUrl }}"
+            alt=""
+            class="img-fluid w-100 h-100"
+          />
+        </div>
+      </div>
+    </div>
+  
+    <div class="RecommendedcredentialsContainer">
+      <div class="row px-5 RecommendedHeaderParent">
+        <h2 class="RecommendedHeader">Recommended credentials</h2>
+        <div
+          class="border rounded-5 ps-5 pt-5 pb-5 pe-0 RecommendedContentParent mb-5"
+        >
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-12 col-md-5 LinkSide pe-3">
+                <a href="#" class="Link">
+                  <div class="w-25 IconPart">
+                    <img
+                      class="border rounded-2"
+                      src="http://coursera-university-assets.s3.amazonaws.com/d9/7ac5ee1c0247dab299ec6a8343f16d/Adobe-A-square.png"
+                      alt=""
+                    />
+                  </div>
+  
+                  <h3 class="my-4">{{ CareerCourse?.name }}</h3>
+                  <div class="Recommended_First_Rating_reviews">
+                    <div class="Recommended_First_Rating_reviews_div">
+                      <i class="fa-solid fa-star text-primary me-3"></i>
+                      <span class="fw-bold me-2">4.6</span
+                      ><span>(240 review)</span>
+                    </div>
+                    <div class="Recommended_second_Rating_reviews_div">
+                      <span>Beginner .4 months</span>
+                    </div>
+                  </div>
+                </a>
+  
+                <div class="RecommendedButtonsContainer container-fluid mt-4">
+                  <div class="row">
+                    <div class="col-4">
+                      <button
+                        type="button"
+                        class="btn btn-primary px-3 py-2 fw-semibold"
+                      >
+                        <span>enroll for free</span>
+                      </button>
+                    </div>
+                    <div class="col-4 mt-2 fw-semibold VeiwButton">
+                      <a href="#" class="rounded-2">
+                        <span>veiw Details</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-7 ImagesSideContainer mt-5">
+                <div class="row ImageSideDiv">
+                  @for(relatedCourses of CareerCourse?.relatedCourses; track
+                  $index; ){
+  
+                  <div class="col-3 me-3">
+                    <div>
+                      <img
+                        src="{{ relatedCourses.imgUrl }}"
+                        alt=""
+                        class="img-fluid rounded-4"
+                      />
+                    </div>
+                    <div class="ImageSide_Content_div">
+                      <h6>{{ relatedCourses.name }}</h6>
+                      <p>Course {{ $index + 1 }} of 4</p>
+                    </div>
+                  </div>
+                  }
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="RolesSimilarContainer p-5 mt-4">
+      <h2>Roles similar to Content Creator</h2>
+  
+      <div class="row mt-5">
+        @for (course of SimilarCourses.slice(0, visibleCoursesCount); track
+        course.id) {
+        <div class="col-12 col-md-6 col-lg-3 mb-4 course">
+          <div class="CourseParent rounded-4 d-flex flex-column">
+            <div class="imageContainer">
+              <img src="{{ course.imgUrl }}" alt="" class="w-100" />
+            </div>
+            <div class="CourseContent">
+              <h5>{{ course.name }}</h5>
+              <p>{{ course.description }}</p>
+              <h6>
+                if you like:
+                <p>{{ course.IfYouLikeValue }}</p>
+              </h6>
+              <div class="CredentialContainer pb-3">
+                <p class="fw-bold fs-6 text-dark">Credentials</p>
+                <a href="#" class="CredentialLink mb-2">
+                  <div class="credentialImage p-1 rounded">
+                    <img
+                      src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/4YgA9i6O79eZxdUK345q55/b4e7041b0f0d92e0da7d3c835e168c8f/Google-G_360x360.jpeg?auto=format%2Ccompress&dpr=1"
+                      class="img-fluid"
+                      alt=""
+                    />
+                  </div>
+                  <div class="d-flex align-items-center ms-2">
+                    Google UX Design
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        }
+      </div>
+    </div>
+  
+    <div class="lastPartContainer">
+      <p class="lastPart">
+        ¹ Median salary and job opening data are sourced from Lightcast™ Job
+        Postings Report. Content Creator, Machine Learning Engineer and Salesforce
+        Development Representative (1/1/2024 - 12/31/2024) <br />
+        All other job roles (3/1/2024 - 3/1/2025)
+      </p>
+    </div>
+  </div>
+  
