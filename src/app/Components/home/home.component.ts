@@ -1,9 +1,10 @@
 import { Component, OnInit ,ViewEncapsulation} from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ApiService } from '../../Services/api.service';
-import { HomeCard } from '../../Models/home-card';
+
 import { CommonModule } from '@angular/common';
 import { Router, RouterModule } from '@angular/router';
+import { ICareerCourses } from '../../Models/ICareerCourses';
 
 @Component({
   selector: 'app-home',
@@ -14,7 +15,7 @@ import { Router, RouterModule } from '@angular/router';
 })
 export class HomeComponent implements OnInit{
 
-  filterArray: HomeCard[] = [];
+  filterArray: ICareerCourses[] = [];
   visibleCount = 4;
   visibleCount2=4;
   visibleCount3=4;
@@ -77,7 +78,7 @@ export class HomeComponent implements OnInit{
 
 
 
-  goToDetails(prodId: number) {
+  goToDetails(prodId: string) {
     this.router.navigate(['/homeDetails', prodId]);
   }
 

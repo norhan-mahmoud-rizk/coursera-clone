@@ -7,6 +7,7 @@ import { HomeComponent } from './Components/home/home.component';
 import { HomeDetalisComponent } from './Components/home-detalis/home-detalis.component';
 import { LandingPageComponent } from './Components/landing-page/landing-page.component';
 import { MainLayoutComponent } from './main-layout/main-layout.component';
+import { MyLearningComponent } from './Components/my-learning/my-learning.component';
 
 export const routes: Routes = [
   // Default route to LandingPageComponent without navbar and footer
@@ -18,6 +19,7 @@ export const routes: Routes = [
     component: MainLayoutComponent, // Parent component with navbar and footer
     children: [
       { path: 'home', component: HomeComponent, title: "Home" },
+      { path: 'my learning', component: MyLearningComponent, title: "my learning" },
       { path: 'onlinedegree', component: OnlineDegreesComponent, title: 'Online Degree' },
       { path: 'profile', component: ProfileComponent, title: 'Profile' },
       { path: 'careercourses', component: CareerParentComponent, title: 'Career Courses' },

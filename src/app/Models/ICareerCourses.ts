@@ -8,6 +8,9 @@ export interface ICareerCourses {
     IfYouLikeValue: string;
     SkillsNeeded: string;
     SkillsNeededValue: string;
+    logoImage: string;
+      
+    organization:string,
     relatedCourses: {
       RelatedCourseID: string;
       name: string;

@@ -638,6 +638,9 @@
         "SkillsNeeded": "Skills you’ll need:",
         "SkillsNeededValue": "Software Design, Problem-Solving, Coding, Agile Development, Debugging, Communication, Testing"
         ,
+        "logoImage":"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/4a/cb36835ae3421187080898a7ecc11d/Google-G_360x360.png?auto=format%2Ccompress&dpr=3&w=24&h=24"
+        ,
+        "organization":"Google",
         "relatedCourses": [
 
           {
@@ -673,6 +676,10 @@
         "SkillsNeeded": "Skills you’ll need:",
         "SkillsNeededValue": "React.js, Node.js, Express, MongoDB, API Integration, Database Management, Web Security"
         ,
+        "logoImage":"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/4a/cb36835ae3421187080898a7ecc11d/Google-G_360x360.png?auto=format%2Ccompress&dpr=3&w=24&h=24"
+        ,
+        
+        "organization":"Google",
         "relatedCourses": [
           {
             "RelatedCourseID": "1",
@@ -707,6 +714,10 @@
         "SkillsNeeded": "Skills you’ll need:",
         "SkillsNeededValue": "JavaScript ES6+, Asynchronous Programming, Problem-Solving, Coding Best Practices, Debugging, Web Development"
         ,
+        "logoImage":"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/4a/cb36835ae3421187080898a7ecc11d/Google-G_360x360.png?auto=format%2Ccompress&dpr=3&w=24&h=24"
+        ,
+        
+        "organization":"Google",
         "relatedCourses": [
           {
             "RelatedCourseID": "1",
@@ -741,6 +752,10 @@
         "SkillsNeeded": "Skills you’ll need:",
         "SkillsNeededValue": "Python Basics, Logic Building, Problem-Solving, Data Analysis, Debugging, Code Optimization"
         ,
+        "logoImage":"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/4a/cb36835ae3421187080898a7ecc11d/Google-G_360x360.png?auto=format%2Ccompress&dpr=3&w=24&h=24"
+        ,
+          
+        "organization":"Google",
         "relatedCourses": [
           {
             "RelatedCourseID": "1",
@@ -775,6 +790,10 @@
         "SkillsNeeded": "Skills you’ll need:",
         "SkillsNeededValue": "Strategic Thinking, Leadership, Market Analysis, Decision Making, Problem-Solving, Financial Analysis"
         ,
+        "logoImage":"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/4a/cb36835ae3421187080898a7ecc11d/Google-G_360x360.png?auto=format%2Ccompress&dpr=3&w=24&h=24"
+        ,
+          
+        "organization":"Google",
         "relatedCourses": [
           {
             "RelatedCourseID": "1",
@@ -809,6 +828,10 @@
         "SkillsNeeded": "Skills you’ll need:",
         "SkillsNeededValue": "Financial Accounting, Budgeting, Financial Statements, Attention to Detail, Problem-Solving, Excel"
         ,
+        "logoImage":"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/4a/cb36835ae3421187080898a7ecc11d/Google-G_360x360.png?auto=format%2Ccompress&dpr=3&w=24&h=24"
+        ,
+          
+        "organization":"Google",
         "relatedCourses": [
           {
             "RelatedCourseID": "1",
@@ -843,6 +866,10 @@
         "SkillsNeeded": "Skills you’ll need:",
         "SkillsNeededValue": "Leadership, Conflict Resolution, Communication, Team Building, Performance Management, Motivation"
         ,
+        "logoImage":"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/4a/cb36835ae3421187080898a7ecc11d/Google-G_360x360.png?auto=format%2Ccompress&dpr=3&w=24&h=24"
+        ,
+          
+        "organization":"Google",
         "relatedCourses": [
           {
             "RelatedCourseID": "1",
@@ -877,6 +904,10 @@
         "SkillsNeeded": "Skills you’ll need:",
         "SkillsNeededValue": "SEO, PPC, Social Media Marketing, Content Creation, Data Analytics, Online Advertising"
         ,
+        "logoImage":"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/4a/cb36835ae3421187080898a7ecc11d/Google-G_360x360.png?auto=format%2Ccompress&dpr=3&w=24&h=24"
+        ,
+          
+        "organization":"Google",
         "relatedCourses": [
           {
             "RelatedCourseID": "1",
@@ -911,6 +942,10 @@
         "SkillsNeeded": "Skills you’ll need:",
         "SkillsNeededValue": "Sales Techniques, Digital Marketing, Customer Engagement, Communication, Negotiation, Market Research"
         ,
+        "logoImage":"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/4a/cb36835ae3421187080898a7ecc11d/Google-G_360x360.png?auto=format%2Ccompress&dpr=3&w=24&h=24"
+        ,
+          
+        "organization":"Google",
         "relatedCourses": [
           {
             "RelatedCourseID": "1",
@@ -945,6 +980,9 @@
         "SkillsNeeded": "Skills you’ll need:",
         "SkillsNeededValue": "Content Creation, SEO, Blogging, Creativity, Social Media, Audience Engagement"
         ,
+        "logoImage":"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/4a/cb36835ae3421187080898a7ecc11d/Google-G_360x360.png?auto=format%2Ccompress&dpr=3&w=24&h=24"
+        ,  
+        "organization":"Google",
         "relatedCourses": [
           {
             "RelatedCourseID": "1",
@@ -979,6 +1017,9 @@
         "SkillsNeeded": "Skills you’ll need:",
         "SkillsNeededValue": "Python, Machine Learning, Data Visualization, Data Analysis, Statistical Methods, Problem-Solving"
         ,
+        "logoImage":"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/4a/cb36835ae3421187080898a7ecc11d/Google-G_360x360.png?auto=format%2Ccompress&dpr=3&w=24&h=24"
+        ,  
+        "organization":"Google",
         "relatedCourses": [
           {
             "RelatedCourseID": "1",
@@ -1012,7 +1053,9 @@
         "IfYouLikeValue": "A Big Data Analyst uses Hadoop and Spark to process massive datasets. They analyze data patterns and help organizations make data-driven decisions.",
         "SkillsNeeded": "Skills you’ll need:",
         "SkillsNeededValue": "Hadoop, Spark, Data Processing, Data Analysis, SQL, Problem-Solving, Distributed Computing"
-        ,
+        , "logoImage":"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/4a/cb36835ae3421187080898a7ecc11d/Google-G_360x360.png?auto=format%2Ccompress&dpr=3&w=24&h=24"
+        ,  
+        "organization":"Google",
         "relatedCourses": [
           {
             "RelatedCourseID": "1",
@@ -1047,6 +1090,9 @@
         "SkillsNeeded": "Skills you’ll need:",
         "SkillsNeededValue": "TensorFlow, Neural Networks, Machine Learning, Python, Deep Learning, Problem-Solving"
         ,
+        "logoImage":"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/4a/cb36835ae3421187080898a7ecc11d/Google-G_360x360.png?auto=format%2Ccompress&dpr=3&w=24&h=24"
+        ,  
+        "organization":"Google",
         "relatedCourses": [
           {
             "RelatedCourseID": "1",
@@ -1081,6 +1127,9 @@
         "SkillsNeeded": "Skills you’ll need:",
         "SkillsNeededValue": "Data Science, Healthcare Systems, Statistical Analysis, Predictive Modeling, Problem-Solving"
         ,
+        "logoImage":"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/4a/cb36835ae3421187080898a7ecc11d/Google-G_360x360.png?auto=format%2Ccompress&dpr=3&w=24&h=24"
+        ,  
+        "organization":"Google",
         "relatedCourses": [
           {
             "RelatedCourseID": "1",
@@ -1115,6 +1164,9 @@
         "SkillsNeeded": "Skills you’ll need:",
         "SkillsNeededValue": "Blockchain Technology, Cryptocurrency, Cryptography, Smart Contracts, Programming, Security"
         ,
+        "logoImage":"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/4a/cb36835ae3421187080898a7ecc11d/Google-G_360x360.png?auto=format%2Ccompress&dpr=3&w=24&h=24"
+        ,  
+        "organization":"Google",
         "relatedCourses": [
           {
             "RelatedCourseID": "1",
@@ -1148,6 +1200,9 @@
           "IfYouLikeValue": "A Healthcare Data Scientist uses analytics and machine learning to identify patterns and optimize treatment plans, ultimately improving patient outcomes.",
           "SkillsNeeded": "Skills you’ll need:",
           "SkillsNeededValue": "Data Science, Healthcare Systems, Statistical Analysis, Predictive Modeling, Problem-Solving",
+          "logoImage":"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/4a/cb36835ae3421187080898a7ecc11d/Google-G_360x360.png?auto=format%2Ccompress&dpr=3&w=24&h=24"
+          ,  
+          "organization":"Google",
           "relatedCourses": [
             {
               "RelatedCourseID": "1",
@@ -1181,6 +1236,9 @@
           "IfYouLikeValue": "A Healthcare Analyst uses data analytics to drive decisions that enhance patient care, optimize operations, and streamline healthcare services.",
           "SkillsNeeded": "Skills you’ll need:",
           "SkillsNeededValue": "Data Analytics, Healthcare Systems, Statistical Analysis, Data Visualization, Problem-Solving",
+          "logoImage":"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/4a/cb36835ae3421187080898a7ecc11d/Google-G_360x360.png?auto=format%2Ccompress&dpr=3&w=24&h=24"
+          ,  
+          "organization":"Google",
           "relatedCourses": [
             {
               "RelatedCourseID": "1",
@@ -1214,6 +1272,9 @@
           "IfYouLikeValue": "A Digital Health Specialist uses telemedicine tools to improve healthcare accessibility, streamline patient care, and enhance patient outcomes.",
           "SkillsNeeded": "Skills you’ll need:",
           "SkillsNeededValue": "Telemedicine, Digital Health, Healthcare Systems, Technology Integration, Problem-Solving",
+          "logoImage":"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/4a/cb36835ae3421187080898a7ecc11d/Google-G_360x360.png?auto=format%2Ccompress&dpr=3&w=24&h=24"
+          ,  
+          "organization":"Google",
           "relatedCourses": [
             {
               "RelatedCourseID": "1",
@@ -1247,6 +1308,9 @@
           "IfYouLikeValue": "A Predictive Modeling Specialist in healthcare applies advanced modeling techniques to anticipate healthcare trends and outcomes, enhancing patient care and operational efficiency.",
           "SkillsNeeded": "Skills you’ll need:",
           "SkillsNeededValue": "Predictive Modeling, Healthcare Systems, Machine Learning, Data Science, Problem-Solving",
+          "logoImage":"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/4a/cb36835ae3421187080898a7ecc11d/Google-G_360x360.png?auto=format%2Ccompress&dpr=3&w=24&h=24"
+        ,  
+        "organization":"Google",
           "relatedCourses": [
             {
               "RelatedCourseID": "1",
@@ -1564,128 +1628,7 @@
 
       }
     ],
-    "Career": [
-        {
-          "id": "1",
-          "name": "The Bits and Bytes of Computer Networking",
-          "description": "Google",
-          "categoryID": 1,
-          "imgUrl": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/00atxywtfxvd/16bYBkWKlhcjngtmHmnAoD/e6c25c733a434b1fc6773d03226be947/Product_Manager-role-card_2x.png?auto=format%2Ccompress&dpr=2&w=430",
-          "logoImage":"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/4a/cb36835ae3421187080898a7ecc11d/Google-G_360x360.png?auto=format%2Ccompress&dpr=3&w=24&h=24"
-        },
-        {
-          "id": "2",
-          "name": "Generative AI Fundamentals",
-          "description": "IBM",
-          "categoryID": 1,
-          "imgUrl": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/00atxywtfxvd/1Z2h61l00YMxiMD8Xu7sHw/669880819cd3c5eac5a5fd08606679d1/data-analyst-role-card_2x.png?auto=format%2Ccompress&dpr=2&w=430",
-         "logoImage":"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/bb/f5ced2bdd4437aa79f00eb1bf7fbf0/IBM-Logo-Blk---Square.png?auto=format%2Ccompress&dpr=3&w=24&h=24"
-         },
-        {
-          "id": "3",
-          "name": "Supervised Machine Learning: Regression and Classification ",
-          "description": "DeepLearning.AI",
-          "categoryID": 1,
-          "imgUrl": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/00atxywtfxvd/5IsGEeYCPeL4aEQubWn6B6/a8777da5de882ca7353dedafa49bf68e/UI-UX_Designer-role-card_2x.png?auto=format%2Ccompress&dpr=2&w=430",
-    "logoImage":"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/b4/5cb90bb92f420b99bf323a0356f451/Icon.png?auto=format%2Ccompress&dpr=3&w=24&h=24"
-     },
-        {
-          "id": "4",
-          "name": "Machine Learning",
-          "description": "DeepLearning.AI",
-          "categoryID": 1,
-          "imgUrl": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/00atxywtfxvd/599o30wORCv3HfGL69jCc3/6f765c21b0030a065e71dfdf14686764/Machine_Learning_Engineer-role-card_2x.png?auto=format%2Ccompress&dpr=2&w=430",
-          "logoImage":"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/b4/5cb90bb92f420b99bf323a0356f451/Icon.png?auto=format%2Ccompress&dpr=3&w=24&h=24"
-          },
-        {
-          "id": "5",
-          "name": "Marketing Analytics",
-          "description": "DeepLearning.AI",
-          "categoryID": 2,
-          "imgUrl": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/00atxywtfxvd/2okXQwMsMaDLsff3uh3uUz/c619cf8860813538a005dbea25425df5/Data_Scientist-role-card_2x.png?auto=format%2Ccompress&dpr=2&w=430",
-          "logoImage":"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/b4/5cb90bb92f420b99bf323a0356f451/Icon.png?auto=format%2Ccompress&dpr=3&w=24&h=24"
-           },
-        {
-          "id": "6",
-          "name": "Google IT Support",
-          "description": "DeepLearning.AI",
-          "categoryID": 2,
-          "imgUrl": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/00atxywtfxvd/5ljfRsTdVz1cL6CAGEqUku/bd9262bd36ed9ecdbef635704a15a4eb/Project_Manager-role-card_2x.png?auto=format%2Ccompress&dpr=2&w=430",
-          "logoImage":"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/b4/5cb90bb92f420b99bf323a0356f451/Icon.png?auto=format%2Ccompress&dpr=3&w=24&h=24"
-           },
-        {
-          "id": "7",
-          "name": "مطوّر الواجهة الأمامية من Meta",
-          "description": "DeepLearning.AI",
-          "categoryID": 2,
-          "imgUrl": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/00atxywtfxvd/4SOZ5pnB6iLm6CblBzbovv/f74d8252f50e99e682caff61d094c5be/Social_Media_Strategist_-_Specialist-role-card_2x.png?auto=format%2Ccompress&dpr=2&w=430",
-          "logoImage":"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/4a/cb36835ae3421187080898a7ecc11d/Google-G_360x360.png?auto=format%2Ccompress&dpr=3&w=24&h=24"
-           },
-        {
-          "id": "8",
-          "name": "Digital Marketing Strategy",
-          "description": "DeepLearning.AI",
-          "categoryID": 3,
-          "imgUrl": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/00atxywtfxvd/WslreKdXXAeCwERKLCllJ/64064536b4aba8be21f8cb5e9d4cf697/Cyber_Security_Analyst-role-card_2x.png?auto=format%2Ccompress&dpr=2&w=430",
-          "logoImage":"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/4a/cb36835ae3421187080898a7ecc11d/Google-G_360x360.png?auto=format%2Ccompress&dpr=3&w=24&h=24"
-            },
-        {
-          "id": "9",
-          "name": "Sales and Marketing Fundamentals",
-          "description": "Google",
-          "categoryID": 3,
-          "imgUrl": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/00atxywtfxvd/6avnH5aIWbiAX2JCI3PeaG/ab20caf9ec9832ad7548eb226a9c3355/Business_Intelligence_Analyst-role-card_2x.png?auto=format%2Ccompress&dpr=2&w=430",
-          "logoImage":"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/4a/cb36835ae3421187080898a7ecc11d/Google-G_360x360.png?auto=format%2Ccompress&dpr=3&w=24&h=24"
-           },
-        {
-          "id": "10",
-          "name": "Content Marketing Mastery",
-          "description": "Google",
-          "categoryID": 3,
-          "imgUrl": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/00atxywtfxvd/3tmvmI2yPsCk40EQOwHJtz/db14503e7d36fa43c12ecbf3536fc3e2/HR_Specialist-role-card_2x.png?auto=format%2Ccompress&dpr=2&w=430",
-          "logoImage":"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/4a/cb36835ae3421187080898a7ecc11d/Google-G_360x360.png?auto=format%2Ccompress&dpr=3&w=24&h=24"
-           },
-        {
-          "id": "11",
-          "name": "Data Science and Machine Learning",
-          "description": "Google",
-          "categoryID": 4,
-          "imgUrl": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/00atxywtfxvd/Sv9XLpeio9RHRrjWydTOZ/8fcc90ec4342ad629fbe897c45f83314/Statistician-role-card_2x.png?auto=format%2Ccompress&dpr=2&w=430",
-          "logoImage":"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/4a/cb36835ae3421187080898a7ecc11d/Google-G_360x360.png?auto=format%2Ccompress&dpr=3&w=24&h=24"
-           },
-        {
-          "id": "12",
-          "name": "Big Data Analytics with Hadoop",
-          "description": "University of Virginia",
-          "categoryID": 4,
-          "imgUrl": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/00atxywtfxvd/lDjWGMy2tzPVgrIqiVU43/1f922da497567defd20a21ea4af5b8b5/Data_Engineer-role-card_2x.png?auto=format%2Ccompress&dpr=2&w=430",
-         "logoImage":"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/4a/cb36835ae3421187080898a7ecc11d/Google-G_360x360.png?auto=format%2Ccompress&dpr=3&w=24&h=24"
-          },
-        {
-          "id": "13",
-          "name": "Deep Learning with TensorFlow",
-          "description": "University of Virginia",
-          "categoryID": 4,
-          "imgUrl": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/00atxywtfxvd/46OgHJ65ZWBXNnO50rD8iO/ee2581ca4137242403a294e4e7da569c/Business_Analyst-role-card_2x.png?auto=format%2Ccompress&dpr=2&w=430",
-          "logoImage":"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/4a/cb36835ae3421187080898a7ecc11d/Google-G_360x360.png?auto=format%2Ccompress&dpr=3&w=24&h=24"
-          },
-        {
-          "id": "14",
-          "name": "Healthcare Analytics",
-          "description": "University of Virginia",
-          "categoryID": 5,
-          "imgUrl": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/00atxywtfxvd/2C0PGe8TYeHJgf2lyniSiC/6d176c0328e05a877a79213acba4377e/Front_End_Dev-role-card_2x.png?auto=format%2Ccompress&dpr=2&w=430",
-         "logoImage":"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/4a/cb36835ae3421187080898a7ecc11d/Google-G_360x360.png?auto=format%2Ccompress&dpr=3&w=24&h=24"
-          },
-        {
-          "id": "15",
-          "name": "Public Health Foundations",
-          "description": "University of Virginia",
-          "categoryID": 5,
-          "imgUrl": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/00atxywtfxvd/4tSXoE3bVMPjkBmFLXHwDv/f0d2abf8c6d3c3ca55a33992dc3bac3a/Full_Stack_Dev-role-card_2x.png?auto=format%2Ccompress&dpr=2&w=430",
-         "logoImage":"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/4a/cb36835ae3421187080898a7ecc11d/Google-G_360x360.png?auto=format%2Ccompress&dpr=3&w=24&h=24"
-         }
-      ],
+  
       "group1": {
         "herder": "Specializations and Professional Certificates",
         "title": "Most Popular Certificates",
