@@ -1,5 +1,5 @@
 .NavScroll {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
@@ -14,7 +14,7 @@
   padding: 12px !important;
 }
 .NavScroll2 {
-  position: fixed;
+  position: sticky;
   top: 68px;
   left: 0;
   width: 100%;

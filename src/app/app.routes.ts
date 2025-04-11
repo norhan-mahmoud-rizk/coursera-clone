@@ -8,6 +8,7 @@ import { HomeDetalisComponent } from './Components/home-detalis/home-detalis.com
 import { LandingPageComponent } from './Components/landing-page/landing-page.component';
 import { MainLayoutComponent } from './main-layout/main-layout.component';
 import { MyLearningComponent } from './Components/my-learning/my-learning.component';
+import { CourseExplanationComponent } from './Components/course-explanation/course-explanation.component';
 
 export const routes: Routes = [
   // Default route to LandingPageComponent without navbar and footer
@@ -21,6 +22,7 @@ export const routes: Routes = [
       { path: 'home', component: HomeComponent, title: "Home" },
       { path: 'my learning', component: MyLearningComponent, title: "my learning" },
       { path: 'onlinedegree', component: OnlineDegreesComponent, title: 'Online Degree' },
+      { path: 'courseExplanation/:Courseid', component: CourseExplanationComponent, title: 'courseExplanation' },
       { path: 'profile', component: ProfileComponent, title: 'Profile' },
       { path: 'careercourses', component: CareerParentComponent, title: 'Career Courses' },
       { path: 'homeDetails/:id', component: HomeDetalisComponent, title: "Home Details" },

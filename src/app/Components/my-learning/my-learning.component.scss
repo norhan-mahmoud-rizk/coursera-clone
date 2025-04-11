@@ -9,7 +9,7 @@ $blueColor:blue;
 .myLearnParent{
 
    
-    padding-top: 5%;
+
    width:95%;
     margin: 0 auto;
     button {
@@ -38,6 +38,12 @@ $blueColor:blue;
             }
         }
     
+        p:nth-child(2) {
+         &:hover{
+            cursor: pointer;
+            text-decoration: underline;
+         }
+        }
         p:nth-child(3) {
             color: $textGrayColor;
         }
