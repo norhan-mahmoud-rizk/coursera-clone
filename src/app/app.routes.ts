@@ -22,7 +22,7 @@ export const routes: Routes = [
       { path: 'home', component: HomeComponent, title: "Home" },
       { path: 'my learning', component: MyLearningComponent, title: "my learning" },
       { path: 'onlinedegree', component: OnlineDegreesComponent, title: 'Online Degree' },
-      { path: 'courseExplanation/:Courseid', component: CourseExplanationComponent, title: 'courseExplanation' },
+      { path: 'courseExplanation/:CourseId', component: CourseExplanationComponent, title: 'courseExplanation' },
       { path: 'profile', component: ProfileComponent, title: 'Profile' },
       { path: 'careercourses', component: CareerParentComponent, title: 'Career Courses' },
       { path: 'homeDetails/:id', component: HomeDetalisComponent, title: "Home Details" },

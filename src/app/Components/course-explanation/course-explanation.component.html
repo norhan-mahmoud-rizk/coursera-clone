@@ -2,17 +2,102 @@
     <div class="row layout-container">
       <!-- Left Sidebar -->
       <div class="col-12 col-md-3 left-sidebar">
-        <app-left-sidebar></app-left-sidebar>
+     
+        <div class="sidebar-content">
+          <div class="d-flex py-4">
+          <img src="{{CareerCourse?. logoImage}}" alt="course_logo" class="img-fluid  mb-2 logo " /><p>{{CareerCourse?.organization}}</p>
+        </div>
+          <h5 class="mb-2   fw-bold">{{CareerCourse?.name}}</h5>
+          <p class="mb-5 gray-text ">{{CareerCourse?.organization}}</p>
+      
+          <ul>
+            <li>
+              <div class="card-body Course-Material-card">
+                <p class="fw-bold">
+                  <button (click)="toggleCourseMaterial()" class="Course-Material border-0 bg-transparent d-flex align-items-center fs-5 fw-semibold">
+                    <i id="arrow" class="fa-solid fa-chevron-right me-3 fw-bold"></i>
+                    Course Material
+                  </button>
+                </p>
+                <div class="collapse modules" [ngClass]="{'show': isMaterialCollapsed}">
+                  <div class="card-body">
+                    <ul class="gap-1 d-flex flex-column Course-Material-list">
+                      <li class="list-group-item border-0" (click)="selectedSection = 'module1'">
+                        <i class="fa-solid fa-circle"></i> Module 1
+                      </li>
+                      <li class="list-group-item border-0" (click)="selectedSection = 'module2'">
+                        <i class="fa-solid fa-circle"></i> Module 2
+                      </li>
+                      <li class="list-group-item border-0" (click)="selectedSection = 'module3'">
+                        <i class="fa-solid fa-circle"></i> Module 3
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+      
+            <li (click)="selectedSection = 'grades'">
+              <p class="fw-bold fs-6">Grades</p>
+            </li>
+            <li (click)="selectedSection = 'notes'">
+              <p class="fw-bold fs-6">Notes</p>
+            </li>
+            <li (click)="selectedSection = 'discussions'">
+              <p class="fw-bold fs-6">Discussion Forums</p>
+            </li>
+            <li (click)="selectedSection = 'messages'">
+              <p class="fw-bold fs-6">Messages</p>
+            </li>
+            <li (click)="selectedSection = 'courseInfo'">
+              <p class="fw-bold fs-6">Course Info</p>
+            </li>
+          </ul>
+        </div>
       </div>
   
       <!-- Main + Right Side Together -->
       <div class="col-12 col-md-9 right-main-wrapper">
         <div class="main-right-scroll">
           <div class="main-content">
-            <app-main-content></app-main-content>
+            <div class="main-content">
+              <div *ngIf="selectedSection === 'module1'">
+                <h2>Module 1</h2>
+                <p>Welcome to Module 1 content!</p>
+              </div>
+              <div *ngIf="selectedSection === 'module2'">
+                <h2>Module 2</h2>
+                <p>Welcome to Module 2 content!</p>
+              </div>
+              <div *ngIf="selectedSection === 'module3'">
+                <h2>Module 3</h2>
+                <p>Welcome to Module 3 content!</p>
+              </div>
+              <div *ngIf="selectedSection === 'grades'">
+                <h2>Grades</h2>
+                <p>Check your grades here.</p>
+              </div>
+              <div *ngIf="selectedSection === 'notes'">
+                <h2>Notes</h2>
+                <p>Here are your notes.</p>
+              </div>
+              <div *ngIf="selectedSection === 'discussions'">
+                <h2>Discussion Forums</h2>
+                <p>Join the discussion!</p>
+              </div>
+              <div *ngIf="selectedSection === 'messages'">
+                <h2>Messages</h2>
+                <p>Read your messages here.</p>
+              </div>
+              <div *ngIf="selectedSection === 'courseInfo'">
+                <h2>Course Info</h2>
+                <p>Course information goes here.</p>
+              </div>
+            </div>
           </div>
           <div class="right-sidebar">
-            <app-right-sidebar></app-right-sidebar>
+            <h5>Additional Info</h5>
+            <p>This is the right-side content.</p>
           </div>
         </div>
       </div>
