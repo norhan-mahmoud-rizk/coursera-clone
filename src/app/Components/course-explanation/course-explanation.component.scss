@@ -4,28 +4,20 @@
   box-sizing: border-box;
 }
 
-.layout-container {
-  display: flex;
-  height: 100vh;
-  overflow: hidden;
-  flex-direction: row; /* بشكل افتراضي */
+html, body, .container-fluid {
+  height: 100%;
 }
 
-/* Left Sidebar */
 .left-sidebar {
   position: sticky;
   top: 0;
   height: 100vh;
+  overflow-y: auto;
+  background-color: #ffffff;
   padding: 15px;
-  overflow-y: auto; /* دائمًا يكون هناك scrollbar */
-  flex: 0 0 25%; /* عرض ثابت بالنسبة للشاشة الكبيرة */
 
   .sidebar-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding-bottom: 20px;
-    .logo{
+    .logo {
       width: 10%;
       margin-right: 3%;
     }
@@ -33,7 +25,6 @@
     ul {
       list-style: none;
       padding: 0;
-      margin: 0;
 
       li {
         padding: 10px 15px;
@@ -47,13 +38,11 @@
         &.Course-Material-card {
           .modules {
             margin-left: 20px;
-            margin-bottom: 10px;
             padding-left: 50px;
-            display: flex;
-            flex-direction: column;
 
             ul {
               line-height: 1.8;
+
               li {
                 padding: 5px 0;
               }
@@ -65,58 +54,21 @@
   }
 }
 
-/* Main + Right content */
-.right-main-wrapper {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden; /* لا يوجد scroll هنا */
-  flex: 1; /* سيأخذ المساحة المتبقية */
-}
-
-/* Scrollable main + right content */
-.main-right-scroll {
-  display: flex;
-  flex: 1;
-  overflow-y: auto; /* تحريك الجزء الأيمن والأوسط معًا */
+/* Scrollable Wrapper for Main + Right */
+.scrollable-wrapper {
   height: 100%;
 }
 
-.main-content {
-  flex: 2;
-  padding: 20px;
-  overflow: hidden; /* لا يوجد scroll هنا */
-}
 
-.right-sidebar {
-  flex: 1;
-  padding: 20px;
-  overflow: hidden; /* لا يوجد scroll هنا */
-}
-
-/* Media Queries لتعديل التصميم عند تصغير الشاشة */
-@media (max-width: 767px) {
-  .layout-container {
-    flex-direction: column; /* ترتيب الأعمدة بشكل عمودي */
-  }
-
+@media (max-width: 767.98px) {
   .left-sidebar {
-    width: 100%; /* الشريط الجانبي يأخذ العرض الكامل */
-    height: auto; /* لا يكون ثابتا، يمكن أن يمتد حسب المحتوى */
-    position: relative; /* إزالة الـ sticky عند الشاشات الصغيرة */
-  }
-
-  .right-main-wrapper {
-    width: 100%; /* الجزء الأيمن يأخذ العرض الكامل */
-    display: block;
+    position: relative;
+    height: auto;
     padding: 10px;
+    background-color: #f8f9fa;
   }
 
-  .main-right-scroll {
-    display: block; /* جعل الجزء الأيمن والجزء الأوسط يعرضان بشكل منفصل في الهاتف */
-  }
-
-  .main-content {
-    padding: 10px;
+  .scrollable-wrapper {
+    flex-direction: column;
   }
 }

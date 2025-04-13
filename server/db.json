@@ -663,6 +663,31 @@
             "name": "Mobile App Testing and Debugging",
             "imgUrl": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/da/170cbdbaf6417ab3e6c6800890ce3a/Square-GenAI.jpg?auto=compress&dpr=1&fit=crop&w=164&h=109"
           }
+        ],  "modules": [
+          {
+            "moduleTitle": "Module 1: Fundamentals of Software Engineering",
+            "videos": [
+              "https://www.youtube.com/watch?v=1hHMwLxN6EM",
+              "https://www.youtube.com/watch?v=mrHNSanmqQ4",
+              "https://www.youtube.com/watch?v=QJ-Vrj47zFA"
+            ]
+          },
+          {
+            "moduleTitle": "Module 2: Agile Development & Design Patterns",
+            "videos": [
+              "https://www.youtube.com/watch?v=Z9QbYZh1YXY",
+              "https://www.youtube.com/watch?v=K5uMqZn8E0o",
+              "https://www.youtube.com/watch?v=GRdnvzqKZbQ"
+            ]
+          },
+          {
+            "moduleTitle": "Module 3: Testing & Debugging Techniques",
+            "videos": [
+              "https://www.youtube.com/watch?v=3WiQ9N3p9UM",
+              "https://www.youtube.com/watch?v=woJFF3aGNVw",
+              "https://www.youtube.com/watch?v=FihxERI_Mkc"
+            ]
+          }
         ]
       },
       {
@@ -700,6 +725,32 @@
             "RelatedCourseID": "4",
             "name": "Mobile App Testing and Debugging",
             "imgUrl": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/f1/f4aff288804936a2cd748cc5b52473/Course4-logo-1-.png?auto=compress&dpr=1&fit=crop&w=164&h=109"
+          }
+        ],
+        "modules": [
+          {
+            "moduleTitle": "Module 1: Fundamentals of Software Engineering",
+            "videos": [
+              "https://www.youtube.com/watch?v=1hHMwLxN6EM",
+              "https://www.youtube.com/watch?v=mrHNSanmqQ4",
+              "https://www.youtube.com/watch?v=QJ-Vrj47zFA"
+            ]
+          },
+          {
+            "moduleTitle": "Module 2: Agile Development & Design Patterns",
+            "videos": [
+              "https://www.youtube.com/watch?v=Z9QbYZh1YXY",
+              "https://www.youtube.com/watch?v=K5uMqZn8E0o",
+              "https://www.youtube.com/watch?v=GRdnvzqKZbQ"
+            ]
+          },
+          {
+            "moduleTitle": "Module 3: Testing & Debugging Techniques",
+            "videos": [
+              "https://www.youtube.com/watch?v=3WiQ9N3p9UM",
+              "https://www.youtube.com/watch?v=woJFF3aGNVw",
+              "https://www.youtube.com/watch?v=FihxERI_Mkc"
+            ]
           }
         ]
       },
@@ -739,6 +790,31 @@
             "name": "Mobile App Testing and Debugging",
             "imgUrl": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/aa/a8f062634547039292672049853487/4_Alex.png?auto=compress&dpr=1&fit=crop&w=164&h=109"
           }
+        ],  "modules": [
+          {
+            "moduleTitle": "Module 1: Fundamentals of Software Engineering",
+            "videos": [
+              "https://www.youtube.com/watch?v=1hHMwLxN6EM",
+              "https://www.youtube.com/watch?v=mrHNSanmqQ4",
+              "https://www.youtube.com/watch?v=QJ-Vrj47zFA"
+            ]
+          },
+          {
+            "moduleTitle": "Module 2: Agile Development & Design Patterns",
+            "videos": [
+              "https://www.youtube.com/watch?v=Z9QbYZh1YXY",
+              "https://www.youtube.com/watch?v=K5uMqZn8E0o",
+              "https://www.youtube.com/watch?v=GRdnvzqKZbQ"
+            ]
+          },
+          {
+            "moduleTitle": "Module 3: Testing & Debugging Techniques",
+            "videos": [
+              "https://www.youtube.com/watch?v=3WiQ9N3p9UM",
+              "https://www.youtube.com/watch?v=woJFF3aGNVw",
+              "https://www.youtube.com/watch?v=FihxERI_Mkc"
+            ]
+          }
         ]
       },
       {
@@ -776,6 +852,32 @@
             "RelatedCourseID": "4",
             "name": "Mobile App Testing and Debugging",
             "imgUrl": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/90/1641c4f0be4906a3095292a58a46d2/c1-introduction-to-computer-vision-1000x1000.jpg?auto=compress&dpr=1&fit=crop&w=164&h=109"
+          }
+        ],
+        "modules": [
+          {
+            "moduleTitle": "Module 1: Fundamentals of Software Engineering",
+            "videos": [
+              "https://www.youtube.com/watch?v=1hHMwLxN6EM",
+              "https://www.youtube.com/watch?v=mrHNSanmqQ4",
+              "https://www.youtube.com/watch?v=QJ-Vrj47zFA"
+            ]
+          },
+          {
+            "moduleTitle": "Module 2: Agile Development & Design Patterns",
+            "videos": [
+              "https://www.youtube.com/watch?v=Z9QbYZh1YXY",
+              "https://www.youtube.com/watch?v=K5uMqZn8E0o",
+              "https://www.youtube.com/watch?v=GRdnvzqKZbQ"
+            ]
+          },
+          {
+            "moduleTitle": "Module 3: Testing & Debugging Techniques",
+            "videos": [
+              "https://www.youtube.com/watch?v=3WiQ9N3p9UM",
+              "https://www.youtube.com/watch?v=woJFF3aGNVw",
+              "https://www.youtube.com/watch?v=FihxERI_Mkc"
+            ]
           }
         ]
       },
@@ -815,6 +917,31 @@
             "name": "Mobile App Testing and Debugging",
             "imgUrl": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/77/88b9b0a39211e59ef34380216d0be9/04.IMAGE_1200-x-1200_logo_2.jpg?auto=compress&dpr=1&fit=crop&w=164&h=109"
           }
+        ],  "modules": [
+          {
+            "moduleTitle": "Module 1: Fundamentals of Software Engineering",
+            "videos": [
+              "https://www.youtube.com/watch?v=1hHMwLxN6EM",
+              "https://www.youtube.com/watch?v=mrHNSanmqQ4",
+              "https://www.youtube.com/watch?v=QJ-Vrj47zFA"
+            ]
+          },
+          {
+            "moduleTitle": "Module 2: Agile Development & Design Patterns",
+            "videos": [
+              "https://www.youtube.com/watch?v=Z9QbYZh1YXY",
+              "https://www.youtube.com/watch?v=K5uMqZn8E0o",
+              "https://www.youtube.com/watch?v=GRdnvzqKZbQ"
+            ]
+          },
+          {
+            "moduleTitle": "Module 3: Testing & Debugging Techniques",
+            "videos": [
+              "https://www.youtube.com/watch?v=3WiQ9N3p9UM",
+              "https://www.youtube.com/watch?v=woJFF3aGNVw",
+              "https://www.youtube.com/watch?v=FihxERI_Mkc"
+            ]
+          }
         ]
       },
       {
@@ -852,6 +979,31 @@
             "RelatedCourseID": "4",
             "name": "Mobile App Testing and Debugging",
             "imgUrl": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/da/170cbdbaf6417ab3e6c6800890ce3a/Square-GenAI.jpg?auto=compress&dpr=1&fit=crop&w=164&h=109"
+          }
+        ],  "modules": [
+          {
+            "moduleTitle": "Module 1: Fundamentals of Software Engineering",
+            "videos": [
+              "https://www.youtube.com/watch?v=1hHMwLxN6EM",
+              "https://www.youtube.com/watch?v=mrHNSanmqQ4",
+              "https://www.youtube.com/watch?v=QJ-Vrj47zFA"
+            ]
+          },
+          {
+            "moduleTitle": "Module 2: Agile Development & Design Patterns",
+            "videos": [
+              "https://www.youtube.com/watch?v=Z9QbYZh1YXY",
+              "https://www.youtube.com/watch?v=K5uMqZn8E0o",
+              "https://www.youtube.com/watch?v=GRdnvzqKZbQ"
+            ]
+          },
+          {
+            "moduleTitle": "Module 3: Testing & Debugging Techniques",
+            "videos": [
+              "https://www.youtube.com/watch?v=3WiQ9N3p9UM",
+              "https://www.youtube.com/watch?v=woJFF3aGNVw",
+              "https://www.youtube.com/watch?v=FihxERI_Mkc"
+            ]
           }
         ]
       },
@@ -891,6 +1043,31 @@
             "name": "Mobile App Testing and Debugging",
             "imgUrl": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/f1/f4aff288804936a2cd748cc5b52473/Course4-logo-1-.png?auto=compress&dpr=1&fit=crop&w=164&h=109"
           }
+        ],  "modules": [
+          {
+            "moduleTitle": "Module 1: Fundamentals of Software Engineering",
+            "videos": [
+              "https://www.youtube.com/watch?v=1hHMwLxN6EM",
+              "https://www.youtube.com/watch?v=mrHNSanmqQ4",
+              "https://www.youtube.com/watch?v=QJ-Vrj47zFA"
+            ]
+          },
+          {
+            "moduleTitle": "Module 2: Agile Development & Design Patterns",
+            "videos": [
+              "https://www.youtube.com/watch?v=Z9QbYZh1YXY",
+              "https://www.youtube.com/watch?v=K5uMqZn8E0o",
+              "https://www.youtube.com/watch?v=GRdnvzqKZbQ"
+            ]
+          },
+          {
+            "moduleTitle": "Module 3: Testing & Debugging Techniques",
+            "videos": [
+              "https://www.youtube.com/watch?v=3WiQ9N3p9UM",
+              "https://www.youtube.com/watch?v=woJFF3aGNVw",
+              "https://www.youtube.com/watch?v=FihxERI_Mkc"
+            ]
+          }
         ]
       },
       {
@@ -928,6 +1105,31 @@
             "RelatedCourseID": "4",
             "name": "Mobile App Testing and Debugging",
             "imgUrl": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/90/1641c4f0be4906a3095292a58a46d2/c1-introduction-to-computer-vision-1000x1000.jpg?auto=compress&dpr=1&fit=crop&w=164&h=109"
+          }
+        ],  "modules": [
+          {
+            "moduleTitle": "Module 1: Fundamentals of Software Engineering",
+            "videos": [
+              "https://www.youtube.com/watch?v=1hHMwLxN6EM",
+              "https://www.youtube.com/watch?v=mrHNSanmqQ4",
+              "https://www.youtube.com/watch?v=QJ-Vrj47zFA"
+            ]
+          },
+          {
+            "moduleTitle": "Module 2: Agile Development & Design Patterns",
+            "videos": [
+              "https://www.youtube.com/watch?v=Z9QbYZh1YXY",
+              "https://www.youtube.com/watch?v=K5uMqZn8E0o",
+              "https://www.youtube.com/watch?v=GRdnvzqKZbQ"
+            ]
+          },
+          {
+            "moduleTitle": "Module 3: Testing & Debugging Techniques",
+            "videos": [
+              "https://www.youtube.com/watch?v=3WiQ9N3p9UM",
+              "https://www.youtube.com/watch?v=woJFF3aGNVw",
+              "https://www.youtube.com/watch?v=FihxERI_Mkc"
+            ]
           }
         ]
       },
@@ -967,6 +1169,31 @@
             "name": "Mobile App Testing and Debugging",
             "imgUrl": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/da/170cbdbaf6417ab3e6c6800890ce3a/Square-GenAI.jpg?auto=compress&dpr=1&fit=crop&w=164&h=109"
           }
+        ],  "modules": [
+          {
+            "moduleTitle": "Module 1: Fundamentals of Software Engineering",
+            "videos": [
+              "https://www.youtube.com/watch?v=1hHMwLxN6EM",
+              "https://www.youtube.com/watch?v=mrHNSanmqQ4",
+              "https://www.youtube.com/watch?v=QJ-Vrj47zFA"
+            ]
+          },
+          {
+            "moduleTitle": "Module 2: Agile Development & Design Patterns",
+            "videos": [
+              "https://www.youtube.com/watch?v=Z9QbYZh1YXY",
+              "https://www.youtube.com/watch?v=K5uMqZn8E0o",
+              "https://www.youtube.com/watch?v=GRdnvzqKZbQ"
+            ]
+          },
+          {
+            "moduleTitle": "Module 3: Testing & Debugging Techniques",
+            "videos": [
+              "https://www.youtube.com/watch?v=3WiQ9N3p9UM",
+              "https://www.youtube.com/watch?v=woJFF3aGNVw",
+              "https://www.youtube.com/watch?v=FihxERI_Mkc"
+            ]
+          }
         ]
       },
       {
@@ -1003,6 +1230,31 @@
             "RelatedCourseID": "4",
             "name": "Mobile App Testing and Debugging",
             "imgUrl": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/77/88b9b0a39211e59ef34380216d0be9/04.IMAGE_1200-x-1200_logo_2.jpg?auto=compress&dpr=1&fit=crop&w=164&h=109"
+          }
+        ],  "modules": [
+          {
+            "moduleTitle": "Module 1: Fundamentals of Software Engineering",
+            "videos": [
+              "https://www.youtube.com/watch?v=1hHMwLxN6EM",
+              "https://www.youtube.com/watch?v=mrHNSanmqQ4",
+              "https://www.youtube.com/watch?v=QJ-Vrj47zFA"
+            ]
+          },
+          {
+            "moduleTitle": "Module 2: Agile Development & Design Patterns",
+            "videos": [
+              "https://www.youtube.com/watch?v=Z9QbYZh1YXY",
+              "https://www.youtube.com/watch?v=K5uMqZn8E0o",
+              "https://www.youtube.com/watch?v=GRdnvzqKZbQ"
+            ]
+          },
+          {
+            "moduleTitle": "Module 3: Testing & Debugging Techniques",
+            "videos": [
+              "https://www.youtube.com/watch?v=3WiQ9N3p9UM",
+              "https://www.youtube.com/watch?v=woJFF3aGNVw",
+              "https://www.youtube.com/watch?v=FihxERI_Mkc"
+            ]
           }
         ]
       },
@@ -1041,6 +1293,31 @@
             "name": "Mobile App Testing and Debugging",
             "imgUrl": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/aa/a8f062634547039292672049853487/4_Alex.png?auto=compress&dpr=1&fit=crop&w=164&h=109"
           }
+        ],  "modules": [
+          {
+            "moduleTitle": "Module 1: Fundamentals of Software Engineering",
+            "videos": [
+              "https://www.youtube.com/watch?v=1hHMwLxN6EM",
+              "https://www.youtube.com/watch?v=mrHNSanmqQ4",
+              "https://www.youtube.com/watch?v=QJ-Vrj47zFA"
+            ]
+          },
+          {
+            "moduleTitle": "Module 2: Agile Development & Design Patterns",
+            "videos": [
+              "https://www.youtube.com/watch?v=Z9QbYZh1YXY",
+              "https://www.youtube.com/watch?v=K5uMqZn8E0o",
+              "https://www.youtube.com/watch?v=GRdnvzqKZbQ"
+            ]
+          },
+          {
+            "moduleTitle": "Module 3: Testing & Debugging Techniques",
+            "videos": [
+              "https://www.youtube.com/watch?v=3WiQ9N3p9UM",
+              "https://www.youtube.com/watch?v=woJFF3aGNVw",
+              "https://www.youtube.com/watch?v=FihxERI_Mkc"
+            ]
+          }
         ]
       },
       {
@@ -1076,6 +1353,31 @@
             "RelatedCourseID": "4",
             "name": "Mobile App Testing and Debugging",
             "imgUrl": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/aa/a8f062634547039292672049853487/4_Alex.png?auto=compress&dpr=1&fit=crop&w=164&h=109"
+          }
+        ],  "modules": [
+          {
+            "moduleTitle": "Module 1: Fundamentals of Software Engineering",
+            "videos": [
+              "https://www.youtube.com/watch?v=1hHMwLxN6EM",
+              "https://www.youtube.com/watch?v=mrHNSanmqQ4",
+              "https://www.youtube.com/watch?v=QJ-Vrj47zFA"
+            ]
+          },
+          {
+            "moduleTitle": "Module 2: Agile Development & Design Patterns",
+            "videos": [
+              "https://www.youtube.com/watch?v=Z9QbYZh1YXY",
+              "https://www.youtube.com/watch?v=K5uMqZn8E0o",
+              "https://www.youtube.com/watch?v=GRdnvzqKZbQ"
+            ]
+          },
+          {
+            "moduleTitle": "Module 3: Testing & Debugging Techniques",
+            "videos": [
+              "https://www.youtube.com/watch?v=3WiQ9N3p9UM",
+              "https://www.youtube.com/watch?v=woJFF3aGNVw",
+              "https://www.youtube.com/watch?v=FihxERI_Mkc"
+            ]
           }
         ]
       },
@@ -1114,6 +1416,31 @@
             "name": "Mobile App Testing and Debugging",
             "imgUrl": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/77/88b9b0a39211e59ef34380216d0be9/04.IMAGE_1200-x-1200_logo_2.jpg?auto=compress&dpr=1&fit=crop&w=164&h=109"
           }
+        ],  "modules": [
+          {
+            "moduleTitle": "Module 1: Fundamentals of Software Engineering",
+            "videos": [
+              "https://www.youtube.com/watch?v=1hHMwLxN6EM",
+              "https://www.youtube.com/watch?v=mrHNSanmqQ4",
+              "https://www.youtube.com/watch?v=QJ-Vrj47zFA"
+            ]
+          },
+          {
+            "moduleTitle": "Module 2: Agile Development & Design Patterns",
+            "videos": [
+              "https://www.youtube.com/watch?v=Z9QbYZh1YXY",
+              "https://www.youtube.com/watch?v=K5uMqZn8E0o",
+              "https://www.youtube.com/watch?v=GRdnvzqKZbQ"
+            ]
+          },
+          {
+            "moduleTitle": "Module 3: Testing & Debugging Techniques",
+            "videos": [
+              "https://www.youtube.com/watch?v=3WiQ9N3p9UM",
+              "https://www.youtube.com/watch?v=woJFF3aGNVw",
+              "https://www.youtube.com/watch?v=FihxERI_Mkc"
+            ]
+          }
         ]
       },
       {
@@ -1150,6 +1477,31 @@
             "RelatedCourseID": "4",
             "name": "Mobile App Testing and Debugging",
             "imgUrl": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/77/88b9b0a39211e59ef34380216d0be9/04.IMAGE_1200-x-1200_logo_2.jpg?auto=compress&dpr=1&fit=crop&w=164&h=109"
+          }
+        ],  "modules": [
+          {
+            "moduleTitle": "Module 1: Fundamentals of Software Engineering",
+            "videos": [
+              "https://www.youtube.com/watch?v=1hHMwLxN6EM",
+              "https://www.youtube.com/watch?v=mrHNSanmqQ4",
+              "https://www.youtube.com/watch?v=QJ-Vrj47zFA"
+            ]
+          },
+          {
+            "moduleTitle": "Module 2: Agile Development & Design Patterns",
+            "videos": [
+              "https://www.youtube.com/watch?v=Z9QbYZh1YXY",
+              "https://www.youtube.com/watch?v=K5uMqZn8E0o",
+              "https://www.youtube.com/watch?v=GRdnvzqKZbQ"
+            ]
+          },
+          {
+            "moduleTitle": "Module 3: Testing & Debugging Techniques",
+            "videos": [
+              "https://www.youtube.com/watch?v=3WiQ9N3p9UM",
+              "https://www.youtube.com/watch?v=woJFF3aGNVw",
+              "https://www.youtube.com/watch?v=FihxERI_Mkc"
+            ]
           }
         ]
       },
@@ -1188,6 +1540,31 @@
             "name": "Mobile App Testing and Debugging",
             "imgUrl": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/f1/f4aff288804936a2cd748cc5b52473/Course4-logo-1-.png?auto=compress&dpr=1&fit=crop&w=164&h=109"
           }
+        ],  "modules": [
+          {
+            "moduleTitle": "Module 1: Fundamentals of Software Engineering",
+            "videos": [
+              "https://www.youtube.com/watch?v=1hHMwLxN6EM",
+              "https://www.youtube.com/watch?v=mrHNSanmqQ4",
+              "https://www.youtube.com/watch?v=QJ-Vrj47zFA"
+            ]
+          },
+          {
+            "moduleTitle": "Module 2: Agile Development & Design Patterns",
+            "videos": [
+              "https://www.youtube.com/watch?v=Z9QbYZh1YXY",
+              "https://www.youtube.com/watch?v=K5uMqZn8E0o",
+              "https://www.youtube.com/watch?v=GRdnvzqKZbQ"
+            ]
+          },
+          {
+            "moduleTitle": "Module 3: Testing & Debugging Techniques",
+            "videos": [
+              "https://www.youtube.com/watch?v=3WiQ9N3p9UM",
+              "https://www.youtube.com/watch?v=woJFF3aGNVw",
+              "https://www.youtube.com/watch?v=FihxERI_Mkc"
+            ]
+          }
         ]
       },
         {
@@ -1223,6 +1600,31 @@
               "RelatedCourseID": "4",
               "name": "Mobile App Testing and Debugging",
               "imgUrl": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/aa/a8f062634547039292672049853487/4_Alex.png?auto=compress&dpr=1&fit=crop&w=164&h=109"
+            }
+          ],  "modules": [
+            {
+              "moduleTitle": "Module 1: Fundamentals of Software Engineering",
+              "videos": [
+                "https://www.youtube.com/watch?v=1hHMwLxN6EM",
+                "https://www.youtube.com/watch?v=mrHNSanmqQ4",
+                "https://www.youtube.com/watch?v=QJ-Vrj47zFA"
+              ]
+            },
+            {
+              "moduleTitle": "Module 2: Agile Development & Design Patterns",
+              "videos": [
+                "https://www.youtube.com/watch?v=Z9QbYZh1YXY",
+                "https://www.youtube.com/watch?v=K5uMqZn8E0o",
+                "https://www.youtube.com/watch?v=GRdnvzqKZbQ"
+              ]
+            },
+            {
+              "moduleTitle": "Module 3: Testing & Debugging Techniques",
+              "videos": [
+                "https://www.youtube.com/watch?v=3WiQ9N3p9UM",
+                "https://www.youtube.com/watch?v=woJFF3aGNVw",
+                "https://www.youtube.com/watch?v=FihxERI_Mkc"
+              ]
             }
           ]
         },
@@ -1260,6 +1662,31 @@
               "name": "Mobile App Testing and Debugging",
               "imgUrl": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/aa/a8f062634547039292672049853487/4_Alex.png?auto=compress&dpr=1&fit=crop&w=164&h=109"
             }
+          ],  "modules": [
+            {
+              "moduleTitle": "Module 1: Fundamentals of Software Engineering",
+              "videos": [
+                "https://www.youtube.com/watch?v=1hHMwLxN6EM",
+                "https://www.youtube.com/watch?v=mrHNSanmqQ4",
+                "https://www.youtube.com/watch?v=QJ-Vrj47zFA"
+              ]
+            },
+            {
+              "moduleTitle": "Module 2: Agile Development & Design Patterns",
+              "videos": [
+                "https://www.youtube.com/watch?v=Z9QbYZh1YXY",
+                "https://www.youtube.com/watch?v=K5uMqZn8E0o",
+                "https://www.youtube.com/watch?v=GRdnvzqKZbQ"
+              ]
+            },
+            {
+              "moduleTitle": "Module 3: Testing & Debugging Techniques",
+              "videos": [
+                "https://www.youtube.com/watch?v=3WiQ9N3p9UM",
+                "https://www.youtube.com/watch?v=woJFF3aGNVw",
+                "https://www.youtube.com/watch?v=FihxERI_Mkc"
+              ]
+            }
           ]
         },
         {
@@ -1296,6 +1723,31 @@
               "name": "Mobile App Testing and Debugging",
               "imgUrl": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/aa/a8f062634547039292672049853487/4_Alex.png?auto=compress&dpr=1&fit=crop&w=164&h=109"
             }
+          ],  "modules": [
+            {
+              "moduleTitle": "Module 1: Fundamentals of Software Engineering",
+              "videos": [
+                "https://www.youtube.com/watch?v=1hHMwLxN6EM",
+                "https://www.youtube.com/watch?v=mrHNSanmqQ4",
+                "https://www.youtube.com/watch?v=QJ-Vrj47zFA"
+              ]
+            },
+            {
+              "moduleTitle": "Module 2: Agile Development & Design Patterns",
+              "videos": [
+                "https://www.youtube.com/watch?v=Z9QbYZh1YXY",
+                "https://www.youtube.com/watch?v=K5uMqZn8E0o",
+                "https://www.youtube.com/watch?v=GRdnvzqKZbQ"
+              ]
+            },
+            {
+              "moduleTitle": "Module 3: Testing & Debugging Techniques",
+              "videos": [
+                "https://www.youtube.com/watch?v=3WiQ9N3p9UM",
+                "https://www.youtube.com/watch?v=woJFF3aGNVw",
+                "https://www.youtube.com/watch?v=FihxERI_Mkc"
+              ]
+            }
           ]
         },
         {
@@ -1331,6 +1783,31 @@
               "RelatedCourseID": "4",
               "name": "Mobile App Testing and Debugging",
               "imgUrl": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/aa/a8f062634547039292672049853487/4_Alex.png?auto=compress&dpr=1&fit=crop&w=164&h=109"
+            }
+          ],  "modules": [
+            {
+              "moduleTitle": "Module 1: Fundamentals of Software Engineering",
+              "videos": [
+                "https://www.youtube.com/watch?v=1hHMwLxN6EM",
+                "https://www.youtube.com/watch?v=mrHNSanmqQ4",
+                "https://www.youtube.com/watch?v=QJ-Vrj47zFA"
+              ]
+            },
+            {
+              "moduleTitle": "Module 2: Agile Development & Design Patterns",
+              "videos": [
+                "https://www.youtube.com/watch?v=Z9QbYZh1YXY",
+                "https://www.youtube.com/watch?v=K5uMqZn8E0o",
+                "https://www.youtube.com/watch?v=GRdnvzqKZbQ"
+              ]
+            },
+            {
+              "moduleTitle": "Module 3: Testing & Debugging Techniques",
+              "videos": [
+                "https://www.youtube.com/watch?v=3WiQ9N3p9UM",
+                "https://www.youtube.com/watch?v=woJFF3aGNVw",
+                "https://www.youtube.com/watch?v=FihxERI_Mkc"
+              ]
             }
           ]
         }

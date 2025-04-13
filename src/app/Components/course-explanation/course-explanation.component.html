@@ -1,106 +1,106 @@
-<div class="container-fluid">
-    <div class="row layout-container">
-      <!-- Left Sidebar -->
-      <div class="col-12 col-md-3 left-sidebar">
-     
-        <div class="sidebar-content">
-          <div class="d-flex py-4">
-          <img src="{{CareerCourse?. logoImage}}" alt="course_logo" class="img-fluid  mb-2 logo " /><p>{{CareerCourse?.organization}}</p>
+<div class="container-fluid h-100">
+  <div class="row h-100">
+
+    <!-- Navbar for small screens -->
+    <nav class="navbar navbar-expand-md bg-light d-md-none">
+      <div class="container-fluid">
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu"
+          aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon "></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Left Sidebar (Collapsible for small screens) -->
+    <div class="col-12 col-md-3 left-sidebar collapse d-md-block" id="sidebarMenu">
+      <div class="sidebar-content">
+        <div class="d-flex py-4">
+          <img src="{{CareerCourse?.logoImage}}" alt="course_logo" class="img-fluid mb-2 logo" />
+          <p>{{CareerCourse?.organization}}</p>
         </div>
-          <h5 class="mb-2   fw-bold">{{CareerCourse?.name}}</h5>
-          <p class="mb-5 gray-text ">{{CareerCourse?.organization}}</p>
-      
-          <ul>
-            <li>
-              <div class="card-body Course-Material-card">
-                <p class="fw-bold">
-                  <button (click)="toggleCourseMaterial()" class="Course-Material border-0 bg-transparent d-flex align-items-center fs-5 fw-semibold">
-                    <i id="arrow" class="fa-solid fa-chevron-right me-3 fw-bold"></i>
-                    Course Material
-                  </button>
-                </p>
-                <div class="collapse modules" [ngClass]="{'show': isMaterialCollapsed}">
-                  <div class="card-body">
-                    <ul class="gap-1 d-flex flex-column Course-Material-list">
-                      <li class="list-group-item border-0" (click)="selectedSection = 'module1'">
-                        <i class="fa-solid fa-circle"></i> Module 1
+        <h5 class="mb-2 fw-bold">{{CareerCourse?.name}}</h5>
+        <p class="mb-5 gray-text">{{CareerCourse?.organization}}</p>
+
+        <ul>
+          <li>
+            <div class="card-body Course-Material-card">
+              <p class="fw-bold">
+                <button (click)="toggleCourseMaterial()" class="Course-Material border-0 bg-transparent d-flex align-items-center fs-5 fw-semibold">
+                  <i id="arrow" class="fa-solid fa-chevron-right me-3 fw-bold"></i> Course Material
+                </button>
+              </p>
+              <div class="collapse modules" [ngClass]="{'show': isMaterialCollapsed}">
+                <div class="card-body">
+                  <ul class="gap-1 d-flex flex-column Course-Material-list">
+                    @for( module of CareerCourse?.modules; track $index){
+                    <li class="list-group-item border-0 mt-3" (click)="selectedSection = module.moduleTitle" >
+                        <i class="fa-solid fa-circle text-secondary"></i> module{{$index +1}}
                       </li>
-                      <li class="list-group-item border-0" (click)="selectedSection = 'module2'">
-                        <i class="fa-solid fa-circle"></i> Module 2
-                      </li>
-                      <li class="list-group-item border-0" (click)="selectedSection = 'module3'">
-                        <i class="fa-solid fa-circle"></i> Module 3
-                      </li>
-                    </ul>
-                  </div>
+                    }
+                  </ul>
                 </div>
               </div>
-            </li>
-      
-            <li (click)="selectedSection = 'grades'">
-              <p class="fw-bold fs-6">Grades</p>
-            </li>
-            <li (click)="selectedSection = 'notes'">
-              <p class="fw-bold fs-6">Notes</p>
-            </li>
-            <li (click)="selectedSection = 'discussions'">
-              <p class="fw-bold fs-6">Discussion Forums</p>
-            </li>
-            <li (click)="selectedSection = 'messages'">
-              <p class="fw-bold fs-6">Messages</p>
-            </li>
-            <li (click)="selectedSection = 'courseInfo'">
-              <p class="fw-bold fs-6">Course Info</p>
-            </li>
-          </ul>
-        </div>
-      </div>
-  
-      <!-- Main + Right Side Together -->
-      <div class="col-12 col-md-9 right-main-wrapper">
-        <div class="main-right-scroll">
-          <div class="main-content">
-            <div class="main-content">
-              <div *ngIf="selectedSection === 'module1'">
-                <h2>Module 1</h2>
-                <p>Welcome to Module 1 content!</p>
-              </div>
-              <div *ngIf="selectedSection === 'module2'">
-                <h2>Module 2</h2>
-                <p>Welcome to Module 2 content!</p>
-              </div>
-              <div *ngIf="selectedSection === 'module3'">
-                <h2>Module 3</h2>
-                <p>Welcome to Module 3 content!</p>
-              </div>
-              <div *ngIf="selectedSection === 'grades'">
-                <h2>Grades</h2>
-                <p>Check your grades here.</p>
-              </div>
-              <div *ngIf="selectedSection === 'notes'">
-                <h2>Notes</h2>
-                <p>Here are your notes.</p>
-              </div>
-              <div *ngIf="selectedSection === 'discussions'">
-                <h2>Discussion Forums</h2>
-                <p>Join the discussion!</p>
-              </div>
-              <div *ngIf="selectedSection === 'messages'">
-                <h2>Messages</h2>
-                <p>Read your messages here.</p>
-              </div>
-              <div *ngIf="selectedSection === 'courseInfo'">
-                <h2>Course Info</h2>
-                <p>Course information goes here.</p>
-              </div>
             </div>
-          </div>
-          <div class="right-sidebar">
-            <h5>Additional Info</h5>
-            <p>This is the right-side content.</p>
-          </div>
-        </div>
+          </li>
+          <li (click)="selectedSection = 'grades'"><p class="fw-bold fs-6">Grades</p></li>
+          <li (click)="selectedSection = 'notes'"><p class="fw-bold fs-6">Notes</p></li>
+          <li (click)="selectedSection = 'discussions'"><p class="fw-bold fs-6">Discussion Forums</p></li>
+          <li (click)="selectedSection = 'messages'"><p class="fw-bold fs-6">Messages</p></li>
+          <li (click)="selectedSection = 'courseInfo'"><p class="fw-bold fs-6">Course Info</p></li>
+        </ul>
       </div>
     </div>
+
+    <!-- Main Content + Right Sidebar -->
+    <div class="col-12 col-md-9 d-flex flex-column h-100">
+      <div class="scrollable-wrapper d-flex flex-column flex-md-row flex-grow-1 overflow-auto">
+
+        <!-- Main Content -->
+        <div class="col-12 col-md-8 p-4 main-content">
+          <div *ngIf="selectedSection">
+            <div *ngIf="CareerCourse?.modules">
+              @for( module of CareerCourse?.modules; track $index){
+                <div *ngIf="module.moduleTitle === selectedSection">
+                  <h2>{{module.moduleTitle}}</h2>
+                  @for( video of module.videos; track $index){
+                    <iframe width="100%" height="315" [src]="sanitizeVideoUrl(video)" frameborder="0" allowfullscreen></iframe>
+                  }
+                </div>
+              }
+            </div>
+
+            <div *ngIf="selectedSection === 'grades'">
+              <h2>Grades</h2>
+              <p>Check your grades here.</p>
+            </div>
+            <div *ngIf="selectedSection === 'notes'">
+              <h2>Notes</h2>
+              <p>Here are your notes.</p>
+            </div>
+            <div *ngIf="selectedSection === 'discussions'">
+              <h2>Discussion Forums</h2>
+              <p>Join the discussion!</p>
+            </div>
+            <div *ngIf="selectedSection === 'messages'">
+              <h2>Messages</h2>
+              <p>Read your messages here.</p>
+            </div>
+            <div *ngIf="selectedSection === 'courseInfo'">
+              <h2>Course Info</h2>
+              <p>Course information goes here.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Sidebar -->
+        <div class="col-12 col-md-4 p-4 right-sidebar">
+          <h5>the right part of the page </h5>
+          <p>the content will be here </p>
+        </div>
+
+      </div>
+    </div>
+
   </div>
-  
+</div>
