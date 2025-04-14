@@ -71,4 +71,22 @@ html, body, .container-fluid {
   .scrollable-wrapper {
     flex-direction: column;
   }
+
+}
+
+
+.right-sidebar{
+
+  height: 700px;
+  .ProfessionalCertificate{
+
+    height: 100px;
+  }
+  .profilecard{
+    p{
+      font-size: 0.875rem;
+      color: #5b6780;
+    }
+  }
+ 
 }
