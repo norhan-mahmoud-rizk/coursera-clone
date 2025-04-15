@@ -3,8 +3,8 @@
       <div class="row px-5">
         <div class="col-12 col-md-6 pb-5">
           <div class="my-3">
-            <a href=""> <i class="fa-solid fa-house me-4 text-primary"></i></a>
-            <i class="fa-solid fa-chevron-right me-3"></i>
+            <a routerLink="/home"> <i class="fa-solid fa-house me-4 text-primary" ></i></a>
+            <i class="fa-solid fa-chevron-right me-3" ></i>
             <a class="text-decoration-none" routerLink="/careercourses">Career</a>
 
           </div>
@@ -35,7 +35,7 @@
           <div class="container-fluid">
             <div class="row">
               <div class="col-12 col-md-5 LinkSide pe-3">
-                <div class="Link">
+                <div class="Link"  (click)="goToHomeDetails(CareerCourse!.id)">
                   <div class="w-25 IconPart">
                     <img
                       class="border rounded-2"

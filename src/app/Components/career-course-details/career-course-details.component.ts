@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { ActivatedRoute, RouterLink } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { ICareerCourses } from '../../Models/ICareerCourses';
 import { ServiceWithApiService } from '../../Services/service-with-api.service';
 
@@ -21,7 +21,8 @@ export class CareerCourseDetailsComponent implements OnInit {
     visibleCoursesCount:number=4;
     constructor(
       private CourseService: ServiceWithApiService,
-      private activatedroute: ActivatedRoute
+      private activatedroute: ActivatedRoute,
+      private router:Router
     ) {}
   
     ngOnInit(): void {
@@ -65,5 +66,12 @@ export class CareerCourseDetailsComponent implements OnInit {
         });
       }
     }
+
+    goToHomeDetails(CourseID: string | undefined) {
+      if (!CourseID) return; 
+      this.router.navigate(['/homeDetails', CourseID]);
+    }
+    
+
 
 }
