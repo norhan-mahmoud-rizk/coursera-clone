@@ -58,14 +58,39 @@
       <div class="scrollable-wrapper d-flex flex-column flex-md-row flex-grow-1 overflow-auto">
 
         <!-- Main Content -->
-        <div class="col-12 col-md-8 p-4 main-content">
+        <div class="col-12 col-md-7 m-md-4  main-content border rounded ">
           <div *ngIf="selectedSection">
             <div *ngIf="CareerCourse?.modules">
               @for( module of CareerCourse?.modules; track $index){
                 <div *ngIf="module.moduleTitle === selectedSection">
-                  <h2>{{module.moduleTitle}}</h2>
+                  <!-- <h2 class="ps-2">{{module.moduleTitle}}</h2> -->
+
+                  
                   @for( video of module.videos; track $index){
-                    <iframe width="100%" height="315" [src]="sanitizeVideoUrl(video)" frameborder="0" allowfullscreen></iframe>
+
+                   <div class="accordion accordionContainer p-3 border border-1" id="accordionExample">
+                    <div class="accordion-item ">
+                      <h2 class="accordion-header header">
+                        <button class="accordion-button mb-3 pe-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <h3 class="py-3  ps-2">{{video.title}}</h3> 
+                        
+                        </button>
+                      </h2>
+                      <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          @for(vid of video.videos; track $index){
+                         <div class="row ps-3 py-2 body mb-3">
+                            <div class="col-1"><i class="fa-solid fa-film"></i></div>
+                            <div class="col-11 video-title">
+                              <p class="fw-bold">{{vid.videoTitle}}</p>
+                              <p> video . {{vid.duration}}</p>
+                            </div>
+                         </div>
+                     }
+                        </div>
+                      </div>
+                    </div>
+                    </div>
                   }
                 </div>
               }

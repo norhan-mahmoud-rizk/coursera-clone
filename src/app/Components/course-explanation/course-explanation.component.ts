@@ -32,6 +32,7 @@ export class CourseExplanationComponent implements OnInit {
       ? String(this.activatedroute.snapshot.paramMap.get('CourseId'))
       : '';
     this.GetCareerCourseById();
+
   }
 
   toggleCourseMaterial() {
@@ -42,6 +43,8 @@ export class CourseExplanationComponent implements OnInit {
     this.CourseService.getCarerrCourseById(this.CourseId).subscribe({
       next: (data) => {
         this.CareerCourse = data;
+        console.log(this.CareerCourse);
+        
 
         // to make the first module to be the default 
         if (this.CareerCourse?.modules?.length > 0) {

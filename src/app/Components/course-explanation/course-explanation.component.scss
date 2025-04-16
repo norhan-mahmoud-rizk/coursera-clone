@@ -89,4 +89,29 @@ html, body, .container-fluid {
     }
   }
  
+
+ 
+}
+
+
+.main-content {
+ 
+ .accordion-body{
+  .body{
+
+    
+    .video-title{
+    
+      cursor: pointer;
+    p:nth-child(2){
+     color: #5b6780;
+    }
+
+    }
+    &:hover{
+      background-color: #eef4fb;
+      cursor: pointer;
+    }
+  }
+ }
 }
