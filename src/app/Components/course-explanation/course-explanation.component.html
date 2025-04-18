@@ -82,7 +82,12 @@
                             <div class="row ps-3 py-2 body mb-3">
                                <div class="col-1"><i class="fa-solid fa-film"></i></div>
                                <div class="col-11 video-title">
-                                 <p class="fw-bold">{{vid.videoTitle}}</p>
+                                <p class="fw-bold"
+                                (click)="playVideo(module.moduleTitle, video.title, vid)">
+                                {{vid.videoTitle}}
+                             </p>
+                             
+                                
                                  <p> video . {{vid.duration}}</p>
                                </div>
                             </div>

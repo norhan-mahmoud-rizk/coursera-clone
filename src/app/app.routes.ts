@@ -9,6 +9,7 @@ import { LandingPageComponent } from './Components/landing-page/landing-page.com
 import { MainLayoutComponent } from './main-layout/main-layout.component';
 import { MyLearningComponent } from './Components/my-learning/my-learning.component';
 import { CourseExplanationComponent } from './Components/course-explanation/course-explanation.component';
+import { VideoPlayerComponent } from './Components/video-player/video-player.component';
 
 export const routes: Routes = [
   // Default route to LandingPageComponent without navbar and footer
@@ -23,6 +24,8 @@ export const routes: Routes = [
       { path: 'my learning', component: MyLearningComponent, title: "my learning" },
       { path: 'onlinedegree', component: OnlineDegreesComponent, title: 'Online Degree' },
       { path: 'courseExplanation/:CourseId', component: CourseExplanationComponent, title: 'courseExplanation' },
+      { path: 'courseExplanation/:CourseId/video-player', component: VideoPlayerComponent, title: 'Video Player' },
+
       { path: 'profile', component: ProfileComponent, title: 'Profile' },
       { path: 'careercourses', component: CareerParentComponent, title: 'Career Courses' },
       { path: 'homeDetails/:id', component: HomeDetalisComponent, title: "Home Details" },

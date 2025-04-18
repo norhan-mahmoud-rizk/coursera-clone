@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+
 import { ServiceWithApiService } from '../../Services/service-with-api.service';
 import { ICareerCourses } from '../../Models/ICareerCourses';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -24,7 +24,8 @@ export class CourseExplanationComponent implements OnInit {
   constructor(
     private CourseService: ServiceWithApiService,
     private activatedroute: ActivatedRoute,
-    private sanitizer: DomSanitizer
+    private router: Router,
+    
   ) {}
 
   ngOnInit(): void {
@@ -57,9 +58,17 @@ export class CourseExplanationComponent implements OnInit {
       },
     });
   }
-
-  // Method to sanitize video URLs
-  sanitizeVideoUrl(url: string): SafeResourceUrl {
-    return this.sanitizer.bypassSecurityTrustResourceUrl(url);
+  playVideo(moduleTitle: string, videoGroupTitle: string, video: any) {
+    this.router.navigate(
+      [`/courseExplanation/${this.CourseId}/video-player`],
+      {
+        state: {
+          course: this.CareerCourse,
+          moduleTitle: videoGroupTitle,
+          video: video
+        }
+      }
+    );
   }
+
 }
