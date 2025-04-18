@@ -59,64 +59,81 @@
 
         <!-- Main Content -->
         <div class="col-12 col-md-7 m-md-4  main-content border rounded ">
-          <div *ngIf="selectedSection">
-            <div *ngIf="CareerCourse?.modules">
-              @for( module of CareerCourse?.modules; track $index){
-                <div *ngIf="module.moduleTitle === selectedSection">
+         
+          @if(selectedSection){
+              @if(CareerCourse?.modules){
+                @for( module of CareerCourse?.modules; track $index){
                   <!-- <h2 class="ps-2">{{module.moduleTitle}}</h2> -->
-
+                    @if(module.moduleTitle === selectedSection){
+                           
+                    @for( video of module.videos; track $index){
                   
-                  @for( video of module.videos; track $index){
-
-                   <div class="accordion accordionContainer p-3 border border-1" id="accordionExample">
-                    <div class="accordion-item ">
-                      <h2 class="accordion-header header">
-                        <button class="accordion-button mb-3 pe-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        <h3 class="py-3  ps-2">{{video.title}}</h3> 
-                        
-                        </button>
-                      </h2>
-                      <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                          @for(vid of video.videos; track $index){
-                         <div class="row ps-3 py-2 body mb-3">
-                            <div class="col-1"><i class="fa-solid fa-film"></i></div>
-                            <div class="col-11 video-title">
-                              <p class="fw-bold">{{vid.videoTitle}}</p>
-                              <p> video . {{vid.duration}}</p>
+                      <div class="accordion accordionContainer p-3 border border-1" id="accordionExample">
+                       <div class="accordion-item ">
+                         <h2 class="accordion-header header">
+                           <button class="accordion-button mb-3 pe-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                           <h3 class="py-3  ps-2">{{video.title}}</h3> 
+                           
+                           </button>
+                         </h2>
+                         <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                           <div class="accordion-body">
+                             @for(vid of video.videos; track $index){
+                            <div class="row ps-3 py-2 body mb-3">
+                               <div class="col-1"><i class="fa-solid fa-film"></i></div>
+                               <div class="col-11 video-title">
+                                 <p class="fw-bold">{{vid.videoTitle}}</p>
+                                 <p> video . {{vid.duration}}</p>
+                               </div>
                             </div>
+                        }
+                           </div>
                          </div>
+                       </div>
+                       </div>
                      }
-                        </div>
-                      </div>
-                    </div>
-                    </div>
-                  }
-                </div>
+                    }
+                  
+  
+                 
+                
+                }
               }
-            </div>
+             
+            
 
-            <div *ngIf="selectedSection === 'grades'">
-              <h2>Grades</h2>
-              <p>Check your grades here.</p>
-            </div>
-            <div *ngIf="selectedSection === 'notes'">
-              <h2>Notes</h2>
-              <p>Here are your notes.</p>
-            </div>
-            <div *ngIf="selectedSection === 'discussions'">
-              <h2>Discussion Forums</h2>
-              <p>Join the discussion!</p>
-            </div>
-            <div *ngIf="selectedSection === 'messages'">
-              <h2>Messages</h2>
-              <p>Read your messages here.</p>
-            </div>
-            <div *ngIf="selectedSection === 'courseInfo'">
-              <h2>Course Info</h2>
-              <p>Course information goes here.</p>
-            </div>
-          </div>
+          
+
+              @if(selectedSection === 'grades'){
+                <h2 class="ps-2">Grades</h2>
+                <p>Check your grades here.</p>
+              }
+             
+    
+              @if(selectedSection === 'notes'){
+                <h2 class="ps-2">Notes</h2>
+                <p>Here are your notes.</p>
+              }
+              
+        
+              @if(selectedSection === 'discussions'){
+                <h2 class="ps-2">Discussion Forums</h2>
+                <p>Join the discussion!</p>
+              }
+            
+       
+              @if(selectedSection === 'messages'){
+                <h2 class="ps-2">Messages</h2>
+                <p>Read your messages here.</p>
+              }
+             
+            
+              @if(selectedSection === 'courseInfo'){
+                <h2 class="ps-2">Course Info</h2>
+                <p>Course information goes here.</p>
+              }
+              
+            }
         </div>
 
         <!-- Right Sidebar -->
