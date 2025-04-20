@@ -38,16 +38,11 @@ export class LandingPageComponent implements OnInit {
   loginEmail: string = '';
   loginPassword: string = '';
 
+  
+
   // Register object
-  registerUser: Iuser = {
-    id: '',
-    name: '',
-    email: '',
-    password: '',
-    address: '',
-    myLearning: [],
-    completed: [],
-  };
+  registerUser: Iuser = {} as Iuser;
+
 
   constructor(
     private coursesGroupService: CoursesGroupService,
@@ -91,6 +86,9 @@ export class LandingPageComponent implements OnInit {
       },
     });
   }
+
+
+
 
   register() {
     this.authService.register(this.registerUser).subscribe({
