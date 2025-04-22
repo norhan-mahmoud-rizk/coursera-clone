@@ -1,4 +1,6 @@
-<div class="navSection">
+
+
+<div class="navSection paddingPage">
   <div class="mb-3">
     <div class="row g-0">
 
@@ -12,20 +14,19 @@
 
           <h1 class="card-title mb-3">{{getID?.name}}</h1>
           <p class="card-text mb-3">
-            Unlock and leverage the potential of generative AI. Learn how you can use the capabilities
-            of generative AI to enhance your work and daily life.
+           {{getID?.description}}
           </p>
 
 
           <div class="row">
             <div class="col-12 col-lg-4">
-            
+
               <button class="btn btn-primary NavButton" (click)="enrollCourse()">
-                Enroll for Free 
+                Enroll for Free
                 <p class="textBTN">Starts Mar 2</p>
               </button>
             </div>
-            <div class="col-12 col-lg-8 mb-3">
+            <div class="col-12 col-lg-8 mb-3 trytToFreeText">
               <p>Try for Free: Enroll to start your 7-day full access free trial</p>
               <a href="" class="link">Financial aid available</a>
             </div>
@@ -34,7 +35,7 @@
           </div>
 
           <div class="pt-3  ">
-            <span class="salary">29,499 </span>already enrolled
+            <span class="salary">{{getID?.views}}</span>already enrolled
           </div>
           <div class="pt-3 mb-5">
             Included with
@@ -60,7 +61,7 @@
 </div>
 
 
-<div class="row ps-5 mx-auto">
+<div class="row mx-auto paddingPage">
 
   <div class="col-4 py-1">
     <div class="row">
@@ -127,7 +128,7 @@
 </div>
 
 <!-- skill -->
-<div class="ms-4">
+<div class="paddingPage ">
   <h2 class="mb-3">
     Skills you'll gain
   </h2>
@@ -151,7 +152,7 @@
 </div>
 
 
-<div class="row ms-4">
+<div class="row DetailsTO">
   <h3 class="mb-4">Details to know</h3>
 
   <div class="col-3">
@@ -170,7 +171,7 @@
 </div>
 
 <!-- employees -->
-<div class="employees mb-5">
+<div class="employees mb-5 ">
   <div class="mb-3">
     <div class="row g-0">
 
@@ -197,7 +198,7 @@
 </div>
 
 
-<div class="ms-4 ">
+<div class="ms-4 paddingPage">
   <div class="row">
 
     <div class="col-12 col-lg-6">
@@ -230,7 +231,7 @@
   <button mat-button mat-dialog-close>Close</button>
 </div> -->
 
-<div class="row ms-4 ">
+<div class="row ms-4 paddingPage">
   <h2 class="mb-4 mt-5">Why people choose Coursera for their career</h2>
 
 <!-- 1 -->

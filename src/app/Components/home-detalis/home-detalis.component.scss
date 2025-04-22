@@ -5,15 +5,23 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+.paddingPage{
+  padding:0 48px;
 
+}
+.DetailsTO{
+  padding: 24px 48px 16px;
 }
 .navSection{
   background-color: #ebfdf8;
 
-  padding-left: 50px;
-
 }
-
+.trytToFreeText{
+ padding-left: 8px;
+ font-weight: 400;
+ font-size: 14px;
+}
 .textBTN{
   font-size: 12px;
 }
@@ -23,7 +31,7 @@
 
 .salary{
   font-weight: bold;
-  margin-right: 5px;
+  // margin-right: 5px;
 }
 
 .link{

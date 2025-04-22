@@ -1,6 +1,6 @@
 <!-- Recently Viewed Products -->
 
-<div class="container-fluid marginTopFirst">
+<div class="container-fluid marginTopFirst paddingCard">
   <div class="row margin">
     <h2 class="sectionOne">Recently Viewed Products</h2>
     <div class="container-fluid">
@@ -36,7 +36,7 @@
 
 
 <!-- start -->
-<div class="container marginTop ">
+<div class="container  ">
   <div class="row StartCard">
 
     <div class="col-12 col-lg-3 StartText">
@@ -91,7 +91,7 @@
 
 
 <!-- Most Popular Certificates -->
-<div class="container-fluid marginTop">
+<div class="container-fluid paddingCard">
   <div class="row">
     <h2 class="sectionOne">Most Popular Certificates</h2>
     <div class="container-fluid">
@@ -99,7 +99,7 @@
         @for(prod of filterArray.slice(0, visibleCount2) ; track prod.id){
         <div class="col-12 col-sm-6 col-lg-3  mt-5">
           <div class="custom-card">
-            <img class="card-image" [src]="prod.imgUrl" alt="Course Image">
+            <img class="card-image" [src]="prod.imgUrl" alt="Course Image" (click)="goToDetails(prod.id)">
             <div class="CardBody">
               <div class="card-header">
                 <img class="logo-card" [src]="prod.logoImage" alt="">
@@ -124,7 +124,7 @@
 
 
 <!-- Personalized Specializations for You -->
-<div class="container-fluid marginTop">
+<div class="container-fluid  paddingCard">
   <div class="row">
     <h2 class="sectionOne">Personalized Specializations for You</h2>
     <div class="container-fluid">
@@ -132,7 +132,7 @@
         @for(prod of filterArray.slice(0, visibleCount3) ; track prod.id){
         <div class="col-12 col-sm-6 col-lg-3  mt-5">
           <div class="custom-card">
-            <img class="card-image" [src]="prod.imgUrl" alt="Course Image">
+            <img class="card-image" [src]="prod.imgUrl" alt="Course Image" (click)="goToDetails(prod.id)" >
             <div class="CardBody">
               <div class="card-header">
                 <img class="logo-card" [src]="prod.logoImage" alt="">
@@ -157,7 +157,7 @@
 
 
 <!-- Build In-Demand Business Analysis Skills -->
-<div class="container-fluid marginTop">
+<div class="container-fluid  paddingCard">
   <div class="row">
     <h2 class="sectionOne">Build In-Demand Business Analysis Skills</h2>
     <div class="container-fluid">
@@ -165,7 +165,7 @@
         @for(prod of filterArray.slice(0, visibleCount4) ; track prod.id){
         <div class="col-12 col-sm-6 col-lg-3  mt-5">
           <div class="custom-card">
-            <img class="card-image" [src]="prod.imgUrl" alt="Course Image">
+            <img class="card-image" [src]="prod.imgUrl" alt="Course Image" (click)="goToDetails(prod.id)">
             <div class="CardBody">
               <div class="card-header">
                 <img class="logo-card" [src]="prod.logoImage" alt="">
@@ -189,7 +189,7 @@
 
 
 <!-- Explore with a Coursera Plus Subscription -->
-<div class="container-fluid marginTop">
+<div class="container-fluid  paddingCard">
   <div class="row">
     <h2 class="sectionOne">Explore with a Coursera Plus Subscription</h2>
     <div class="container-fluid">
@@ -197,7 +197,7 @@
         @for(prod of filterArray.slice(0, visibleCount5) ; track prod.id){
         <div class="col-12 col-sm-6 col-lg-3  mt-5">
           <div class="custom-card">
-            <img class="card-image" [src]="prod.imgUrl" alt="Course Image">
+            <img class="card-image" [src]="prod.imgUrl" alt="Course Image" (click)="goToDetails(prod.id)">
             <div class="CardBody">
               <div class="card-header">
                 <img class="logo-card" [src]="prod.logoImage" alt="">
@@ -266,7 +266,7 @@
 <!-- Categories -->
 <div class="container-fluid">
   <div class="row CategoriesCenter">
-    <h2>Categories</h2>
+    <h2 class="ps-5">Categories</h2>
     <div class="col-12 col-lg-5 Categories CategoriesLink rightSide">
       <h5><a href="">Arts and Humanities</a></h5>
     </div>
