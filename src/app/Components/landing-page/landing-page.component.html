@@ -1,107 +1,4 @@
-<div class="header">
-  <div class="container d-flex">
-    <div class="w-50 d-flex flex-column justify-content-center gap-3 px-5">
-      <h2 class="text-white fw-bold">Seize the weekend</h2>
-      <p>
-        Save 40% on 3 months of Coursera Plus and get unlimited access to
-        10,000+ learning programs from top institutions like IBM, Google, and
-        more.
-      </p>
-
-      <div class="d-flex gap-3">
-        <!-- Button that uses routerLink to navigate -->
-        <!-- <button 
-          class="btn btn-light rounded-1 header-button px-3 py-2"
-          [routerLink]="'/home'"> 
-         
-          explore Coursera <i class="fa-solid fa-arrow-right"></i>
-        </button>
-
-        <button class="rounded-1 header-button2 px-3 py-2">
-          Try Coursera for Business <i class="fa-solid fa-arrow-right"></i>
-        </button> -->
-
-        <button  class="btn btn-light rounded-1 header-button px-3 py-2" onclick="dialog.showModal()">Join for free</button>
-      </div>
-    </div>
-    <img class="w-50" src=".\landingPage.png" alt="" />
-  </div>
-</div>
-
-<div class="collaborate py-5">
-  <div class="container">
-    <h3 class="text-center fw-bold">
-      We collaborate with <a href="">325+ leading universities and companies</a>
-    </h3>
-    <div class="d-flex justify-content-center gap-4 py-5 collaborate-img">
-      <img src=".\illinois-3.png" alt="illinois" />
-      <img src=".\duke-3.png" alt="duke-3" />
-      <img src=".\google.png" alt="google" />
-      <img src=".\umich.png" alt="umich" />
-      <img src=".\1000px-IBM_logo.svg.png" alt="IBM_logo" />
-      <img src=".\imperial.png" alt="imperial" />
-      <img src=".\stanford.png" alt="stanford" />
-      <img src=".\penn.png" alt="penn" />
-    </div>
-  </div>
-</div>
-
-<div class="container d-flex flex-column g-3 my-3">
-  <app-group-of-courses
-    [herder]="herder"
-    [title]="title"
-    [supTitle]="supTitle"
-    [courses]="courses"
-  ></app-group-of-courses>
-
-  <div></div>
-
-  <app-group-of-courses
-    [herder]="herder"
-    [title]="title"
-    [supTitle]="supTitle"
-    [courses]="courses"
-  ></app-group-of-courses>
-  <app-group-of-courses
-    [herder]="herder"
-    [title]="title"
-    [supTitle]="supTitle"
-    [courses]="courses"
-  ></app-group-of-courses>
-  <app-group-of-courses
-    [herder]="herder"
-    [title]="title"
-    [supTitle]="supTitle"
-    [courses]="courses"
-  ></app-group-of-courses>
-</div>
-
-<div class="container">
-  <h2 class="my-5 fs-1">Explore Coursera</h2>
-  <div class="d-flex flex-wrap">
-    <app-explore-coursera
-      *ngFor="let course of exploreCourses"
-      [img]="course.img"
-      [title]="course.title"
-      [numberOfCourses]="course.numberOfCourses"
-    ></app-explore-coursera>
-  </div>
-</div>
-
-<div class="outcomes">
-  <div class="container d-flex gap-3">
-    <img src="./outcomes.png" alt="" />
-    <div class="outcomes-text d">
-      <h2>Learner outcomes on Coursera</h2>
-      <p>
-        <span>77%% of learners report career benefits,</span> such as new skills, increased pay, and new job opportunities.
-        <a href="">2023 Coursera Learner Outcomes Report</a>
-      </p>
-      <button class="btn btn-primary rounded-1 py-2 px-3">Join for free</button>
-    </div>
-  </div>
-</div>
-
+<!-- Dialogs -->
 <div class="auth-forms container py-5 " *ngIf="!authService.getToken()">
   <div class="row">
     <!-- Login Form -->
@@ -125,7 +22,7 @@
           email
           #LoginEmail="ngModel"
           [ngClass]="{'is-invalid':(LoginEmail.touched||LoginEmail.dirty)&& LoginEmail.invalid}"
-        
+
         />
         <label for="loginPassword">Password  <span class="text-danger">*</span></label>
         <input
@@ -140,24 +37,21 @@
           maxlength="72"
           #LoginPassword="ngModel"
           [ngClass]="{'is-invalid':(LoginPassword.touched||LoginPassword.dirty)&& LoginPassword.invalid}"
-        
+
         />
 
-        <!-- Only one login button -->
-        <button class="btn btn-primary w-100 mt-3 fw-bold" [disabled]="!loginForm.valid">Login</button>
+      <button class="btn btn-primary w-100 mt-3 fw-bold" [disabled]="!loginForm.valid">Login</button>
       </form>
     </div>
     </dialog>
 
     <!-- Register Form -->
-    <dialog id="dialog" class="col-md-6">
+    <dialog id="registerDialog" class="col-md-6">
     <div class="dialog-content">
       <div  class="d-flex justify-content-end">
-
-        <button onclick="dialog.close()" class="border-0 bg-light"><i class="fa-solid fa-x"></i></button>
+        <button onclick="registerDialog.close()" class="border-0 bg-light"><i class="fa-solid fa-x"></i></button>
       </div>
       <div class="dialog-header text-center mb-4 w-75 mx-auto">
-        
       <h3>Sign Up</h3>
       <p>Learn on your own time from top universities and businesses.</p>
       </div>
@@ -172,16 +66,8 @@
           class="form-control my-2"
           required
           #FullName="ngModel"
-
           [ngClass]="{'is-invalid':(FullName.touched||FullName.dirty)&&FullName.invalid}"
         />
-        <!-- @if(FullName.errors?.['required']){
-
-          <span class="invalid-feedback"> the name is required</span>
-        } -->
-
-       
-     
 
         <label for="Email">Email  <span class="text-danger">*</span></label>
         <input
@@ -196,12 +82,7 @@
           #Email="ngModel"
           [ngClass]="{'is-invalid':(Email.touched||Email.dirty)&& Email.invalid}"
         />
-    
-        <!-- @if(Email.errors?.['required']){
 
-          <span class="invalid-feedback"> the email is required</span>
-        }
-    -->
         <label for="Password">Password  <span class="text-danger">*</span></label>
         <p style="text-align: start;">Between 8 and 72 characters</p>
         <input
@@ -215,20 +96,9 @@
           minlength="8"
           maxlength="72"
           #Password="ngModel"
-
           [ngClass]="{'is-invalid':(Password.touched||Password.dirty)&& Password.invalid}"
         />
-        <!-- <span class="invalid-feedback">
-          @if(Password.errors?.['required']){
 
-            <span> the password is required</span>
-          }
-          @if(Password.errors?.['minlength']){
-
-
-            <span> the password is must be between 8 and 72</span>
-          }
-        </span> -->
         <label for="Address">Enter You Address  <span class="text-danger">*</span></label>
         <input
           id="Address"
@@ -239,24 +109,15 @@
           class="form-control my-2"
           required
           #Address="ngModel"
-
           [ngClass]="{'is-invalid':(Address.touched||Address.dirty)&& Address.invalid}"
         />
-        <!-- <span class="invalid-feedback">
-          @if(Address.errors?.['required']){
 
-            <span> the address is required</span>
-          }
-        </span> -->
-    
-
-        <!-- Disable button if form is invalid -->
         <button class="btn btn-primary w-100 py-3 mt-4 fw-bold" [disabled]="!registerForm.valid">Join for free</button>
       </form>
 
       <p class="mt-3">
         Already have an account?
-        <a href="#" onclick="dialog.close(); document.querySelector('dialog:nth-of-type(1)').showModal(); return false;" class="fw-semibold text-primary">
+        <a href="#" onclick="registerDialog.close(); document.querySelector('dialog:nth-of-type(1)').showModal(); return false;" class="fw-semibold text-primary">
           Login here
         </a>
       </p>
@@ -264,3 +125,205 @@
     </dialog>
   </div>
 </div>
+
+
+<dialog id="loginDialog">
+  <div class="dialog-content p-4">
+    <div class="d-flex justify-content-end">
+      <button onclick="document.getElementById('loginDialog')?.close()" class="border-0 bg-light">
+        <i class="fa-solid fa-x"></i>
+      </button>
+    </div>
+    <h3>Login</h3>
+    <form (ngSubmit)="login()" #loginForm="ngForm">
+      <input class="form-control my-2" type="email" name="loginEmail" placeholder="Email" required [(ngModel)]="loginEmail">
+      <input class="form-control my-2" type="password" name="loginPassword" placeholder="Password" required [(ngModel)]="loginPassword">
+      <button class="btn btn-primary w-100 mt-3" type="submit" [disabled]="!loginForm.valid">Login</button>
+    </form>
+  </div>
+</dialog>
+
+
+<!-- learn -->
+<div class="container-fluid">
+  <div class="row marginLearn">
+    <div class="col-12 col-md-7 ">
+      <h1 class="learn">{{ ArrayData[0]?.title }}</h1>
+      <p class="magrinDescription">{{ArrayData[0]?.description}}</p>
+    </div>
+    <div class="col-md-5 learnImage">
+      <img src="{{ArrayData[0].image}}" alt="">
+    </div>
+    <div class="buttonGroup">
+      <button type="button" class="btn btn-primary buttonFree" onclick="document.getElementById('registerDialog')?.showModal()">Join For Free</button>
+
+      <button type="button" class="btn btn-primary buttonFree" (click)="gotohome()">home </button>
+
+      <button type="button" class="btn btn-outline-primary buttonTry">Try Coursera for Business </button>
+    </div>
+  </div>
+</div>
+
+<!-- logo -->
+
+<div class="container-fluid logo">
+  <div class="row paddingTop">
+    <div class="center">
+      <h2>
+        <a class="universities">We collaborate with
+          <span class="leading">350+ leading universities and companies</span>
+        </a>
+      </h2>
+    </div>
+    <div class="marginLogo">
+      @for(logo of ArrayData[0]?.logoImage; track ArrayData[0].id){
+        <a href="">
+          <img src="{{logo}}" alt="" class="logoImage" >
+        </a>
+      }
+    </div>
+
+  </div>
+</div>
+
+
+<!-- Most Popular Certificates -->
+<div class="container-fluid">
+  <div class="row paddingMost">
+    <div class="Specializations">Specializations and Professional Certificates</div>
+    <h2 class="mostPopular">Most Popular Certificates</h2>
+    <p class="Specializations">Explore our most popular programs, get job-ready for an in-demand career.</p>
+
+    @for(prod of filterArray.slice(0, visibleCount2) ; track prod.id){
+      <div class="col-12 col-sm-6 col-lg-3  mt-5">
+        <div class="custom-card">
+          <img class="card-image" [src]="prod.imgUrl" alt="Course Image" (click)="goToDetails(prod.id)">
+          <div class="CardBody">
+            <div class="card-header">
+              <img class="logo-card" [src]="prod.logoImage" alt="">
+              <a class="card-link" href="#">{{prod.organization}}</a>
+            </div>
+            <h6 class="card-text">{{prod.name}}</h6>
+            <p class="last-section">Course</p>
+          </div>
+        </div>
+      </div>
+      }
+
+    </div>
+    @if(visibleCount2 < filterArray.length){ <button class="showBtn" (click)="showMoreCard2()">Show 8 more</button>
+      } @else {
+      <button class="showBtn" (click)="showfewerCard2()">Show fewer</button>
+      }
+
+</div>
+
+<!-- New on Coursera -->
+<div class="container-fluid">
+  <div class="row paddingMost">
+    <div class="Specializations">Courses and Professional Certificates</div>
+    <h2 class="mostPopular">New on Coursera</h2>
+    <p class="Specializations">Explore our newest programs, focused on delivering in-demand skills.</p>
+
+    @for(prod of filterArray.slice(0, visibleCount) ; track prod.id){
+      <div class="col-12 col-sm-6 col-lg-3  mt-5">
+        <div class="custom-card">
+          <img class="card-image" [src]="prod.imgUrl" alt="Course Image" (click)="goToDetails(prod.id)">
+          <div class="CardBody">
+            <div class="card-header">
+              <img class="logo-card" [src]="prod.logoImage" alt="">
+              <a class="card-link" href="#">{{prod.organization}}</a>
+            </div>
+            <h6 class="card-text">{{prod.name}}</h6>
+            <p class="last-section">Course</p>
+          </div>
+        </div>
+      </div>
+      }
+
+    </div>
+    @if(visibleCount2 < filterArray.length){ <button class="showBtn" (click)="showMoreCard()">Show 8 more</button>
+      } @else {
+      <button class="showBtn" (click)="showfewerCard()">Show fewer</button>
+      }
+
+</div>
+
+<!-- Get a head start on a degree today -->
+<div class="container-fluid">
+  <div class="row paddingMost">
+    <div class="Specializations">Degree Programs</div>
+    <h2 class="mostPopular">Get a head start on a degree today</h2>
+    <p class="Specializations">With these programs, you can build valuable skills, earn career credentials, and make progress
+       toward a degree before you even enroll.</p>
+
+    @for(prod of filterArray.slice(0, visibleCount3) ; track prod.id){
+      <div class="col-12 col-sm-6 col-lg-3  mt-5">
+        <div class="custom-card">
+          <img class="card-image" [src]="prod.imgUrl" alt="Course Image" (click)="goToDetails(prod.id)">
+          <div class="CardBody">
+            <div class="card-header">
+              <img class="logo-card" [src]="prod.logoImage" alt="">
+              <a class="card-link" href="#">{{prod.organization}}</a>
+            </div>
+            <h6 class="card-text">{{prod.name}}</h6>
+            <p class="last-section">Course</p>
+          </div>
+        </div>
+      </div>
+      }
+
+    </div>
+    @if(visibleCount2 < filterArray.length){ <button class="showBtn" (click)="showMoreCard3()">Show 8 more</button>
+      } @else {
+      <button class="showBtn" (click)="showfewerCard3()">Show fewer</button>
+      }
+
+</div>
+
+<!-- Explore Coursera -->
+<div class="container-fluid">
+
+  <div class="row paddingMost">
+
+    <h2 class="mostPopular exploreText">Explore Coursera</h2>
+
+    @for(explore of ArrayData[0].ExploreCoursera; track ArrayData[0].id){
+      <div class="col-sm-12 col-md-6 col-lg-4 mb-3">
+        <div class="d-flex align-items-center exploreCard border rounded shadow-sm overflow-hidden">
+          <img class="exploreImage no-left-radius" src="{{explore.image}}" alt="Data Science">
+
+          <div class="p-3">
+            <div class="fw-bold">{{explore.description}}</div>
+            <span class="text-muted">{{explore.number}} courses</span>
+          </div>
+        </div>
+      </div>
+    }
+
+  </div>
+</div>
+
+
+<div class="container-fluid">
+  <div class="row marginCommunity">
+
+    <div class="center">
+      <h2 class="communityFrom"> From the Coursera community</h2>
+    <p class="communityText">168+ million people have already joined Coursera</p>
+    </div>
+
+
+      @for(community of ArrayData[0].CourseraCommunity; track ArrayData[0].id){
+        <div class="col-md-4 communityCard">
+          <img src="{{community.image}}" alt="">
+          <h3 class="communityName communityPadding">{{community.name}}</h3>
+          <div class="communityPadding">{{community.community}}</div>
+          <div class="line"></div>
+          <div class="communityDescription">{{community.description}}</div>
+        </div>
+      }
+  </div>
+
+</div>
+
