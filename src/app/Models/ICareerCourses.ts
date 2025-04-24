@@ -10,9 +10,12 @@ export interface ICareerCourses {
   SkillsNeededValue: string;
   logoImage: string;
   organization: string;
-  views: number;        
-  reviews: number;       
-  enrolled: number;   
+  views: number;
+  reviews: number;
+  enrolled: number;
+  instructorsImage:string;
+  instructorID:string;
+  instructorName:string;
   relatedCourses: {
     RelatedCourseID: string;
     name: string;
@@ -27,9 +30,9 @@ export interface ICareerCourses {
       videos: {
         videoID: string;
         videoTitle: string;
-        url: string; 
-        duration: string; 
-      }[]; 
+        url: string;
+        duration: string;
+      }[];
     }[];
   }[];
 }

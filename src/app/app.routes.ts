@@ -11,6 +11,7 @@ import { MyLearningComponent } from './Components/my-learning/my-learning.compon
 import { CourseExplanationComponent } from './Components/course-explanation/course-explanation.component';
 import { VideoPlayerComponent } from './Components/video-player/video-player.component';
 import { AboutComponent } from './Components/about/about.component';
+import { InstructorDetailsComponent } from './Components/instructor-details/instructor-details.component';
 
 export const routes: Routes = [
   // Default route to LandingPageComponent without navbar and footer
@@ -31,6 +32,7 @@ export const routes: Routes = [
       { path: 'careercourses', component: CareerParentComponent, title: 'Career Courses' },
       { path: 'homeDetails/:id', component: HomeDetalisComponent, title: "Home Details" },
       { path: 'courseDetails/:CourseId', component: CareerCourseDetailsComponent, title: 'Course Details' },
+      { path: 'instructoeDetails/:Id', component: InstructorDetailsComponent, title: 'intructor Details' },
       { path: 'about', component: AboutComponent, title: 'About Coursera' },
     ]
   }

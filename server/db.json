@@ -94,394 +94,360 @@
       ]
     }
   ],
-  "Degrees" : [
+  "Degrees": [
     {
-        "id": "1",
-        "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/69/e53caf7a9348df9f738d2c1ad2b6d2/Clemson-logo-square-no-borders.png?auto=format%2Ccompress&dpr=1",
-        "name": "Clemson University",
-        "degree": "Master of Science in Computer Science",
-        "description": "Ranked #80 in the National University rankings (US News & World Report, 2025)",
-        "duration": "Application due August 19, 2025",
-        "level": "Master's Degree",
-        "subject" : "Computer Science",
-        "link" : "https://www.coursera.org/degrees/master-computer-science-clemson"
-
-
+      "id": "1",
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/69/e53caf7a9348df9f738d2c1ad2b6d2/Clemson-logo-square-no-borders.png?auto=format%2Ccompress&dpr=1",
+      "name": "Clemson University",
+      "degree": "Master of Science in Computer Science",
+      "description": "Ranked #80 in the National University rankings (US News & World Report, 2025)",
+      "duration": "Application due August 19, 2025",
+      "level": "Master's Degree",
+      "subject": "Computer Science",
+      "link": "https://www.coursera.org/degrees/master-computer-science-clemson"
     },
     {
-        "id": "2",
-        "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/5WVyYON4icQJuoFQfLYBM5/2e5aa47d543e59637cb208563b9fb373/BITS_Emblem.png?auto=format%2Ccompress&dpr=1",
-        "name": "University of Illinois Urbana-Champaign",
-        "degree": "Master of Science in Management (iMSM)",
-        "description": "#12 in Top Public Universities in the U.S. (U.S. News & World Report, 2023)",
-        "duration": "Application due March 5, 2025",
-        "level": "Master's Degree",
-        "subject" : "Business",
-        "link" : "https://www.coursera.org/degrees/bachelor-of-science-computer-science-bits"
-
+      "id": "2",
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/5WVyYON4icQJuoFQfLYBM5/2e5aa47d543e59637cb208563b9fb373/BITS_Emblem.png?auto=format%2Ccompress&dpr=1",
+      "name": "University of Illinois Urbana-Champaign",
+      "degree": "Master of Science in Management (iMSM)",
+      "description": "#12 in Top Public Universities in the U.S. (U.S. News & World Report, 2023)",
+      "duration": "Application due March 5, 2025",
+      "level": "Master's Degree",
+      "subject": "Business",
+      "link": "https://www.coursera.org/degrees/bachelor-of-science-computer-science-bits"
     },
     {
-        "id": "3",
-        "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/IHNuNEKZnmjtOs3g6uX9h/c0038feefd8e96515ab88ee67e1bb59f/Square_logo_for_partner_landing_page.png?auto=format%2Ccompress&dpr=1",
-        "name": "University of Huddersfield",
-        "degree": "MSc Management",
-        "description": "AACSB accredited, Business School of the Year 2023 (THE Awards), top in the UK in the global Times Higher Education Young University Rankings 2024",
-        "duration": "Application due May 18, 2025",
-        "level": "Master's Degree",
-        "subject" : "Business",
-        "link" : "https://www.coursera.org/degrees/bachelor-of-science-data-science-ai-iitguwahati"
-
+      "id": "3",
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/IHNuNEKZnmjtOs3g6uX9h/c0038feefd8e96515ab88ee67e1bb59f/Square_logo_for_partner_landing_page.png?auto=format%2Ccompress&dpr=1",
+      "name": "University of Huddersfield",
+      "degree": "MSc Management",
+      "description": "AACSB accredited, Business School of the Year 2023 (THE Awards), top in the UK in the global Times Higher Education Young University Rankings 2024",
+      "duration": "Application due May 18, 2025",
+      "level": "Master's Degree",
+      "subject": "Business",
+      "link": "https://www.coursera.org/degrees/bachelor-of-science-data-science-ai-iitguwahati"
     },
     {
-        "id": "4",
-        "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/7EM0x2VEDTvYABQqQXiIem/6ce5b3f131a225cbf1a6b0aa24af8df6/University_of_Michigan_Horizontal_Logo.png?auto=format%2Ccompress&dpr=1",
-        "name": "University of Michigan",
-        "degree": "Master of Applied Data Science",
-        "description": "#1 Public Research University in the U.S. (QS World Rankings, 2022)",
-        "duration": "Application due March 14, 2025",
-        "level": "Master's Degree",
-        "subject" : "Data Science",
-        "link" : "https://www.coursera.org/degrees/master-of-applied-data-science-umich"
-
+      "id": "4",
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/7EM0x2VEDTvYABQqQXiIem/6ce5b3f131a225cbf1a6b0aa24af8df6/University_of_Michigan_Horizontal_Logo.png?auto=format%2Ccompress&dpr=1",
+      "name": "University of Michigan",
+      "degree": "Master of Applied Data Science",
+      "description": "#1 Public Research University in the U.S. (QS World Rankings, 2022)",
+      "duration": "Application due March 14, 2025",
+      "level": "Master's Degree",
+      "subject": "Data Science",
+      "link": "https://www.coursera.org/degrees/master-of-applied-data-science-umich"
     },
     {
-        "id": "5",
-        "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/2UqKAdajxMiAKGLdOgYCrc/f09facd5960e7697c6398f672c7c14dc/Captura_de_pantalla_2023-08-30_a_la_s__11.29.07_a.m..png?auto=format%2Ccompress&dpr=1",
-        "name": "Northeastern University",
-        "degree": "Master of Science in Data Analytics Engineering",
-        "description": "Ranked in the top 40 of the U.S. News Best Graduate Schools in Engineering",
-        "duration": "Application due March 27, 2025",
-        "level": "Master's Degree",
-        "subject" : "Data Science",
-        "link" : "https://www.coursera.org/degrees/ms-data-analytics-engineering-northeastern"
-
+      "id": "5",
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/2UqKAdajxMiAKGLdOgYCrc/f09facd5960e7697c6398f672c7c14dc/Captura_de_pantalla_2023-08-30_a_la_s__11.29.07_a.m..png?auto=format%2Ccompress&dpr=1",
+      "name": "Northeastern University",
+      "degree": "Master of Science in Data Analytics Engineering",
+      "description": "Ranked in the top 40 of the U.S. News Best Graduate Schools in Engineering",
+      "duration": "Application due March 27, 2025",
+      "level": "Master's Degree",
+      "subject": "Data Science",
+      "link": "https://www.coursera.org/degrees/ms-data-analytics-engineering-northeastern"
     },
     {
-        "id": "6",
-        "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/3DZlvCCGVWluFtfeXoCgFO/e0e068904fbabadd01c00c3165f54f68/900x200_px_SCI_Logo.png?auto=format%2Ccompress&dpr=1",
-        "name": "University of Pittsburgh",
-        "degree": "Master of Data Science",
-        "description": "A highly-ranked, Carnegie R1 public research institution",
-        "duration": "Application due May 6, 2025",
-        "level": "Master's Degree",
-        "subject" : "Data Science",
-        "link" : "https://www.coursera.org/degrees/master-of-data-science-university-of-pittsburgh"
-
+      "id": "6",
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/3DZlvCCGVWluFtfeXoCgFO/e0e068904fbabadd01c00c3165f54f68/900x200_px_SCI_Logo.png?auto=format%2Ccompress&dpr=1",
+      "name": "University of Pittsburgh",
+      "degree": "Master of Data Science",
+      "description": "A highly-ranked, Carnegie R1 public research institution",
+      "duration": "Application due May 6, 2025",
+      "level": "Master's Degree",
+      "subject": "Data Science",
+      "link": "https://www.coursera.org/degrees/master-of-data-science-university-of-pittsburgh"
     },
     {
-        "id": "7",
-        "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/2Io1b5QQU4YcyVOuQTdjOO/e29485e582c8a543ca136e61d3ef78e8/OPJindal.jpg?auto=format%2Ccompress&dpr=1",
-        "name": "O.P. Jindal Global University",
-        "degree": "MBA in Business Analytics",
-        "description": "#1 ranked private university in India (QS World University Rankings, 2021)",
-        "duration": "Application due March 29, 2025",
-        "level": "Master's Degree",
-        "subject" : "Business",
-        "link" : "https://www.coursera.org/degrees/ma-public-policy-jgu"
-
+      "id": "7",
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/2Io1b5QQU4YcyVOuQTdjOO/e29485e582c8a543ca136e61d3ef78e8/OPJindal.jpg?auto=format%2Ccompress&dpr=1",
+      "name": "O.P. Jindal Global University",
+      "degree": "MBA in Business Analytics",
+      "description": "#1 ranked private university in India (QS World University Rankings, 2021)",
+      "duration": "Application due March 29, 2025",
+      "level": "Master's Degree",
+      "subject": "Business",
+      "link": "https://www.coursera.org/degrees/ma-public-policy-jgu"
     },
     {
-        "id": "8",
-        "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/4mrOdqJi42NxrBI41WUp6o/d25b6495268583fe9c079bfbac858fa8/University_of_London_logo.svg.png?auto=format%2Ccompress&dpr=1",
-        "name": "University of London",
-        "degree": "International Foundation Programme for Computer Science",
-        "description": "Secure your future in computer science regardless of your academic or professional experience and qualifications",
-        "duration": "Application due June 1, 2025",
-        "level": "Bachelor's Degree",
-        "subject" : "Business",
-        "link" : "https://www.coursera.org/degrees/ifp-computer-science-london"
-
+      "id": "8",
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/4mrOdqJi42NxrBI41WUp6o/d25b6495268583fe9c079bfbac858fa8/University_of_London_logo.svg.png?auto=format%2Ccompress&dpr=1",
+      "name": "University of London",
+      "degree": "International Foundation Programme for Computer Science",
+      "description": "Secure your future in computer science regardless of your academic or professional experience and qualifications",
+      "duration": "Application due June 1, 2025",
+      "level": "Bachelor's Degree",
+      "subject": "Business",
+      "link": "https://www.coursera.org/degrees/ifp-computer-science-london"
     },
     {
-        "id": "9",
-        "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/2yj3zCXqTytZevxwT4h4xK/114973b81842684c450c6dfc67338276/London_Goldsmiths_logo_1000x200.png?auto=format%2Ccompress&dpr=1",
-        "name": "University of London",
-        "degree": "Bachelor of Science in Computer Science",
-        "description": "Specialise in ML and AI, data science, web and mobile development, physical computing and IoT, game development, VR, or UX",
-        "duration": "Application due March 9, 2025",
-        "level": "Bachelor's Degree",
-        "subject" : "Computer Science",
-        "link" : "https://www.coursera.org/degrees/bachelor-of-science-computer-science-london"
-
+      "id": "9",
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/2yj3zCXqTytZevxwT4h4xK/114973b81842684c450c6dfc67338276/London_Goldsmiths_logo_1000x200.png?auto=format%2Ccompress&dpr=1",
+      "name": "University of London",
+      "degree": "Bachelor of Science in Computer Science",
+      "description": "Specialise in ML and AI, data science, web and mobile development, physical computing and IoT, game development, VR, or UX",
+      "duration": "Application due March 9, 2025",
+      "level": "Bachelor's Degree",
+      "subject": "Computer Science",
+      "link": "https://www.coursera.org/degrees/bachelor-of-science-computer-science-london"
     },
     {
-        "id": "10",
-        "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/249FlRfDx2yviQr9UUz57n/e25a8f5dd17ed44212698529e3e88760/Georgetown_SCS_MonotoneLogo.png?auto=format%2Ccompress&dpr=1",
-        "name": "Georgetown University",
-        "degree": "Bachelor of Arts in Liberal Studies",
-        "description": "Ranked #24 in the National University rankings (US News & World Report, 2025)",
-        "duration": "Application due March 31, 2025",
-        "level": "Bachelor's Degree",
-        "subject" : "Arts and Humanities",
-        "link": "https://www.coursera.org/degrees/ba-liberal-studies-georgetown"
-
+      "id": "10",
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/249FlRfDx2yviQr9UUz57n/e25a8f5dd17ed44212698529e3e88760/Georgetown_SCS_MonotoneLogo.png?auto=format%2Ccompress&dpr=1",
+      "name": "Georgetown University",
+      "degree": "Bachelor of Arts in Liberal Studies",
+      "description": "Ranked #24 in the National University rankings (US News & World Report, 2025)",
+      "duration": "Application due March 31, 2025",
+      "level": "Bachelor's Degree",
+      "subject": "Arts and Humanities",
+      "link": "https://www.coursera.org/degrees/ba-liberal-studies-georgetown"
     },
     {
-        "id": "11",
-        "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/69/e53caf7a9348df9f738d2c1ad2b6d2/Clemson-logo-square-no-borders.png?auto=format%2Ccompress&dpr=1",
-        "name": "University of Huddersfield",
-        "degree": "MSc Management",
-        "description": "AACSB accredited, Business School of the Year 2023 (THE Awards), top in the UK in the global Times Higher Education Young University Rankings 2024",
-        "duration": "Application due May 18, 2025",
-        "level": "Master's Degree",
-        "subject" : "Business",
-        "link" : "https://www.coursera.org/degrees/master-computer-science-clemson"
-
+      "id": "11",
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/69/e53caf7a9348df9f738d2c1ad2b6d2/Clemson-logo-square-no-borders.png?auto=format%2Ccompress&dpr=1",
+      "name": "University of Huddersfield",
+      "degree": "MSc Management",
+      "description": "AACSB accredited, Business School of the Year 2023 (THE Awards), top in the UK in the global Times Higher Education Young University Rankings 2024",
+      "duration": "Application due May 18, 2025",
+      "level": "Master's Degree",
+      "subject": "Business",
+      "link": "https://www.coursera.org/degrees/master-computer-science-clemson"
     },
     {
-        "id": "12",
-        "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/5bvCtypTxR2uVK6aH7HS0k/0e98a5efb8aaed315766914559c8c4e0/200x400_logo__1_.jpg?auto=format%2Ccompress&dpr=1",
-        "name": "University of Michigan",
-        "degree": "Master of Applied Data Science",
-        "description": "#1 Public Research University in the U.S. (QS World Rankings, 2022)",
-        "duration": "Application due March 14, 2025",
-        "level": "Master's Degree",
-        "subject" : "Data Science",
-        "link" : "https://www.coursera.org/degrees/msc-management-huddersfield"
-
+      "id": "12",
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/5bvCtypTxR2uVK6aH7HS0k/0e98a5efb8aaed315766914559c8c4e0/200x400_logo__1_.jpg?auto=format%2Ccompress&dpr=1",
+      "name": "University of Michigan",
+      "degree": "Master of Applied Data Science",
+      "description": "#1 Public Research University in the U.S. (QS World Rankings, 2022)",
+      "duration": "Application due March 14, 2025",
+      "level": "Master's Degree",
+      "subject": "Data Science",
+      "link": "https://www.coursera.org/degrees/msc-management-huddersfield"
     },
     {
-        "id": "13",
-        "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/5ASJDg3lEJwiQ2i3baLYbD/f64e9ef7e44f9cc4bb38b8bc2c9659b0/UoL_Royal_Holloway_logo.png?auto=format%2Ccompress&dpr=1",
-        "name": "University of London",
-        "degree": "Master of Science in Cyber Security",
-        "description": "Ranked #34 in the UK (The Times and Sunday Times Good University Guide 2025)",
-        "duration": "Application due March 27, 2025",
-        "level": "Master's Degree",
-        "subject" : "Information Technology",
-        "link" : "https://www.coursera.org/degrees/msc-cyber-security-london"
-
-
+      "id": "13",
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/5ASJDg3lEJwiQ2i3baLYbD/f64e9ef7e44f9cc4bb38b8bc2c9659b0/UoL_Royal_Holloway_logo.png?auto=format%2Ccompress&dpr=1",
+      "name": "University of London",
+      "degree": "Master of Science in Cyber Security",
+      "description": "Ranked #34 in the UK (The Times and Sunday Times Good University Guide 2025)",
+      "duration": "Application due March 27, 2025",
+      "level": "Master's Degree",
+      "subject": "Information Technology",
+      "link": "https://www.coursera.org/degrees/msc-cyber-security-london"
     },
     {
-        "id": "14",
-        "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/7EM0x2VEDTvYABQqQXiIem/6ce5b3f131a225cbf1a6b0aa24af8df6/University_of_Michigan_Horizontal_Logo.png?auto=format%2Ccompress&dpr=1",
-        "name": "University of Michigan",
-        "degree": "Master of Public Health",
-        "description": "A highly-ranked, Carnegie R1 public research institution",
-        "duration": "Application due May 6, 2025",
-        "level": "Master's Degree",
-        "subject" : "Health",
-        "link" : "https://www.coursera.org/degrees/master-of-applied-data-science-umich"
-
+      "id": "14",
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/7EM0x2VEDTvYABQqQXiIem/6ce5b3f131a225cbf1a6b0aa24af8df6/University_of_Michigan_Horizontal_Logo.png?auto=format%2Ccompress&dpr=1",
+      "name": "University of Michigan",
+      "degree": "Master of Public Health",
+      "description": "A highly-ranked, Carnegie R1 public research institution",
+      "duration": "Application due May 6, 2025",
+      "level": "Master's Degree",
+      "subject": "Health",
+      "link": "https://www.coursera.org/degrees/master-of-applied-data-science-umich"
     },
     {
-        "id": "15",
-        "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/rMCBKMrF70cUNdZeBogKq/2fe16830ca7d2ad13fed79d7327d86cf/UC_I_Chile_1__1_.png?auto=format%2Ccompress&dpr=1",
-        "name": "Pontificia Universidad Católica de",
-        "degree": "Magíster en Salud Pública Global",
-        "description": "Universidad No. 1 de Latinoamérica (QS Ranking 2023)",
-        "duration": "Application due March 29, 2025",
-        "level": "Master's Degree",
-        "subject" : "Health",
-        "link" : "https://www.coursera.org/degrees/magister-en-ciencia-de-datos-ucchile"
-
+      "id": "15",
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/rMCBKMrF70cUNdZeBogKq/2fe16830ca7d2ad13fed79d7327d86cf/UC_I_Chile_1__1_.png?auto=format%2Ccompress&dpr=1",
+      "name": "Pontificia Universidad Católica de",
+      "degree": "Magíster en Salud Pública Global",
+      "description": "Universidad No. 1 de Latinoamérica (QS Ranking 2023)",
+      "duration": "Application due March 29, 2025",
+      "level": "Master's Degree",
+      "subject": "Health",
+      "link": "https://www.coursera.org/degrees/magister-en-ciencia-de-datos-ucchile"
     },
     {
-        "id": "16",
-        "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/4mrOdqJi42NxrBI41WUp6o/d25b6495268583fe9c079bfbac858fa8/University_of_London_logo.svg.png?auto=format%2Ccompress&dpr=1",
-        "name": "University of London",
-        "degree": "International Foundation Programme for Computer Science",
-        "description": "Secure your future in computer science regardless of your academic or professional experience and qualifications",
-        "duration": "Application due June 1, 2025",
-        "level": "Bachelor's Degree",
-        "subject" : "Math and Logic",
-        "link" : "https://www.coursera.org/degrees/ifp-computer-science-london"
-
+      "id": "16",
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/4mrOdqJi42NxrBI41WUp6o/d25b6495268583fe9c079bfbac858fa8/University_of_London_logo.svg.png?auto=format%2Ccompress&dpr=1",
+      "name": "University of London",
+      "degree": "International Foundation Programme for Computer Science",
+      "description": "Secure your future in computer science regardless of your academic or professional experience and qualifications",
+      "duration": "Application due June 1, 2025",
+      "level": "Bachelor's Degree",
+      "subject": "Math and Logic",
+      "link": "https://www.coursera.org/degrees/ifp-computer-science-london"
     },
     {
-        "id": "17",
-        "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/7sYMgDJqCDHFvK5oVGE3lE/fe0066b4eb26c82ac6475165e5a97c77/UoL__black.png?auto=format%2Ccompress&dpr=1",
-        "name": "University of Leeds",
-        "degree": "MSc Data Science (Statistics)",
-        "description": "Ranked #80 in the National University rankings (US News & World Report, 2025)",
-        "duration": "Application due August 19, 2025",
-        "level": "Bachelor's Degree",
-        "subject" : "Math and Logic",
-        "link" : "https://www.coursera.org/degrees/msc-data-science-ul"
-
+      "id": "17",
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/7sYMgDJqCDHFvK5oVGE3lE/fe0066b4eb26c82ac6475165e5a97c77/UoL__black.png?auto=format%2Ccompress&dpr=1",
+      "name": "University of Leeds",
+      "degree": "MSc Data Science (Statistics)",
+      "description": "Ranked #80 in the National University rankings (US News & World Report, 2025)",
+      "duration": "Application due August 19, 2025",
+      "level": "Bachelor's Degree",
+      "subject": "Math and Logic",
+      "link": "https://www.coursera.org/degrees/msc-data-science-ul"
     },
     {
-        "id": "18",
-        "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/7Gv6kCXvhPrxw8ttsKzA5Y/bced82c9e8cbdf44c6c5b71e5983a89d/green-dartmouth-engineering-horizontal-logo__1_.png?auto=format%2Ccompress&dpr=1",
-        "name": "Dartmouth College",
-        "degree": "Master of Engineering in Computer Engineering",
-        "description": "#12 in Top Public Universities in the U.S. (U.S. News & World Report, 2023)",
-        "duration": "Application due March 5, 2025",
-        "level": "Master's Degree",
-        "subject" : "Physical Science and Engineering",
-        "link" : "https://www.coursera.org/degrees/meng-computer-engineering-dartmouth"
-
+      "id": "18",
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/7Gv6kCXvhPrxw8ttsKzA5Y/bced82c9e8cbdf44c6c5b71e5983a89d/green-dartmouth-engineering-horizontal-logo__1_.png?auto=format%2Ccompress&dpr=1",
+      "name": "Dartmouth College",
+      "degree": "Master of Engineering in Computer Engineering",
+      "description": "#12 in Top Public Universities in the U.S. (U.S. News & World Report, 2023)",
+      "duration": "Application due March 5, 2025",
+      "level": "Master's Degree",
+      "subject": "Physical Science and Engineering",
+      "link": "https://www.coursera.org/degrees/meng-computer-engineering-dartmouth"
     },
     {
-        "id": "19",
-        "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/249FlRfDx2yviQr9UUz57n/e25a8f5dd17ed44212698529e3e88760/Georgetown_SCS_MonotoneLogo.png?auto=format%2Ccompress&dpr=1",
-        "name": "Georgetown University",
-        "degree": "Bachelor of Arts in Liberal Studies",
-        "description": "AACSB accredited, Business School of the Year 2023 (THE Awards), top in the UK in the global Times Higher Education Young University Rankings 2024",
-        "duration": "Application due May 18, 2025",
-        "level": "Master's Degree",
-        "subject" : "Social Science",
-        "link": "https://www.coursera.org/degrees/ba-liberal-studies-georgetown"
-
+      "id": "19",
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/249FlRfDx2yviQr9UUz57n/e25a8f5dd17ed44212698529e3e88760/Georgetown_SCS_MonotoneLogo.png?auto=format%2Ccompress&dpr=1",
+      "name": "Georgetown University",
+      "degree": "Bachelor of Arts in Liberal Studies",
+      "description": "AACSB accredited, Business School of the Year 2023 (THE Awards), top in the UK in the global Times Higher Education Young University Rankings 2024",
+      "duration": "Application due May 18, 2025",
+      "level": "Master's Degree",
+      "subject": "Social Science",
+      "link": "https://www.coursera.org/degrees/ba-liberal-studies-georgetown"
     },
     {
-        "id": "20",
-        "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/7EM0x2VEDTvYABQqQXiIem/6ce5b3f131a225cbf1a6b0aa24af8df6/University_of_Michigan_Horizontal_Logo.png?auto=format%2Ccompress&dpr=1",
-        "name": "University of Michigan",
-        "degree": "Master of Applied Data Science",
-        "description": "#1 Public Research University in the U.S. (QS World Rankings, 2022)",
-        "duration": "Application due March 14, 2025",
-        "level": "Bachelor's Degree",
-        "subject" : "Arts and Humanities",
-        "link" : "https://www.coursera.org/degrees/master-of-applied-data-science-umich"
-
+      "id": "20",
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/7EM0x2VEDTvYABQqQXiIem/6ce5b3f131a225cbf1a6b0aa24af8df6/University_of_Michigan_Horizontal_Logo.png?auto=format%2Ccompress&dpr=1",
+      "name": "University of Michigan",
+      "degree": "Master of Applied Data Science",
+      "description": "#1 Public Research University in the U.S. (QS World Rankings, 2022)",
+      "duration": "Application due March 14, 2025",
+      "level": "Bachelor's Degree",
+      "subject": "Arts and Humanities",
+      "link": "https://www.coursera.org/degrees/master-of-applied-data-science-umich"
     },
     {
-        "id": "21",
-        "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/2UqKAdajxMiAKGLdOgYCrc/f09facd5960e7697c6398f672c7c14dc/Captura_de_pantalla_2023-08-30_a_la_s__11.29.07_a.m..png?auto=format%2Ccompress&dpr=1",
-        "name": "Northeastern University",
-        "degree": "Master of Science in Data Analytics Engineering",
-        "description": "Ranked in the top 40 of the U.S. News Best Graduate Schools in Engineering",
-        "duration": "Application due March 27, 2025",
-        "level": "Bachelor's Degree",
-        "subject" : "Arts and Humanities",
-        "link" : "https://www.coursera.org/degrees/ms-information-systems-northeastern"
-
+      "id": "21",
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/2UqKAdajxMiAKGLdOgYCrc/f09facd5960e7697c6398f672c7c14dc/Captura_de_pantalla_2023-08-30_a_la_s__11.29.07_a.m..png?auto=format%2Ccompress&dpr=1",
+      "name": "Northeastern University",
+      "degree": "Master of Science in Data Analytics Engineering",
+      "description": "Ranked in the top 40 of the U.S. News Best Graduate Schools in Engineering",
+      "duration": "Application due March 27, 2025",
+      "level": "Bachelor's Degree",
+      "subject": "Arts and Humanities",
+      "link": "https://www.coursera.org/degrees/ms-information-systems-northeastern"
     },
     {
-        "id": "22",
-        "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/5bvCtypTxR2uVK6aH7HS0k/0e98a5efb8aaed315766914559c8c4e0/200x400_logo__1_.jpg?auto=format%2Ccompress&dpr=1",
-        "name": "University of Huddersfield",
-        "degree": "MSc Management",
-        "description": "A highly-ranked, Carnegie R1 public research institution",
-        "duration": "Application due May 6, 2025",
-        "level": "Master's Degree",
-        "subject" : "Business",
-        "link" : "https://www.coursera.org/degrees/msc-management-huddersfield"
-
+      "id": "22",
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/5bvCtypTxR2uVK6aH7HS0k/0e98a5efb8aaed315766914559c8c4e0/200x400_logo__1_.jpg?auto=format%2Ccompress&dpr=1",
+      "name": "University of Huddersfield",
+      "degree": "MSc Management",
+      "description": "A highly-ranked, Carnegie R1 public research institution",
+      "duration": "Application due May 6, 2025",
+      "level": "Master's Degree",
+      "subject": "Business",
+      "link": "https://www.coursera.org/degrees/msc-management-huddersfield"
     },
     {
-        "id": "23",
-        "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/2Io1b5QQU4YcyVOuQTdjOO/e29485e582c8a543ca136e61d3ef78e8/OPJindal.jpg?auto=format%2Ccompress&dpr=1",
-        "name": "O.P. Jindal Global University",
-        "degree": "MBA in Business Analytics",
-        "description": "#1 ranked private university in India (QS World University Rankings, 2021)",
-        "duration": "Application due March 29, 2025",
-        "level": "Master's Degree",
-        "subject" : "Business",
-        "link" : "https://www.coursera.org/degrees/mba-business-analytics-jgu"
-
+      "id": "23",
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/2Io1b5QQU4YcyVOuQTdjOO/e29485e582c8a543ca136e61d3ef78e8/OPJindal.jpg?auto=format%2Ccompress&dpr=1",
+      "name": "O.P. Jindal Global University",
+      "degree": "MBA in Business Analytics",
+      "description": "#1 ranked private university in India (QS World University Rankings, 2021)",
+      "duration": "Application due March 29, 2025",
+      "level": "Master's Degree",
+      "subject": "Business",
+      "link": "https://www.coursera.org/degrees/mba-business-analytics-jgu"
     },
     {
-        "id": "24",
-        "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/4mrOdqJi42NxrBI41WUp6o/d25b6495268583fe9c079bfbac858fa8/University_of_London_logo.svg.png?auto=format%2Ccompress&dpr=1",
-        "name": "University of London",
-        "degree": "International Foundation Programme for Computer Science",
-        "description": "Secure your future in computer science regardless of your academic or professional experience and qualifications",
-        "duration": "Application due June 1, 2025",
-        "level": "Master's Degree",
-        "subject" : "Business",
-        "link" : "https://www.coursera.org/degrees/ifp-computer-science-london"
-
+      "id": "24",
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/4mrOdqJi42NxrBI41WUp6o/d25b6495268583fe9c079bfbac858fa8/University_of_London_logo.svg.png?auto=format%2Ccompress&dpr=1",
+      "name": "University of London",
+      "degree": "International Foundation Programme for Computer Science",
+      "description": "Secure your future in computer science regardless of your academic or professional experience and qualifications",
+      "duration": "Application due June 1, 2025",
+      "level": "Master's Degree",
+      "subject": "Business",
+      "link": "https://www.coursera.org/degrees/ifp-computer-science-london"
     },
     {
-        "id": "25",
-        "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/69/e53caf7a9348df9f738d2c1ad2b6d2/Clemson-logo-square-no-borders.png?auto=format%2Ccompress&dpr=1",
-        "name": "Clemson University",
-        "degree": "Master of Science in Computer Science",
-        "description": "Ranked #80 in the National University rankings (US News & World Report, 2025)",
-        "duration": "Application due August 19, 2025",
-        "level": "Master's Degree",
-        "subject" : "Business",
-        "link" : "https://www.coursera.org/degrees/master-computer-science-clemson"
-
+      "id": "25",
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/69/e53caf7a9348df9f738d2c1ad2b6d2/Clemson-logo-square-no-borders.png?auto=format%2Ccompress&dpr=1",
+      "name": "Clemson University",
+      "degree": "Master of Science in Computer Science",
+      "description": "Ranked #80 in the National University rankings (US News & World Report, 2025)",
+      "duration": "Application due August 19, 2025",
+      "level": "Master's Degree",
+      "subject": "Business",
+      "link": "https://www.coursera.org/degrees/master-computer-science-clemson"
     },
     {
-        "id": "26",
-        "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/1Rp5a6TiZD2LO4n6MHsMtS/78e1f67bd7784a40ddae53db3389a054/IllinoisGies.jpg?auto=format%2Ccompress&dpr=1",
-        "name": "University of Illinois Urbana-Champaign",
-        "degree": "Master of Science in Management (iMSM)",
-        "description": "#12 in Top Public Universities in the U.S. (U.S. News & World Report, 2023)",
-        "duration": "Application due March 5, 2025",
-        "level": "Master's Degree",
-        "subject" : "Business",
-        "link" : "https://www.coursera.org/degrees/imsa"
-
+      "id": "26",
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/1Rp5a6TiZD2LO4n6MHsMtS/78e1f67bd7784a40ddae53db3389a054/IllinoisGies.jpg?auto=format%2Ccompress&dpr=1",
+      "name": "University of Illinois Urbana-Champaign",
+      "degree": "Master of Science in Management (iMSM)",
+      "description": "#12 in Top Public Universities in the U.S. (U.S. News & World Report, 2023)",
+      "duration": "Application due March 5, 2025",
+      "level": "Master's Degree",
+      "subject": "Business",
+      "link": "https://www.coursera.org/degrees/imsa"
     },
     {
-        "id": "27",
-        "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/5bvCtypTxR2uVK6aH7HS0k/0e98a5efb8aaed315766914559c8c4e0/200x400_logo__1_.jpg?auto=format%2Ccompress&dpr=1",
-        "name": "University of Huddersfield",
-        "degree": "MSc Management",
-        "description": "AACSB accredited, Business School of the Year 2023 (THE Awards), top in the UK in the global Times Higher Education Young University Rankings 2024",
-        "duration": "Application due May 18, 2025",
-        "level": "Master's Degree",
-        "subject" : "Business",
-        "link" : "https://www.coursera.org/degrees/msc-management-huddersfield"
-
+      "id": "27",
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/5bvCtypTxR2uVK6aH7HS0k/0e98a5efb8aaed315766914559c8c4e0/200x400_logo__1_.jpg?auto=format%2Ccompress&dpr=1",
+      "name": "University of Huddersfield",
+      "degree": "MSc Management",
+      "description": "AACSB accredited, Business School of the Year 2023 (THE Awards), top in the UK in the global Times Higher Education Young University Rankings 2024",
+      "duration": "Application due May 18, 2025",
+      "level": "Master's Degree",
+      "subject": "Business",
+      "link": "https://www.coursera.org/degrees/msc-management-huddersfield"
     },
     {
-        "id": "28",
-        "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/7EM0x2VEDTvYABQqQXiIem/6ce5b3f131a225cbf1a6b0aa24af8df6/University_of_Michigan_Horizontal_Logo.png?auto=format%2Ccompress&dpr=1",
-        "name": "University of Michigan",
-        "degree": "Master of Applied Data Science",
-        "description": "#1 Public Research University in the U.S. (QS World Rankings, 2022)",
-        "duration": "Application due March 14, 2025",
-        "level": "Master's Degree",
-        "subject" : "Business",
-        "link" : "https://www.coursera.org/degrees/master-of-applied-data-science-umich"
-
+      "id": "28",
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/7EM0x2VEDTvYABQqQXiIem/6ce5b3f131a225cbf1a6b0aa24af8df6/University_of_Michigan_Horizontal_Logo.png?auto=format%2Ccompress&dpr=1",
+      "name": "University of Michigan",
+      "degree": "Master of Applied Data Science",
+      "description": "#1 Public Research University in the U.S. (QS World Rankings, 2022)",
+      "duration": "Application due March 14, 2025",
+      "level": "Master's Degree",
+      "subject": "Business",
+      "link": "https://www.coursera.org/degrees/master-of-applied-data-science-umich"
     },
     {
-        "id": "29",
-        "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/2UqKAdajxMiAKGLdOgYCrc/f09facd5960e7697c6398f672c7c14dc/Captura_de_pantalla_2023-08-30_a_la_s__11.29.07_a.m..png?auto=format%2Ccompress&dpr=1",
-        "name": "Northeastern University",
-        "degree": "Master of Science in Data Analytics Engineering",
-        "description": "Ranked in the top 40 of the U.S. News Best Graduate Schools in Engineering",
-        "duration": "Application due March 27, 2025",
-        "level": "Master's Degree",
-        "subject" : "Business",
-        "link" : "https://www.coursera.org/degrees/ms-data-analytics-engineering-northeastern"
-
+      "id": "29",
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/2UqKAdajxMiAKGLdOgYCrc/f09facd5960e7697c6398f672c7c14dc/Captura_de_pantalla_2023-08-30_a_la_s__11.29.07_a.m..png?auto=format%2Ccompress&dpr=1",
+      "name": "Northeastern University",
+      "degree": "Master of Science in Data Analytics Engineering",
+      "description": "Ranked in the top 40 of the U.S. News Best Graduate Schools in Engineering",
+      "duration": "Application due March 27, 2025",
+      "level": "Master's Degree",
+      "subject": "Business",
+      "link": "https://www.coursera.org/degrees/ms-data-analytics-engineering-northeastern"
     },
     {
-        "id": "30",
-        "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/3DZlvCCGVWluFtfeXoCgFO/e0e068904fbabadd01c00c3165f54f68/900x200_px_SCI_Logo.png?auto=format%2Ccompress&dpr=1",
-        "name": "University of Pittsburgh",
-        "degree": "Master of Data Science",
-        "description": "A highly-ranked, Carnegie R1 public research institution",
-        "duration": "Application due May 6, 2025",
-        "level": "Master's Degree",
-        "subject" : "Data Science",
-        "link" : "https://www.coursera.org/degrees/master-of-data-science-university-of-pittsburgh"
-
+      "id": "30",
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/3DZlvCCGVWluFtfeXoCgFO/e0e068904fbabadd01c00c3165f54f68/900x200_px_SCI_Logo.png?auto=format%2Ccompress&dpr=1",
+      "name": "University of Pittsburgh",
+      "degree": "Master of Data Science",
+      "description": "A highly-ranked, Carnegie R1 public research institution",
+      "duration": "Application due May 6, 2025",
+      "level": "Master's Degree",
+      "subject": "Data Science",
+      "link": "https://www.coursera.org/degrees/master-of-data-science-university-of-pittsburgh"
     },
     {
-        "id": "31",
-        "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/2Io1b5QQU4YcyVOuQTdjOO/e29485e582c8a543ca136e61d3ef78e8/OPJindal.jpg?auto=format%2Ccompress&dpr=1",
-        "name": "O.P. Jindal Global University",
-        "degree": "MBA in Business Analytics",
-        "description": "#1 ranked private university in India (QS World University Rankings, 2021)",
-        "duration": "Application due March 29, 2025",
-        "level": "Master's Degree",
-        "subject" : "Business",
-        "link" : "https://www.coursera.org/degrees/ma-public-policy-jgu"
-
+      "id": "31",
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/2Io1b5QQU4YcyVOuQTdjOO/e29485e582c8a543ca136e61d3ef78e8/OPJindal.jpg?auto=format%2Ccompress&dpr=1",
+      "name": "O.P. Jindal Global University",
+      "degree": "MBA in Business Analytics",
+      "description": "#1 ranked private university in India (QS World University Rankings, 2021)",
+      "duration": "Application due March 29, 2025",
+      "level": "Master's Degree",
+      "subject": "Business",
+      "link": "https://www.coursera.org/degrees/ma-public-policy-jgu"
     },
     {
-        "id": "32",
-        "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/4mrOdqJi42NxrBI41WUp6o/d25b6495268583fe9c079bfbac858fa8/University_of_London_logo.svg.png?auto=format%2Ccompress&dpr=1",
-        "name": "University of London",
-        "degree": "International Foundation Programme for Computer Science",
-        "description": "Secure your future in computer science regardless of your academic or professional experience and qualifications",
-        "duration": "Application due June 1, 2025",
-        "level": "Master's Degree",
-        "subject" : "Social Science",
-        "link" : "https://www.coursera.org/degrees/ifp-computer-science-london"
-
+      "id": "32",
+      "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/4mrOdqJi42NxrBI41WUp6o/d25b6495268583fe9c079bfbac858fa8/University_of_London_logo.svg.png?auto=format%2Ccompress&dpr=1",
+      "name": "University of London",
+      "degree": "International Foundation Programme for Computer Science",
+      "description": "Secure your future in computer science regardless of your academic or professional experience and qualifications",
+      "duration": "Application due June 1, 2025",
+      "level": "Master's Degree",
+      "subject": "Social Science",
+      "link": "https://www.coursera.org/degrees/ifp-computer-science-london"
     }
-],
+  ],
   "collection1": [
     {
       "id": "1",
@@ -744,9 +710,70 @@
       "open": false
     }
   ],
+  "Instructor": [
+    {
+      "id": "1",
+      "Name": "Abhishek Gagneja",
+      "Image": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-instructor-photos.s3.amazonaws.com/b2/0806f53b554dba90cb0ce4e6efa9d7/Abhishek-G.jpg?auto=format%2Ccompress&dpr=1&w=75&h=75&fit=crop",
+      "job": "Curriculum Engineer",
+      "coursesTitle": [
+        "DeepLearning.AI"
+      ],
+      "SocialMedia": {
+        "LinkidIn": "geoff-ladwig-2650241"
+      },
+      "description": "Geoff Ladwig started as a Deep Learning student and a mentor for the Deep Learning Specialization. He worked as a consultant on the Natural Language Processing Specialization and as a Curriculum Engineer on the Machine Learning Specialization. Geoff has spent most of his career as an ASIC/Hardware/System engineer/architect in the communications and computer industries.",
+      "course": [
+        {
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "Name": "IBM Skills Network Team",
+      "Image": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-instructor-photos.s3.amazonaws.com/da/fb0215690449429824c74f8f849b30/profile-photo.jpg?auto=format%2Ccompress&dpr=1&w=75&h=75&fit=crop",
+      "job": "Instructor",
+      "coursesTitle": [
+        "DeepLearning.AI","Stanford University"
+      ],
+      "SocialMedia": {
+        "twiter":"AndrewYNg",
+        "facbook":"andrew.ng.96",
+        "google":"https://www.andrewng.org/",
+        "LinkidIn": "geoff-ladwig-2650241"
+      },
+      "description": "Andrew Ng is Founder of DeepLearning.AI, General Partner at AI Fund, Chairman and Co-Founder of Coursera, and an Adjunct Professor at Stanford University. As a pioneer both in machine learning and online education, Dr. Ng has changed countless lives through his work in AI, authoring or co-authoring over 100 research papers in machine learning, robotics, and related fields. Previously, he was chief scientist at Baidu, the founding lead of the Google Brain team, and the co-founder of Coursera – the world's largest MOOC platform. Dr. Ng now focuses his time primarily on his entrepreneurial ventures, looking for the best ways to accelerate responsible AI practices in the larger global economy.",
+      "course": [
+        {
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "Name": "Instructor",
+      "Image": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-instructor-photos.s3.amazonaws.com/b1/46e02a12f3418486d986cc1d30727d/aarti_bagul_profile_pic.jpg?auto=format%2Ccompress&dpr=1&w=75&h=75&fit=crop",
+      "job": "Instructor",
+      "coursesTitle": [
+        "DeepLearning.AI"
+      ],
+      "SocialMedia": {
+      },
+      "description": "Eddy is an AI Product Manager at Cisco and was previously Curriculum Product Manager at DeepLearning.AI. Eddy has built ~40 online courses about AI, which are available on Coursera, DeepLearning.AI, Udacity and Cisco Networking Academy.",
+      "course": [
+        {
+          "image": ""
+        }
+      ]
+    }
+  ],
   "CareerCourses": [
     {
       "id": "1",
+      "instructorID": "1",
+      "instructorName": "Abhishek Gagneja",
+      "instructorsImage": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-instructor-photos.s3.amazonaws.com/b2/0806f53b554dba90cb0ce4e6efa9d7/Abhishek-G.jpg?auto=format%2Ccompress&dpr=1&w=75&h=75&fit=crop",
       "name": "Introduction to Software Engineering",
       "description": "Learn the fundamental principles of software engineering, including agile development, software design, and testing.",
       "categoryID": 1,
@@ -1153,6 +1180,9 @@
     },
     {
       "id": "2",
+      "instructorID": "2",
+      "instructorName": "IBM Skills Network Team",
+      "instructorsImage": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-instructor-photos.s3.amazonaws.com/da/fb0215690449429824c74f8f849b30/profile-photo.jpg?auto=format%2Ccompress&dpr=1&w=75&h=75&fit=crop",
       "name": "Full-Stack Web Development with React",
       "description": "Master full-stack web development using React, Node.js, Express, and MongoDB.",
       "categoryID": 1,
@@ -1559,6 +1589,9 @@
     },
     {
       "id": "3",
+      "instructorID": "3",
+      "instructorName": "Andrew Ng",
+      "instructorsImage": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-instructor-photos.s3.amazonaws.com/b1/46e02a12f3418486d986cc1d30727d/aarti_bagul_profile_pic.jpg?auto=format%2Ccompress&dpr=1&w=75&h=75&fit=crop",
       "name": "Advanced JavaScript Concepts",
       "description": "Deep dive into JavaScript ES6+, asynchronous programming, and best practices.",
       "categoryID": 1,
@@ -1965,6 +1998,9 @@
     },
     {
       "id": "4",
+      "instructorID": "1",
+      "instructorName": "Abhishek Gagneja",
+      "instructorsImage": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-instructor-photos.s3.amazonaws.com/b2/0806f53b554dba90cb0ce4e6efa9d7/Abhishek-G.jpg?auto=format%2Ccompress&dpr=1&w=75&h=75&fit=crop",
       "name": "Python for Beginners",
       "description": "Start coding with Python and explore basic programming concepts and syntax.",
       "categoryID": 1,
@@ -2371,6 +2407,9 @@
     },
     {
       "id": "5",
+      "instructorID": "2",
+      "instructorName": "IBM Skills Network Team",
+      "instructorsImage": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-instructor-photos.s3.amazonaws.com/da/fb0215690449429824c74f8f849b30/profile-photo.jpg?auto=format%2Ccompress&dpr=1&w=75&h=75&fit=crop",
       "name": "Business Strategy for Managers",
       "description": "Gain insights into strategic decision-making, competitive analysis, and business growth strategies.",
       "categoryID": 2,
@@ -2777,6 +2816,9 @@
     },
     {
       "id": "6",
+      "instructorID": "3",
+      "instructorName": "Andrew Ng",
+      "instructorsImage": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-instructor-photos.s3.amazonaws.com/b1/46e02a12f3418486d986cc1d30727d/aarti_bagul_profile_pic.jpg?auto=format%2Ccompress&dpr=1&w=75&h=75&fit=crop",
       "name": "Financial Accounting Essentials",
       "description": "Understand core accounting principles, balance sheets, and income statements.",
       "categoryID": 2,
@@ -3183,6 +3225,9 @@
     },
     {
       "id": "7",
+      "instructorID": "1",
+      "instructorName": "Abhishek Gagneja",
+      "instructorsImage": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-instructor-photos.s3.amazonaws.com/b2/0806f53b554dba90cb0ce4e6efa9d7/Abhishek-G.jpg?auto=format%2Ccompress&dpr=1&w=75&h=75&fit=crop",
       "name": "Leadership and Team Management",
       "description": "Master leadership skills, conflict resolution, and team performance management.",
       "categoryID": 2,
@@ -3995,6 +4040,9 @@
     },
     {
       "id": "9",
+      "instructorID": "1",
+      "instructorName": "Abhishek Gagneja",
+      "instructorsImage": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-instructor-photos.s3.amazonaws.com/b2/0806f53b554dba90cb0ce4e6efa9d7/Abhishek-G.jpg?auto=format%2Ccompress&dpr=1&w=75&h=75&fit=crop",
       "name": "Sales and Marketing Fundamentals",
       "description": "Learn core principles of sales and marketing, including digital marketing strategies and customer engagement techniques.",
       "categoryID": 3,
@@ -4401,6 +4449,9 @@
     },
     {
       "id": "10",
+      "instructorID": "1",
+      "instructorName": "Abhishek Gagneja",
+      "instructorsImage": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-instructor-photos.s3.amazonaws.com/b2/0806f53b554dba90cb0ce4e6efa9d7/Abhishek-G.jpg?auto=format%2Ccompress&dpr=1&w=75&h=75&fit=crop",
       "name": "Content Marketing Mastery",
       "description": "Explore techniques for content creation, blogging, and audience engagement.",
       "categoryID": 3,
@@ -4807,6 +4858,9 @@
     },
     {
       "id": "11",
+      "instructorID": "1",
+      "instructorName": "Abhishek Gagneja",
+      "instructorsImage": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-instructor-photos.s3.amazonaws.com/b2/0806f53b554dba90cb0ce4e6efa9d7/Abhishek-G.jpg?auto=format%2Ccompress&dpr=1&w=75&h=75&fit=crop",
       "name": "Data Science and Machine Learning",
       "description": "Explore data analysis, visualization, and machine learning techniques using Python and R.",
       "categoryID": 4,
@@ -5213,6 +5267,9 @@
     },
     {
       "id": "12",
+      "instructorID": "1",
+      "instructorName": "Abhishek Gagneja",
+      "instructorsImage": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-instructor-photos.s3.amazonaws.com/b2/0806f53b554dba90cb0ce4e6efa9d7/Abhishek-G.jpg?auto=format%2Ccompress&dpr=1&w=75&h=75&fit=crop",
       "name": "Big Data Analytics with Hadoop",
       "description": "Learn how to process large datasets using Hadoop and Spark frameworks.",
       "categoryID": 4,
@@ -5619,6 +5676,9 @@
     },
     {
       "id": "13",
+      "instructorID": "1",
+      "instructorName": "Abhishek Gagneja",
+      "instructorsImage": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-instructor-photos.s3.amazonaws.com/b2/0806f53b554dba90cb0ce4e6efa9d7/Abhishek-G.jpg?auto=format%2Ccompress&dpr=1&w=75&h=75&fit=crop",
       "name": "Deep Learning with TensorFlow",
       "description": "Master neural networks, TensorFlow, and deep learning algorithms.",
       "categoryID": 4,
@@ -6025,6 +6085,9 @@
     },
     {
       "id": "14",
+      "instructorID": "1",
+      "instructorName": "Abhishek Gagneja",
+      "instructorsImage": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-instructor-photos.s3.amazonaws.com/b2/0806f53b554dba90cb0ce4e6efa9d7/Abhishek-G.jpg?auto=format%2Ccompress&dpr=1&w=75&h=75&fit=crop",
       "name": "Deep Learning with TensorFlow",
       "description": "Apply Deep Learning with TensorFlow to healthcare problems.",
       "categoryID": 4,
@@ -6431,6 +6494,9 @@
     },
     {
       "id": "15",
+      "instructorID": "1",
+      "instructorName": "Abhishek Gagneja",
+      "instructorsImage": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-instructor-photos.s3.amazonaws.com/b2/0806f53b554dba90cb0ce4e6efa9d7/Abhishek-G.jpg?auto=format%2Ccompress&dpr=1&w=75&h=75&fit=crop",
       "name": "Blockchain and Cryptocurrency",
       "description": "Learn the basics of blockchain technology and its applications in cryptocurrency.",
       "categoryID": 4,
@@ -6837,6 +6903,9 @@
     },
     {
       "id": "16",
+      "instructorID": "1",
+      "instructorName": "Abhishek Gagneja",
+      "instructorsImage": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-instructor-photos.s3.amazonaws.com/b2/0806f53b554dba90cb0ce4e6efa9d7/Abhishek-G.jpg?auto=format%2Ccompress&dpr=1&w=75&h=75&fit=crop",
       "name": "Data Science in Healthcare",
       "description": "Learn how to apply data science techniques to improve healthcare systems and patient care.",
       "categoryID": 5,
@@ -7243,6 +7312,9 @@
     },
     {
       "id": "17",
+      "instructorID": "1",
+      "instructorName": "Abhishek Gagneja",
+      "instructorsImage": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-instructor-photos.s3.amazonaws.com/b2/0806f53b554dba90cb0ce4e6efa9d7/Abhishek-G.jpg?auto=format%2Ccompress&dpr=1&w=75&h=75&fit=crop",
       "name": "Healthcare Data Analytics",
       "description": "Dive into healthcare data and learn how to extract valuable insights to improve healthcare delivery.",
       "categoryID": 5,
@@ -7649,6 +7721,9 @@
     },
     {
       "id": "18",
+      "instructorID": "1",
+      "instructorName": "Abhishek Gagneja",
+      "instructorsImage": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-instructor-photos.s3.amazonaws.com/b2/0806f53b554dba90cb0ce4e6efa9d7/Abhishek-G.jpg?auto=format%2Ccompress&dpr=1&w=75&h=75&fit=crop",
       "name": "Telemedicine and Digital Health",
       "description": "Explore the future of healthcare with telemedicine and digital health technologies.",
       "categoryID": 5,
@@ -8055,6 +8130,9 @@
     },
     {
       "id": "19",
+      "instructorID": "1",
+      "instructorName": "Abhishek Gagneja",
+      "instructorsImage": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-instructor-photos.s3.amazonaws.com/b2/0806f53b554dba90cb0ce4e6efa9d7/Abhishek-G.jpg?auto=format%2Ccompress&dpr=1&w=75&h=75&fit=crop",
       "name": "Predictive Modeling in Healthcare",
       "description": "Learn to build predictive models that can forecast patient outcomes and improve healthcare decision-making.",
       "categoryID": 5,

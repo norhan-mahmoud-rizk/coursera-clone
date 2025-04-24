@@ -16,6 +16,11 @@
           <p class="card-text mb-3">
            {{getID?.description}}
           </p>
+          <div style="display: flex; align-items: center; gap: 10px;" class="Instructors">
+            <img class="imageInstructor" src="{{getID?.instructorsImage}}" alt="">
+            <p style="margin: 0;">Instructors:</p>
+            <a class="linkInstructor" (click)="instructorDitals(getID?.instructorID)">Abhishek Gagneja</a>
+          </div>
 
 
           <div class="row">
@@ -35,7 +40,7 @@
           </div>
 
           <div class="pt-3  ">
-            <span class="salary">{{getID?.views}}</span>already enrolled
+            <span class="salary">{{getID?.views}}</span>  already enrolled
           </div>
           <div class="pt-3 mb-5">
             Included with

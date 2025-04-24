@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { ApiService } from '../../Services/api.service';
 import { ICareerCourses } from '../../Models/ICareerCourses';
-import { Router } from '@angular/router'; 
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -14,6 +14,7 @@ import { Router } from '@angular/router';
 export class HomeDetalisComponent implements OnInit {
   productID!: number;
   getID!: ICareerCourses | undefined;
+  getInstructor!:ICareerCourses;
 
   //  Static array to hold enrolled courses
   static myCourses: ICareerCourses[] = [];
@@ -49,9 +50,13 @@ export class HomeDetalisComponent implements OnInit {
       this.router.navigate(['/my learning']); //  Navigate after adding
     }
   }
-  
+
   //  This method is used to get the enrolled courses in My Learning component
   static getMyCourses(): ICareerCourses[] {
     return HomeDetalisComponent.myCourses;
   }
+  instructorDitals(id:string|undefined){
+    this.router.navigate(['/instructoeDetails', id]);
+  }
+
 }
