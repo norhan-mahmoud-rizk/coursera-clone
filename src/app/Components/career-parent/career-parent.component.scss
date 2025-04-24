@@ -77,7 +77,8 @@ $whiteColor:white;
     button {
       flex: 1 1 auto;
       white-space: nowrap;
-      font-size: .91rem; 
+      font-size: .875rem; 
+      font-weight: 600;
       padding: 0 ;
       @media (max-width: 768px) {
         font-size: 0.7rem;
@@ -135,8 +136,8 @@ $whiteColor:white;
 .toggleShowMore {
   button {
     font-weight: 500;
-    padding:.6% 1.6% .6% 1.6%;
-    font-size: 1.08vw;
+   
+   
     background-color: $whiteColor !important;
     &:hover {
       background-color: $whiteColor !important;

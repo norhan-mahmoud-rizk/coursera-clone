@@ -5,11 +5,12 @@ import { FormsModule } from '@angular/forms';
 import { CareerResourses } from '../../Models/career-resourses';
 import { CoursesCategories } from '../../Models/CoursesCategories';
 import { CareerResoursesCategory } from '../../Models/career-resourses-category';
-import { SucessStories } from '../../Models/sucess-stories';
+// import { SucessStories } from '../../Models/sucess-stories';
 import { ServiceWithApiService } from '../../Services/service-with-api.service';
+import { SuccessStoriesComponent } from '../success-stories/success-stories.component';
 @Component({
   selector: 'app-career-parent',
-  imports: [CareerComponent, CommonModule,FormsModule],
+  imports: [CareerComponent, CommonModule,FormsModule,SuccessStoriesComponent],
   templateUrl: './career-parent.component.html',
   styleUrl: './career-parent.component.scss'
 })
@@ -23,7 +24,7 @@ export class CareerParentComponent  implements OnInit  {
     CareerResourseCategory: CareerResoursesCategory[] = [];
     selectedCategory: string = ''; 
     visibleCoursesCount: number = 4;
-    SuccessStories: SucessStories[] = [];
+    // SuccessStories: SucessStories[] = [];
     
     constructor(private courseServiceWithApi: ServiceWithApiService) {}
   
@@ -36,7 +37,7 @@ export class CareerParentComponent  implements OnInit  {
         this.fetchCareerResoureses(this.selectedCategory);
       }
   
-      this.fetchAllSuccessStories();
+      // this.fetchAllSuccessStories();
     }
   
     fetchCareerCoursesCategories() {
@@ -101,15 +102,15 @@ export class CareerParentComponent  implements OnInit  {
       }
     }
   
-    fetchAllSuccessStories() {
-      this.courseServiceWithApi.GetAllSuccessStories().subscribe({
-        next: (data) => {
-          this.SuccessStories = data;
-        },
-        error: (err) => {
-          console.log(err);
-        }
-      });
-    }
+    // fetchAllSuccessStories() {
+    //   this.courseServiceWithApi.GetAllSuccessStories().subscribe({
+    //     next: (data) => {
+    //       this.SuccessStories = data;
+    //     },
+    //     error: (err) => {
+    //       console.log(err);
+    //     }
+    //   });
+    // }
   
 }
