@@ -82,6 +82,11 @@
     <div class="col-md-4 sidebar">
       <div class="card profile-card">
         <div class="card-body text-center">
+     <div class="d-flex justify-content-end">
+  
+      <button type="button" class=" buttonFree  border-0 bg-light" onclick="document.getElementById('EditDialog')?.showModal()"><i class="fa-solid fa-pen text-primary"></i></button>
+
+     </div>
           <h5>Personal details</h5>
           <div class="profile-img">U</div>
           <h5 class="profile-name">User Name</h5>
@@ -106,11 +111,12 @@
     <div class="col-md-8 main-content">
       <h4>Experience</h4>
       <div class="card content-card">
-        <h5>Projects</h5>
+        <h5>Projects  <button type="button" class=" buttonFree  border-0 bg-light" onclick="document.getElementById('ProjectDialog')?.showModal()"><i class="fa-solid fa-circle-info text-primary"></i></button>
+     </h5>
         <div class="card-body back">
           
           <p >Showcase your skills to recruiters with job-relevant projects.</p>
-          <a href="#" class="text-primary" data-bs-toggle="modal" data-bs-target="#five">Browse Projects</a>
+          <a href="#" class="text-primary" data-bs-toggle="modal" data-bs-target="#five">Browse Projects </a>
         </div>
       </div>
       <div class="card content-card">
@@ -122,7 +128,7 @@
       </div>
       <h4 class="mt-4">Education</h4>
       <div class="card content-card">
-        <h5>Credentials</h5>
+        <h5>Credentials  <button type="button" class=" buttonFree  border-0 bg-light" onclick="document.getElementById('CredentialsDialog')?.showModal()"><i class="fa-solid fa-circle-info text-primary"></i></button></h5>
         <div class="card-body back mb-3">
           <p>Add your educational background here to let employers know where you studied or are currently studying.</p>
           <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#four">Add education</button>
@@ -278,5 +284,10 @@
 
 
 </div>
+
+<app-edit-form-dialog></app-edit-form-dialog>
+<app-project-dialog></app-project-dialog>
+<app-credential-dialog></app-credential-dialog>
+
 
 

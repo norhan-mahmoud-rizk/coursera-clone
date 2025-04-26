@@ -10,13 +10,22 @@
       </div>
       <h3 class="text-center mb-3">Login</h3>
       <form (ngSubmit)="login()" #loginForm="ngForm">
-        <input class="form-control my-2" type="email" name="loginEmail" placeholder="Email" required [(ngModel)]="loginEmail"      #LoginEmail="ngModel"
+        <label for="loginEmail">Email  <span class="text-danger">*</span></label>
+        <input class="form-control my-2 py-2" type="email" name="loginEmail" placeholder="Email" required [(ngModel)]="loginEmail"      #LoginEmail="ngModel"
+        placeholder="Enter your Email"
         [ngClass]="{'is-invalid':(LoginEmail.touched||LoginEmail.dirty)&& LoginEmail.invalid}"
 />
-        <input class="form-control my-2" type="password" name="loginPassword" placeholder="Password" required [(ngModel)]="loginPassword"      #LoginPassword="ngModel"
+
+<label for="loginPassword">Password  <span class="text-danger">*</span></label>
+       
+        <input class="form-control my-2 py-2" type="password" name="loginPassword" placeholder="Password" required [(ngModel)]="loginPassword"      #LoginPassword="ngModel"
+       
+        placeholder="Enter your Password"
         [ngClass]="{'is-invalid':(LoginPassword.touched||LoginPassword.dirty)&& LoginPassword.invalid}"
->
-        <button class="btn btn-primary w-100 mt-3" type="submit" [disabled]="!loginForm.valid">Login</button>
+
+
+        />
+        <button class="btn btn-primary w-100 mt-3 py-3 fw-semibold fs-5" type="submit" [disabled]="!loginForm.valid">Login</button>
       </form>
     </div>
   </dialog>
@@ -31,32 +40,40 @@
       </div>
       <div class="dialog-header text-center mb-4 w-75 mx-auto">
         <h3>Sign Up</h3>
-        <p>Learn on your own time from top universities and businesses.</p>
+        <p style="font-size: 1.54 rem; font-weight: 400;" >Learn on your own time from top universities and businesses.</p>
       </div>
       <form (ngSubmit)="register()" #registerForm="ngForm">
-        <label for="FullName">Full Name</label>
-        <input id="FullName" class="form-control my-2" name="name" [(ngModel)]="registerUser.name" required
+        <label for="FullName">Full Name <span class="text-danger">*</span></label>
+        <input id="FullName" class="form-control my-2 py-2" name="name" [(ngModel)]="registerUser.name" required
+        placeholder="Enter your full name"
         #FullName="ngModel"
         [ngClass]="{'is-invalid':(FullName.touched||FullName.dirty)&&FullName.invalid}"
      />
   
-        <label for="Email">Email</label>
-        <input id="Email" class="form-control my-2" name="email" type="email" [(ngModel)]="registerUser.email" required     #Email="ngModel"
+        <label for="Email">Email <span class="text-danger">*</span></label>
+        <input id="Email" class="form-control my-2 py-2" name="email" type="email" [(ngModel)]="registerUser.email" required 
+        placeholder="name@gmail.com"
+        #Email="ngModel"
         [ngClass]="{'is-invalid':(Email.touched||Email.dirty)&& Email.invalid}"
       />
   
-        <label for="Password">Password</label>
-        <input id="Password" class="form-control my-2" name="password" type="password" [(ngModel)]="registerUser.password" required minlength="8" maxlength="72"      #Password="ngModel"
+        <label for="Password">Password <span class="text-danger">*</span></label>
+        <p style="text-align: start;">Between 8 and 72 characters</p>
+        <input id="Password" class="form-control my-2 py-2"
+        placeholder="Create a password"
+        name="password" type="password" [(ngModel)]="registerUser.password" required minlength="8" maxlength="72"      #Password="ngModel"
         [ngClass]="{'is-invalid':(Password.touched||Password.dirty)&& Password.invalid}"
      />
   
-        <label for="Address">Address</label>
-        <input id="Address" class="form-control my-2" name="address" [(ngModel)]="registerUser.address" required
+        <label for="Address">Address <span class="text-danger">*</span></label>
+        <input id="Address" class="form-control my-2 py-2"
+        placeholder="Address"
+        name="address" [(ngModel)]="registerUser.address" required
         #Address="ngModel"
         [ngClass]="{'is-invalid':(Address.touched||Address.dirty)&& Address.invalid}"
       />
   
-        <button class="btn btn-primary w-100 py-2 mt-3 fw-bold" type="submit" [disabled]="!registerForm.valid">Join for free</button>
+        <button class="btn btn-primary w-100 py-3 mt-3 fw-bold" type="submit" [disabled]="!registerForm.valid">Join for free</button>
       </form>
   
       <p class="mt-3 text-center">
