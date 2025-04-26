@@ -63,14 +63,16 @@
                       <button
                         type="button"
                         class="btn btn-primary px-3 py-2 fw-semibold"
+                       
                       >
-                        <span>enroll for free</span>
+                        <button type="button" class="btn btn-primary buttonFree" onclick="document.getElementById('EnrollDialog')?.showModal()">    <span>Enroll for free</span></button>
+                       
                       </button>
                     </div>
                     <div class="col-4 mt-2 fw-semibold VeiwButton">
-                      <a href="#" class="rounded-2">
-                        <span>veiw Details</span>
-                      </a>
+                     
+                        <span  (click)="goToHomeDetails(CareerCourse!.id)"  class="rounded-2 " style="cursor: pointer;">veiw Details</span>
+                     
                     </div>
                   </div>
                 </div>
@@ -152,4 +154,6 @@
       </p>
     </div>
   </div>
+
+  <app-enroll-dialog></app-enroll-dialog>
   
