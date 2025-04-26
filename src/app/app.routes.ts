@@ -36,7 +36,7 @@ export const routes: Routes = [
       { path: 'homeDetails/:id', component: HomeDetalisComponent, title: "Home Details" },
       { path: 'formDialog', component: LoginRegisterFormDialogComponent, title: "Login/Register" },
       { path: 'courseDetails/:CourseId', component: CareerCourseDetailsComponent, title: 'Course Details' },
-      { path: 'instructoeDetails/:Id', component: InstructorDetailsComponent, title: 'intructor Details' },
+      { path: 'instructoeDetails/:id', component: InstructorDetailsComponent, title: 'intructor Details' },
       { path: 'leaderShip', component: LeaderShipComponent, title: 'leadership page ' },
       { path: 'about', component: AboutComponent, title: 'About Coursera' },
     ]
