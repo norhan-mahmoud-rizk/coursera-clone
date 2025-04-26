@@ -4,10 +4,11 @@ import { FormsModule } from '@angular/forms';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { ICareerCourses } from '../../Models/ICareerCourses';
 import { ServiceWithApiService } from '../../Services/service-with-api.service';
+import { EnrollDialogComponent } from '../enroll-dialog/enroll-dialog.component';
 
 @Component({
   selector: 'app-career-course-details',
-  imports: [CommonModule, FormsModule,RouterLink],
+  imports: [CommonModule, FormsModule,RouterLink,EnrollDialogComponent],
   templateUrl: './career-course-details.component.html',
   styleUrl: './career-course-details.component.scss'
 })
