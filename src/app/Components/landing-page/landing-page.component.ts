@@ -14,6 +14,7 @@ import { ApiService } from '../../Services/api.service';
 import { ICareerCourses } from '../../Models/ICareerCourses';
 import { AuthService } from '../../Services/auth.service';
 import { Iuser } from '../../Models/iuser';
+import { LoginRegisterFormDialogComponent } from '../login-register-form-dialog/login-register-form-dialog.component';
 
 @Component({
   selector: 'app-landing-page',
@@ -24,6 +25,7 @@ import { Iuser } from '../../Models/iuser';
     CommonModule,
     RouterLink,
     FormsModule,
+    LoginRegisterFormDialogComponent
   ],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.scss'
@@ -37,9 +39,9 @@ export class LandingPageComponent implements OnInit {
   visibleCount3 = 4;
 
   // Login & Register variables
-  loginEmail: string = '';
-  loginPassword: string = '';
-  registerUser: Iuser = {} as Iuser;
+  // loginEmail: string = '';
+  // loginPassword: string = '';
+  // registerUser: Iuser = {} as Iuser;
 
   constructor(
     private loadin: LandingPageService,
@@ -64,35 +66,35 @@ export class LandingPageComponent implements OnInit {
     });
   }
 
-  login() {
-    this.authService.login(this.loginEmail, this.loginPassword).subscribe({
-      next: (users) => {
-        if (users.length > 0) {
-          this.authService.setToken(users[0]);
-          this.router.navigate(['/home']);
-        } else {
-          alert('Invalid email or password');
-        }
-      },
-      error: (err) => {
-        console.error(err);
-        alert('Login failed');
-      }
-    });
-  }
+  // login() {
+  //   this.authService.login(this.loginEmail, this.loginPassword).subscribe({
+  //     next: (users) => {
+  //       if (users.length > 0) {
+  //         this.authService.setToken(users[0]);
+  //         this.router.navigate(['/home']);
+  //       } else {
+  //         alert('Invalid email or password');
+  //       }
+  //     },
+  //     error: (err) => {
+  //       console.error(err);
+  //       alert('Login failed');
+  //     }
+  //   });
+  // }
 
-  register() {
-    this.authService.register(this.registerUser).subscribe({
-      next: (user) => {
-        this.authService.setToken(user);
-        this.router.navigate(['/home']);
-      },
-      error: (err) => {
-        console.error(err);
-        alert('Registration failed');
-      }
-    });
-  }
+  // register() {
+  //   this.authService.register(this.registerUser).subscribe({
+  //     next: (user) => {
+  //       this.authService.setToken(user);
+  //       this.router.navigate(['/home']);
+  //     },
+  //     error: (err) => {
+  //       console.error(err);
+  //       alert('Registration failed');
+  //     }
+  //   });
+  // }
 
   goToDetails(prodId: string) {
     this.router.navigate(['/homeDetails', prodId]);

@@ -8,6 +8,8 @@ import { CoursesCategories } from '../Models/CoursesCategories';
 import { CareerResourses } from '../Models/career-resourses';
 import { CareerResoursesCategory } from '../Models/career-resourses-category';
 import { SucessStories } from '../Models/sucess-stories';
+import { WhatWeGains } from '../Models/WhatWeGains';
+import { Achieve } from '../Models/achieve';
 
 
 @Injectable({
@@ -28,6 +30,8 @@ export class ServiceWithApiService {
   baseURLcareerResources:string=`${environment.baseURL}/careerResources`;
   baseURLcareerResourceCategories:string=`${environment.baseURL}/careerResourceCategories`;
   baseURLsuccessStories:string=`${environment.baseURL}/successStories`;
+  baseURLGains:string=`${environment.baseURL}/Gains`;
+  baseURLAchieve:string=`${environment.baseURL}/Achieve`;
 
 
   // /get all career courses
@@ -68,6 +72,17 @@ getCarerrCourseById(CourseId: string): Observable<ICareerCourses> {
    GetAllSuccessStories():Observable<SucessStories[]>{
     return this.httpclient.get<SucessStories[]>(`${this.baseURLsuccessStories}`)
    }
+
+
+  //  get all what we offer
+  getWhatWeGains():Observable<WhatWeGains[]>{
+    return this.httpclient.get<WhatWeGains[]>(this.baseURLGains)
+  }
+
+  // get all Achieve
+  getAchieve():Observable<Achieve[]>{
+    return this.httpclient.get<Achieve[]>(this.baseURLAchieve)
+  }
 
 
 

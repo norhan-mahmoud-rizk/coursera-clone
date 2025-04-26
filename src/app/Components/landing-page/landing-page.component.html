@@ -1,7 +1,7 @@
 <!-- Dialogs -->
-<div class="auth-forms container py-5 " *ngIf="!authService.getToken()">
+<!-- <div class="auth-forms container py-5 " *ngIf="!authService.getToken()">
   <div class="row">
-    <!-- Login Form -->
+  
     <dialog class="col-md-6 ">
     <div class="dialog-content">
       <div  class="d-flex justify-content-end">
@@ -45,7 +45,7 @@
     </div>
     </dialog>
 
-    <!-- Register Form -->
+   
     <dialog id="registerDialog" class="col-md-6">
     <div class="dialog-content">
       <div  class="d-flex justify-content-end">
@@ -141,7 +141,7 @@
       <button class="btn btn-primary w-100 mt-3" type="submit" [disabled]="!loginForm.valid">Login</button>
     </form>
   </div>
-</dialog>
+</dialog> -->
 
 
 <!-- learn -->
@@ -326,4 +326,7 @@
   </div>
 
 </div>
+
+<app-login-register-form-dialog *ngIf="!authService.getToken()"></app-login-register-form-dialog>
+
 

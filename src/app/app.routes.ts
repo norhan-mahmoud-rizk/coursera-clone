@@ -12,6 +12,9 @@ import { CourseExplanationComponent } from './Components/course-explanation/cour
 import { VideoPlayerComponent } from './Components/video-player/video-player.component';
 import { AboutComponent } from './Components/about/about.component';
 import { InstructorDetailsComponent } from './Components/instructor-details/instructor-details.component';
+import { HowDoesCouresraWorks } from './Components/How-does-Couresra-Works/How-does-Couresra-Works.component';
+import { LeaderShipComponent } from './Components/leader-ship/leader-ship.component';
+import { LoginRegisterFormDialogComponent } from './Components/login-register-form-dialog/login-register-form-dialog.component';
 
 export const routes: Routes = [
   // Default route to LandingPageComponent without navbar and footer
@@ -31,9 +34,12 @@ export const routes: Routes = [
       { path: 'profile', component: ProfileComponent, title: 'Profile' },
       { path: 'careercourses', component: CareerParentComponent, title: 'Career Courses' },
       { path: 'homeDetails/:id', component: HomeDetalisComponent, title: "Home Details" },
+      { path: 'formDialog', component: LoginRegisterFormDialogComponent, title: "Login/Register" },
       { path: 'courseDetails/:CourseId', component: CareerCourseDetailsComponent, title: 'Course Details' },
       { path: 'instructoeDetails/:Id', component: InstructorDetailsComponent, title: 'intructor Details' },
+      { path: 'leaderShip', component: LeaderShipComponent, title: 'leadership page ' },
       { path: 'about', component: AboutComponent, title: 'About Coursera' },
     ]
-  }
+  },
+  { path: 'HowDoesCouresraWorks', component: HowDoesCouresraWorks, title: 'How does coursraWorks' },
 ];
