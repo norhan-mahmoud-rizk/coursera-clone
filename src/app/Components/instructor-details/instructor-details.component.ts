@@ -41,7 +41,7 @@ export class InstructorDetailsComponent implements OnInit {
           console.log(this.getInstructorID);
         },
         error: (err) => {
-          console.error('Error fetching Instructor:', err);
+          console.error('Error fetching Instructors:', err);
         }
       });
     });
