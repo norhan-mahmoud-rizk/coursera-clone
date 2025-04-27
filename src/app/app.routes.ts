@@ -15,6 +15,7 @@ import { InstructorDetailsComponent } from './Components/instructor-details/inst
 import { HowDoesCouresraWorks } from './Components/How-does-Couresra-Works/How-does-Couresra-Works.component';
 import { LeaderShipComponent } from './Components/leader-ship/leader-ship.component';
 import { LoginRegisterFormDialogComponent } from './Components/login-register-form-dialog/login-register-form-dialog.component';
+import { PaymentPageComponent } from './Components/payment-page/payment-page.component';
 
 export const routes: Routes = [
   // Default route to LandingPageComponent without navbar and footer
@@ -42,4 +43,5 @@ export const routes: Routes = [
     ]
   },
   { path: 'HowDoesCouresraWorks', component: HowDoesCouresraWorks, title: 'How does coursraWorks' },
+  { path: 'Payment', component: PaymentPageComponent, title: ' Payment Page ' },
 ];
