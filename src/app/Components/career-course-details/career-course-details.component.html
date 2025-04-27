@@ -59,30 +59,30 @@
   
                 <div class="RecommendedButtonsContainer container-fluid mt-4">
                   <div class="row">
-                    <div class="col-4">
+                    <div class="col-4 me-2">
                       <button
                         type="button"
                         class="btn btn-primary px-3 py-2 fw-semibold"
                        
                       >
-                        <button type="button" class="btn btn-primary buttonFree" onclick="document.getElementById('EnrollDialog')?.showModal()">    <span>Enroll for free</span></button>
+                        <span style=" font-size: .875rem;font-weight: 500;" onclick="document.getElementById('EnrollDialog')?.showModal()">Enroll for free</span>
                        
                       </button>
                     </div>
                     <div class="col-4 mt-2 fw-semibold VeiwButton">
                      
-                        <span  (click)="goToHomeDetails(CareerCourse!.id)"  class="rounded-2 " style="cursor: pointer;">veiw Details</span>
+                        <span  (click)="goToHomeDetails(CareerCourse!.id)"  class="rounded-2 " style="cursor: pointer; font-size: .875rem; font-weight: 500;">veiw Details</span>
                      
                     </div>
                   </div>
                 </div>
               </div>
               <div class="col-12 col-md-7 ImagesSideContainer mt-5">
-                <div class="row ImageSideDiv">
+                <div class="row ImageSideDiv  flex-wrap flex-md-nowrap">
                   @for(relatedCourses of CareerCourse?.relatedCourses; track
                   $index; ){
   
-                  <div class="col-3 me-3">
+                  <div class="col-12 col-md-3 me-3 d-flex d-md-block my-2">
                     <div>
                       <img
                         src="{{ relatedCourses.imgUrl }}"
@@ -90,9 +90,9 @@
                         class="img-fluid rounded-4"
                       />
                     </div>
-                    <div class="ImageSide_Content_div">
-                      <h6>{{ relatedCourses.name }}</h6>
-                      <p>Course {{ $index + 1 }} of 4</p>
+                    <div class="ImageSide_Content_div ms-2">
+                      <h6 style="font-size: .875rem;" class="my-2 h-25">{{ relatedCourses.name }}</h6>
+                      <p style="font-size: .875rem;">Course {{ $index + 1 }} of 4</p>
                     </div>
                   </div>
                   }
