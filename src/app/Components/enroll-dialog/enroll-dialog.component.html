@@ -52,7 +52,9 @@ Certificate when you complete after your trial ends</h5>
     <!--  -->
 
     <div>
-        <button class="btn btn-primary px-3 py-3 mt-3 fs-5 fw-semibold" routerLink="/Payment"> Get Free Trial</button>
+
+        <!-- ask eng: asmaa here why when i send the course id from the ts to the html in the router link i did not need to make binding with {{}} -->
+        <button class="btn btn-primary px-3 py-3 mt-3 fs-5 fw-semibold"   [routerLink]="['/Payment',CourseId]"> Get Free Trial</button>
     </div>
 </div>
     
