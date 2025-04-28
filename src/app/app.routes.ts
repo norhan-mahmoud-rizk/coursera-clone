@@ -43,5 +43,5 @@ export const routes: Routes = [
     ]
   },
   { path: 'HowDoesCouresraWorks', component: HowDoesCouresraWorks, title: 'How does coursraWorks' },
-  { path: 'Payment', component: PaymentPageComponent, title: ' Payment Page ' },
+  { path: 'Payment/:CourseId', component: PaymentPageComponent, title: ' Payment Page ' },
 ];

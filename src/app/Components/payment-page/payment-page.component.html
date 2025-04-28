@@ -82,8 +82,9 @@
         class="form-control my-2 py-3 ps-3 fs-6 text-success"
         placeholder="1234 1234 1234 1234"
         required
+        maxlength="19"
         type="text"
-        oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+        oninput="this.value = this.value.replace(/\D/g, '').replace(/(.{4})/g, '$1 ').trim()"
    />
 
    <div class="container-fluid">
@@ -99,8 +100,9 @@
                 placeholder="MM/YY"
                 type="text"
                 required
+                maxlength="5"
                 pattern="^(0[1-9]|1[0-2])\/\d{2}$"
-                oninput="this.value = this.value.replace(/[^0-9\/]/g, '')"
+                oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/^(\d{2})(\d{1,2})?$/, '$1/$2')"
               />
         </div>
         <div class="col-12 col-md-6">
@@ -113,6 +115,7 @@
             class="form-control my-2 py-3 ps-3 fs-6 text-success "
             placeholder="CVC"
             required
+            maxlength="4"
             type="text"
             oninput="this.value = this.value.replace(/[^0-9]/g, '')"
        />
@@ -164,11 +167,11 @@
           <div class=" container-fluid courseCardContainer border border-1  border-secondary-subtle p-4" style="box-shadow: 1px 1px 5px gray; min-height: 500px;">
                 <div class="row pb-5 border-bottom">
                     <div class="col-2">
-                        <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/4a/cb36835ae3421187080898a7ecc11d/Google-G_360x360.png?auto=format%2Ccompress&dpr=2&fit=fill&bg=FFF" class="img-fluid w-100" alt="">
+                        <img src="{{CareerCourse?.logoImage}}" class="img-fluid w-100" alt="">
                     </div>
                     <div class="col-10 px-4">
-                        <p class="fw-semibold fs-6" >Google Data Analytics Professional Certificate</p>
-                        <p>by Google</p>
+                        <p class="fw-semibold fs-6" >{{CareerCourse?.name}}</p>
+                        <p>by {{CareerCourse?.organization}}</p>
                         <a href="" class="text-decoration-none">remove from cart</a>
                     </div>
                 </div>
