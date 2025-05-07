@@ -26,15 +26,15 @@ export const routes: Routes = [
     path: '',
     component: MainLayoutComponent, // Parent component with navbar and footer
     children: [
+      
       { path: 'home', component: HomeComponent, title: "Home" },
       { path: 'my learning', component: MyLearningComponent, title: "my learning" },
       { path: 'onlinedegree', component: OnlineDegreesComponent, title: 'Online Degree' },
       { path: 'courseExplanation/:CourseId', component: CourseExplanationComponent, title: 'courseExplanation' },
       { path: 'courseExplanation/:CourseId/video-player', component: VideoPlayerComponent, title: 'Video Player' },
-
       { path: 'profile', component: ProfileComponent, title: 'Profile' },
       { path: 'careercourses', component: CareerParentComponent, title: 'Career Courses' },
-      { path: 'homeDetails/:id', component: HomeDetalisComponent, title: "Home Details" },
+      { path: 'homeDetails/:CourseId', component: HomeDetalisComponent, title: "Home Details" },
       { path: 'formDialog', component: LoginRegisterFormDialogComponent, title: "Login/Register" },
       { path: 'courseDetails/:CourseId', component: CareerCourseDetailsComponent, title: 'Course Details' },
       { path: 'instructoeDetails/:id', component: InstructorDetailsComponent, title: 'intructor Details' },

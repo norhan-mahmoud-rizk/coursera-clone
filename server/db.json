@@ -714,10 +714,20 @@
     {
       "id": "1",
       "Name": "Abhishek Gagneja",
-      "Image": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-instructor-photos.s3.amazonaws.com/b2/0806f53b554dba90cb0ce4e6efa9d7/Abhishek-G.jpg?auto=format%2Ccompress&dpr=1&w=75&h=75&fit=crop",
+      "Image": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-instructor-photos.s3.amazonaws.com/01/18adc0d3fd11e69f887dc4d1bcf68d/DSC04911cropcoursera.jpg?auto=format%2Ccompress&dpr=1&w=200&h=200",
       "job": "Curriculum Engineer",
       "coursesTitle": [
         "DeepLearning.AI"
+      ],
+      "CoursesEnglish": [
+        {
+          "image": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/79/8f75d1a6ad498aa248a2eac2cc5858/200594-BI_Logo-Image_1200x1200pxl-copy.jpg",
+          "title": "Building Generative AI-Powered Applications with Python"
+        },
+        {
+          "image": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/79/8f75d1a6ad498aa248a2eac2cc5858/200594-BI_Logo-Image_1200x1200pxl-copy.jpg",
+          "title": "Fundamentals of AI Agents Using RAG and LangChain"
+        }
       ],
       "SocialMedia": {
         "LinkidIn": "geoff-ladwig-2650241"
@@ -731,8 +741,18 @@
     },
     {
       "id": "2",
+      "CoursesEnglish": [
+        {
+          "image": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/00atxywtfxvd/5IsGEeYCPeL4aEQubWn6B6/a8777da5de882ca7353dedafa49bf68e/UI-UX_Designer-role-card_2x.png?auto=format%2Ccompress&dpr=2&w=430",
+          "title": "Building Generative AI-Powered Applications with Python"
+        },
+        {
+          "image": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/00atxywtfxvd/5IsGEeYCPeL4aEQubWn6B6/a8777da5de882ca7353dedafa49bf68e/UI-UX_Designer-role-card_2x.png?auto=format%2Ccompress&dpr=2&w=430",
+          "title": "Fundamentals of AI Agents Using RAG and LangChain"
+        }
+      ],
       "Name": "IBM Skills Network Team",
-      "Image": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-instructor-photos.s3.amazonaws.com/da/fb0215690449429824c74f8f849b30/profile-photo.jpg?auto=format%2Ccompress&dpr=1&w=75&h=75&fit=crop",
+      "Image": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-instructor-photos.s3.amazonaws.com/da/fb0215690449429824c74f8f849b30/profile-photo.jpg?auto=format%2Ccompress&dpr=1&w=200&h=200",
       "job": "Instructor",
       "coursesTitle": [
         "DeepLearning.AI",
@@ -753,6 +773,16 @@
     },
     {
       "id": "3",
+      "CoursesEnglish": [
+        {
+          "image": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/00atxywtfxvd/5IsGEeYCPeL4aEQubWn6B6/a8777da5de882ca7353dedafa49bf68e/UI-UX_Designer-role-card_2x.png?auto=format%2Ccompress&dpr=2&w=430",
+          "title": "Building Generative AI-Powered Applications with Python"
+        },
+        {
+          "image": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/00atxywtfxvd/5IsGEeYCPeL4aEQubWn6B6/a8777da5de882ca7353dedafa49bf68e/UI-UX_Designer-role-card_2x.png?auto=format%2Ccompress&dpr=2&w=430",
+          "title": "Fundamentals of AI Agents Using RAG and LangChain"
+        }
+      ],
       "Name": "Instructor",
       "Image": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-instructor-photos.s3.amazonaws.com/b1/46e02a12f3418486d986cc1d30727d/aarti_bagul_profile_pic.jpg?auto=format%2Ccompress&dpr=1&w=75&h=75&fit=crop",
       "job": "Instructor",
@@ -760,97 +790,6 @@
         "DeepLearning.AI"
       ],
       "SocialMedia": {},
-      "description": "Eddy is an AI Product Manager at Cisco and was previously Curriculum Product Manager at DeepLearning.AI. Eddy has built ~40 online courses about AI, which are available on Coursera, DeepLearning.AI, Udacity and Cisco Networking Academy.",
-      "course": [
-        {
-          "image": ""
-        }
-      ]
-    }
-  ],
-  "Instructor": [
-    {
-      "id": "1",
-      "Name": "Abhishek Gagneja",
-      "Image": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-instructor-photos.s3.amazonaws.com/01/18adc0d3fd11e69f887dc4d1bcf68d/DSC04911cropcoursera.jpg?auto=format%2Ccompress&dpr=1&w=200&h=200",
-      "job": "Curriculum Engineer",
-      "coursesTitle": [
-        "DeepLearning.AI"
-      ],
-      "CoursesEnglish":[
-        {
-          "image":"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/79/8f75d1a6ad498aa248a2eac2cc5858/200594-BI_Logo-Image_1200x1200pxl-copy.jpg",
-          "title":"Building Generative AI-Powered Applications with Python"
-        },
-        {
-          "image":"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/79/8f75d1a6ad498aa248a2eac2cc5858/200594-BI_Logo-Image_1200x1200pxl-copy.jpg",
-          "title":"Fundamentals of AI Agents Using RAG and LangChain"
-        }
-
-      ],
-      "SocialMedia": {
-        "LinkidIn": "geoff-ladwig-2650241"
-      },
-      "description": "Geoff Ladwig started as a Deep Learning student and a mentor for the Deep Learning Specialization. He worked as a consultant on the Natural Language Processing Specialization and as a Curriculum Engineer on the Machine Learning Specialization. Geoff has spent most of his career as an ASIC/Hardware/System engineer/architect in the communications and computer industries.",
-      "course": [
-        {
-          "image": ""
-        }
-      ]
-    },
-    {
-      "id": "2",
-      "CoursesEnglish":[
-        {
-          "image":"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/00atxywtfxvd/5IsGEeYCPeL4aEQubWn6B6/a8777da5de882ca7353dedafa49bf68e/UI-UX_Designer-role-card_2x.png?auto=format%2Ccompress&dpr=2&w=430",
-          "title":"Building Generative AI-Powered Applications with Python"
-        },
-        {
-          "image":"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/00atxywtfxvd/5IsGEeYCPeL4aEQubWn6B6/a8777da5de882ca7353dedafa49bf68e/UI-UX_Designer-role-card_2x.png?auto=format%2Ccompress&dpr=2&w=430",
-          "title":"Fundamentals of AI Agents Using RAG and LangChain"
-        }
-
-      ],
-      "Name": "IBM Skills Network Team",
-      "Image": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-instructor-photos.s3.amazonaws.com/da/fb0215690449429824c74f8f849b30/profile-photo.jpg?auto=format%2Ccompress&dpr=1&w=200&h=200",
-      "job": "Instructor",
-      "coursesTitle": [
-        "DeepLearning.AI","Stanford University"
-      ],
-      "SocialMedia": {
-        "twiter":"AndrewYNg",
-        "facbook":"andrew.ng.96",
-        "google":"https://www.andrewng.org/",
-        "LinkidIn": "geoff-ladwig-2650241"
-      },
-      "description": "Andrew Ng is Founder of DeepLearning.AI, General Partner at AI Fund, Chairman and Co-Founder of Coursera, and an Adjunct Professor at Stanford University. As a pioneer both in machine learning and online education, Dr. Ng has changed countless lives through his work in AI, authoring or co-authoring over 100 research papers in machine learning, robotics, and related fields. Previously, he was chief scientist at Baidu, the founding lead of the Google Brain team, and the co-founder of Coursera – the world's largest MOOC platform. Dr. Ng now focuses his time primarily on his entrepreneurial ventures, looking for the best ways to accelerate responsible AI practices in the larger global economy.",
-      "course": [
-        {
-          "image": ""
-        }
-      ]
-    },
-    {
-      "id": "3",
-      "CoursesEnglish":[
-        {
-          "image":"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/00atxywtfxvd/5IsGEeYCPeL4aEQubWn6B6/a8777da5de882ca7353dedafa49bf68e/UI-UX_Designer-role-card_2x.png?auto=format%2Ccompress&dpr=2&w=430",
-          "title":"Building Generative AI-Powered Applications with Python"
-        },
-        {
-          "image":"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/00atxywtfxvd/5IsGEeYCPeL4aEQubWn6B6/a8777da5de882ca7353dedafa49bf68e/UI-UX_Designer-role-card_2x.png?auto=format%2Ccompress&dpr=2&w=430",
-          "title":"Fundamentals of AI Agents Using RAG and LangChain"
-        }
-
-      ],
-      "Name": "Instructor",
-      "Image": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-instructor-photos.s3.amazonaws.com/b1/46e02a12f3418486d986cc1d30727d/aarti_bagul_profile_pic.jpg?auto=format%2Ccompress&dpr=1&w=75&h=75&fit=crop",
-      "job": "Instructor",
-      "coursesTitle": [
-        "DeepLearning.AI"
-      ],
-      "SocialMedia": {
-      },
       "description": "Eddy is an AI Product Manager at Cisco and was previously Curriculum Product Manager at DeepLearning.AI. Eddy has built ~40 online courses about AI, which are available on Coursera, DeepLearning.AI, Udacity and Cisco Networking Academy.",
       "course": [
         {
@@ -9136,6 +9075,38 @@
       "email": "azza@gmail.com",
       "password": "12345678",
       "address": "مركز دشنا",
+      "myLearning": []
+    },
+    {
+      "id": "1746649085559",
+      "name": "Norhan Mohamed",
+      "email": "norhanmahmoud447@gmail.com",
+      "password": "12345678",
+      "address": "مركز دشنا",
+      "myLearning": []
+    },
+    {
+      "id": "1746649490078",
+      "name": "Norhan Mohamed",
+      "email": "norhanmahmoud447@gmail.com",
+      "password": "12345678",
+      "address": "مركز دشنا",
+      "myLearning": []
+    },
+    {
+      "id": "1746649661314",
+      "name": "Norhan Mohamed",
+      "email": "norhanmahmoud447@gmail.com",
+      "password": "12345678",
+      "address": "مركز دشنا",
+      "myLearning": []
+    },
+    {
+      "id": "1746655095184",
+      "name": "Norhan Mohamed",
+      "email": "nm447@gmail.com",
+      "address": "مركز دشنا",
+      "password": "12345678",
       "myLearning": []
     }
   ],

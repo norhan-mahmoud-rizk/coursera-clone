@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { Iuser } from '../../Models/iuser';
+
 import { AuthService } from '../../Services/auth.service';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { Iuser } from '../../Models/iuser';
 
 @Component({
   selector: 'app-login-register-form-dialog',
