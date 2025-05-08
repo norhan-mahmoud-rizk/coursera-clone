@@ -8,8 +8,8 @@ export interface Iuser {
     password: string;
     address: string;
   
-    myLearning: ICareerCourses[]; // Array of course IDs
-    completed:  ICareerCourses[]; // Array of course IDs
+    myLearning: ICareerCourses[]; 
+    completed:  ICareerCourses[];
 
     token?: string;
 

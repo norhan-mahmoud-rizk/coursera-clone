@@ -6,10 +6,12 @@ import { Router } from '@angular/router';
 import { Instructors } from '../../Models/instructors';
 import { InstructorsService } from '../../Services/instructors.service';
 import { EnrollDialogComponent } from '../enroll-dialog/enroll-dialog.component';
+import { Navbar2Component } from '../navbar2/navbar2.component';
+import { NavbarComponent } from '../navbar/navbar.component';
 
 @Component({
   selector: 'app-home-detalis',
-  imports: [RouterModule,EnrollDialogComponent],
+  imports: [RouterModule,EnrollDialogComponent,NavbarComponent],
   templateUrl: './home-detalis.component.html',
   styleUrl: './home-detalis.component.scss'
 })

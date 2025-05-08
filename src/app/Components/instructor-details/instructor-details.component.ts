@@ -6,10 +6,11 @@ import { InstructorsService } from '../../Services/instructors.service';
 import { LandingPage } from '../../Models/landing-page';
 import { AuthService } from '../../Services/auth.service';
 import { LandingPageService } from '../../Services/landing-page.service';
+import { NavbarComponent } from '../navbar/navbar.component';
 
 @Component({
   selector: 'app-instructor-details',
-  imports: [],
+  imports: [NavbarComponent],
   templateUrl: './instructor-details.component.html',
   styleUrl: './instructor-details.component.scss'
 })

@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule, Location } from '@angular/common';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { NavbarComponent } from '../navbar/navbar.component';
 
 @Component({
   selector: 'app-video-player',
   templateUrl: './video-player.component.html',
   styleUrls: ['./video-player.component.scss'],
-  imports: [CommonModule]
+  imports: [CommonModule,NavbarComponent]
 })
 
 export class VideoPlayerComponent implements OnInit {
