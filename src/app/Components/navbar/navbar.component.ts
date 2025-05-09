@@ -15,4 +15,8 @@ export class NavbarComponent {
     this.authService.logout();
     this.router.navigate(['/']); // Redirect to landing page the default route after logout
   }
+  goToHome(){
+    this.router.navigate(['/home']);
+
+  }
 }

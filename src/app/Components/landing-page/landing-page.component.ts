@@ -14,6 +14,7 @@ import { ApiService } from '../../Services/api.service';
 import { ICareerCourses } from '../../Models/ICareerCourses';
 import { AuthService } from '../../Services/auth.service';
 import { LoginRegisterFormDialogComponent } from '../login-register-form-dialog/login-register-form-dialog.component';
+import { ConfirmEmailComponent } from '../confirm-email/confirm-email.component';
 
 @Component({
   selector: 'app-landing-page',
@@ -24,7 +25,8 @@ import { LoginRegisterFormDialogComponent } from '../login-register-form-dialog/
     CommonModule,
     RouterLink,
     FormsModule,
-    LoginRegisterFormDialogComponent
+    LoginRegisterFormDialogComponent,
+    ConfirmEmailComponent
   ],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.scss'

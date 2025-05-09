@@ -5,14 +5,16 @@
            
     </div>
     <div>
-        
+  
         <div class="dropdown">
-            <a  class="d-flex align-items-end hidden-arrow " id="profileDropdown" role="button" data-bs-toggle="dropdown">
-              <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle ProgImg" alt="Profile">
-            </a>
+            <a  class="d-flex align-items-center hidden-arrow link text-decoration-none" id="profileDropdown" role="button" data-bs-toggle="dropdown">
+              <div class="avatar">
+                <span class="AvatarText">F</span>
+  
+              </div> </a>
             <ul class="dropdown-menu dropdown-menu-end">
-            
-              <li class="p-2"><a class="dropdown-item p-0" (click)="logout()" style="cursor: pointer;">Logout</a></li>
+         
+              <li><a class="dropdown-item p-2" (click)="logout()" style="cursor: pointer; ">Logout</a></li>
   
             </ul>
           </div>
