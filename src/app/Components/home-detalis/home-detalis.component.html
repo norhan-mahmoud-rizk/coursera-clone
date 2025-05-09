@@ -1,5 +1,5 @@
 
-
+<app-navbar></app-navbar>
 <div class="navSection paddingPage">
   <div class="mb-3">
     <div class="row g-0">
@@ -19,7 +19,9 @@
           <div style="display: flex; align-items: center; gap: 10px;" class="Instructors">
             <img class="imageInstructor" src="{{getID?.instructorsImage}}" alt="">
             <p style="margin: 0;">Instructors:</p>
-            <a class="linkInstructor" (click)="instructorDitals(getID?.instructorID)">Abhishek Gagneja</a>
+            <a class="linkInstructor" (click)="instructorDitals(getID?.instructorID)">
+              <span>{{ getInstructor?.Name }}</span>
+            </a>
           </div>
 
 
@@ -30,6 +32,8 @@
                 Enroll for Free
                 <p class="textBTN">Starts Mar 2</p>
               </button>
+
+              <span style=" font-size: .875rem;font-weight: 500;" onclick="document.getElementById('EnrollDialog')?.showModal()">Enroll for free</span>
             </div>
             <div class="col-12 col-lg-8 mb-3 trytToFreeText">
               <p>Try for Free: Enroll to start your 7-day full access free trial</p>
@@ -320,7 +324,7 @@
 
 </div>
 
-
+<app-enroll-dialog></app-enroll-dialog>
 
 
 <!-- install icon -->

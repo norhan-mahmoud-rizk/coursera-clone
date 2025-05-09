@@ -16,6 +16,7 @@ import { HowDoesCouresraWorks } from './Components/How-does-Couresra-Works/How-d
 import { LeaderShipComponent } from './Components/leader-ship/leader-ship.component';
 import { LoginRegisterFormDialogComponent } from './Components/login-register-form-dialog/login-register-form-dialog.component';
 import { PaymentPageComponent } from './Components/payment-page/payment-page.component';
+import { ConfirmEmailComponent } from './Components/confirm-email/confirm-email.component';
 
 export const routes: Routes = [
   // Default route to LandingPageComponent without navbar and footer
@@ -26,22 +27,30 @@ export const routes: Routes = [
     path: '',
     component: MainLayoutComponent, // Parent component with navbar and footer
     children: [
+      
       { path: 'home', component: HomeComponent, title: "Home" },
       { path: 'my learning', component: MyLearningComponent, title: "my learning" },
       { path: 'onlinedegree', component: OnlineDegreesComponent, title: 'Online Degree' },
-      { path: 'courseExplanation/:CourseId', component: CourseExplanationComponent, title: 'courseExplanation' },
-      { path: 'courseExplanation/:CourseId/video-player', component: VideoPlayerComponent, title: 'Video Player' },
-
-      { path: 'profile', component: ProfileComponent, title: 'Profile' },
+    
       { path: 'careercourses', component: CareerParentComponent, title: 'Career Courses' },
-      { path: 'homeDetails/:id', component: HomeDetalisComponent, title: "Home Details" },
+
       { path: 'formDialog', component: LoginRegisterFormDialogComponent, title: "Login/Register" },
-      { path: 'courseDetails/:CourseId', component: CareerCourseDetailsComponent, title: 'Course Details' },
-      { path: 'instructoeDetails/:id', component: InstructorDetailsComponent, title: 'intructor Details' },
+    { path: 'courseDetails/:CourseId', component: CareerCourseDetailsComponent, title: 'Course Details' },
+    
       { path: 'leaderShip', component: LeaderShipComponent, title: 'leadership page ' },
       { path: 'about', component: AboutComponent, title: 'About Coursera' },
     ]
   },
+  { path: 'ConfirmEmail', component: ConfirmEmailComponent, title: "ConfirmEmail" },
+     
+
+  { path: 'courseExplanation/:CourseId', component: CourseExplanationComponent, title: 'courseExplanation' },
+  { path: 'courseExplanation/:CourseId/video-player', component: VideoPlayerComponent, title: 'Video Player' },
+
+  { path: 'instructoeDetails/:id', component: InstructorDetailsComponent, title: 'intructor Details' },
+     
+  { path: 'homeDetails/:CourseId', component: HomeDetalisComponent, title: "Home Details" },
+  { path: 'profile', component: ProfileComponent, title: 'Profile' },
   { path: 'HowDoesCouresraWorks', component: HowDoesCouresraWorks, title: 'How does coursraWorks' },
   { path: 'Payment/:CourseId', component: PaymentPageComponent, title: ' Payment Page ' },
 ];

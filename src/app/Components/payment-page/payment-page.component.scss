@@ -17,6 +17,25 @@
             height: 50%;
            
           }
+          
+.avatar{
+    border-radius: 50%;
+    background-color: #002761;
+    width: 36px;
+    height: 36px;
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 1rem;
+    font-family: Source Sans Pro,Arial,sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+  }
+  .AvatarText{
+    font-size: 16px;
+    font-weight: 600;
+  }
     }
 
     .PaymentFormContainer{

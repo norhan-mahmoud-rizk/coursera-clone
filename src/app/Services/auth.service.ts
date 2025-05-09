@@ -1,57 +1,63 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Iuser } from '../Models/iuser';
-import { BehaviorSubject, Observable, of } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { environment } from '../../environments/environment.development';
+import { Iuser } from '../Models/iuser';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  // private baseURL = 'http://localhost:3000/users';
-  private baseURL = `${environment.baseURL}/users`;
+  private baseURL = `${environment.backendURL}/user`;
   private currentUserSubject = new BehaviorSubject<Iuser | null>(null);
   currentUser$ = this.currentUserSubject.asObservable();
 
   constructor(private http: HttpClient) {
-    const token = this.getToken();
-    if (token) {
-      this.http.get<Iuser>(`${this.baseURL}/${token}`).subscribe({
-        next: (user) => this.currentUserSubject.next(user),
-        error: () => this.logout()
-      });
+    const storedUser = localStorage.getItem('user');
+    if (storedUser) {
+      this.currentUserSubject.next(JSON.parse(storedUser));
     }
   }
 
-  register(user: Iuser): Observable<Iuser> {
-    user.id = Date.now().toString(); // Generate ID as string
-    user.myLearning = []; 
-    return this.http.post<Iuser>(this.baseURL, user);
+  register(userData: Partial<Iuser>): Observable<{ message: string; user: Iuser }> {
+    return this.http.post<{ message: string; user: Iuser }>(`${this.baseURL}/signup`, userData);
   }
 
-  login(email: string, password: string): Observable<Iuser[]> {
-    return this.http.get<Iuser[]>(`${this.baseURL}?email=${email}&password=${password}`);
+  login(email: string, password: string): Observable<{ message: string; userToken: string }> {
+    return this.http.post<{ message: string; userToken: string }>(
+      `${this.baseURL}/signin`,
+      { email, password }
+    );
   }
 
-  setToken(user: Iuser): void {
-    localStorage.setItem('token', user.id);
-    this.currentUserSubject.next(user);
+  confirmEmail(email: string, code: string): Observable<{ message: string; userToken: string }> {
+    return this.http.patch<{ message: string; userToken: string }>(
+      `${this.baseURL}/confirm-email`,
+      { email, code }
+    );
+  }
+
+  setToken(token: string): void {
+    localStorage.setItem('token', token);
   }
 
   getToken(): string | null {
     return localStorage.getItem('token');
   }
 
+  setCurrentUser(user: Partial<Iuser>): void {
+    localStorage.setItem('user', JSON.stringify(user));
+    this.currentUserSubject.next(user as Iuser);
+  }
+
   logout(): void {
     localStorage.removeItem('token');
+    localStorage.removeItem('user');
     this.currentUserSubject.next(null);
+    this.http.post(`${this.baseURL}/logout`, {}).subscribe(); // Optional
   }
 
   getCurrentUser(): Iuser | null {
     return this.currentUserSubject.value;
   }
-
-  
-
 }
