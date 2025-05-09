@@ -43,8 +43,15 @@
         <div class="col-12 col-md-4 profileContainer">
             <div class="border rounded-4 p-4 mb-3 profileCard">
                 <div class="d-block d-sm-flex d-md-block align-items-center gap-2">
-                    <h5 class="mb-2 p-1">N</h5>
-                    <p class="fw-bold fs-6  mb-2">Good evening, Norhan Mahmoud</p>
+                  <div class="avatar">
+                    <span class="AvatarText" *ngIf="userName"> {{ userName.charAt(0) }}</span>
+      
+       <!-- <div *ngIf="userName" class="user-info">
+              <p> {{ userName }}</p>
+            </div> -->
+      
+                  </div>
+                    <p class="fw-bold fs-6  mb-2" *ngIf="userName">Good evening, {{userName}}</p>
                   </div>
                   <p>Your career goal is to explore topics outside of work as a Front-end Application Design</p>
                 

@@ -61,6 +61,10 @@ data-bs-backdrop="false"
 
       </div>
 
+      <!-- <div *ngIf="userName" class="user-info">
+        <p> {{ userName }}</p>
+      </div> -->
+
       <div class="search-container">
         <input type="text" placeholder="What do you want to learn?" class="seaechText">
 
@@ -100,11 +104,15 @@ data-bs-backdrop="false"
 
           </svg>
         </button>
-
+      
         <div class="dropdown">
           <a  class="d-flex align-items-center hidden-arrow link" id="profileDropdown" role="button" data-bs-toggle="dropdown">
             <div class="avatar">
-              <span class="AvatarText">F</span>
+              <span class="AvatarText" *ngIf="userName"> {{ userName.charAt(0) }}</span>
+
+ <!-- <div *ngIf="userName" class="user-info">
+        <p> {{ userName }}</p>
+      </div> -->
 
             </div> </a>
           <ul class="dropdown-menu dropdown-menu-end">
