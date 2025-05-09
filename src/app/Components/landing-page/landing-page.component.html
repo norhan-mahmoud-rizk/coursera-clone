@@ -156,9 +156,9 @@
     </div>
     <div class="buttonGroup">
       <button type="button" class="btn btn-primary buttonFree" onclick="document.getElementById('registerDialog')?.showModal()">Join For Free</button>
-      <button type="button" class="btn btn-primary buttonFree" onclick="document.getElementById('confirmEmail')?.showModal()">confirm email</button>
+      <!-- <button type="button" class="btn btn-primary buttonFree" onclick="document.getElementById('confirmEmail')?.showModal()">confirm email</button>
 
-      <button type="button" class="btn btn-primary buttonFree" (click)="gotohome()">home </button>
+      <button type="button" class="btn btn-primary buttonFree" (click)="gotohome()">home </button> -->
 
       <button type="button" class="btn btn-outline-primary buttonTry">Try Coursera for Business </button>
     </div>
@@ -330,7 +330,7 @@
 
 <app-login-register-form-dialog *ngIf="!authService.getToken()"></app-login-register-form-dialog>
 
-
-<app-confirm-email *ngIf="!authService.getToken()"></app-confirm-email>
+<!-- 
+<app-confirm-email *ngIf="!authService.getToken()"></app-confirm-email> -->
 
 

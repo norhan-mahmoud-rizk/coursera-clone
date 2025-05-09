@@ -14,8 +14,8 @@ export interface Iuser {
   codeExpires?: Date;
   isConfirmed?: boolean;
   isDeleted?: boolean;
-  address?: string;
-  myLearning?: ICareerCourses[];
+  // address?: string;
+  // myLearning?: ICareerCourses[];
   progress?: {
     progressCourses: Array<{
       courseId?: string;

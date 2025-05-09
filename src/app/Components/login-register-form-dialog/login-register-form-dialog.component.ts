@@ -1,20 +1,23 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, AfterViewInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthService} from '../../Services/auth.service';
+import { AuthService } from '../../Services/auth.service';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { Iuser } from '../../Models/iuser';
+import { ConfirmEmailComponent } from '../confirm-email/confirm-email.component';
 
 @Component({
   selector: 'app-login-register-form-dialog',
   templateUrl: './login-register-form-dialog.component.html',
   styleUrls: ['./login-register-form-dialog.component.scss'],
   standalone: true,
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule, CommonModule, ConfirmEmailComponent],
 })
-export class LoginRegisterFormDialogComponent {
+export class LoginRegisterFormDialogComponent implements AfterViewInit {
   loginEmail: string = '';
   loginPassword: string = '';
+
+  @ViewChild('confirmEmailDialog') confirmEmailDialog!: any;
 
   registerUser: Iuser = {
     username: '',
@@ -24,37 +27,44 @@ export class LoginRegisterFormDialogComponent {
     lastName: '',
     phone: '',
     dob: new Date(),
-    address: '',
-    myLearning: [],
+    // myLearning: [],
     progress: {
       progressCourses: []
     }
   };
 
   constructor(
-    private authService: AuthService,
+    public authService: AuthService,
     private router: Router
   ) {}
+
+  ngAfterViewInit(): void {
+    // nothing needed here for now
+  }
 
   login() {
     this.authService.login(this.loginEmail, this.loginPassword).subscribe({
       next: (response) => {
-        this.authService.setToken(response.userToken); // Save JWT
-
+        // Save token
+        this.authService.setToken(response.userToken);
+  
+        // Create dummy user for display
         const dummyUser: Iuser = {
           username: this.loginEmail.split('@')[0],
           email: this.loginEmail,
           password: '',
           firstName: '',
           lastName: '',
-          address: '',
-          myLearning: [],
+          // myLearning: [],
           progress: {
             progressCourses: []
           }
         };
+  
+        // Set current user
         this.authService.setCurrentUser(dummyUser);
-
+  
+        // Navigate to home
         this.router.navigate(['/home']);
       },
       error: (err) => {
@@ -68,11 +78,13 @@ export class LoginRegisterFormDialogComponent {
     this.authService.register(this.registerUser).subscribe({
       next: (response) => {
         alert('Registration successful! Please check your email for a confirmation code.');
-        this.router.navigate(['/home']);
+        setTimeout(() => {
+          const dialog = document.getElementById('confirmEmail') as HTMLDialogElement;
+          dialog?.showModal();
+        }, 0);
       },
       error: (err) => {
         console.error('Registration error:', err);
-
         if (err.status === 409) {
           alert(`This email is already taken. Try logging in.`);
         } else if (err.status === 400) {

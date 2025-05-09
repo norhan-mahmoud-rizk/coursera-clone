@@ -30,8 +30,8 @@ export class AuthService {
     );
   }
 
-  confirmEmail(email: string, code: string): Observable<{ message: string; confirmedUser: any }> {
-    return this.http.patch<{ message: string; confirmedUser: any }>(
+  confirmEmail(email: string, code: string): Observable<{ message: string; userToken: string }> {
+    return this.http.patch<{ message: string; userToken: string }>(
       `${this.baseURL}/confirm-email`,
       { email, code }
     );
