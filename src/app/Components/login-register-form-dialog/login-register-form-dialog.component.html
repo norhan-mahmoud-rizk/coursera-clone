@@ -44,7 +44,7 @@
       </div>
       <form (ngSubmit)="register()" #registerForm="ngForm">
         <label for="FullName">Full Name <span class="text-danger">*</span></label>
-        <input id="FullName" class="form-control my-2 py-2" name="name" [(ngModel)]="registerUser.name" required
+        <input id="FullName" class="form-control my-2 py-2" name="name" [(ngModel)]="registerUser.username" required
         placeholder="Enter your full name"
         #FullName="ngModel"
         [ngClass]="{'is-invalid':(FullName.touched||FullName.dirty)&&FullName.invalid}"

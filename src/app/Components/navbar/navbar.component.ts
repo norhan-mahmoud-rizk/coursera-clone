@@ -13,6 +13,6 @@ export class NavbarComponent {
 
   logout() {
     this.authService.logout();
-    this.router.navigate(['/']);
+    this.router.navigate(['/']); // Redirect to landing page the default route after logout
   }
 }
