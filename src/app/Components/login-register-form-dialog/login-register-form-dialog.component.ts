@@ -14,11 +14,13 @@ import { ConfirmEmailComponent } from '../confirm-email/confirm-email.component'
   imports: [FormsModule, CommonModule, ConfirmEmailComponent],
 })
 export class LoginRegisterFormDialogComponent implements AfterViewInit {
+
+  // They store the data that the user enters in the login form.
   loginEmail: string = '';
   loginPassword: string = '';
-
+// To access the item named confirmEmailDialog
   @ViewChild('confirmEmailDialog') confirmEmailDialog!: any;
-
+// An object representing a new user who will register on the website. It contains his data.
   registerUser: Iuser = {
     username: '',
     email: '',
@@ -26,6 +28,9 @@ export class LoginRegisterFormDialogComponent implements AfterViewInit {
     firstName: '',
     lastName: '',
     phone: '',
+  userImage: '',
+  location: '',
+  gender: '',
     dob: new Date(),
     // myLearning: [],
     progress: {
@@ -46,7 +51,7 @@ export class LoginRegisterFormDialogComponent implements AfterViewInit {
     this.authService.login(this.loginEmail, this.loginPassword).subscribe({
       next: (response) => {
         // Save token
-        this.authService.setToken(response.userToken);
+        this.authService.setToken(response.userToken);//Here we hold and store the token because i acces that from the coming response 
   
         // Create dummy user for display
         const dummyUser: Iuser = {
@@ -55,6 +60,9 @@ export class LoginRegisterFormDialogComponent implements AfterViewInit {
           password: '',
           firstName: '',
           lastName: '',
+           userImage: '',
+  location: '',
+  gender: '',
           // myLearning: [],
           progress: {
             progressCourses: []
@@ -64,7 +72,7 @@ export class LoginRegisterFormDialogComponent implements AfterViewInit {
         // Set current user
         this.authService.setCurrentUser(dummyUser);
   
-        // Navigate to home
+        // Navigate to home if the user that logged in in the data base
         this.router.navigate(['/home']);
       },
       error: (err) => {

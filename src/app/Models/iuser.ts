@@ -1,12 +1,10 @@
-import { ICareerCourses } from "./ICareerCourses";
-
 export interface Iuser {
-  id?: string;
+  _id?: string;
   firstName?: string;
   lastName?: string;
-  username: string;
-  email: string;
-  password: string;
+  username?: string;
+  email?: string;
+  password?: string;
   phone?: string;
   dob?: Date;
   role?: string;
@@ -14,10 +12,12 @@ export interface Iuser {
   codeExpires?: Date;
   isConfirmed?: boolean;
   isDeleted?: boolean;
-  // address?: string;
-  // myLearning?: ICareerCourses[];
+  gender?: string;
+  userImage?: string;
+  location?: string;
+  courses?: string[];
   progress?: {
-    progressCourses: Array<{
+    progressCourses?: Array<{
       courseId?: string;
       name?: string;
       passedModules?: Array<{
@@ -29,10 +29,10 @@ export interface Iuser {
           passedSubTopics?: Array<{
             subTopicId?: string;
             name?: string;
-          }>;
-        }>;
-      }>;
-    }>;
+          }>;}
+        >;}
+      >;}
+    >;
   };
   createdAt?: Date;
   updatedAt?: Date;
