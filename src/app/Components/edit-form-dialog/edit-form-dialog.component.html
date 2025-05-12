@@ -30,7 +30,7 @@
             align-items: center;
             justify-content: center;
             border-radius: 50%;
-           " *ngIf="userName">{{userName.charAt(0)}}</div>
+           " *ngIf="userData">{{ userData.username.charAt(0) }}</div>
 
            
         </div>
@@ -42,7 +42,7 @@
      </div>
 
         <label for="FullName" class="fw-semibold  fs-5" >user Name <Span class="text-danger">*</Span> <span class="text-secondary">(Required)</span> </label>
-        <input id="FullName" class="form-control my-2 py-2 ps-3 fs-6" name="name"  required value="{{userName}}"
+        <input id="FullName" class="form-control my-2 py-2 ps-3 fs-6" name="name"  required value="{{ userData.username }}"
    />
    <label for="location" class="fw-semibold fs-5">Location</label>
    <select id="location" name="location" class="form-select my-2 py-2 ps-3 fs-6" required>

@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { Iuser } from '../../Models/iuser';
 import { ConfirmEmailComponent } from '../confirm-email/confirm-email.component';
+import { UserServiceService } from '../../Services/user-service.service';
 
 @Component({
   selector: 'app-login-register-form-dialog',
@@ -40,47 +41,81 @@ export class LoginRegisterFormDialogComponent implements AfterViewInit {
 
   constructor(
     public authService: AuthService,
-    private router: Router
+    private router: Router,
+    public userService:UserServiceService
   ) {}
 
   ngAfterViewInit(): void {
     // nothing needed here for now
   }
+// 
 
-  login() {
-    this.authService.login(this.loginEmail, this.loginPassword).subscribe({
-      next: (response) => {
-        // Save token
-        this.authService.setToken(response.userToken);//Here we hold and store the token because i acces that from the coming response 
+
+
+login() {
+  this.authService.login(this.loginEmail, this.loginPassword).subscribe({
+    next: (response) => {
+      this.authService.setToken(response.userToken);
+      this.authService.setUserId(response.userId); // لو مش محتاجاه ممكن تشيليه
+
+      this.userService.getUserById().subscribe({
+        next: (user) => {
+          console.log('✅ Logged-in user data:', user);
+          this.router.navigate(['/home']);
+        },
+        error: (err) => {
+          console.error('❌ Error fetching user data:', err);
+        }
+      });
+    },
+    error: (err) => {
+      alert('Invalid email or password');
+      console.error(err);
+    }
+  });
+}
+
+
+
+
+// 
+
+
+
+  // login() {
+  //   this.authService.login(this.loginEmail, this.loginPassword).subscribe({
+  //     next: (response) => {
+  //       // Save token
+  //       this.authService.setToken(response.userToken);//Here we hold and store the token because i acces that from the coming response 
   
-        // Create dummy user for display
-        const dummyUser: Iuser = {
-          username: this.loginEmail.split('@')[0],
-          email: this.loginEmail,
-          password: '',
-          firstName: '',
-          lastName: '',
-           userImage: '',
-  location: '',
-  gender: '',
-          // myLearning: [],
-          progress: {
-            progressCourses: []
-          }
-        };
+  //       // Create dummy user for display
+  //       const dummyUser: Iuser = {
+  //         username: this.loginEmail.split('@')[0],
+  //         email: this.loginEmail,
+  //         password: '',
+  //         firstName: '',
+  //         lastName: '',
+  //          userImage: '',
+  // location: '',
+  // gender: '',
+  //         // myLearning: [],
+  //         progress: {
+  //           progressCourses: []
+  //         }
+  //       };
   
-        // Set current user
-        this.authService.setCurrentUser(dummyUser);
+  //       // Set current user
+  //       this.authService.setCurrentUser(dummyUser);
   
-        // Navigate to home if the user that logged in in the data base
-        this.router.navigate(['/home']);
-      },
-      error: (err) => {
-        alert('Invalid email or password');
-        console.error(err);
-      }
-    });
-  }
+  //       // Navigate to home if the user that logged in in the data base
+  //       this.router.navigate(['/home']);
+  //     },
+  //     error: (err) => {
+  //       alert('Invalid email or password');
+  //       console.error(err);
+  //     }
+  //   });
+  // }
 
   register() {
     this.authService.register(this.registerUser).subscribe({

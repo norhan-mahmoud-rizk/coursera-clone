@@ -3,6 +3,7 @@ import { Router, RouterModule } from '@angular/router';
 import { AuthService } from '../../Services/auth.service';
 import { FormsModule, NgModel } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { UserServiceService } from '../../Services/user-service.service';
 
 @Component({
   selector: 'app-navbar',
@@ -12,13 +13,14 @@ import { CommonModule } from '@angular/common';
 })
 export class NavbarComponent implements OnInit {
 
-  userName: string | null = null;//to display the username  of the user 
-  constructor(public authService: AuthService, private router: Router) {}
+  // userName: string | null = null;//to display the username  of the user
+ userData: any;
+  constructor(public authService: AuthService, private router: Router,public userService :UserServiceService) {}
   ngOnInit(): void {
-    const currentUser = this.authService.getCurrentUser();
-    if (currentUser && currentUser.username) {
-      this.userName = currentUser.username;
-    }
+   this.userService.getUserById().subscribe((res: any) => {
+    console.log("✅ Current logged-in user form the career page :", res);
+    this.userData = res.data; // <-- هنا بنخزن اليوزر
+  });
   }
 
   logout() {
