@@ -13,7 +13,8 @@ export interface Iuser {
   isConfirmed?: boolean;
   isDeleted?: boolean;
   gender?: string;
-  userImage?: string;
+userImage?: string | File;
+
   location?: string;
   courses?: string[];
   progress?: {

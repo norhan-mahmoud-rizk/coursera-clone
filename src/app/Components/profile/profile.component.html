@@ -90,8 +90,10 @@
           <h5>Personal details</h5>
           <div class="profile-img" *ngIf="userData">{{ userData.username.charAt(0) }}</div>
           <h5 class="profile-name" *ngIf="userData">{{ userData.username }}</h5>
-          <button class="btn btn-outline-primary">Share profile link</button>
-          <a href="#" class="update-visibility">Update profile visibility</a>
+          <h6 class="profile-name" *ngIf="userData">{{ userData.location }}</h6>
+
+          <!-- <button class="btn btn-outline-primary">Share profile link</button>
+          <a href="#" class="update-visibility">Update profile visibility</a> -->
         </div>
       </div>
       <div class="card info-card">

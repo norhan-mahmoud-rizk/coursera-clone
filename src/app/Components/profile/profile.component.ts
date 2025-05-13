@@ -21,8 +21,8 @@ export class ProfileComponent implements OnInit {
     constructor(public authService: AuthService, private router: Router,public userService :UserServiceService) {}
     ngOnInit(): void {
      this.userService.getUserById().subscribe((res: any) => {
-    console.log("✅ Current logged-in user form the career page :", res);
-    this.userData = res.data; // <-- هنا بنخزن اليوزر
+    // console.log(" Current  user form the career page :", res);
+    this.userData = res.data; //here will be the user
   });
     }
 

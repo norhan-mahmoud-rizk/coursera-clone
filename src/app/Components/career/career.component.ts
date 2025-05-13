@@ -25,10 +25,10 @@ export class CareerComponent implements OnInit{
   
   this.userService.getUserById().subscribe({
     next: (user) => {
-      console.log('✅ Current logged-in user form the career page :', user);
+      console.log(' Current user form the career page :', user);
     },
     error: (err) => {
-      console.error('❌ Failed to fetch user from token:', err);
+      console.error(' Failed to fetch user from token:', err);
     }
   });
     }

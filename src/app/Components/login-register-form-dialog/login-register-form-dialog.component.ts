@@ -60,11 +60,11 @@ login() {
 
       this.userService.getUserById().subscribe({
         next: (user) => {
-          console.log('✅ Logged-in user data:', user);
+          console.log(' user data:', user);
           this.router.navigate(['/home']);
         },
         error: (err) => {
-          console.error('❌ Error fetching user data:', err);
+          console.error('Error fetching user data:', err);
         }
       });
     },
@@ -118,6 +118,13 @@ login() {
   // }
 
   register() {
+
+    // this.registerUser.username was undefined at the moment .trim() was called for this i make the condition
+   if (this.registerUser?.username) {
+    const nameParts = this.registerUser.username.trim().split(' ');
+    this.registerUser.firstName = nameParts[0] || '';
+    this.registerUser.lastName = nameParts.slice(1).join(' ') || '';
+  }
     this.authService.register(this.registerUser).subscribe({
       next: (response) => {
         alert('Registration successful! Please check your email for a confirmation code.');

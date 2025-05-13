@@ -20,8 +20,28 @@ export class UserServiceService {
       headers = headers.set('Authorization', `Bearer ${token}`);
     }
 
-    // لاحظي إننا مبنحطش ID هنا
+  
     return this.http.get<Iuser>(`${this.apiUrl}/`, { headers });
   }
+
+
+
+  // update the user 
+
+  updateUser(data: Partial<Iuser>): Observable<{ message: string; updatedUser: Iuser }> {
+  const token = this.authService.getToken();
+  let headers = new HttpHeaders();
+
+  if (token) {
+    headers = headers.set('Authorization', `Bearer ${token}`);
+  }
+
+  return this.http.patch<{ message: string; updatedUser: Iuser }>(
+    `${this.apiUrl}/update`,
+    data,
+    { headers }
+  );
+}
+
 }
 
