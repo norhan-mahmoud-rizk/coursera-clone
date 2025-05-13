@@ -37,6 +37,7 @@ export class AuthService {
     this.token = token;
     localStorage.setItem('token', token);
   }
+//function to get the token and used in testing i have token or not for the naviagton or guard the route 
 
   getToken(): string | null {
     return this.token || localStorage.getItem('token');
@@ -54,7 +55,7 @@ export class AuthService {
     this.token = null;
     this.userId = null;
     localStorage.removeItem('token');
-    this.http.post(`${this.baseURL}/logout`, {}).subscribe(); // Optional
+    this.http.post(`${this.baseURL}/logout`, {}).subscribe(); 
   }
 }
 
