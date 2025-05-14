@@ -3,6 +3,6 @@ export interface CareerResourses {
     id: string,
       question: string,
       answer: string,
-       categoryID:string,
+       CareerResourceCategory:string,
       date:string
 }

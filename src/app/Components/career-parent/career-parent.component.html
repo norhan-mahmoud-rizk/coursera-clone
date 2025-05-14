@@ -51,49 +51,8 @@
   
     <app-career [filtervalue]="sendedValueFromParent"></app-career>
   
-    <!-- career resources -->
-    <div class="CareerResourse">
-      <h2 class="mb-4 CareerResouresHeader">Career resources</h2>
-  
-      <div class="buttons-container d-flex flex-wrap gap-2">
-        @for (Resoursescat of CareerResourseCategory; track
-        Resoursescat.categoryID) {
-        <button
-          class="btn rounded-pill fw-semibold py-1 px-2"
-          [class.active]="selectedCategory === Resoursescat.categoryID"
-          (click)="selectResours(Resoursescat.categoryID)"
-        >
-          {{ Resoursescat.categoryName }}
-        </button>
-        }
-      </div>
-  
-      <div class="container-fluid px-0 mx-0">
-        <div class="row gap-3">
-          @for (resource of CareerResourses.slice(0, visibleCoursesCount); track
-          resource.id) { @if (selectedCategory === '' || selectedCategory ===
-          resource.categoryID) {
-  
-          <div class="CareerResoursesCard mb-4 rounded-4 py-4">
-            <h6 class="fw-bold mb-2">{{ resource.question }}</h6>
-            <p>{{ resource.answer }}</p>
-            <p>{{ resource.date }}</p>
-          </div>
-  
-          } }
-        </div>
-      </div>
-  
-      <div class="container-fluid my-4 toggleShowMore mb-4 pb-5 px-0">
-        <button
-          class="rounded text-primary border border-primary px-4 py-3 bg-light"
-          (click)="toggleShowMore()"
-        >
-          {{ visibleCoursesCount > 4 ? "Show fewer" : "Show 6 more" }}
-        </button>
-      </div>
-    </div>
-  
+   
+  <app-career-resourses></app-career-resourses>
 <!-- success stories -->
   <app-success-stories></app-success-stories>
     <!-- last part  -->

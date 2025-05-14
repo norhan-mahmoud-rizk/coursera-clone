@@ -65,7 +65,7 @@ getCarerrCourseById(CourseId: string): Observable<ICareerCourses> {
 
   // Get career resources filtered by category
   getCareerResoursesByCategory(categoryID: string): Observable<CareerResourses[]> {
-    return this.httpclient.get<CareerResourses[]>(`${this.baseURLcareerResources}?categoryID=${categoryID}`);
+    return this.httpclient.get<CareerResourses[]>(`${this.baseURLcareerResources}?CareerResourceCategory=${categoryID}`);
   }
 
   // get all success stories 
