@@ -29,7 +29,7 @@ export class ServiceWithApiService {
   baseURLCareerCourseCategory:string=`${environment.baseURL}/CareerCourseCategories`;
   baseURLcareerResources:string=`${environment.baseURL}/careerResources`;
   baseURLcareerResourceCategories:string=`${environment.baseURL}/careerResourceCategories`;
-  baseURLsuccessStories:string=`${environment.baseURL}/successStories`;
+  baseURLsuccessStories:string=`${environment.backendURL}/successStory/allsuccessStories`;
   baseURLGains:string=`${environment.baseURL}/Gains`;
   baseURLAchieve:string=`${environment.baseURL}/Achieve`;
 
