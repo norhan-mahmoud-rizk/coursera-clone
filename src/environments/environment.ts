@@ -1,5 +1,7 @@
 export const environment = {
     baseURL: 'http://localhost:3000',
- backendURL: 'http://localhost:3200',
+ backendURL: 'https://coursera-clone-iti-production.up.railway.app',
+
     production: true
+    
 };

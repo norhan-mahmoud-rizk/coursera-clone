@@ -1,35 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 $lightGray: #8495b0;
 $baseGray:#5b6780;
 $primaryColor:#0d6efd;
 $whiteColor:white;
-*{
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-.RolesParent {
-  margin-top: 5%;
-  .roles {
-    
-    font-weight: 600;
-  }
-  p {
-    padding-top: 1%;
-    font-size: 18px;
+.CareerResourse{
+  .CareerResouresHeader{
+    font-weight: 600 !important;
   }
   .buttons {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;//to make spaces between buttons
-
   }
   .buttons-container {
     display: flex;
-    width: 80%;
+    flex-wrap: nowrap;
+    width:40%;
+    margin-bottom: 3%;
     button {
       flex: 1 1 auto;
       white-space: nowrap;
-      font-size: .87rem; 
+      font-size: .875rem; 
+      font-weight: 600;
+      padding: 0 ;
       @media (max-width: 768px) {
         font-size: 0.7rem;
       }
@@ -60,19 +55,38 @@ $whiteColor:white;
       flex-wrap: wrap;
     }
   }
-}
-
-
-
-.lastPartContainer{
-   margin-top: 6%;
-  .lastPart{
-    color: $baseGray;
-    
-    width: 50%;
-    font-size:  0.875rem;
-    font-weight: 400;
-    padding: 0 1% 0 1%;
-    
+  .CareerResoursesCard {
+    border: 1px solid $lightGray !important;
+    padding: 2% 1% 0 2%;
+    width: 24% !important;
+    p {
+      font-size:.875rem;
+      color: $baseGray;
     }
+    @media (max-width:1289px) {
+      width: 48% !important;
+    }
+    @media (max-width:594px) {
+      width: 96% !important;
+    }
+    &:hover {
+      transition: transform 0.5s ease-in-out;
+      transform: scale(1.04);
+      box-shadow: 0 0 12px $lightGray;
+      cursor: pointer;
+    }
+
+  }
+  
+.toggleShowMore {
+  button {
+    font-weight: 500;
+   
+   
+    background-color: $whiteColor !important;
+    &:hover {
+      background-color: $whiteColor !important;
+    }
+  }
+}
 }

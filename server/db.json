@@ -8600,190 +8600,190 @@
       "id": "1",
       "question": "What Is a Project Manager? A Career Guide",
       "answer": "A project manager is a skilled professional who organizes, plans and executes projects across various industries. You work within the constraints of budgets, schedules, and resources to ensure projects are completed and delivered on time. Project managers lead and coordinate entire teams, define and manage project goals, and maintain clear communication with stakeholders throughout the project lifecycle.",
-      "categoryID": "3",
+      "CareerResourceCategory": "3",
       "date": "2025-02-25"
     },
     {
       "id": "5",
       "question": "How Can I Become a Product Manager?",
       "answer": "A product manager oversees the development and lifecycle of a product, from ideation to market launch. You can become a product manager by gaining experience in product design, working closely with cross-functional teams, and mastering product management frameworks. Many product managers come from a technical, business, or design background.",
-      "categoryID": "3",
+      "CareerResourceCategory": "3",
       "date": "2025-02-22"
     },
     {
       "id": "9",
       "question": "What Is a Marketing Manager and What Do They Do?",
       "answer": "A marketing manager is responsible for developing, implementing, and overseeing marketing strategies to promote products or services. Their role includes market research, campaign planning, brand management, and overseeing the marketing team. Marketing managers often work closely with sales and product teams to ensure cohesive messaging.",
-      "categoryID": "3",
+      "CareerResourceCategory": "3",
       "date": "2025-02-18"
     },
     {
       "id": "13",
       "question": "What Are the Duties of a Digital Marketing Specialist?",
       "answer": "A digital marketing specialist develops online marketing strategies to drive traffic, build brand awareness, and increase sales. Their duties include managing social media campaigns, analyzing web traffic, SEO, content creation, and running paid ad campaigns. They often work closely with other teams to ensure marketing efforts align with business goals.",
-      "categoryID": "3",
+      "CareerResourceCategory": "3",
       "date": "2025-02-14"
     },
     {
       "id": "16",
       "question": "How Do I Transition from a Developer to a Product Manager?",
       "answer": "Transitioning from a developer to a product manager requires building skills in market analysis, user experience design, and cross-functional team management. It is helpful to gain experience in project management, communicate effectively with stakeholders, and become comfortable making strategic decisions based on business goals and customer needs.",
-      "categoryID": "3",
+      "CareerResourceCategory": "3",
       "date": "2025-03-01"
     },
     {
       "id": "17",
       "question": "What Are the Benefits of Career Coaching?",
       "answer": "Career coaching helps individuals identify their strengths and weaknesses, align their career aspirations with real-world opportunities, and receive tailored advice on job searches, interviews, and professional development. Career coaches offer a strategic perspective and provide actionable guidance to overcome career obstacles.",
-      "categoryID": "3",
+      "CareerResourceCategory": "3",
       "date": "2025-03-02"
     },
     {
       "id": "2",
       "question": "How Do I Become a Software Engineer?",
       "answer": "Becoming a software engineer requires a strong foundation in programming, understanding software development methodologies, and gaining hands-on experience in real-world projects. Start by learning programming languages like Python, Java, or C++, and work on projects to enhance your coding skills. Participate in internships and contribute to open-source projects to build your portfolio and gain industry experience.",
-      "categoryID": "1",
+      "CareerResourceCategory": "1",
       "date": "2025-02-26"
     },
     {
       "id": "6",
       "question": "What Is the Role of a Software Developer?",
       "answer": "Software developers design, build, and maintain software applications or systems. They write code, debug software, and test applications to ensure they meet user needs. A software developer must be skilled in programming languages, problem-solving, and collaborating with other developers and stakeholders to deliver functional software.",
-      "categoryID": "1",
+      "CareerResourceCategory": "1",
       "date": "2025-02-21"
     },
     {
       "id": "10",
       "question": "What Are the Key Programming Languages for Software Engineers?",
       "answer": "The most common programming languages for software engineers include Python, Java, C++, JavaScript, and Ruby. These languages are used across different domains such as web development, data science, app development, and more. The choice of language depends on the project requirements and the developer's area of expertise.",
-      "categoryID": "1",
+      "CareerResourceCategory": "1",
       "date": "2025-02-17"
     },
     {
       "id": "14",
       "question": "What Tools Are Essential for Software Engineers?",
       "answer": "Software engineers use various tools depending on their specialty. Common tools include IDEs (e.g., Visual Studio, IntelliJ), version control systems (e.g., Git), debuggers, and testing tools. Additionally, engineers often use frameworks, databases, and APIs to streamline development and ensure code quality.",
-      "categoryID": "1",
+      "CareerResourceCategory": "1",
       "date": "2025-02-13"
     },
     {
       "id": "18",
       "question": "What Are the Best Online Courses for Software Engineers?",
       "answer": "There are several platforms offering online courses that can help aspiring software engineers, including Codecademy, Udemy, Coursera, and edX. These platforms provide interactive lessons in programming languages, software development techniques, and computer science fundamentals.",
-      "categoryID": "1",
+      "CareerResourceCategory": "1",
       "date": "2025-03-05"
     },
     {
       "id": "19",
       "question": "How Can I Improve My Problem-Solving Skills as a Developer?",
       "answer": "Improving problem-solving skills as a developer involves practicing algorithmic thinking, understanding data structures, and participating in coding challenges like those on LeetCode, HackerRank, or Codewars. It is also important to work on debugging and refining code and to learn how to break complex problems into smaller, manageable pieces.",
-      "categoryID": "1",
+      "CareerResourceCategory": "1",
       "date": "2025-03-06"
     },
     {
       "id": "3",
       "question": "What Skills Do Data Scientists Need?",
       "answer": "Data scientists need a combination of strong programming skills, statistical knowledge, and the ability to work with large datasets. Key skills include proficiency in languages like Python, R, and SQL, experience with machine learning algorithms, and the ability to visualize and interpret data effectively.",
-      "categoryID": "2",
+      "CareerResourceCategory": "2",
       "date": "2025-02-24"
     },
     {
       "id": "7",
       "question": "What Are the Most Important Skills for a Data Analyst?",
       "answer": "Data analysts need a combination of technical skills, like proficiency in Excel, SQL, and data visualization tools, as well as analytical skills to draw insights from data. Understanding business context and being able to communicate findings effectively are also essential skills for data analysts.",
-      "categoryID": "2",
+      "CareerResourceCategory": "2",
       "date": "2025-02-20"
     },
     {
       "id": "11",
       "question": "How Do I Start a Career in Data Science?",
       "answer": "To start a career in data science, you should first acquire strong knowledge in programming languages like Python or R, learn statistics and machine learning techniques, and gain hands-on experience through projects. Additionally, developing skills in data wrangling, visualization, and tools like Jupyter notebooks and TensorFlow will be beneficial.",
-      "categoryID": "2",
+      "CareerResourceCategory": "2",
       "date": "2025-02-16"
     },
     {
       "id": "15",
       "question": "What Is the Difference Between Data Analytics and Data Science?",
       "answer": "Data analytics involves examining data to find trends and insights, often focusing on descriptive and diagnostic analytics. Data science, on the other hand, involves building models, algorithms, and using machine learning to predict future outcomes and gain deeper insights. Data science typically requires more advanced knowledge of programming and statistical analysis.",
-      "categoryID": "2",
+      "CareerResourceCategory": "2",
       "date": "2025-02-12"
     },
     {
       "id": "20",
       "question": "What Are the Best Tools for Data Analysts?",
       "answer": "Some of the best tools for data analysts include Excel, SQL, R, Tableau, and Power BI. These tools help analysts manipulate data, create reports, and visualize trends to inform business decisions.",
-      "categoryID": "2",
+      "CareerResourceCategory": "2",
       "date": "2025-03-07"
     },
     {
       "id": "21",
       "question": "What Are the Most Common Machine Learning Algorithms?",
       "answer": "Some of the most common machine learning algorithms include decision trees, linear regression, logistic regression, support vector machines (SVM), and k-means clustering. These algorithms are used to analyze data and make predictions based on patterns found in historical data.",
-      "categoryID": "2",
+      "CareerResourceCategory": "2",
       "date": "2025-03-08"
     },
     {
       "id": "4",
       "question": "What Is Career Path Planning?",
       "answer": "Career path planning involves identifying your long-term career goals and the steps required to achieve them. This may include selecting a field to specialize in, obtaining the necessary qualifications, gaining relevant experience, and setting milestones for career growth. Successful career path planning involves a strategic approach to continuous learning and development.",
-      "categoryID": "4",
+      "CareerResourceCategory": "4",
       "date": "2025-02-23"
     },
     {
       "id": "8",
       "question": "How Do I Set Clear Career Goals?",
       "answer": "Setting clear career goals involves identifying your long-term aspirations, breaking them into smaller achievable steps, and setting timelines for each step. Reflecting on your strengths and areas of improvement, as well as staying adaptable to changes in your industry, will also help you align your goals with your career progress.",
-      "categoryID": "4",
+      "CareerResourceCategory": "4",
       "date": "2025-02-19"
     },
     {
       "id": "12",
       "question": "What Is a Career Coach and How Can They Help Me?",
       "answer": "A career coach helps individuals identify their career goals, develop a job search strategy, and provide guidance on professional growth. They offer advice on resume building, job interviewing, salary negotiation, and overall career development. Career coaches also help individuals navigate career transitions and challenges.",
-      "categoryID": "4",
+      "CareerResourceCategory": "4",
       "date": "2025-02-15"
     },
     {
       "id": "22",
       "question": "What Are the Key Skills for Career Development?",
       "answer": "The key skills for career development include strong communication skills, adaptability, time management, leadership, and continuous learning. Building a strong professional network and gaining expertise in relevant areas also play a critical role in advancing your career.",
-      "categoryID": "4",
+      "CareerResourceCategory": "4",
       "date": "2025-03-10"
     },
     {
       "id": "23",
       "question": "How Do I Create a Career Development Plan?",
       "answer": "Creating a career development plan involves setting specific career goals, identifying the skills and experience needed to achieve those goals, and outlining actionable steps to accomplish them. Regularly reviewing and adjusting your plan ensures continuous progress toward your goals.",
-      "categoryID": "4",
+      "CareerResourceCategory": "4",
       "date": "2025-03-11"
     },
     {
       "id": "24",
       "question": "What Are the Benefits of Networking for Career Advancement?",
       "answer": "Networking is essential for career advancement because it helps you build relationships with professionals in your industry, gain insights into job opportunities, and establish a support system for your career. Networking can lead to mentorship, collaborations, and access to valuable resources.",
-      "categoryID": "4",
+      "CareerResourceCategory": "4",
       "date": "2025-03-12"
     }
   ],
   "careerResourceCategories": [
     {
       "categoryName": "General",
-      "categoryID": "1",
+      "CareerResourceCategory": "1",
       "id": "963a"
     },
     {
       "categoryName": "Skills",
-      "categoryID": "2",
+      "CareerResourceCategory": "2",
       "id": "78c6"
     },
     {
       "categoryName": "Career Advice",
-      "categoryID": "3",
+      "CareerResourceCategory": "3",
       "id": "5e99"
     },
     {
       "categoryName": "Career Path Planning",
-      "categoryID": "4",
+      "CareerResourceCategory": "4",
       "id": "eaab"
     }
   ],
