@@ -27,9 +27,9 @@ export class ServiceWithApiService {
   
   baseURLCareerCourse:string=`${environment.baseURL}/CareerCourses`;
   baseURLCareerCourseCategory:string=`${environment.baseURL}/CareerCourseCategories`;
-  baseURLcareerResources:string=`${environment.baseURL}/careerResources`;
-  baseURLcareerResourceCategories:string=`${environment.baseURL}/careerResourceCategories`;
-  baseURLsuccessStories:string=`${environment.backendURL}/successStory/allsuccessStories`;
+baseURLcareerResources: string = `${environment.backendURL}/careeerResource/allCareerResources`;
+baseURLcareerResourceCategories: string = `${environment.backendURL}/careeerResourceCategories/allCareerResourceCategories`;
+ baseURLsuccessStories:string=`${environment.backendURL}/successStory/allsuccessStories`;
   baseURLGains:string=`${environment.baseURL}/Gains`;
   baseURLAchieve:string=`${environment.baseURL}/Achieve`;
 
@@ -54,19 +54,21 @@ getCarerrCourseById(CourseId: string): Observable<ICareerCourses> {
     return this.httpclient.get<ICareerCourses[]>(`${this.baseURLCareerCourse}?categoryID=${catValu}`);
   }
 
+// Get all career resources // Get all career resources
   GetAllCareerResourses(): Observable<CareerResourses[]> {
     return this.httpclient.get<CareerResourses[]>(this.baseURLcareerResources);
   }
 
-  // Get categories for career resources
+  // Get all resource categories
   getCareerResoursesCategory(): Observable<CareerResoursesCategory[]> {
-    return this.httpclient.get<CareerResoursesCategory[]>(`${environment.baseURL}/careerResourceCategories`);
+    return this.httpclient.get<CareerResoursesCategory[]>(this.baseURLcareerResourceCategories);
   }
 
-  // Get career resources filtered by category
+  // Get resources filtered by category
   getCareerResoursesByCategory(categoryID: string): Observable<CareerResourses[]> {
     return this.httpclient.get<CareerResourses[]>(`${this.baseURLcareerResources}?CareerResourceCategory=${categoryID}`);
   }
+
 
   // get all success stories 
    GetAllSuccessStories():Observable<SucessStories[]>{

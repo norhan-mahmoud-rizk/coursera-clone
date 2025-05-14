@@ -1,78 +1,71 @@
 import { Component, OnInit } from '@angular/core';
 import { CareerResoursesCategory } from '../../Models/career-resourses-category';
-import { ServiceWithApiService } from '../../Services/service-with-api.service';
 import { CareerResourses } from '../../Models/career-resourses';
+import { ServiceWithApiService } from '../../Services/service-with-api.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-career-resourses',
-  imports: [],
   templateUrl: './career-resourses.component.html',
-  styleUrl: './career-resourses.component.scss'
+  styleUrls: ['./career-resourses.component.scss'],
+  standalone: true,
+  imports: [CommonModule]
 })
-export class CareerResoursesComponent implements OnInit{
+export class CareerResoursesComponent implements OnInit {
   CareerResourseCategory: CareerResoursesCategory[] = [];
-    selectedCategory: string = ''; 
-       CareerResourses: CareerResourses[] = [];
-           visibleCoursesCount: number = 4;
-  constructor(private courseServiceWithApi: ServiceWithApiService){}
+  selectedCategory: string = '';
+  CareerResourses: CareerResourses[] = [];
+  visibleCoursesCount: number = 4;
+
+  constructor(private courseServiceWithApi: ServiceWithApiService) {}
+
   ngOnInit(): void {
-  this.fetchCareerResoursesCategories();
-  
-      if (this.CareerResourseCategory.length > 0) {
-        this.selectedCategory = this.CareerResourseCategory[0].CareerResourceCategory;
-        this.fetchCareerResoureses(this.selectedCategory);
-      }
+    this.fetchCareerResoursesCategories();
   }
 
-
-     fetchCareerResoursesCategories() {
-      this.courseServiceWithApi.getCareerResoursesCategory().subscribe({
-        next: (data) => {
-          this.CareerResourseCategory = data;
-          if (this.CareerResourseCategory.length > 0) {
-            this.selectedCategory = this.CareerResourseCategory[0].CareerResourceCategory;
-            this.fetchCareerResoureses(this.selectedCategory);
-          }
-        },
-        error: (err) => {
-          console.log(err);
+  fetchCareerResoursesCategories() {
+    this.courseServiceWithApi.getCareerResoursesCategory().subscribe({
+      next: (data) => {
+        this.CareerResourseCategory = data;
+        if (this.CareerResourseCategory.length > 0) {
+          this.selectedCategory = this.CareerResourseCategory[0]._id;
+          this.fetchCareerResoureses();
         }
-      });
-    }
-  
-    fetchCareerResoureses(CareerResourceCategor: string = '') {
-      if (CareerResourceCategor === '') {
-        this.courseServiceWithApi.GetAllCareerResourses().subscribe({
-          next: (data) => {
-            this.CareerResourses = data;
-          },
-          error: (err) => {
-            console.log(err);
-          }
-        });
-      } else {
-        this.courseServiceWithApi.getCareerResoursesByCategory(CareerResourceCategor).subscribe({
-          next: (data) => {
-            this.CareerResourses = data;
-          },
-          error: (err) => {
-            console.log(err);
-          }
-        });
+      },
+      error: (err) => {
+        console.log('Error fetching categories:', err);
       }
-    }
-  
-    selectResours(selectValue: string) {
-      this.selectedCategory = selectValue;
-      this.fetchCareerResoureses(selectValue);
-    }
-  
+    });
+  }
 
-    toggleShowMore() {
-      if (this.visibleCoursesCount > 4) {
-        this.visibleCoursesCount = 4;
-      } else {
-        this.visibleCoursesCount += 6;
+  fetchCareerResoureses() {
+    this.courseServiceWithApi.GetAllCareerResourses().subscribe({
+      next: (data) => {
+        this.CareerResourses = data.filter(resource =>
+          resource.CareerResourceCategory &&
+          resource.CareerResourceCategory._id === this.selectedCategory
+        );
+      },
+      error: (err) => {
+        console.log('Error fetching resources:', err);
       }
+    });
+  }
+
+  selectResours(selectValue: string): void {
+    this.selectedCategory = selectValue;
+    this.fetchCareerResoureses();
+  }
+
+  toggleShowMore() {
+    if (this.visibleCoursesCount > 4) {
+      this.visibleCoursesCount = 4;
+    } else {
+      this.visibleCoursesCount += 6;
     }
+  }
+
+  trackByFn(index: number, item: CareerResourses): string {
+    return item._id;
+  }
 }

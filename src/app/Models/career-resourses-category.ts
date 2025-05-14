@@ -1,5 +1,5 @@
 export interface CareerResoursesCategory {
-
-    categoryName: string,
-    CareerResourceCategory: string
+  _id: string;
+  categoryName: string;
+  
 }
