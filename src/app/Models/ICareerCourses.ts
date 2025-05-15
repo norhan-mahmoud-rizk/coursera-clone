@@ -1,8 +1,8 @@
 export interface ICareerCourses {
-  id: string;
+ id: string;
   name: string;
   description: string;
-  categoryID: number;
+  categoryID: string;
   courseImage: string;
   IfYouLike: string;
   IfYouLikeValue: string;
@@ -11,30 +11,15 @@ export interface ICareerCourses {
   logoImage: string;
   organization: string;
   views: number;
-  reviews: number;
+  reviews: any[];
   enrolled: number;
-  instructorsImage:string;
-  instructorID:string;
-  instructorName:string;
+  instructor:string;
   relatedCourses: {
     RelatedCourseID: string;
     name: string;
     imgUrl: string;
   }[];
-  modules: {
-    id: string;
-    moduleTitle: string;
-    duration: string;
-    videos: {
-      title: string;
-      videos: {
-        videoID: string;
-        videoTitle: string;
-        url: string;
-        duration: string;
-      }[];
-    }[];
-  }[];
+ modules: string[];
     createdAt?: Date;
   updatedAt?: Date;
 }

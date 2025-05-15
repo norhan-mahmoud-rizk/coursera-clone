@@ -7,18 +7,18 @@
     <div class="container-fluid">
       <div class="row gap-5 mt-4">
         <div class="col-12 col-md-7  ">
-            @for(course of enrolledCourses; track course.id) {  
+       
                 <div class="border rounded-4 p-4 mt-5 coursesContainer">
                     <div class="logo d-flex  gap-2">
                     <div>
-                        <img src="{{course.logoImage}}" alt="" class="border rounded-3 p-2">
+                        <img src="" alt="" class="border rounded-3 p-2">
                        
                     </div>
                        <div>
-                        <p class="fw-semibold mt-1">{{course.organization}}</p>
+                        <p class="fw-semibold mt-1">course organization</p>
                     </div>
                 </div>
-                <p class="fw-semibold fs-5 coursename "   [routerLink]="['/courseExplanation', course.id]">{{course.name}}</p>
+                <p class="fw-semibold fs-5 coursename "  routerLink="/courseExplanation">course Name</p>
                 <p>course . 6% complete</p>
                 <div class="progress" style="height: 10px;" role="progressbar" aria-label="Basic example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
                     <div class="progress-bar bg-success" style="width: 10%"></div>
@@ -38,20 +38,20 @@
                         </div>
                     </div>
                   </div>
-            }
+           
         </div>
         <div class="col-12 col-md-4 profileContainer">
             <div class="border rounded-4 p-4 mb-3 profileCard">
                 <div class="d-block d-sm-flex d-md-block align-items-center gap-2">
                   <div class="avatar">
-                    <span class="AvatarText" *ngIf="userName"> {{ userName.charAt(0) }}</span>
+                    <span class="AvatarText" *ngIf="userData">{{ userData.username.charAt(0) }}</span>
       
        <!-- <div *ngIf="userName" class="user-info">
               <p> {{ userName }}</p>
             </div> -->
       
                   </div>
-                    <p class="fw-bold fs-6  mb-2" *ngIf="userName">Good evening, {{userName}}</p>
+                    <p class="fw-bold fs-6  mb-2" *ngIf="userData">{{ userData.username }}</p>
                   </div>
                   <p>Your career goal is to explore topics outside of work as a Front-end Application Design</p>
                 

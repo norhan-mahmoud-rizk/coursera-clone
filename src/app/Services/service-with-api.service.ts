@@ -25,8 +25,9 @@ export class ServiceWithApiService {
    }
 
   
-  baseURLCareerCourse:string=`${environment.baseURL}/CareerCourses`;
-  baseURLCareerCourseCategory:string=`${environment.baseURL}/CareerCourseCategories`;
+  baseURLCareerCourse:string=`${environment.backendURL}/course/allCourse`;
+  baseURLGetOneCareerCourse:string=`${environment.backendURL}/course`;
+  baseURLCareerCourseCategory:string=`${environment.backendURL}/Category/allCategories`;
 baseURLcareerResources: string = `${environment.backendURL}/careeerResource/allCareerResources`;
 baseURLcareerResourceCategories: string = `${environment.backendURL}/careeerResourceCategories/allCareerResourceCategories`;
  baseURLsuccessStories:string=`${environment.backendURL}/successStory/allsuccessStories`;
@@ -40,7 +41,7 @@ baseURLcareerResourceCategories: string = `${environment.backendURL}/careeerReso
   }
 // get course by id
 getCarerrCourseById(CourseId: string): Observable<ICareerCourses> {
-    return this.httpclient.get<ICareerCourses>(`${this.baseURLCareerCourse}/${CourseId}`);
+    return this.httpclient.get<ICareerCourses>(`${this.baseURLGetOneCareerCourse}/${CourseId}`);
   }
 
 // get all catgories of career courses
@@ -88,7 +89,6 @@ getCarerrCourseById(CourseId: string): Observable<ICareerCourses> {
 
 
 
- 
   
  
 }
