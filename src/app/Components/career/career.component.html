@@ -4,11 +4,11 @@
     {
     <div
       class="col-12 col-md-6 col-lg-3 mb-4 course"
-      [routerLink]="['/courseDetails', course.id]"
+       (click)="goToCareerDetails(course.id)"
     >
       <div class="CourseParent rounded-4 d-flex flex-column border mx-2">
         <div class="imageContainer">
-          <img src="{{ course.imgUrl }}" alt="" class="w-100" />
+          <img src="{{ course.courseImage }}" alt="" class="w-100" />
         </div>
         <div class="CourseContent p-3">
           <h5>{{ course.name }}</h5>

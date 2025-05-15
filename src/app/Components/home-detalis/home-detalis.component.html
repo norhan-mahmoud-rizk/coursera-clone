@@ -9,17 +9,17 @@
         <div class="card-body">
 
           <img class="mb-3 mt-5"
-            [src]="getID?.logoImage"
+            [src]="CareerCourse?.logoImage"
             alt="">
 
-          <h1 class="card-title mb-3">{{getID?.name}}</h1>
+          <h1 class="card-title mb-3">{{CareerCourse?.name}}</h1>
           <p class="card-text mb-3">
-           {{getID?.description}}
+           {{CareerCourse?.description}}
           </p>
           <div style="display: flex; align-items: center; gap: 10px;" class="Instructors">
-            <img class="imageInstructor" src="{{getID?.instructorsImage}}" alt="">
+            <img class="imageInstructor" src="{{CareerCourse?.instructorsImage}}" alt="">
             <p style="margin: 0;">Instructors:</p>
-            <a class="linkInstructor" (click)="instructorDitals(getID?.instructorID)">
+            <a class="linkInstructor" (click)="instructorDitals(CareerCourse?.instructorID)">
               <span>{{ getInstructor?.Name }}</span>
             </a>
           </div>
@@ -44,7 +44,7 @@
           </div>
 
           <div class="pt-3  ">
-            <span class="salary">{{getID?.views}}</span>  already enrolled
+            <span class="salary">{{CareerCourse?.views}}</span>  already enrolled
           </div>
           <div class="pt-3 mb-5">
             Included with
