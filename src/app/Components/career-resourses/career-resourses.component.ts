@@ -41,6 +41,7 @@ export class CareerResoursesComponent implements OnInit {
   fetchCareerResoureses() {
     this.courseServiceWithApi.GetAllCareerResourses().subscribe({
       next: (data) => {
+          console.log('GetAllCareerResourses form backend are :', data);
         this.CareerResourses = data.filter(resource =>
           resource.CareerResourceCategory &&
           resource.CareerResourceCategory._id === this.selectedCategory
