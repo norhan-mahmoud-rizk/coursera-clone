@@ -3,8 +3,9 @@ import { FormsModule } from '@angular/forms';
 import { ApiService } from '../../Services/api.service';
 
 import { CommonModule } from '@angular/common';
-import { Router, RouterModule } from '@angular/router';
+import { NavigationEnd, NavigationStart, Router, RouterModule } from '@angular/router';
 import { ICareerCourses } from '../../Models/ICareerCourses';
+import { ServiceWithApiService } from '../../Services/service-with-api.service';
 
 @Component({
   selector: 'app-home',
@@ -14,7 +15,7 @@ import { ICareerCourses } from '../../Models/ICareerCourses';
   encapsulation: ViewEncapsulation.None
 })
 export class HomeComponent implements OnInit{
-
+filteredListfrombackend:ICareerCourses[]=[];
   filterArray: ICareerCourses[] = [];
   visibleCount = 4;
   visibleCount2=4;
@@ -28,19 +29,59 @@ export class HomeComponent implements OnInit{
 
   constructor(
     private api:ApiService,
-    private router: Router
-  ){}
-
-
+    private router: Router,
+    public courseServiceWithApi:ServiceWithApiService
+  ){
+     this.router.events.subscribe(event => {
+    if (event instanceof NavigationStart) {
+      console.log('Navigation started:', event.url);
+    }
+    if (event instanceof NavigationEnd) {
+      console.log('Navigation ended:', event.url);
+    }
+  });
+  }
 
   ngOnInit(): void {
-    this.api.getAllProduct().subscribe(
-      data => {
-        console.log('Data received from API:', data);
-        this.filterArray = data;
-      }
-    );
+    // this.api.getAllProduct().subscribe(
+    //   data => {
+    //     console.log('Data received from API:', data);
+    //     this.filterArray = data;
+    //   }
+    // );
+
+
+  this.courseServiceWithApi.GetAllCareerCourses().subscribe({
+  next: (data) => {
+    console.log('Data received from backend:', data);
+    this.filterArray = data;
+      // map _id to id
+    this.filterArray = data.map((item: any) => ({
+      ...item,
+      id: item._id
+    }));
+  },
+  error: (err) => {
+    console.error('Error fetching data from backend:', err);
   }
+});
+
+  }
+
+
+  // get the data from the backend
+
+    // fetchAllCareerCoursesFromBackend() {
+    //   this.courseServiceWithApi.GetAllCareerCoursesBybackend().subscribe({
+    //     next: (data) => {
+    //       this.filteredListfrombackend = data;
+    //       console.log("the data from backend is in the home page ",data)
+    //     },
+    //     error: (err) => {
+    //       console.log(err);
+    //     }
+    //   });
+    // }
   showMore(): void {
     this.visibleCount += 4;
   }
@@ -79,6 +120,7 @@ export class HomeComponent implements OnInit{
 
 
   goToDetails(prodId: string) {
+    console.log('Navigating to details for:', prodId);
     this.router.navigate(['/homeDetails', prodId]);
   }
 

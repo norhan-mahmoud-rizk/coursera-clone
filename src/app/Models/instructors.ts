@@ -6,11 +6,16 @@ export interface Course {
 export interface Instructors {
   id: string;
   Name: string;
-  Image: string;
+  instructorImage: string;
   job: string;
   coursesTitle: string[];
-  SocialMedia: string;
+  SocialMedia: {
+    LinkidIn: string;
+  };
   description: string;
-  course: string[];
-  CoursesEnglish: Course[];
+  courses: string[];
+  createdAt: string;
+  updatedAt: string;
+  __v?: number;
+  CoursesEnglish?: Course[];
 }

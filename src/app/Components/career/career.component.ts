@@ -34,14 +34,20 @@ export class CareerComponent implements OnInit{
     }
   
     fetchAllCareerCourses() {
-      this.courseServiceWithApi.GetAllCareerCourses().subscribe({
-        next: (data) => {
-          this.filteredList = data;
-        },
-        error: (err) => {
-          console.log(err);
-        }
-      });
+    this.courseServiceWithApi.GetAllCareerCourses().subscribe({
+  next: (data) => {
+    console.log('Data received from backend:', data);
+
+    // map _id to id
+    this.filteredList = data.map((item: any) => ({
+      ...item,
+      id: item._id
+    }));
+  },
+  error: (err) => {
+    console.error('Error fetching data from backend:', err);
+  }
+});
     }
   
     @Input() set filtervalue(categoryID: string) {
