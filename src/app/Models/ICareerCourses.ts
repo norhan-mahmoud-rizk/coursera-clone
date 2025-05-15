@@ -3,7 +3,7 @@ export interface ICareerCourses {
   name: string;
   description: string;
   categoryID: number;
-  imgUrl: string;
+  courseImage: string;
   IfYouLike: string;
   IfYouLikeValue: string;
   SkillsNeeded: string;
