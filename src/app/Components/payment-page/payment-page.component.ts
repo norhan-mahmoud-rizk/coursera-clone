@@ -3,6 +3,7 @@ import { AuthService } from '../../Services/auth.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ICareerCourses } from '../../Models/ICareerCourses';
 import { ServiceWithApiService } from '../../Services/service-with-api.service';
+import { UserServiceService } from '../../Services/user-service.service';
 
 @Component({
   selector: 'app-payment-page',
@@ -13,10 +14,15 @@ import { ServiceWithApiService } from '../../Services/service-with-api.service';
 export class PaymentPageComponent implements OnInit {
  CareerCourse: ICareerCourses | undefined = undefined;
     CourseId: string = '';
+    userData:any;//get the current user 
   constructor(public authService: AuthService, private router: Router,    private CourseService: ServiceWithApiService,
-        private activatedroute: ActivatedRoute,) { }
+        private activatedroute: ActivatedRoute,public userService:UserServiceService) { }
   ngOnInit(): void {
-
+// get the user by token 
+    this.userService.getUserById().subscribe((res: any) => {
+    // console.log(" Current  user form the career page :", res);
+    this.userData = res.data; //here will be the user
+  });
 
     // Initialization logic can go here if needed
 

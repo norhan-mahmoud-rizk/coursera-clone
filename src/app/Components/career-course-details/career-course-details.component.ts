@@ -42,7 +42,7 @@ export class CareerCourseDetailsComponent implements OnInit {
       this.CourseService.getCarerrCourseById(this.CourseId).subscribe({
         next: (data) => {
           this.CareerCourse = data;
-          console.log('Current course:', this.CareerCourse);
+          console.log('Current course is from the career page :', this.CareerCourse);
   
           //call GetSimilarCourses() function here not in the function of OnInit is was to ensure that you only fetch the similar courses after successfully fetching the current course's details  and because the categoryID required for GetSimilarCourses() might not be available immediately when the ngOnInit() method runs
           this.GetSimilarCourses();

@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { ICareerCourses } from '../../Models/ICareerCourses';
 import { ServiceWithApiService } from '../../Services/service-with-api.service';
+import { UserServiceService } from '../../Services/user-service.service';
 
 @Component({
   selector: 'app-career',
@@ -16,11 +17,20 @@ export class CareerComponent implements OnInit{
     filteredList: ICareerCourses[] = [];
     visibleCoursesCount: number = 8;
   
-    constructor(public courseServiceWithApi: ServiceWithApiService) {}
+    constructor(public courseServiceWithApi: ServiceWithApiService,public userService:UserServiceService) {}
   
     ngOnInit(): void {
   
       this.fetchAllCareerCourses();
+  
+  this.userService.getUserById().subscribe({
+    next: (user) => {
+      console.log(' Current user form the career page :', user);
+    },
+    error: (err) => {
+      console.error(' Failed to fetch user from token:', err);
+    }
+  });
     }
   
     fetchAllCareerCourses() {

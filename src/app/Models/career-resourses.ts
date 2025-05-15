@@ -1,8 +1,9 @@
-export interface CareerResourses {
+import { CareerResoursesCategory } from './career-resourses-category';
 
-    id: string,
-      question: string,
-      answer: string,
-       categoryID:string,
-      date:string
+export interface CareerResourses {
+  _id: string;
+  question: string;
+  answer: string;
+  CareerResourceCategory: CareerResoursesCategory;
+  date: string;
 }

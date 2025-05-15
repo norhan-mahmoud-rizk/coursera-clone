@@ -9,7 +9,7 @@
         <div class="dropdown">
             <a  class="d-flex align-items-center hidden-arrow link text-decoration-none" id="profileDropdown" role="button" data-bs-toggle="dropdown">
               <div class="avatar">
-                <span class="AvatarText">F</span>
+                <span class="AvatarText">{{userData.username.charAt(0)}}</span>
   
               </div> </a>
             <ul class="dropdown-menu dropdown-menu-end">
@@ -46,7 +46,7 @@
   
 
        <label for="FullName" class="fw-semibold text-success  fs-5">Name  </label>
-       <input id="FullName" class="form-control my-2 py-3 ps-3 fs-6 text-success" name="name"  required value="Norhan Mohamed"
+       <input id="FullName" class="form-control my-2 py-3 ps-3 fs-6 text-success" name="name"  required value="{{ userData.username }}"
   />
       
 <label for="Country" class="fw-semibold fs-5">Country</label>

@@ -3,10 +3,9 @@ import {
   HttpEvent,
   HttpHandler,
   HttpInterceptor,
-  HttpRequest,
+  HttpRequest
 } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { tap } from 'rxjs/operators';
 
 @Injectable()
 export class AuthInterceptor implements HttpInterceptor {
@@ -15,7 +14,6 @@ export class AuthInterceptor implements HttpInterceptor {
     next: HttpHandler
   ): Observable<HttpEvent<any>> {
     const token = localStorage.getItem('token');
-    console.log('token:', token);
 
     if (token) {
       req = req.clone({
@@ -25,13 +23,6 @@ export class AuthInterceptor implements HttpInterceptor {
       });
     }
 
-    return next.handle(req).pipe(
-      tap(
-        (event) => {},
-        (error) => {
-          console.warn('HTTP Error Intercepted:', error);
-        }
-      )
-    );
+    return next.handle(req);
   }
 }

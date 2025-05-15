@@ -21,10 +21,10 @@ export class MyLearningComponent implements OnInit {
     console.log(' My learning list:', this.enrolledCourses);
 
 
-    // display the first character of the user
-    const currentUser = this.authService.getCurrentUser();
-    if (currentUser && currentUser.username) {
-      this.userName = currentUser.username;
-    }
+    // // display the first character of the user
+    // const currentUser = this.authService.getCurrentUser();
+    // if (currentUser && currentUser.username) {
+    //   this.userName = currentUser.username;
+    // }
   }
 }

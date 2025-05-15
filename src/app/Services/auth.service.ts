@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { Observable } from 'rxjs';
 import { environment } from '../../environments/environment.development';
 import { Iuser } from '../Models/iuser';
 
@@ -9,55 +9,53 @@ import { Iuser } from '../Models/iuser';
 })
 export class AuthService {
   private baseURL = `${environment.backendURL}/user`;
-  private currentUserSubject = new BehaviorSubject<Iuser | null>(null);
-  currentUser$ = this.currentUserSubject.asObservable();
 
-  constructor(private http: HttpClient) {
-    const storedUser = localStorage.getItem('user');
-    if (storedUser) {
-      this.currentUserSubject.next(JSON.parse(storedUser));
-    }
-  }
+  private token: string | null = null;
+  private userId: string | null = null;
+
+  constructor(private http: HttpClient) {}
 
   register(userData: Partial<Iuser>): Observable<{ message: string; user: Iuser }> {
     return this.http.post<{ message: string; user: Iuser }>(`${this.baseURL}/signup`, userData);
   }
 
-  login(email: string, password: string): Observable<{ message: string; userToken: string }> {
-    return this.http.post<{ message: string; userToken: string }>(
+  login(email: string, password: string): Observable<{ message: string; userToken: string; userId: string }> {
+    return this.http.post<{ message: string; userToken: string; userId: string }>(
       `${this.baseURL}/signin`,
       { email, password }
     );
   }
 
-  confirmEmail(email: string, code: string): Observable<{ message: string; userToken: string }> {
-    return this.http.patch<{ message: string; userToken: string }>(
+  confirmEmail(email: string, code: string): Observable<{ message: string; userToken: string; userId: string }> {
+    return this.http.patch<{ message: string; userToken: string; userId: string }>(
       `${this.baseURL}/confirm-email`,
       { email, code }
     );
   }
 
   setToken(token: string): void {
+    this.token = token;
     localStorage.setItem('token', token);
   }
+//function to get the token and used in testing i have token or not for the naviagton or guard the route 
 
   getToken(): string | null {
-    return localStorage.getItem('token');
+    return this.token || localStorage.getItem('token');
   }
 
-  setCurrentUser(user: Partial<Iuser>): void {
-    localStorage.setItem('user', JSON.stringify(user));
-    this.currentUserSubject.next(user as Iuser);
+  setUserId(id: string): void {
+    this.userId = id;
+  }
+
+  getUserId(): string | null {
+    return this.userId;
   }
 
   logout(): void {
+    this.token = null;
+    this.userId = null;
     localStorage.removeItem('token');
-    localStorage.removeItem('user');
-    this.currentUserSubject.next(null);
-    this.http.post(`${this.baseURL}/logout`, {}).subscribe(); // Optional
-  }
-
-  getCurrentUser(): Iuser | null {
-    return this.currentUserSubject.value;
+    this.http.post(`${this.baseURL}/logout`, {}).subscribe(); 
   }
 }
+
