@@ -16,8 +16,8 @@ import { NavbarComponent } from '../navbar/navbar.component';
   styleUrl: './home-detalis.component.scss'
 })
 export class HomeDetalisComponent implements OnInit {
-  productID!: number;
-  getID!: ICareerCourses | undefined;
+   CareerCourse: ICareerCourses | undefined = undefined;
+    CourseId: string = '';
   getInstructor!: Instructors;
 
   // Static array to hold enrolled courses
@@ -33,15 +33,16 @@ export class HomeDetalisComponent implements OnInit {
 
   ngOnInit(): void {
     this.active.paramMap.subscribe(par => {
-      this.productID = Number(par.get('CourseId')) || 0;
-
-      this.api.getByID(String(this.productID)).subscribe({
+     this.CourseId = this.active.snapshot.paramMap.get('CourseId')
+        ? String(this.active.snapshot.paramMap.get('CourseId'))
+        : '';
+      this.api.getByID(this.CourseId).subscribe({
         next: (data) => {
-          this.getID = data;
-          console.log('Course Details:', this.getID);
+          this.CareerCourse = data;
+          console.log('Course Details:', this.CareerCourse);
 
           
-          const instructorId = this.getID?.instructorID;
+          const instructorId = this.CareerCourse?.instructorID;
           if (instructorId) {
             this.instructorService.getInstructorID(instructorId).subscribe({
               next: (instructorData) => {
@@ -63,10 +64,10 @@ export class HomeDetalisComponent implements OnInit {
 
 
   enrollCourse(): void {
-    if (this.getID) {
-      const exists = HomeDetalisComponent.myCourses.some(c => c.id === this.getID!.id);
+    if (this.CareerCourse) {
+      const exists = HomeDetalisComponent.myCourses.some(c => c.id === this.CareerCourse!.id);
       if (!exists) {
-        HomeDetalisComponent.myCourses.push(this.getID);
+        HomeDetalisComponent.myCourses.push(this.CareerCourse);
       }
       this.router.navigate(['/my learning']);
     }
