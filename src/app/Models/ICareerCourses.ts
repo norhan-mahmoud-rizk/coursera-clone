@@ -35,4 +35,6 @@ export interface ICareerCourses {
       }[];
     }[];
   }[];
+    createdAt?: Date;
+  updatedAt?: Date;
 }
