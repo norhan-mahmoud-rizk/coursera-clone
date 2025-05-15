@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { ICareerCourses } from '../../Models/ICareerCourses';
 import { ServiceWithApiService } from '../../Services/service-with-api.service';
 import { UserServiceService } from '../../Services/user-service.service';
@@ -17,7 +17,7 @@ export class CareerComponent implements OnInit{
     filteredList: ICareerCourses[] = [];
     visibleCoursesCount: number = 8;
   
-    constructor(public courseServiceWithApi: ServiceWithApiService,public userService:UserServiceService) {}
+    constructor(public courseServiceWithApi: ServiceWithApiService,public userService:UserServiceService,public router:Router) {}
   
     ngOnInit(): void {
   
@@ -65,5 +65,7 @@ export class CareerComponent implements OnInit{
     showMore8() {
       this.visibleCoursesCount += 8;
     }
- 
+  goToCareerDetails(CouserId: string) {
+    this.router.navigate(['/courseDetails', CouserId]);
+  }
 }
