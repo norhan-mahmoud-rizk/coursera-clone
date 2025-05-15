@@ -10,21 +10,29 @@ import { ITopics } from '../../Models/itopics';
   selector: 'app-online-degrees',
   imports: [CommonModule],
   templateUrl: './online-degrees.component.html',
-  styleUrl: './online-degrees.component.scss'
+  styleUrl: './online-degrees.component.scss',
 })
 export class OnlineDegreesComponent implements OnInit {
-
   degrees: IOnlineDegrees[] = [];
   filterdDegrees: IOnlineDegrees[] = [];
 
-  subjects: string[] = ['Arts and Humanities','Business', 'Computer Science','Data Science','Information Technology','Health', 'Math and Logic','Personal Development', 'Physical Science and Engineering', 'Social Science', 'Language Learning'];
+  subjects: string[] = [
+    'Arts and Humanities',
+    'Business',
+    'Computer Science',
+    'Data Science',
+    'Information Technology',
+    'Health',
+    'Math and Logic',
+    'Personal Development',
+    'Physical Science and Engineering',
+    'Social Science',
+    'Language Learning',
+  ];
   levels: string[] = ["Bachelor's Degree", "Master's Degree"];
-
 
   selectedSubjects: string[] = [];
   selectedLevels: string[] = [];
-
-
 
   collection1: IOnlineDegrees[] = [];
   collection2: IOnlineDegrees[] = [];
@@ -43,82 +51,70 @@ export class OnlineDegreesComponent implements OnInit {
   Degs = [
     {
       id: 1,
-      title:"Bachelor's Degrees"
+      title: "Bachelor's Degrees",
     },
     {
       id: 2,
-      title:"Master's Degrees"
+      title: "Master's Degrees",
     },
     {
       id: 3,
-      title:"Postgraduate Programs"
+      title: 'Postgraduate Programs',
     },
   ];
-
 
   Category = [
     {
       id: 1,
-      title:"Business and MBA Degrees"
+      title: 'Business and MBA Degrees',
     },
     {
       id: 2,
-      title:"Computer Science Degrees"
+      title: 'Computer Science Degrees',
     },
     {
       id: 3,
-      title:"Data Science Degrees"
+      title: 'Data Science Degrees',
     },
     {
       id: 4,
-      title:"Public Health Degrees"
+      title: 'Public Health Degrees',
     },
     {
       id: 5,
-      title:"Data Analytics Degrees"
+      title: 'Data Analytics Degrees',
     },
     {
       id: 6,
-      title:"Top European Degrees"
+      title: 'Top European Degrees',
     },
     {
       id: 7,
-      title:"Maestrías en línea de Latinoamérica"
+      title: 'Maestrías en línea de Latinoamérica',
     },
     {
       id: 8,
-      title:"Top Indian Degrees"
+      title: 'Top Indian Degrees',
     },
   ];
 
   constructor(private onlineDegreesService: OnlineDegreesService) {}
   ngOnInit(): void {
-    
     this.loadDegrees();
 
-    this.getAllCollections();
-
-
+    // this.getAllCollections();
   }
 
   loadDegrees() {
-    
     this.onlineDegreesService.getAllDegrees().subscribe({
-
       next: (data) => {
         this.degrees = data;
 
         this.applyFilters();
-      
-      }, error: (err) => console.log(err)
-
-    })
-
+      },
+      error: (err) => console.log(err),
+    });
   }
-
-
-
-
 
   toggleLevel(level: string) {
     const index = this.selectedLevels.indexOf(level);
@@ -140,23 +136,25 @@ export class OnlineDegreesComponent implements OnInit {
     this.applyFilters();
   }
 
-  applyFilters(event?: Event){
+  applyFilters(event?: Event) {
     if (event) {
       event.preventDefault();
     }
-    this.filterdDegrees = this.degrees.filter(degree => {
-      const matchesLevel = this.selectedLevels.length === 0 || this.selectedLevels.includes(degree.level);
-      const matchesSubject = this.selectedSubjects.length === 0 || this.selectedSubjects.includes(degree.subject);
+    this.filterdDegrees = this.degrees.filter((degree) => {
+      const matchesLevel =
+        this.selectedLevels.length === 0 ||
+        this.selectedLevels.includes(degree.level);
+      const matchesSubject =
+        this.selectedSubjects.length === 0 ||
+        this.selectedSubjects.includes(degree.subject);
       return matchesLevel && matchesSubject;
     });
-
 
     this.totalPages = Math.ceil(this.filterdDegrees.length / this.itemsPerPage);
     this.pages = Array.from({ length: this.totalPages }, (_, i) => i + 1);
 
     this.currentPage = 1;
     this.updateDegrees();
-
   }
 
   clearFilters() {
@@ -171,20 +169,14 @@ export class OnlineDegreesComponent implements OnInit {
     this.updateDegrees();
   }
 
-
-
-
-
-
-
-
-
   displayedDegrees: any[] = [];
 
   updateDegrees() {
-
-      const startIndex = (this.currentPage - 1) * this.itemsPerPage;
-      this.displayedDegrees = this.filterdDegrees.slice(startIndex, startIndex + this.itemsPerPage);
+    const startIndex = (this.currentPage - 1) * this.itemsPerPage;
+    this.displayedDegrees = this.filterdDegrees.slice(
+      startIndex,
+      startIndex + this.itemsPerPage
+    );
   }
 
   goToPage(page: number) {
@@ -208,92 +200,79 @@ export class OnlineDegreesComponent implements OnInit {
     }
   }
 
-
-
   // Collections :
 
-  getAllCollections() {
+  // getAllCollections() {
 
-    this.onlineDegreesService.getCollection1().subscribe({
-      next: (data) => {
-        
-        this.collection1=data;
-        
-      }, error: (err) => console.log(err)
-    })
+  //   this.onlineDegreesService.getCollection1().subscribe({
+  //     next: (data) => {
 
-  
-    this.onlineDegreesService.getCollection2().subscribe({
-      next: (data) => {
-        
-        this.collection2=data;
-        
-      }, error: (err) => console.log(err)
-    })
+  //       this.collection1=data;
 
-  
-    this.onlineDegreesService.getCollection3().subscribe({
-      next: (data) => {
-        
-        this.collection3=data;
-        
-      }, error: (err) => console.log(err)
-    })
+  //     }, error: (err) => console.log(err)
+  //   })
 
+  //   this.onlineDegreesService.getCollection2().subscribe({
+  //     next: (data) => {
 
-    this.onlineDegreesService.getCollection4().subscribe({
-      next: (data) => {
-        
-        this.collection4=data;
-        
-      }, error: (err) => console.log(err)
-    })
+  //       this.collection2=data;
 
-  
-    this.onlineDegreesService.getCollection5().subscribe({
-      next: (data) => {
-        
-        this.collection5=data;
-        
-      }, error: (err) => console.log(err)
-    })
+  //     }, error: (err) => console.log(err)
+  //   })
 
-  
-    this.onlineDegreesService.getExperts().subscribe({
-      next: (data) => {
-        
-        this.experts=data;
-        
-      }, error: (err) => console.log(err)
-    })
+  //   this.onlineDegreesService.getCollection3().subscribe({
+  //     next: (data) => {
 
+  //       this.collection3=data;
 
+  //     }, error: (err) => console.log(err)
+  //   })
 
-    this.onlineDegreesService.getTopics().subscribe({
-      next: (data) => {
-        
-        this.topics = data;
-        
-      }, error: (err) => console.log(err)
-    })
+  //   this.onlineDegreesService.getCollection4().subscribe({
+  //     next: (data) => {
 
+  //       this.collection4=data;
 
-    this.onlineDegreesService.getFaqs().subscribe({
-      next: (data) => {
-        
-        this.faqs = data;
-        this.displayedFaqs = this.faqs.slice(0, 3);
-        
-      }, error: (err) => console.log(err)
-    })
+  //     }, error: (err) => console.log(err)
+  //   })
 
+  //   this.onlineDegreesService.getCollection5().subscribe({
+  //     next: (data) => {
 
+  //       this.collection5=data;
 
-  }
+  //     }, error: (err) => console.log(err)
+  //   })
 
+  //   this.onlineDegreesService.getExperts().subscribe({
+  //     next: (data) => {
+
+  //       this.experts=data;
+
+  //     }, error: (err) => console.log(err)
+  //   })
+
+  //   this.onlineDegreesService.getTopics().subscribe({
+  //     next: (data) => {
+
+  //       this.topics = data;
+
+  //     }, error: (err) => console.log(err)
+  //   })
+
+  //   this.onlineDegreesService.getFaqs().subscribe({
+  //     next: (data) => {
+
+  //       this.faqs = data;
+  //       this.displayedFaqs = this.faqs.slice(0, 3);
+
+  //     }, error: (err) => console.log(err)
+  //   })
+
+  // }
 
   showAll = false;
-  displayedFaqs = this.faqs.slice(0, 3); 
+  displayedFaqs = this.faqs.slice(0, 3);
 
   toggleShowAll() {
     this.showAll = !this.showAll;
@@ -301,12 +280,7 @@ export class OnlineDegreesComponent implements OnInit {
   }
 
   toggleAnswer(id: number) {
-    const faq = this.faqs.find(f => +f.id === id);
+    const faq = this.faqs.find((f) => +f.id === id);
     if (faq) faq.open = !faq.open;
   }
-
-
-
-
-
 }
