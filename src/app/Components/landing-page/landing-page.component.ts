@@ -26,7 +26,6 @@ import { CoursesCategories } from '../../Models/CoursesCategories';
     RouterLink,
     FormsModule,
     LoginRegisterFormDialogComponent,
-    ConfirmEmailComponent
   ],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.scss'
