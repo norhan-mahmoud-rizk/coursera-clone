@@ -51,7 +51,10 @@
                     class="gap-1 d-flex flex-column Course-Material-list list-unstyled"
                   >
                     @for (module of courseDetails?.modules; track $index) {
-                    <li class="list-group-item border-0 mt-3">
+                    <li
+                      (click)="selectModule(module)"
+                      class="list-group-item border-0 mt-3"
+                    >
                       @if (module.isCompleted) {
                       <i class="fa-solid fa-circle-check text-success"></i>
                       } @else {
@@ -81,103 +84,97 @@
         <div class="col-12 col-md-7 m-md-4 main-content border rounded">
           <div
             class="accordion accordionContainer p-3 border border-1"
-            id="accordionExample"
+            id="accordion-module"
           >
             <div class="accordion-item">
               <h2 class="accordion-header header">
                 <button
                   class="accordion-button mb-3 pe-3"
                   type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapse-module"
                   aria-expanded="true"
-                  aria-controls="collapseOne"
+                  aria-controls="collapse-module"
                 >
-                  <h3 class="py-3 ps-2">video title</h3>
+                  <h3 class="py-3 ps-2">{{ selectedModule?.moduleTitle }}</h3>
                 </button>
               </h2>
               <div
-                id="collapseOne"
+                id="collapse-module"
                 class="accordion-collapse collapse show"
-                data-bs-parent="#accordionExample"
+                data-bs-parent="#accordion-module"
               >
                 <div class="accordion-body">
-                  <div class="row ps-3 py-2 body mb-3">
-                    <div class="col-1"><i class="fa-solid fa-film"></i></div>
-                    <div class="col-11 video-title">
-                      <p
-                        class="fw-bold"
-                        routerLink="/courseExplanation/video-player"
+                  <div class="accordion" id="collapse-topic">
+                    @for (topic of selectedModule?.topics; track $index) {
+                    <div class="accordion-item mb-3">
+                      <h2 class="accordion-header">
+                        <button
+                          class="accordion-button p-3"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          [attr.data-bs-target]="'#collapse' + topic._id"
+                          aria-expanded="false"
+                          [attr.aria-expanded]="false"
+                          [attr.aria-controls]="'collapse' + topic._id"
+                        >
+                          <span class="me-2">
+                            @if (topic.isCompleted) {
+                            <i
+                              class="fa-solid fa-circle-check text-success"
+                            ></i>
+                            } @else {
+                            <i class="fa-solid fa-circle text-secondary"></i>
+                            }
+                          </span>
+                          {{ topic.title }}
+                        </button>
+                      </h2>
+                      <div
+                        [attr.id]="'collapse' + topic._id"
+                        class="accordion-collapse collapse show py-2"
                       >
-                        video title
-                      </p>
+                        <div class="accordion-body">
+                          @for (video of topic.videos; track $index) {
+                          <div class="row body px-2">
+                            <div
+                              class="col-1 d-flex align-items-center justify-content-center"
+                            >
+                              @if (topic.isCompleted) {
+                              <i
+                                class="fa-solid fa-circle-check text-success"
+                              ></i>
+                              } @else {
+                              <i class="fa-solid fa-film"></i>
+                              }
+                            </div>
+                            <div class="col-11 video-title">
+                              <p
+                                class="fw-bold"
+                                routerLink="/courseExplanation/video-player"
+                              >
+                                {{ video.videoTitle }}
+                              </p>
 
-                      <p>video . duration</p>
+                              <p>
+                                Video . {{ formatSecondsToHMS(video.duration) }}
+                              </p>
+                            </div>
+                          </div>
+                          }
+                        </div>
+                      </div>
                     </div>
-                  </div>
-
-                  <div class="row ps-3 py-2 body mb-3">
-                    <div class="col-1"><i class="fa-solid fa-film"></i></div>
-                    <div class="col-11 video-title">
-                      <p
-                        class="fw-bold"
-                        routerLink="/courseExplanation/video-player"
-                      >
-                        video title
-                      </p>
-
-                      <p>video . duration</p>
-                    </div>
-                  </div>
-
-                  <div class="row ps-3 py-2 body mb-3">
-                    <div class="col-1"><i class="fa-solid fa-film"></i></div>
-                    <div class="col-11 video-title">
-                      <p
-                        class="fw-bold"
-                        routerLink="/courseExplanation/video-player"
-                      >
-                        video title
-                      </p>
-
-                      <p>video . duration</p>
-                    </div>
-                  </div>
-
-                  <div class="row ps-3 py-2 body mb-3">
-                    <div class="col-1"><i class="fa-solid fa-film"></i></div>
-                    <div class="col-11 video-title">
-                      <p
-                        class="fw-bold"
-                        routerLink="/courseExplanation/video-player"
-                      >
-                        video title
-                      </p>
-
-                      <p>video . duration</p>
-                    </div>
-                  </div>
-
-                  <div class="row ps-3 py-2 body mb-3">
-                    <div class="col-1"><i class="fa-solid fa-film"></i></div>
-                    <div class="col-11 video-title">
-                      <p
-                        class="fw-bold"
-                        routerLink="/courseExplanation/video-player"
-                      >
-                        video title
-                      </p>
-
-                      <p>video . duration</p>
-                    </div>
+                    }
                   </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          <!-- <h2 class="ps-2">Grades</h2>
+            <!-- <h2 class="ps-2">Grades</h2>
                 <p>Check your grades here.</p> -->
 
-          <!--
+            <!--
                 <h2 class="ps-2">Notes</h2>
                 <p>Here are your notes.</p>
 
@@ -189,8 +186,8 @@
 
                 <h2 class="ps-2">Course Info</h2>
                 <p>Course information goes here.</p> -->
+          </div>
         </div>
-
         <div
           class="col-12 col-md-4 right-sidebar border rounded rounded-4 mt-4"
         >

@@ -1,12 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
-import { ServiceWithApiService } from '../../Services/service-with-api.service';
-import { ICareerCourses } from '../../Models/ICareerCourses';
-import { ActivatedRoute, Router, RouterLink } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { NavbarComponent } from '../navbar/navbar.component';
 import { CoursesService } from '../../Services/courses.service';
-import { CourseData } from '../../Models/course-details';
+import { CourseData, Module } from '../../Models/course-details';
 import { map, switchMap, tap } from 'rxjs';
 
 @Component({
@@ -15,14 +13,17 @@ import { map, switchMap, tap } from 'rxjs';
   imports: [RouterLink, CommonModule, NavbarComponent],
   styleUrls: ['./course-explanation.component.scss'],
 })
-export class CourseExplanationComponent {
+export class CourseExplanationComponent implements OnInit {
   id: string = '';
   courseDetails?: CourseData;
+  selectedModule?: Module;
 
   constructor(
     private route: ActivatedRoute,
     private coursesService: CoursesService
-  ) {
+  ) {}
+
+  ngOnInit(): void {
     this.route.params
       .pipe(
         map((params) => params['id']),
@@ -30,6 +31,7 @@ export class CourseExplanationComponent {
         tap((courseDetails) => {
           this.courseDetails = courseDetails;
           this.id = courseDetails._id;
+          this.selectedModule = courseDetails.modules[0];
         })
       )
       .subscribe();
@@ -40,5 +42,21 @@ export class CourseExplanationComponent {
     if (arrow) {
       arrow.classList.toggle('rotate');
     }
+  }
+
+  formatSecondsToHMS(seconds: number): string {
+    const h = Math.floor(seconds / 3600);
+    const m = Math.floor((seconds % 3600) / 60);
+    const s = Math.floor(seconds % 60);
+
+    const hDisplay = h > 0 ? `${h}h ` : '';
+    const mDisplay = m > 0 ? `${m}m ` : '';
+    const sDisplay = `${s}s`;
+
+    return `${hDisplay}${mDisplay}${sDisplay}`.trim();
+  }
+
+  selectModule(module: Module) {
+    this.selectedModule = module;
   }
 }

@@ -47,7 +47,7 @@ export interface Video {
   url: string;
   transeScript: string;
   discuseion: string;
-  duration: string;
+  duration: number;
   isCompleted: boolean;
 }
 
