@@ -13,18 +13,20 @@ export class LocalizationService {
   setLanguage(lang: string) {
     localStorage.setItem(this.LANGUAGE_KEY, lang);
     this.translate.use(lang);
+    
+    // ✅ غيّر اتجاه الصفحة بالكامل بناءً على اللغة
+    document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
   }
 
   getLanguage(): string {
-    return localStorage.getItem(this.LANGUAGE_KEY) || 'en'; 
+    return localStorage.getItem(this.LANGUAGE_KEY) || 'en';
   }
 
   initLanguage(): void {
     const savedLang = this.getLanguage();
-    if (savedLang === 'en') {
-      this.translate.use('en');
-    } else {
-      this.translate.use('ar');
-    }
+    this.translate.use(savedLang);
+
+    // ✅ برضو نضبط الاتجاه لما التطبيق يشتغل
+    document.documentElement.dir = savedLang === 'ar' ? 'rtl' : 'ltr';
   }
 }

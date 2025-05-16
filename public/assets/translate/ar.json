@@ -1,9 +1,45 @@
 {
+"Home": {
+  "RecentlyViewedCoursess": "الدورات التي تم عرضها مؤخرًا",
+    "button": "عرض 4 دورات أخرى",
+      "button2": "عرض أقل",
+  "MostPopularCertificates": "الشهادات الأكثر شيوعًا",
+  "PersonalizedSpecializationsForYou": "تخصصات مخصصة لك",
+  "BuildInDemandBusinessAnalysisSkills": "طوّر مهارات تحليل الأعمال المطلوبة",
+  "ExploreWithACourseraPlusSubscription": "استكشف باستخدام اشتراك Coursera Plus",
+  "Categories": "الفئات",
+  "Course": "الدورات"
+},
+"FirstCard": {
+  "Title": "ابدأ مع الذكاء الاصطناعي التوليدي",
+  "SubTitle": "استكشاف",
+  "Button": "عرض جميع دورات GenAI",
+  "CardTitle": "أساسيات الذكاء الاصطناعي التوليدي",
+  "Specialization": "تخصص",
+  "button1": "مبتدئ",
+  "button2": "شائع",
+  "button3": "جديد",
+  "button4": "أدوات"
+},
+"SecondCard": {
+  "Title": "جامعة لندن",
+  "subject": "هل أنت مستعد لتطوير مسيرتك المهنية في الأمن السيبراني؟ اكتسب خبرة عملية من خلال جلسات مختبرية تحاكي السيناريوهات الواقعية.",
+  "Button": "معرفة المزيد"
+},
+"CardThree": {
+  "Title": "مدرب كورسيرا",
+  "subject": "أتقن مهارات جديدة بمساعدة مدعومة بالذكاء الاصطناعي، واحصل على دعم تفاعلي حسب الطلب يتماشى مع أهدافك الفريدة.",
+  "Button": "معرفة المزيد"
+}
+,
+
   "Navbar1": {
     "coursera": "كورسيرا",
     "Explore": "استكشف",
     "Language": "العربية",
-    "searchBar": "ماذا تريد أن تتعلم؟"
+    "searchBar": "ماذا تريد أن تتعلم؟",
+       "english": "الانجليزية",
+      "arabic": "العربية"
   },
   "Navbar2": {
     "home": "الرئيسية",
