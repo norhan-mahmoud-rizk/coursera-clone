@@ -1,24 +1,45 @@
 <div class="mt-5 myLearnParent container-fluid">
   <h4 class="mt-4 fw-semibold">My learning</h4>
-  <div class="buttons pb-5">
-    <button class="btn rounded-pill px-3 py-1 btn-sm fw-bold me-2">
-      In progress
-    </button>
-    <button class="btn rounded-pill px-3 py-1 btn-sm fw-bold">Completed</button>
+  <div
+    class="btn-group my-3"
+    role="group"
+    aria-label="Basic radio toggle button group"
+  >
+    <input
+      type="radio"
+      class="btn-check"
+      name="btnradio"
+      id="btnradio1"
+      autocomplete="off"
+      (click)="showInProgress()"
+      checked
+    />
+    <label class="btn btn-outline-primary" for="btnradio1">In progress</label>
+
+    <input
+      type="radio"
+      class="btn-check"
+      name="btnradio"
+      id="btnradio2"
+      (click)="showCompleted()"
+      autocomplete="off"
+    />
+    <label class="btn btn-outline-primary" for="btnradio2">Completed</label>
   </div>
+
   <div class="container-fluid">
     <div class="row gap-5">
       <div class="col-12 col-lg-7">
-        @for (course of enrolledCourses; track $index) {
-        <div class="border rounded-4 p-4 coursesContainer">
+        @for (course of selectedCourses; track $index) {
+        <div class="border rounded-4 p-4 coursesContainer mb-3">
           <div class="logo d-flex gap-2">
-            <!-- <div>
+            <div>
               <img
                 [src]="course.logoImage"
                 alt=""
                 class="border rounded-3 p-2"
               />
-            </div> -->
+            </div>
             <div>
               <p class="fw-semibold mt-1">{{ course.organization }}</p>
             </div>
@@ -55,10 +76,18 @@
                 <p>Reading (10 minutes)</p>
               </div>
               <div class="col-12 col-md-2 mt-2">
-                <button type="button" class="btn btn-primary">resume</button>
+                <button type="button" class="btn btn-primary">Resume</button>
               </div>
             </div>
           </div>
+        </div>
+        } @empty {
+        <div class="border rounded-4 p-4 coursesContainer mb-3">
+          <p class="fw-semibold">No courses found</p>
+          <p routerLink="/home" class="fw-semibold">
+            You have not started any courses yet. Explore our course catalog and
+            start learning today!
+          </p>
         </div>
         }
       </div>

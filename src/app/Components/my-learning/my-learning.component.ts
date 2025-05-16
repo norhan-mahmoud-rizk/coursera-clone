@@ -16,6 +16,7 @@ import { CourseData } from '../../Models/course-details';
 })
 export class MyLearningComponent implements OnInit {
   enrolledCourses: CourseData[] = [];
+  selectedCourses: CourseData[] = [];
   userData: any;
   userName: string | null = null; //to display the username  of the user
   constructor(
@@ -26,11 +27,27 @@ export class MyLearningComponent implements OnInit {
   ngOnInit(): void {
     this.coursesService
       .getCourses()
-      .pipe(tap((res) => (this.enrolledCourses = res.courses)))
+      .pipe(
+        tap((res) => {
+          this.enrolledCourses = res.courses;
+          this.showInProgress();
+        })
+      )
       .subscribe();
 
     this.userService.getUserById().subscribe((res: any) => {
       this.userData = res.data;
     });
+  }
+
+  showInProgress() {
+    this.selectedCourses = this.enrolledCourses.filter(
+      (course) => !course.isCompleted
+    );
+  }
+  showCompleted() {
+    this.selectedCourses = this.enrolledCourses.filter(
+      (course) => course.isCompleted
+    );
   }
 }
