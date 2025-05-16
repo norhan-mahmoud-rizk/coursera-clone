@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
-import { ActivatedRoute, RouterLink } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { NavbarComponent } from '../navbar/navbar.component';
 import { CoursesService } from '../../Services/courses.service';
-import { CourseData, Module } from '../../Models/course-details';
+import { CourseData, Module, Video } from '../../Models/course-details';
 import { map, switchMap, tap } from 'rxjs';
 
 @Component({
@@ -20,7 +20,8 @@ export class CourseExplanationComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private coursesService: CoursesService
+    private coursesService: CoursesService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {

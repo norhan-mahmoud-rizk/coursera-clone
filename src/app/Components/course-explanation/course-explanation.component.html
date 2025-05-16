@@ -151,7 +151,13 @@
                             <div class="col-11 video-title">
                               <p
                                 class="fw-bold"
-                                routerLink="/courseExplanation/video-player"
+                                routerLink="/video-player"
+                                [state]="{
+                course: this.courseDetails,
+                module: this.selectedModule,
+                topic: topic,
+                video: video,
+              }"
                               >
                                 {{ video.videoTitle }}
                               </p>
