@@ -67,7 +67,6 @@ export class VideoPlayerComponent implements OnInit {
 
   onVideoEnded() {
     if (this.course && this.video) {
-      this.video.isCompleted = true;
       this.coursesService
         .updateVideoCompletionStatus(this.course?._id, this.video?._id)
         .pipe(
