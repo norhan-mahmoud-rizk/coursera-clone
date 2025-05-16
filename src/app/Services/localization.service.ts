@@ -12,11 +12,11 @@ export class LocalizationService {
 
   setLanguage(lang: string) {
     localStorage.setItem(this.LANGUAGE_KEY, lang);
-    this.translate.use(lang); // استخدم اللغة مباشرة عند تغييرها
+    this.translate.use(lang);
   }
 
   getLanguage(): string {
-    return localStorage.getItem(this.LANGUAGE_KEY) || 'en'; // اللغة الافتراضية
+    return localStorage.getItem(this.LANGUAGE_KEY) || 'en'; 
   }
 
   initLanguage(): void {
