@@ -11,8 +11,6 @@ export class CoursesService {
   constructor(private httpClient: HttpClient) {}
 
   getCourseDetails(id: string): Observable<CourseData> {
-    console.log('Fetching course details for ID:', id);
-
     return this.httpClient
       .get<CourseData>(`${environment.backendURL}/progress/course/${id}`)
       .pipe(
