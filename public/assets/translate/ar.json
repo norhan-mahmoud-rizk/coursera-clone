@@ -92,10 +92,10 @@
     },
     "mobileAppSection": {
       "title": "تطبيق الجوال",
-      "appStoreButton": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https ://d3njjcbhbojbot.cloudfront.net/web/images/icons/download_on_the_app_store_badge_en.svg?auto=format%2Ccompress&dpr=2&w=152&h=45&q=40",
-      "googlePlayButton": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https ://d3njjcbhbojbot.cloudfront.net/web/images/icons/en_generic_rgb_wo_45.png?auto=format%2Ccompress&dpr=2&w=152&h=45&q=40",
-      "certifiedBadge": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https ://d3njjcbhbojbot.cloudfront.net/web/images/icons/2018-B-Corp-Logo-Black-S.png?auto=format%2Ccompress&dpr=2&w=151&h=120&q=40"
-    },
+      "appStoreButton": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://d3njjcbhbojbot.cloudfront.net/web/images/icons/download_on_the_app_store_badge_en.svg?auto=format%2Ccompress&dpr=2&w=152&h=45&q=40",
+      "googlePlayButton": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://d3njjcbhbojbot.cloudfront.net/web/images/icons/en_generic_rgb_wo_45.png?auto=format%2Ccompress&dpr=2&w=152&h=45&q=40",
+      "certifiedBadge": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://d3njjcbhbojbot.cloudfront.net/web/images/icons/2018-B-Corp-Logo-Black-S.png?auto=format%2Ccompress&dpr=2&w=151&h=120&q=40"
+   },
     "copyright": "© 2020 شركة كورسيرا. جميع الحقوق محفوظة."
   }
 }

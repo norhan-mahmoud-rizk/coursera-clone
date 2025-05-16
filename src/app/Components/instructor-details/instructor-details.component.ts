@@ -6,6 +6,9 @@ import { LandingPage } from '../../Models/landing-page';
 import { AuthService } from '../../Services/auth.service';
 import { LandingPageService } from '../../Services/landing-page.service';
 import { NavbarComponent } from '../navbar/navbar.component';
+import { ICareerCourses } from '../../Models/ICareerCourses';
+import { ServiceWithApiService } from '../../Services/service-with-api.service';
+import { CoursesCategories } from '../../Models/CoursesCategories';
 
 @Component({
   selector: 'app-instructor-details',
@@ -18,6 +21,8 @@ export class InstructorDetailsComponent implements OnInit {
   instructorID!: string;  // غيرت النوع لـ string
   getInstructorID!: Instructors | undefined;
   ArrayData: LandingPage[] = [];
+  filterArray: ICareerCourses[] = [];
+  filterCategory: CoursesCategories[] = [];
 
   constructor(
     private api: InstructorsService,
@@ -25,9 +30,25 @@ export class InstructorDetailsComponent implements OnInit {
     public authService: AuthService,
     private router: Router,
     private loadin: LandingPageService,
+    public courseServiceWithApi:ServiceWithApiService
   ){}
 
   ngOnInit(): void {
+
+     this.courseServiceWithApi.GetAllCareerCourses().subscribe({
+  next: (data) => {
+    console.log('Data received from backend:', data);
+    this.filterArray = data;
+      // map _id to id
+    this.filterArray = data.map((item: any) => ({
+      ...item,
+      id: item._id
+    }));
+  },
+  error: (err) => {
+    console.error('Error fetching data from backend:', err);
+  }
+});
 
     this.loadin.getAllData().subscribe(data => {
       this.ArrayData = data;
@@ -52,6 +73,24 @@ export class InstructorDetailsComponent implements OnInit {
         });
       }
     });
+
+
+
+
+     this.courseServiceWithApi.getCareerCourseCategory().subscribe({
+  next: (data) => {
+    console.log('Data received from backend:', data);
+    this.filterCategory = data;
+      // map _id to id
+    this.filterCategory = data.map((item: any) => ({
+      ...item,
+      id: item._id
+    }));
+  },
+  error: (err) => {
+    console.error('Error fetching data from backend:', err);
+  }
+});
 
   }
 

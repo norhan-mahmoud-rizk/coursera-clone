@@ -43,7 +43,9 @@ GetCareerCourseById() {
     next: (res: any) => {
       this.CareerCourse = {
         ...res.data,
-        id: res.data._id, // لو عايزة id بدل _id
+        id: res.data._id,
+        categoryID: res.data.categoryID,
+        
       };
       console.log('Parsed course object:', this.CareerCourse);
       this.GetSimilarCourses();
