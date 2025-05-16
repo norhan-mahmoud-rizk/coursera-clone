@@ -6,10 +6,11 @@ import { CommonModule } from '@angular/common';
 import { NavigationEnd, NavigationStart, Router, RouterModule } from '@angular/router';
 import { ICareerCourses } from '../../Models/ICareerCourses';
 import { ServiceWithApiService } from '../../Services/service-with-api.service';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-home',
-  imports: [FormsModule,CommonModule,RouterModule],
+  imports: [FormsModule,CommonModule,RouterModule,TranslateModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
   encapsulation: ViewEncapsulation.None
@@ -30,7 +31,8 @@ filteredListfrombackend:ICareerCourses[]=[];
   constructor(
     private api:ApiService,
     private router: Router,
-    public courseServiceWithApi:ServiceWithApiService
+    public courseServiceWithApi:ServiceWithApiService,
+       private translate: TranslateService
   ){
      this.router.events.subscribe(event => {
     if (event instanceof NavigationStart) {

@@ -1,158 +1,13 @@
-<!-- Dialogs -->
-<!-- <div class="auth-forms container py-5 " *ngIf="!authService.getToken()">
-  <div class="row">
-  
-    <dialog class="col-md-6 ">
-    <div class="dialog-content">
-      <div  class="d-flex justify-content-end">
-      <button onclick="document.querySelector('dialog:nth-of-type(1)').close()" class="border-0 bg-light"><i class="fa-solid fa-x"></i></button>
-      </div>
-      <div class="dialog-header text-center mb-4 w-75 mx-auto"><h3 >Login</h3></div>
-
-  <form (ngSubmit)="login()" #loginForm="ngForm">
-        <label for="loginEmail">Email  <span class="text-danger">*</span></label>
-        <input
-          id="loginEmail"
-          type="email"
-          [(ngModel)]="loginEmail"
-          name="loginEmail"
-          placeholder="Enter your Email"
-          class="form-control my-2"
-          required
-          email
-          #LoginEmail="ngModel"
-          [ngClass]="{'is-invalid':(LoginEmail.touched||LoginEmail.dirty)&& LoginEmail.invalid}"
-
-        />
-        <label for="loginPassword">Password  <span class="text-danger">*</span></label>
-        <input
-          id="loginPassword"
-          type="password"
-          [(ngModel)]="loginPassword"
-          name="loginPassword"
-          placeholder="Enter your Password"
-          class="form-control my-2"
-          required
-          minlength="8"
-          maxlength="72"
-          #LoginPassword="ngModel"
-          [ngClass]="{'is-invalid':(LoginPassword.touched||LoginPassword.dirty)&& LoginPassword.invalid}"
-
-        />
-
-      <button class="btn btn-primary w-100 mt-3 fw-bold" [disabled]="!loginForm.valid">Login</button>
-      </form>
-    </div>
-    </dialog>
-
-   
-    <dialog id="registerDialog" class="col-md-6">
-    <div class="dialog-content">
-      <div  class="d-flex justify-content-end">
-        <button onclick="registerDialog.close()" class="border-0 bg-light"><i class="fa-solid fa-x"></i></button>
-      </div>
-      <div class="dialog-header text-center mb-4 w-75 mx-auto">
-      <h3>Sign Up</h3>
-      <p>Learn on your own time from top universities and businesses.</p>
-      </div>
-      <form (ngSubmit)="register()" #registerForm="ngForm">
-        <label for="FullName">Full Name  <span class="text-danger">*</span></label>
-        <input
-          id="FullName"
-          type="text"
-          [(ngModel)]="registerUser.name"
-          name="name"
-          placeholder="Enter Your Full Name"
-          class="form-control my-2"
-          required
-          #FullName="ngModel"
-          [ngClass]="{'is-invalid':(FullName.touched||FullName.dirty)&&FullName.invalid}"
-        />
-
-        <label for="Email">Email  <span class="text-danger">*</span></label>
-        <input
-          id="Email"
-          type="email"
-          [(ngModel)]="registerUser.email"
-          name="email"
-          placeholder="name@email.com"
-          class="form-control my-2"
-          required
-          email
-          #Email="ngModel"
-          [ngClass]="{'is-invalid':(Email.touched||Email.dirty)&& Email.invalid}"
-        />
-
-        <label for="Password">Password  <span class="text-danger">*</span></label>
-        <p style="text-align: start;">Between 8 and 72 characters</p>
-        <input
-          id="Password"
-          type="password"
-          [(ngModel)]="registerUser.password"
-          name="password"
-          placeholder="Create a password"
-          class="form-control my-2"
-          required
-          minlength="8"
-          maxlength="72"
-          #Password="ngModel"
-          [ngClass]="{'is-invalid':(Password.touched||Password.dirty)&& Password.invalid}"
-        />
-
-        <label for="Address">Enter You Address  <span class="text-danger">*</span></label>
-        <input
-          id="Address"
-          type="text"
-          [(ngModel)]="registerUser.address"
-          name="address"
-          placeholder="Address"
-          class="form-control my-2"
-          required
-          #Address="ngModel"
-          [ngClass]="{'is-invalid':(Address.touched||Address.dirty)&& Address.invalid}"
-        />
-
-        <button class="btn btn-primary w-100 py-3 mt-4 fw-bold" [disabled]="!registerForm.valid">Join for free</button>
-      </form>
-
-      <p class="mt-3">
-        Already have an account?
-        <a href="#" onclick="registerDialog.close(); document.querySelector('dialog:nth-of-type(1)').showModal(); return false;" class="fw-semibold text-primary">
-          Login here
-        </a>
-      </p>
-    </div>
-    </dialog>
-  </div>
-</div>
-
-
-<dialog id="loginDialog">
-  <div class="dialog-content p-4">
-    <div class="d-flex justify-content-end">
-      <button onclick="document.getElementById('loginDialog')?.close()" class="border-0 bg-light">
-        <i class="fa-solid fa-x"></i>
-      </button>
-    </div>
-    <h3>Login</h3>
-    <form (ngSubmit)="login()" #loginForm="ngForm">
-      <input class="form-control my-2" type="email" name="loginEmail" placeholder="Email" required [(ngModel)]="loginEmail">
-      <input class="form-control my-2" type="password" name="loginPassword" placeholder="Password" required [(ngModel)]="loginPassword">
-      <button class="btn btn-primary w-100 mt-3" type="submit" [disabled]="!loginForm.valid">Login</button>
-    </form>
-  </div>
-</dialog> -->
-
 
 <!-- learn -->
 <div class="container-fluid">
   <div class="row marginLearn">
     <div class="col-12 col-md-7 ">
-      <h1 class="learn">{{ ArrayData[0]?.title }}</h1>
-      <p class="magrinDescription">{{ArrayData[0]?.description}}</p>
+      <h1 class="learn">Learn without limits</h1>
+      <p class="magrinDescription">Start, switch, or advance your career with more than 10,000 courses, Professional Certificates, and degrees from world-class universities and companies.</p>
     </div>
     <div class="col-md-5 learnImage">
-      <img src="{{ArrayData[0].image}}" alt="">
+      <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/5CFC8u8XiXcbSOlVv6JZQx/4e6f898f57f9d798437b3aa22026e30b/CourseraLearners_C_Composition_Hillary_copy__3_.png?auto=format%2Ccompress&dpr=1&w=459&h=497&q=40" alt="">
     </div>
     <div class="buttonGroup">
       <button type="button" class="btn btn-primary buttonFree" onclick="document.getElementById('registerDialog')?.showModal()">Join For Free</button>
@@ -177,11 +32,37 @@
       </h2>
     </div>
     <div class="marginLogo">
-      @for(logo of ArrayData[0]?.logoImage; track ArrayData[0].id){
-        <a href="">
-          <img src="{{logo}}" alt="" class="logoImage" >
+      <a href="">
+          <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/77hmeEJo3ZPlURCU02fD52/aa37b7f7b52285ba350acac62d8af5c1/illinois-3.png?auto=format%2Ccompress&dpr=2&h=32" alt="" class="logoImage" >
         </a>
-      }
+
+         <a href="">
+          <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/6XkOucZz6pMLV5DPvXCgCL/1777129a58b0a62b237bd28e9956afe8/duke-3.png?auto=format%2Ccompress&dpr=2&h=32" alt="" class="logoImage" >
+        </a>
+
+         <a href="">
+          <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/1c6RjBHi3Lqb9QpWxje7iA/b529f909c5230af3210ba2d47d149620/google.png?auto=format%2Ccompress&dpr=2&h=37" alt="" class="logoImage" >
+        </a>
+
+         <a href="">
+          <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/60SA8pGxPXMmJf4n7umK1H/ccec31bbe2358210bf8391dcba6cd2f1/umich.png?auto=format%2Ccompress&dpr=2&h=55" alt="" class="logoImage" >
+        </a>
+
+         <a href="">
+          <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/3toC4I7jbWxiedfxiyNjtT/735faeaf976a9692f425f8c3a7d125dc/1000px-IBM_logo.svg.png?auto=format%2Ccompress&dpr=2&h=37" alt="" class="logoImage" >
+        </a>
+
+         <a href="">
+          <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/FHOd44z40jTFsSSao84AM/d1e357f5650a23bf2936114112d44445/imperial.png?auto=format%2Ccompress&dpr=2&h=35" alt="" class="logoImage" >
+        </a>
+
+         <a href="">
+          <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/4FSFmNXuDIzTvFb7n0v4mK/704ae9e0a7981fb6415f4cb4609bbbb3/stanford.svg?auto=format%2Ccompress&dpr=2&h=27" alt="" class="logoImage" >
+        </a>
+
+         <a href="">
+          <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/1ZeiauXe5bPProvfuIo7o2/55d005d42979ab585cdfa01f825b7d4f/penn.svg?auto=format%2Ccompress&dpr=2&h=37" alt="" class="logoImage" >
+        </a>
     </div>
 
   </div>
@@ -289,14 +170,14 @@
 
     <h2 class="mostPopular exploreText">Explore Coursera</h2>
 
-    @for(explore of ArrayData[0].ExploreCoursera; track ArrayData[0].id){
+    @for(explore of filterCategory; track ArrayData[0].id){
       <div class="col-sm-12 col-md-6 col-lg-4 mb-3">
         <div class="d-flex align-items-center exploreCard border rounded shadow-sm overflow-hidden">
-          <img class="exploreImage no-left-radius" src="{{explore.image}}" alt="Data Science">
+          <img class="exploreImage no-left-radius" src="{{explore.categoryImage}}" alt="Data Science">
 
           <div class="p-3">
-            <div class="fw-bold">{{explore.description}}</div>
-            <span class="text-muted">{{explore.number}} courses</span>
+            <div class="fw-bold">{{explore.categoryName}}</div>
+            <span class="text-muted">{{explore.courses.length}} courses</span>
           </div>
         </div>
       </div>
@@ -315,22 +196,39 @@
     </div>
 
 
-      @for(community of ArrayData[0].CourseraCommunity; track ArrayData[0].id){
+
         <div class="col-md-4 communityCard">
-          <img src="{{community.image}}" alt="">
-          <h3 class="communityName communityPadding">{{community.name}}</h3>
-          <div class="communityPadding">{{community.community}}</div>
+          <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/N4qrT1XIveNL5SMHSkjTH/b57854e9246bd3aa9fe9ebc51ce650d1/Circle_Kenia.png?auto=format%2Ccompress&dpr=1&w=202&h=202&q=40" alt="">
+          <h3 class="communityName communityPadding">Kenia R.</h3>
+          <div class="communityPadding">United States</div>
           <div class="line"></div>
-          <div class="communityDescription">{{community.description}}</div>
+          <div class="communityDescription">“Being a mother — especially a working mother means I’m constantly trying to juggle my schedule, my kids’ schedules, and work. I am very grateful for the flexible and remote learning programs that Coursera has to offer.”</div>
         </div>
-      }
+
+        <div class="col-md-4 communityCard">
+          <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/66DwUMt1tQTmR4q1JaHPdV/71cbdd4415999eecfcd899283086260c/Circle_Ryan.png?auto=format%2Ccompress&dpr=1&w=202&h=202&q=40" alt="">
+          <h3 class="communityName communityPadding">Ryan L.</h3>
+          <div class="communityPadding">United States</div>
+          <div class="line"></div>
+          <div class="communityDescription">“From taking courses on Coursera, I gained a deep understanding of the UX Design process from start to finish. With the knowledge I gained, I feel prepared for entry-level jobs and internships. I've been able to apply the skills and knowledge I gained to multiple projects and work experiences.”</div>
+        </div>
+
+        <div class="col-md-4 communityCard">
+          <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/28Nv1NZrGQsLf4kt8CXMdd/66d2002ee1d804a0a1a9729376648060/Vishal_Verma.png?auto=format%2Ccompress&dpr=1&w=202&h=202&q=40" alt="">
+          <h3 class="communityName communityPadding">Vishal V.</h3>
+          <div class="communityPadding">India</div>
+          <div class="line"></div>
+          <div class="communityDescription">“I really enjoyed my courses. The quizzes, videos, and quick labs provided helpful hands-on experience. Learning on Coursera has given me the confidence and ability to excel in my career. I love this feeling.”</div>
+        </div>
+
+
   </div>
 
 </div>
 
 <app-login-register-form-dialog *ngIf="!authService.getToken()"></app-login-register-form-dialog>
 
-<!-- 
+<!--
 <app-confirm-email *ngIf="!authService.getToken()"></app-confirm-email> -->
 
 

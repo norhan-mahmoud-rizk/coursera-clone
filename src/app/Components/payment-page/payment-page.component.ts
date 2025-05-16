@@ -40,17 +40,19 @@ export class PaymentPageComponent implements OnInit {
   }
 
 
-  GetCareerCourseById() {
-    this.CourseService.getCarerrCourseById(this.CourseId).subscribe({
-      next: (data) => {
-        this.CareerCourse = data;
-        console.log('Current course from the payment component:', this.CareerCourse);
-
-       
-      },
-      error: (err) => {
-        console.error('Error fetching career course:', err);
-      },
-    });
-  }
+ GetCareerCourseById() {
+  this.CourseService.getCarerrCourseById(this.CourseId).subscribe({
+    next: (res: any) => {
+      this.CareerCourse = {
+        ...res.data,
+        id: res.data._id, // لو عايزة id بدل _id
+      };
+      console.log('Parsed course object:', this.CareerCourse);
+     
+    },
+    error: (err) => {
+      console.error('Error fetching career course:', err);
+    },
+  });
+}
 }

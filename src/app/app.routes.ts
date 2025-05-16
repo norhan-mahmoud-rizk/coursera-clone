@@ -99,34 +99,9 @@ export const routes: Routes = [
     canActivate: [userGuard],
   },
 
-  {
-    path: 'instructoeDetails/:id',
-    component: InstructorDetailsComponent,
-    title: 'intructor Details',
-    canActivate: [userGuard],
-  },
-
-  {
-    path: 'homeDetails/:CourseId',
-    component: HomeDetalisComponent,
-    title: 'Home Details',
-  },
-  {
-    path: 'profile',
-    component: ProfileComponent,
-    title: 'Profile',
-    canActivate: [userGuard],
-  },
-  {
-    path: 'HowDoesCouresraWorks',
-    component: HowDoesCouresraWorks,
-    title: 'How does coursraWorks',
-    canActivate: [userGuard],
-  },
-  {
-    path: 'Payment/:CourseId',
-    component: PaymentPageComponent,
-    title: ' Payment Page ',
-    canActivate: [userGuard],
-  },
+{ path: 'instructorDetails/:id', component: InstructorDetailsComponent, title: 'intructor Details' ,canActivate:[userGuard] },
+  { path: 'homeDetails/:CourseId', component: HomeDetalisComponent, title: "Home Details"  },
+  { path: 'profile', component: ProfileComponent, title: 'Profile' ,canActivate:[userGuard]},
+  { path: 'HowDoesCouresraWorks', component: HowDoesCouresraWorks, title: 'How does coursraWorks' ,canActivate:[userGuard] },
+  { path: 'Payment/:CourseId', component: PaymentPageComponent, title: ' Payment Page ' ,canActivate:[userGuard]},
 ];

@@ -23,11 +23,11 @@
   <div class="container">
     <div class="row marginTop">
       <h3 class="courses">Courses - English</h3>
-      @for(course of getInstructorID?.CoursesEnglish; track getInstructorID?.id){
+      @for(course of filterArray; track getInstructorID?.id){
         <div class="col-12 col-md-6 col-lg-4 card">
-          <img class="imageCourse" src="{{course.image}}" alt="">
+          <img class="imageCourse" src="{{course.courseImage}}" alt="">
           <h4>
-            <div class="titleCourse" style="color:#1F1F1F;margin-bottom:6px">{{course.title}}</div>
+            <div class="titleCourse" style="color:#1F1F1F;margin-bottom:6px">{{course.name}}</div>
           </h4>
         </div>
       }
@@ -40,14 +40,14 @@
 
       <h2 class="mostPopular exploreText">Explore Coursera</h2>
 
-      @for(explore of ArrayData[0].ExploreCoursera; track ArrayData[0].id){
+      @for(explore of filterCategory; track ArrayData[0].id){
         <div class="col-sm-12 col-md-6 col-lg-3 mb-3 explorePartTwo">
           <div class="d-flex align-items-center exploreCard border rounded shadow-sm overflow-hidden cardExplore">
-            <img class="exploreImage no-left-radius" src="{{explore.image}}" alt="Data Science">
+            <img class="exploreImage no-left-radius" src="{{explore.categoryImage}}" alt="Data Science">
 
             <div class="p-3 testExplore">
-              <div class="fw-bold desExplore">{{explore.description}}</div>
-              <span class="text-muted">{{explore.number}} courses</span>
+              <div class="fw-bold desExplore">{{explore.categoryName}}</div>
+              <span class="text-muted">{{explore.courses.length}} courses</span>
             </div>
           </div>
         </div>
