@@ -12,7 +12,7 @@ export class InstructorsService {
   constructor(
     private http:HttpClient
   ) { }
-  URL:string=`${environment.baseURL}`
+  URL:string=`${environment.backendURL}`
 
   getInstructorID(id: string): Observable<Instructors> {
     return this.http.get<Instructors>(`${this.URL}/Instructor/${id}`)

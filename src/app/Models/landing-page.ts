@@ -1,4 +1,3 @@
-
 export interface LandingPage {
   id:string
   title:string;

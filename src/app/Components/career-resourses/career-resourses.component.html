@@ -34,7 +34,7 @@
     @for(resource  of CareerResourses.slice(0, visibleCoursesCount);track resource._id){
 
         
-        <div class=" col-12 col-md-5 col-lg-3 CareerResoursesCard  rounded-3 border px-3 py-3 mb-4 mx-md-auto">
+        <div class=" col-12 col-md-3 col-lg-3 CareerResoursesCard  rounded-3 border p-3 mb-4 mx-auto">
               <h6 class="fw-bold mb-2">{{ resource.question }}</h6>
           <p>{{ resource.answer }}</p>
           <p>{{ resource.date | date }}</p>
@@ -43,7 +43,7 @@
 </div>
 
 </div>
-  
+ 
 
   <!-- Show more button -->
   <div class="container-fluid my-4 toggleShowMore mb-4 pb-5 px-0">

@@ -1,5 +1,3 @@
-
-
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { RouterLink, Router } from '@angular/router';
@@ -15,6 +13,8 @@ import { ICareerCourses } from '../../Models/ICareerCourses';
 import { AuthService } from '../../Services/auth.service';
 import { LoginRegisterFormDialogComponent } from '../login-register-form-dialog/login-register-form-dialog.component';
 import { ConfirmEmailComponent } from '../confirm-email/confirm-email.component';
+import { ServiceWithApiService } from '../../Services/service-with-api.service';
+import { CoursesCategories } from '../../Models/CoursesCategories';
 
 @Component({
   selector: 'app-landing-page',
@@ -34,6 +34,7 @@ export class LandingPageComponent implements OnInit {
 
   ArrayData: LandingPage[] = [];
   filterArray: ICareerCourses[] = [];
+  filterCategory: CoursesCategories[] = [];
   visibleCount2 = 4;
   visibleCount = 4;
   visibleCount3 = 4;
@@ -48,10 +49,27 @@ export class LandingPageComponent implements OnInit {
     private api: ApiService,
     private router: Router,
     public authService: AuthService,
-    
+    public courseServiceWithApi:ServiceWithApiService
+
   ) {}
 
   ngOnInit(): void {
+
+ this.courseServiceWithApi.getCareerCourseCategory().subscribe({
+  next: (data) => {
+    console.log('Data received from backend:', data);
+    this.filterCategory = data;
+      // map _id to id
+    this.filterCategory = data.map((item: any) => ({
+      ...item,
+      id: item._id
+    }));
+  },
+  error: (err) => {
+    console.error('Error fetching data from backend:', err);
+  }
+});
+
     if (this.authService.getToken()) {
       this.router.navigate(['/home']);
       return;
@@ -61,9 +79,20 @@ export class LandingPageComponent implements OnInit {
       this.ArrayData = data;
     });
 
-    this.api.getAllProduct().subscribe(data => {
-      this.filterArray = data;
-    });
+     this.courseServiceWithApi.GetAllCareerCourses().subscribe({
+  next: (data) => {
+    console.log('Data received from backend:', data);
+
+      // map _id to id
+    this.filterArray = data.map((item: any) => ({
+      ...item,
+      id: item._id
+    }));
+  },
+  error: (err) => {
+    console.error('Error fetching data from backend:', err);
+  }
+});
   }
 
   // login() {
