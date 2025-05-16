@@ -2,6 +2,8 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { CommonModule, Location } from '@angular/common';
 import { NavbarComponent } from '../navbar/navbar.component';
 import { CourseData, Module, Topic, Video } from '../../Models/course-details';
+import { CoursesService } from '../../Services/courses.service';
+import { tap } from 'rxjs';
 
 @Component({
   selector: 'app-video-player',
@@ -18,7 +20,10 @@ export class VideoPlayerComponent implements OnInit {
   currentVideoList: Video[] = [];
   currentVideoIndex: number = 0;
 
-  constructor(private location: Location) {}
+  constructor(
+    private location: Location,
+    private coursesService: CoursesService
+  ) {}
 
   ngOnInit(): void {
     const navigation = this.location.getState() as any;
@@ -60,17 +65,17 @@ export class VideoPlayerComponent implements OnInit {
 
   @ViewChild('videoPlayer') videoPlayer!: ElementRef<HTMLVideoElement>;
 
-  onVideoPause() {
-    const currentTime = this.videoPlayer.nativeElement.currentTime;
-    console.log('Video paused at:', currentTime);
-  }
-
   onVideoEnded() {
-    console.log('Video ended');
-  }
-
-  onTimeUpdate(event: Event) {
-    const video = event.target as HTMLVideoElement;
-    console.log('Current Time:', video.currentTime);
+    if (this.course && this.video) {
+      this.video.isCompleted = true;
+      this.coursesService
+        .updateVideoCompletionStatus(this.course?._id, this.video?._id)
+        .pipe(
+          tap(() => {
+            this.video!.isCompleted = true;
+          })
+        )
+        .subscribe();
+    }
   }
 }

@@ -18,9 +18,16 @@
                   : {}
               "
             >
-              <span (click)="video = currentVideo" class="video-link">
-                {{ currentVideo.videoTitle }}
-              </span>
+              <div class="flex flex-row align-items-center gap-2">
+                @if (currentVideo.isCompleted) {
+                <i class="fa-solid fa-circle-check text-success"></i>
+                } @else {
+                <i class="fa-solid fa-circle text-secondary"></i>
+                }
+                <span (click)="video = currentVideo" class="video-link">
+                  {{ currentVideo.videoTitle }}
+                </span>
+              </div>
             </li>
             }
           </ul>
@@ -60,9 +67,7 @@
             width="100%"
             height="100%"
             controls
-            (pause)="onVideoPause()"
             (ended)="onVideoEnded()"
-            (timeupdate)="onTimeUpdate($event)"
           >
             <source [src]="video?.url" type="video/mp4" />
             Your browser does not support the video tag.

@@ -19,4 +19,14 @@ export class CoursesService {
         })
       );
   }
+
+  updateVideoCompletionStatus(
+    courseId: string | undefined,
+    videoId: string | undefined
+  ) {
+    return this.httpClient.post(
+      `${environment.backendURL}/progress/video/${courseId}/${videoId}`,
+      {}
+    );
+  }
 }
