@@ -45,8 +45,8 @@ export const routes: Routes = [
   { path: 'ConfirmEmail', component: ConfirmEmailComponent, title: "ConfirmEmail" },
      
 
-  { path: 'courseExplanation/:CourseId', component: CourseExplanationComponent, title: 'courseExplanation' ,canActivate:[userGuard]},
-  { path: 'courseExplanation/:CourseId/video-player', component: VideoPlayerComponent, title: 'Video Player' ,canActivate:[userGuard] },
+  { path: 'courseExplanation', component: CourseExplanationComponent, title: 'courseExplanation' ,canActivate:[userGuard]},
+  { path: 'courseExplanation/video-player', component: VideoPlayerComponent, title: 'Video Player' ,canActivate:[userGuard] },
 
   { path: 'instructoeDetails/:id', component: InstructorDetailsComponent, title: 'intructor Details' ,canActivate:[userGuard] },
      

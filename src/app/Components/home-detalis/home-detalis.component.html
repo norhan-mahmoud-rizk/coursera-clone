@@ -1,4 +1,3 @@
-
 <app-navbar></app-navbar>
 <div class="navSection paddingPage">
   <div class="mb-3">
@@ -17,9 +16,9 @@
            {{CareerCourse?.description}}
           </p>
           <div style="display: flex; align-items: center; gap: 10px;" class="Instructors">
-            <img class="imageInstructor" src="{{CareerCourse?.instructorsImage}}" alt="">
+            <img class="imageInstructor" src="{{getInstructor?.instructorImage}}" alt="">
             <p style="margin: 0;">Instructors:</p>
-            <a class="linkInstructor" (click)="instructorDitals(CareerCourse?.instructorID)">
+            <a class="linkInstructor" (click)="instructorDitals(CareerCourse?.instructor)">
               <span>{{ getInstructor?.Name }}</span>
             </a>
           </div>

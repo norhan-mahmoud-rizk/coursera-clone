@@ -2,7 +2,6 @@
 <div class="container-fluid h-100">
   <div class="row h-100">
 
-    <!-- Navbar for small screens -->
     <nav class="navbar navbar-expand-md bg-light d-md-none">
       <div class="container-fluid">
         
@@ -14,135 +13,185 @@
       </div>
     </nav>
 
-    <!-- Left Sidebar (Collapsible for small screens) -->
+
     <div class="col-12 col-md-3 left-sidebar collapse d-md-block" id="sidebarMenu">
       <div class="sidebar-content">
         <div class="d-flex py-4">
-          <img src="{{CareerCourse?.logoImage}}" alt="course_logo" class="img-fluid mb-2 logo" />
-          <p>{{CareerCourse?.organization}}</p>
+          <img  alt="course_logo" class="img-fluid mb-2 logo" />
+          <p>Orgnization</p>
         </div>
-        <h5 class="mb-2 fw-bold">{{CareerCourse?.name}}</h5>
-        <p class="mb-5 gray-text">{{CareerCourse?.organization}}</p>
+        <h5 class="mb-2 fw-bold">name</h5>
+        <p class="mb-5 gray-text">organization</p>
 
         <ul>
           <li>
-            <div class="card-body Course-Material-card">
-              <p class="fw-bold">
-                <button (click)="toggleCourseMaterial()" class="Course-Material border-0 bg-transparent d-flex align-items-center fs-5 fw-semibold">
-                  <i id="arrow" class="fa-solid fa-chevron-right me-3 fw-bold"></i> Course Material
-                </button>
-              </p>
-              <div class="collapse modules" [ngClass]="{'show': isMaterialCollapsed}">
-                <div class="card-body">
-                  <ul class="gap-1 d-flex flex-column Course-Material-list">
-                    @for( module of CareerCourse?.modules; track $index){
-                    <li class="list-group-item border-0 mt-3" (click)="selectedSection = module.moduleTitle" >
-                        <i class="fa-solid fa-circle text-secondary"></i> module{{$index +1}}
-                      </li>
-                    }
-                  </ul>
-                </div>
-              </div>
-            </div>
+          <div class="card-body Course-Material-card">
+  <p class="fw-bold mb-0">
+    <button 
+      class="Course-Material border-0 bg-transparent d-flex align-items-center fs-5 fw-semibold"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#courseMaterialCollapse"
+      aria-expanded="false"
+      aria-controls="courseMaterialCollapse"
+      (click)="toggleArrow()">
+      <i id="arrow" class="fa-solid fa-chevron-right me-3 fw-bold transition"></i>
+      Course Material
+    </button>
+  </p>
+
+  <div class="collapse modules mt-2" id="courseMaterialCollapse">
+    <div class="card-body p-0">
+      <ul class="gap-1 d-flex flex-column Course-Material-list list-unstyled">
+        <li class="list-group-item border-0 mt-3">
+          <i class="fa-solid fa-circle text-secondary"></i> Module 1
+        </li>
+        <li class="list-group-item border-0 mt-3">
+          <i class="fa-solid fa-circle text-secondary"></i> Module 2
+        </li>
+        <li class="list-group-item border-0 mt-3">
+          <i class="fa-solid fa-circle text-secondary"></i> Module 3
+        </li>
+        <li class="list-group-item border-0 mt-3">
+          <i class="fa-solid fa-circle text-secondary"></i> Module 4
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
           </li>
-          <li (click)="selectedSection = 'grades'"><p class="fw-bold fs-6">Grades</p></li>
-          <li (click)="selectedSection = 'notes'"><p class="fw-bold fs-6">Notes</p></li>
-          <li (click)="selectedSection = 'discussions'"><p class="fw-bold fs-6">Discussion Forums</p></li>
-          <li (click)="selectedSection = 'messages'"><p class="fw-bold fs-6">Messages</p></li>
-          <li (click)="selectedSection = 'courseInfo'"><p class="fw-bold fs-6">Course Info</p></li>
+          <li><p class="fw-bold fs-6">Grades</p></li>
+          <li ><p class="fw-bold fs-6">Notes</p></li>
+          <li ><p class="fw-bold fs-6">Discussion Forums</p></li>
+          <li ><p class="fw-bold fs-6">Messages</p></li>
+          <li ><p class="fw-bold fs-6">Course Info</p></li>
         </ul>
       </div>
     </div>
 
-    <!-- Main Content + Right Sidebar -->
+
     <div class="col-12 col-md-9 d-flex flex-column h-100">
       <div class="scrollable-wrapper d-flex flex-column flex-md-row flex-grow-1 overflow-auto">
 
-        <!-- Main Content -->
+   
         <div class="col-12 col-md-7 m-md-4  main-content border rounded ">
          
-          @if(selectedSection){
-              @if(CareerCourse?.modules){
-                @for( module of CareerCourse?.modules; track $index){
-                  <!-- <h2 class="ps-2">{{module.moduleTitle}}</h2> -->
-                    @if(module.moduleTitle === selectedSection){
-                           
-                    @for( video of module.videos; track $index){
+       
+                   
                   
                       <div class="accordion accordionContainer p-3 border border-1" id="accordionExample">
                        <div class="accordion-item ">
                          <h2 class="accordion-header header">
-                           <button class="accordion-button mb-3 pe-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                           <h3 class="py-3  ps-2">{{video.title}}</h3> 
-                           
-                           </button>
+                        <button 
+  class="accordion-button mb-3 pe-3" 
+  type="button" 
+ 
+  aria-expanded="true" 
+  aria-controls="collapseOne">
+  <h3 class="py-3 ps-2">video title</h3>
+</button>
+
                          </h2>
                          <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
                            <div class="accordion-body">
-                             @for(vid of video.videos; track $index){
+                
                             <div class="row ps-3 py-2 body mb-3">
                                <div class="col-1"><i class="fa-solid fa-film"></i></div>
                                <div class="col-11 video-title">
-                                <p class="fw-bold"
-                                (click)="playVideo(module.moduleTitle, video.title, vid)">
-                                {{vid.videoTitle}}
+                                <p class="fw-bold"  routerLink="/courseExplanation/video-player">
+                         video title
                              </p>
                              
                                 
-                                 <p> video . {{vid.duration}}</p>
+                                 <p> video . duration</p>
                                </div>
                             </div>
-                        }
+                
+                            <div class="row ps-3 py-2 body mb-3">
+                               <div class="col-1"><i class="fa-solid fa-film"></i></div>
+                               <div class="col-11 video-title">
+                                <p class="fw-bold"  routerLink="/courseExplanation/video-player">
+                         video title
+                             </p>
+                             
+                                
+                                 <p> video . duration</p>
+                               </div>
+                            </div>
+                
+                            <div class="row ps-3 py-2 body mb-3">
+                               <div class="col-1"><i class="fa-solid fa-film"></i></div>
+                               <div class="col-11 video-title">
+                                <p class="fw-bold"  routerLink="/courseExplanation/video-player">
+                         video title
+                             </p>
+                             
+                                
+                                 <p> video . duration</p>
+                               </div>
+                            </div>
+                
+                            <div class="row ps-3 py-2 body mb-3">
+                               <div class="col-1"><i class="fa-solid fa-film"></i></div>
+                               <div class="col-11 video-title">
+                                <p class="fw-bold"  routerLink="/courseExplanation/video-player">
+                         video title
+                             </p>
+                             
+                                
+                                 <p> video . duration</p>
+                               </div>
+                            </div>
+                
+                            <div class="row ps-3 py-2 body mb-3">
+                               <div class="col-1"><i class="fa-solid fa-film"></i></div>
+                               <div class="col-11 video-title">
+                                <p class="fw-bold"  routerLink="/courseExplanation/video-player">
+                         video title
+                             </p>
+                             
+                                
+                                 <p> video . duration</p>
+                               </div>
+                            </div>
+                        
                            </div>
                          </div>
                        </div>
                        </div>
-                     }
-                    }
+                    
                   
   
                  
-                
-                }
-              }
+              
              
             
 
           
 
-              @if(selectedSection === 'grades'){
-                <h2 class="ps-2">Grades</h2>
-                <p>Check your grades here.</p>
-              }
+          
+                <!-- <h2 class="ps-2">Grades</h2>
+                <p>Check your grades here.</p> -->
+            
              
     
-              @if(selectedSection === 'notes'){
+<!--             
                 <h2 class="ps-2">Notes</h2>
                 <p>Here are your notes.</p>
-              }
-              
-        
-              @if(selectedSection === 'discussions'){
+             
                 <h2 class="ps-2">Discussion Forums</h2>
                 <p>Join the discussion!</p>
-              }
-            
-       
-              @if(selectedSection === 'messages'){
+              
                 <h2 class="ps-2">Messages</h2>
                 <p>Read your messages here.</p>
-              }
-             
             
-              @if(selectedSection === 'courseInfo'){
                 <h2 class="ps-2">Course Info</h2>
-                <p>Course information goes here.</p>
-              }
-              
-            }
+                <p>Course information goes here.</p> -->
+            
         </div>
 
-        <!-- Right Sidebar -->
+
         <div class="col-12 col-md-4  right-sidebar border rounded rounded-4 mt-4 ">
          
 

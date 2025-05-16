@@ -1,50 +1,39 @@
-
 <app-navbar></app-navbar>
-<div class="container-fluid mt-4 videoConatiner">
-    <div class="row">
-  
-      <!-- ✅ Left Sidebar -->
-      <div class="col-12 col-md-3">
-        <h5 class="fw-bold">{{ moduleTitle }}</h5>
-        <ul class="list-group">
-          <li 
-            class="list-group-item"
-            *ngFor="let vid of currentVideoList; let i = index"
-            (click)="selectVideo(i)"
-            [class.active]="i === currentIndex"
-            style="cursor: pointer"
-          >
-            {{ vid.videoTitle }}
-          </li>
-        </ul>
-      </div>
-  
-      <!-- ✅ Main Content Area -->
-      <div class="col-12 col-md-9">
-        <div class="row mb-3">
-          <div class="col-md-6">
-            <h3>{{ video?.videoTitle }}</h3>
-          </div>
-          <div class="col-md-6">
-            <div class="d-flex justify-content-end">
-              <button class="btn border-0 text-primary" (click)="goToPreviousVideo()" [disabled]="currentIndex === 0">Previous</button>
-              <button class="btn border-0 text-primary" (click)="goToNextVideo()" [disabled]="currentIndex === currentVideoList.length - 1">Next</button>
-            </div>
-          </div>
+
+<div class="container-fluid mt-4 video-container">
+  <div class="row">
+
+    <!-- Sidebar -->
+    <div class="col-12 col-md-3 sidebar">
+      <h5>Module Title</h5>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Video 1 - Introduction</li>
+        <li class="list-group-item">Video 2 - Getting Started</li>
+        <li class="list-group-item">Video 3 - Building your first app</li>
+        <li class="list-group-item">Video 4 - Advanced Concepts</li>
+      </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="col-12 col-md-9 main-content">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <h3>Video Title</h3>
+        <div>
+          <button class="btn btn-outline-primary me-2" disabled>Previous</button>
+          <button class="btn btn-outline-primary" disabled>Next</button>
         </div>
-  
-     
-        <div class="">
-          <!-- <iframe
-            *ngIf="video?.url"
-            width="100%"
-            height="400"
-            [src]="sanitizeUrl(video.url)"
-            frameborder="0"
-            allowfullscreen
-          ></iframe> -->
+      </div>
+
+      <!-- Video Player Placeholder -->
+      <div class="video-player">
+        <div class="video-wrapper">
+          <!-- يمكنك استبدال الـ div بـ iframe لاحقًا -->
+          <div class="placeholder-video">
+            Video Player Here
+          </div>
         </div>
       </div>
     </div>
+
   </div>
-  
+</div>

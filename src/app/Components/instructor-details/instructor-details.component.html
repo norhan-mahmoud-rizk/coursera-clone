@@ -2,7 +2,7 @@
 <div class="container">
     <div class="row marginTop">
       <div class="col-2">
-        <img class="imageInstructor" src="{{getInstructorID?.Image}}" alt="">
+        <img class="imageInstructor" src="{{getInstructorID?.instructorImage}}" alt="">
       </div>
       <div class="col-7 titleOFinstructor">
         <h2 class="instructorName">{{getInstructorID?.Name}}</h2>
@@ -19,7 +19,7 @@
     </div>
     <hr style="height: 1px; background-color: #8c8e91; border: none; width: 80%;margin-left: 30px;">
   </div>
-  
+
   <div class="container">
     <div class="row marginTop">
       <h3 class="courses">Courses - English</h3>
@@ -33,18 +33,18 @@
       }
     </div>
   </div>
-  
+
   <div class="container Explore">
-  
+
     <div class="row paddingMost">
-  
+
       <h2 class="mostPopular exploreText">Explore Coursera</h2>
-  
+
       @for(explore of ArrayData[0].ExploreCoursera; track ArrayData[0].id){
         <div class="col-sm-12 col-md-6 col-lg-3 mb-3 explorePartTwo">
           <div class="d-flex align-items-center exploreCard border rounded shadow-sm overflow-hidden cardExplore">
             <img class="exploreImage no-left-radius" src="{{explore.image}}" alt="Data Science">
-  
+
             <div class="p-3 testExplore">
               <div class="fw-bold desExplore">{{explore.description}}</div>
               <span class="text-muted">{{explore.number}} courses</span>
@@ -52,12 +52,7 @@
           </div>
         </div>
       }
-  
+
     </div>
   </div>
   <hr style="height: 1px; background-color: #8c8e91; border: none; width: 95%;margin-left: 30px;">
-  
-  
-  
-  
-  

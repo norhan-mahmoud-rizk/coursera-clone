@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, RouterModule } from '@angular/router';
-import { ApiService } from '../../Services/api.service';
+// import { ApiService } from '../../Services/api.service';
 import { ICareerCourses } from '../../Models/ICareerCourses';
 import { Router } from '@angular/router';
 import { Instructors } from '../../Models/instructors';
@@ -8,6 +8,7 @@ import { InstructorsService } from '../../Services/instructors.service';
 import { EnrollDialogComponent } from '../enroll-dialog/enroll-dialog.component';
 import { Navbar2Component } from '../navbar2/navbar2.component';
 import { NavbarComponent } from '../navbar/navbar.component';
+import { ServiceWithApiService } from '../../Services/service-with-api.service';
 
 @Component({
   selector: 'app-home-detalis',
@@ -26,9 +27,10 @@ export class HomeDetalisComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private active: ActivatedRoute,
-    private api: ApiService,
+    // private api: ApiService,
     private instructorService: InstructorsService,
-    private router: Router
+    private router: Router,
+    public courseServiceWithApi:ServiceWithApiService
   ) {}
 
   ngOnInit(): void {
@@ -36,13 +38,13 @@ export class HomeDetalisComponent implements OnInit {
      this.CourseId = this.active.snapshot.paramMap.get('CourseId')
         ? String(this.active.snapshot.paramMap.get('CourseId'))
         : '';
-      this.api.getByID(this.CourseId).subscribe({
+      this.courseServiceWithApi.getCarerrCourseById(this.CourseId).subscribe({
         next: (data) => {
           this.CareerCourse = data;
           console.log('Course Details:', this.CareerCourse);
 
-          
-          const instructorId = this.CareerCourse?.instructorID;
+
+          const instructorId = this.CareerCourse?.instructor;
           if (instructorId) {
             this.instructorService.getInstructorID(instructorId).subscribe({
               next: (instructorData) => {
@@ -60,6 +62,9 @@ export class HomeDetalisComponent implements OnInit {
         }
       });
     });
+
+
+   this.GetCareerCourseById()
   }
 
 
@@ -81,7 +86,21 @@ export class HomeDetalisComponent implements OnInit {
     this.router.navigate(['/instructoeDetails', id]);
   }
 
+GetCareerCourseById() {
+  this.courseServiceWithApi.getCarerrCourseById(this.CourseId).subscribe({
+    next: (res: any) => {
+      this.CareerCourse = {
+        ...res.data,
+        id: res.data._id, 
+      };
+      console.log(' course object from the home details is :', this.CareerCourse);
+    
+    },
+    error: (err) => {
+      console.error('Error fetching career course:', err);
+    },
+  });
+}
 
 
-  
 }
