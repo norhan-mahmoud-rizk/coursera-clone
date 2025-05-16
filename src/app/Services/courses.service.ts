@@ -3,7 +3,6 @@ import { Injectable } from '@angular/core';
 import { map, Observable } from 'rxjs';
 import { CourseData } from '../Models/course-details';
 import { environment } from '../../environments/environment';
-
 @Injectable({
   providedIn: 'root',
 })
@@ -28,5 +27,17 @@ export class CoursesService {
       `${environment.backendURL}/progress/video/${courseId}/${videoId}`,
       {}
     );
+  }
+
+  getCourses() {
+    return this.httpClient
+      .get<{ enrolledCourses: number; courses: CourseData[] }>(
+        `${environment.backendURL}/progress/courses`
+      )
+      .pipe(
+        map((response: any) => {
+          return response.data;
+        })
+      );
   }
 }

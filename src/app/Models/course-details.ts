@@ -11,6 +11,7 @@ export interface CourseData {
   organization: string;
   views: number;
   enrolled: boolean;
+  progress: number;
   modules: Module[];
   description: string;
   reviews: any[]; // You can define a Review interface if needed
