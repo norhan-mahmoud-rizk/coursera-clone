@@ -4,10 +4,11 @@ import { AuthService } from '../../Services/auth.service';
 import { FormsModule, NgModel } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { UserServiceService } from '../../Services/user-service.service';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-navbar',
-  imports: [RouterModule,FormsModule,CommonModule],
+  imports: [RouterModule,FormsModule,CommonModule,TranslateModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss'
 })
@@ -15,7 +16,7 @@ export class NavbarComponent implements OnInit {
 
   // userName: string | null = null;//to display the username  of the user
  userData: any;
-  constructor(public authService: AuthService, private router: Router,public userService :UserServiceService) {}
+  constructor(public authService: AuthService, private router: Router,public userService :UserServiceService, private translate: TranslateService) {}
   ngOnInit(): void {
    this.userService.getUserById().subscribe((res: any) => {
     // console.log(" Current logged-in user form the career page :", res);

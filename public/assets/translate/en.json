@@ -1,0 +1,76 @@
+{
+  "Navbar1": 
+    {
+      "coursera": "Coursera",
+      "Explore": "Explore",
+      "Language": "English",
+      "searchBar": "What do you want to learn?",
+      "profile": "Profile",
+      "logout": "Logout"
+    }
+  ,
+  "Navbar2": {
+    "home": "Home ",
+    "myLearning": "My Learning",
+    "onlineDegrees": "Online Degrees",
+    "career": "Careers"
+  }
+
+  ,
+
+
+  "Footer": {
+    "courseeraSection": {
+      "title": "Coursera",
+      "about": "About  ",
+      "whatWeOffer": "What We Offer",
+      "leadership": "Leadership",
+      "careers": "Careers",
+      "catalog": "Catalog",
+      "courseraPlus": "Coursera Plus",
+      "professionalCertificates": "Professional Certificates",
+      "masterTrackCertificates": "MasterTrack® Certificates",
+      "degrees": "Degrees",
+      "forEnterprise": "For Enterprise",
+      "forGovernment": "For Government",
+      "forCampus": "For Campus",
+      "becomeAPartner": "Become a Partner",
+      "socialImpact": "Social Impact"
+    },
+    "communitySection": {
+      "title": "Community",
+      "learners": "Learners",
+      "partners": "Partners",
+      "betaTesters": "Beta Testers",
+      "blog": "Blog",
+      "theCourseraPodcast": "The Coursera Podcast",
+      "techBlog": "Tech Blog",
+      "teachingCenter": "Teaching Center"
+    },
+    "moreSection": {
+      "title": "More",
+      "press": "Press",
+      "investors": "Investors",
+      "terms": "Terms",
+      "privacy": "Privacy",
+      "help": "Help",
+      "accessibility": "Accessibility",
+      "contact": "Contact",
+      "articles": "Articles",
+      "directory": "Directory",
+      "affiliates": "Affiliates",
+      "modernSlaveryStatement": "Modern Slavery Statement",
+      "manageCookiePreferences": "Manage Cookie Preferences"
+    },
+    "mobileAppSection": {
+      "title": "Mobile App",
+      "appStoreButton": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://d3njjcbhbojbot.cloudfront.net/web/images/icons/download_on_the_app_store_badge_en.svg?auto=format%2Ccompress&dpr=2&w=152&h=45&q=40",
+      "googlePlayButton": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://d3njjcbhbojbot.cloudfront.net/web/images/icons/en_generic_rgb_wo_45.png?auto=format%2Ccompress&dpr=2&w=152&h=45&q=40",
+      "certifiedBadge": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://d3njjcbhbojbot.cloudfront.net/web/images/icons/2018-B-Corp-Logo-Black-S.png?auto=format%2Ccompress&dpr=2&w=151&h=120&q=40"
+    },
+    "copyright": "© 2020 Coursera Inc. All rights reserved"
+  }
+
+
+  
+}
