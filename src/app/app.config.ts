@@ -22,7 +22,7 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes),
     provideHttpClient(withInterceptorsFromDi()),
 
-    // 👍 Add ngx-translate configuration
+//  the configuration of the localization module
     importProvidersFrom(
       TranslateModule.forRoot({
         defaultLanguage: 'en',

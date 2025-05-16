@@ -17,7 +17,7 @@ export class Navbar2Component {
     private router: Router,
     private translate: TranslateService
   ) {
-    this.translate.setDefaultLang('en');
-    this.translate.use('en');
+    // this.translate.setDefaultLang('en');
+    // this.translate.use('en');
   }
 }
