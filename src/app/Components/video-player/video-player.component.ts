@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { CommonModule, Location } from '@angular/common';
 import { NavbarComponent } from '../navbar/navbar.component';
 import { CourseData, Module, Topic, Video } from '../../Models/course-details';
@@ -40,6 +40,7 @@ export class VideoPlayerComponent implements OnInit {
     if (this.currentVideoIndex < this.currentVideoList.length - 1) {
       this.currentVideoIndex++;
       this.video = this.currentVideoList[this.currentVideoIndex];
+      this.videoPlayer.nativeElement.load();
     }
   }
 
@@ -47,11 +48,29 @@ export class VideoPlayerComponent implements OnInit {
     if (this.currentVideoIndex > 0) {
       this.currentVideoIndex--;
       this.video = this.currentVideoList[this.currentVideoIndex];
+      this.videoPlayer.nativeElement.load();
     }
   }
 
   selectVideo(index: number) {
     this.currentVideoIndex = index;
     this.video = this.currentVideoList[this.currentVideoIndex];
+    this.videoPlayer.nativeElement.load();
+  }
+
+  @ViewChild('videoPlayer') videoPlayer!: ElementRef<HTMLVideoElement>;
+
+  onVideoPause() {
+    const currentTime = this.videoPlayer.nativeElement.currentTime;
+    console.log('Video paused at:', currentTime);
+  }
+
+  onVideoEnded() {
+    console.log('Video ended');
+  }
+
+  onTimeUpdate(event: Event) {
+    const video = event.target as HTMLVideoElement;
+    console.log('Current Time:', video.currentTime);
   }
 }
