@@ -102,6 +102,28 @@ export class OnlineDegreesComponent implements OnInit {
   ngOnInit(): void {
     this.loadDegrees();
 
+    this.onlineDegreesService.getExperts().subscribe({
+      next: (data) => {
+        this.experts = data;
+      },
+      error: (err) => console.log(err),
+    });
+
+    this.onlineDegreesService.getTopics().subscribe({
+      next: (data) => {
+        this.topics = data;
+      },
+      error: (err) => console.log(err),
+    });
+
+    this.onlineDegreesService.getFaqs().subscribe({
+      next: (data) => {
+        this.faqs = data;
+        this.displayedFaqs = this.faqs.slice(0, 3);
+      },
+      error: (err) => console.log(err),
+    });
+
     // this.getAllCollections();
   }
 
@@ -110,10 +132,23 @@ export class OnlineDegreesComponent implements OnInit {
       next: (data) => {
         this.degrees = data;
 
+        this.collection1 = this.getRandomDegrees(3);
+        this.collection2 = this.getRandomDegrees(3);
+        this.collection3 = this.getRandomDegrees(3);
+        this.collection4 = this.getRandomDegrees(3);
+        this.collection5 = this.getRandomDegrees(3);
+
         this.applyFilters();
       },
       error: (err) => console.log(err),
     });
+  }
+
+  private getRandomDegrees(count: number) {
+    return this.degrees
+      .slice()
+      .sort(() => 0.5 - Math.random())
+      .slice(0, count);
   }
 
   toggleLevel(level: string) {
@@ -199,77 +234,6 @@ export class OnlineDegreesComponent implements OnInit {
       this.updateDegrees();
     }
   }
-
-  // Collections :
-
-  // getAllCollections() {
-
-  //   this.onlineDegreesService.getCollection1().subscribe({
-  //     next: (data) => {
-
-  //       this.collection1=data;
-
-  //     }, error: (err) => console.log(err)
-  //   })
-
-  //   this.onlineDegreesService.getCollection2().subscribe({
-  //     next: (data) => {
-
-  //       this.collection2=data;
-
-  //     }, error: (err) => console.log(err)
-  //   })
-
-  //   this.onlineDegreesService.getCollection3().subscribe({
-  //     next: (data) => {
-
-  //       this.collection3=data;
-
-  //     }, error: (err) => console.log(err)
-  //   })
-
-  //   this.onlineDegreesService.getCollection4().subscribe({
-  //     next: (data) => {
-
-  //       this.collection4=data;
-
-  //     }, error: (err) => console.log(err)
-  //   })
-
-  //   this.onlineDegreesService.getCollection5().subscribe({
-  //     next: (data) => {
-
-  //       this.collection5=data;
-
-  //     }, error: (err) => console.log(err)
-  //   })
-
-  //   this.onlineDegreesService.getExperts().subscribe({
-  //     next: (data) => {
-
-  //       this.experts=data;
-
-  //     }, error: (err) => console.log(err)
-  //   })
-
-  //   this.onlineDegreesService.getTopics().subscribe({
-  //     next: (data) => {
-
-  //       this.topics = data;
-
-  //     }, error: (err) => console.log(err)
-  //   })
-
-  //   this.onlineDegreesService.getFaqs().subscribe({
-  //     next: (data) => {
-
-  //       this.faqs = data;
-  //       this.displayedFaqs = this.faqs.slice(0, 3);
-
-  //     }, error: (err) => console.log(err)
-  //   })
-
-  // }
 
   showAll = false;
   displayedFaqs = this.faqs.slice(0, 3);
