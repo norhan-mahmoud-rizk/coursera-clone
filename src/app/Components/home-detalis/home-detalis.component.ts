@@ -12,13 +12,13 @@ import { ServiceWithApiService } from '../../Services/service-with-api.service';
 
 @Component({
   selector: 'app-home-detalis',
-  imports: [RouterModule,EnrollDialogComponent,NavbarComponent],
+  imports: [RouterModule, EnrollDialogComponent, NavbarComponent],
   templateUrl: './home-detalis.component.html',
   styleUrl: './home-detalis.component.scss'
 })
 export class HomeDetalisComponent implements OnInit {
-   CareerCourse: ICareerCourses | undefined = undefined;
-    CourseId: string = '';
+  CareerCourse: ICareerCourses | undefined = undefined;
+  CourseId: string = '';
   getInstructor!: Instructors;
 
   // Static array to hold enrolled courses
@@ -30,43 +30,57 @@ export class HomeDetalisComponent implements OnInit {
     // private api: ApiService,
     private instructorService: InstructorsService,
     private router: Router,
-    public courseServiceWithApi:ServiceWithApiService
-  ) {}
+    public courseServiceWithApi: ServiceWithApiService
+  ) { }
 
-  ngOnInit(): void {
-    this.active.paramMap.subscribe(par => {
-     this.CourseId = this.active.snapshot.paramMap.get('CourseId')
-        ? String(this.active.snapshot.paramMap.get('CourseId'))
-        : '';
-      this.courseServiceWithApi.getCarerrCourseById(this.CourseId).subscribe({
-        next: (data) => {
-          this.CareerCourse = data;
-          console.log('Course Details:', this.CareerCourse);
+ ngOnInit(): void {
+    this.route.paramMap.subscribe(params => {
+      this.CourseId = params.get('CourseId') || '';
 
-
-          const instructorId = this.CareerCourse?.instructor;
-          if (instructorId) {
-            this.instructorService.getInstructorID(instructorId).subscribe({
-              next: (instructorData) => {
-                this.getInstructor = instructorData;
-                console.log('Instructor:', this.getInstructor);
-              },
-              error: (err) => {
-                console.error('Error fetching instructor:', err);
-              }
-            });
-          }
-        },
-        error: (err) => {
-          console.error('Error fetching course:', err);
-        }
-      });
+      if (this.CourseId) {
+        this.loadCourseAndInstructor(this.CourseId);
+      }
     });
-
-
-   this.GetCareerCourseById()
   }
 
+  loadCourseAndInstructor(courseId: string): void {
+    this.courseServiceWithApi.getCarerrCourseById(courseId).subscribe({
+      next: (res: any) => {
+        // تحويل _id إلى id للكورس
+        this.CareerCourse = {
+          ...res.data,
+          id: res.data._id,
+        };
+
+        console.log('Course Details:', this.CareerCourse);
+
+        // جلب بيانات الانستركتور باستخدام الـ instructorId اللي جاي من الكورس
+        const instructorId = this.CareerCourse?.instructor;
+        if (instructorId) {
+        this.instructorService.getInstructorID(instructorId).subscribe({
+  next: (instructorData: any) => {
+    // لو الداتا جايه في instructorData.data
+    const data = instructorData.data || instructorData;
+
+    // تحويل _id إلى id عشان يتوافق مع الانترفيس
+    this.getInstructor = {
+      ...data,
+      id: data._id,
+    };
+
+    console.log('Instructor Details:', this.getInstructor);
+  },
+  error: (err) => console.error('Error fetching instructor:', err),
+});
+
+        }
+      },
+      error: (err) => {
+        
+        console.error('Error fetching career course:', err);
+      },
+    });
+  }
 
   enrollCourse(): void {
     if (this.CareerCourse) {
@@ -82,25 +96,11 @@ export class HomeDetalisComponent implements OnInit {
     return HomeDetalisComponent.myCourses;
   }
 
-  instructorDitals(id: string | undefined): void {
-    this.router.navigate(['/instructoeDetails', id]);
+  instructorDitals(id?: string): void {
+    if (id) {
+      this.router.navigate(['/instructorDetails', id]);
+    }
   }
-
-GetCareerCourseById() {
-  this.courseServiceWithApi.getCarerrCourseById(this.CourseId).subscribe({
-    next: (res: any) => {
-      this.CareerCourse = {
-        ...res.data,
-        id: res.data._id, 
-      };
-      console.log(' course object from the home details is :', this.CareerCourse);
-    
-    },
-    error: (err) => {
-      console.error('Error fetching career course:', err);
-    },
-  });
-}
 
 
 }

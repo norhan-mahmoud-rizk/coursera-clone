@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from '../../Services/api.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Instructors } from '../../Models/instructors';
 import { InstructorsService } from '../../Services/instructors.service';
@@ -16,7 +15,7 @@ import { NavbarComponent } from '../navbar/navbar.component';
 })
 export class InstructorDetailsComponent implements OnInit {
 
-  instructortID!: number;
+  instructorID!: string;  // غيرت النوع لـ string
   getInstructorID!: Instructors | undefined;
   ArrayData: LandingPage[] = [];
 
@@ -35,19 +34,25 @@ export class InstructorDetailsComponent implements OnInit {
     });
 
     this.active.paramMap.subscribe(par => {
-      this.instructortID = Number(par.get('id')) || 0;
-      this.api.getInstructorID(String(this.instructortID)).subscribe({
-        next: (data) => {
-          this.getInstructorID = data;
-          console.log(this.getInstructorID);
-        },
-        error: (err) => {
-          console.error('Error fetching Instructors:', err);
-        }
-      });
+      this.instructorID = par.get('id') || '';  // خد ال id كسلسلة نصية string
+      if(this.instructorID) {
+        this.api.getInstructorID(this.instructorID).subscribe({
+          next: (response: any) => {
+            // لو الداتا جوه response.data
+            const data = response.data || response;
+            this.getInstructorID = {
+              ...data,
+              id: data._id || data.id,  // تحويل _id الى id لو موجود
+            };
+            console.log(this.getInstructorID);
+          },
+          error: (err) => {
+            console.error('Error fetching Instructors:', err);
+          }
+        });
+      }
     });
 
   }
-
 
 }

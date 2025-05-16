@@ -48,8 +48,7 @@ export const routes: Routes = [
   { path: 'courseExplanation', component: CourseExplanationComponent, title: 'courseExplanation' ,canActivate:[userGuard]},
   { path: 'courseExplanation/video-player', component: VideoPlayerComponent, title: 'Video Player' ,canActivate:[userGuard] },
 
-  { path: 'instructoeDetails/:id', component: InstructorDetailsComponent, title: 'intructor Details' ,canActivate:[userGuard] },
-     
+{ path: 'instructorDetails/:id', component: InstructorDetailsComponent, title: 'intructor Details' ,canActivate:[userGuard] },
   { path: 'homeDetails/:CourseId', component: HomeDetalisComponent, title: "Home Details"  },
   { path: 'profile', component: ProfileComponent, title: 'Profile' ,canActivate:[userGuard]},
   { path: 'HowDoesCouresraWorks', component: HowDoesCouresraWorks, title: 'How does coursraWorks' ,canActivate:[userGuard] },
