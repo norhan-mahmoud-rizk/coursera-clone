@@ -1,6 +1,6 @@
 export interface IOnlineDegrees {
     id: number;
-    img: string;
+    degreeImage: string;
     name: string;
     degree: string;
     description: string;

@@ -26,7 +26,6 @@ import { ConfirmEmailComponent } from '../confirm-email/confirm-email.component'
     RouterLink,
     FormsModule,
     LoginRegisterFormDialogComponent,
-    ConfirmEmailComponent
   ],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.scss'
