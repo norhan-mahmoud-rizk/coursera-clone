@@ -51,7 +51,7 @@
 .mobileNav svg {
   width: 24px;
   height: 24px;
-  fill: #5b6780; 
+  fill: #5b6780;
   display: inline-block;
   vertical-align: middle;
 }
@@ -251,6 +251,170 @@ padding: 12px;
 }
 .link{
   text-decoration: none;
+}
+// Notification styles
+.notification-container {
+  position: relative;
+  margin-right: 15px;
+}
+
+.notification-icon {
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  padding: 8px;
+  border-radius: 50%;
+  transition: background 0.2s;
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.05);
+
+    svg {
+      fill: #0066cc;
+    }
+  }
+
+  svg {
+    fill: #5b6780;
+    transition: fill 0.2s;
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.notification-badge {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  background: #ff4757;
+  color: white;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  &.pulse {
+    animation: pulse 0.5s ease-in-out;
+  }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+  100% { transform: scale(1); }
+}
+
+.notification-dropdown {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  width: 350px;
+  max-height: 500px;
+  overflow-y: auto;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  padding: 12px;
+
+  .notification-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 12px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #eee;
+
+    h5 {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .mark-all-read {
+      background: none;
+      border: none;
+      color: #0066cc;
+      cursor: pointer;
+      font-size: 12px;
+      padding: 4px 8px;
+      border-radius: 4px;
+
+      &:hover {
+        background: rgba(0, 102, 204, 0.1);
+      }
+    }
+  }
+
+  .no-notifications {
+    padding: 16px;
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+  }
+
+  .notification-item {
+    padding: 12px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    transition: all 0.2s;
+
+    &.unread {
+      background: #f8f9fa;
+      border-left: 3px solid #0066cc;
+    }
+
+    &:hover {
+      background: #f0f5ff;
+      transform: translateX(2px);
+    }
+
+    .notification-content {
+      flex: 1;
+
+      h6 {
+        margin: 0 0 4px 0;
+        font-size: 14px;
+        font-weight: 600;
+        color: #333;
+      }
+
+      p {
+        margin: 0 0 4px 0;
+        font-size: 13px;
+        color: #555;
+      }
+
+      small {
+        font-size: 11px;
+        color: #999;
+      }
+    }
+
+    .mark-read {
+      background: none;
+      border: none;
+      color: #0066cc;
+      cursor: pointer;
+      font-size: 12px;
+      padding: 4px 8px;
+      border-radius: 4px;
+      align-self: center;
+      white-space: nowrap;
+
+      &:hover {
+        background: rgba(0, 102, 204, 0.1);
+      }
+    }
+  }
 }
 
 @media (max-width: 1060px){
