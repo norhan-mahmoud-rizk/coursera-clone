@@ -35,16 +35,25 @@ export class CareerParentComponent  implements OnInit  {
       // this.fetchAllSuccessStories();
     }
   
-    fetchCareerCoursesCategories() {
-      this.courseServiceWithApi.getCareerCourseCategory().subscribe({
-        next: (data) => {
-          this.CareerCoursescategories = data;
-        },
-        error: (err) => {
-          console.log(err);
-        }
-      });
+fetchCareerCoursesCategories() {
+  this.courseServiceWithApi.getCareerCourseCategory().subscribe({
+    next: (data) => {
+     
+      this.CareerCoursescategories = data.map((item: any) => ({
+        
+        categoryName: item.categoryName,
+        categoryID: item._id, // transform _id to categoryID
+        categoryImage: item.categoryImage,
+        courses: item.courses
+      }));
+          //  console.log('the categoryIDs form backend are :', this.CareerCoursescategories.map(cat => cat.categoryID));
+    },
+    error: (err) => {
+      console.log(err);
     }
+  });
+}
+
   
  
     

@@ -47,7 +47,7 @@ GetCareerCourseById() {
         categoryID: res.data.categoryID,
         
       };
-      console.log('Parsed course object:', this.CareerCourse);
+      // console.log('Parsed course object:', this.CareerCourse);
       this.GetSimilarCourses();
     },
     error: (err) => {
@@ -60,11 +60,11 @@ GetCareerCourseById() {
   
     GetSimilarCourses() {
       if (this.CareerCourse?.categoryID) {
-        const categoryID = Number(this.CareerCourse?.categoryID);
+        const categoryID = this.CareerCourse?.categoryID;
         console.log('the category id of the current course :', categoryID);
         this.CourseService.getCourseByCatId(categoryID).subscribe({
           next: (courses) => {
-            console.log('courses with the same category Id:', courses);
+            // console.log('courses with the same category Id:', courses);
             this.SimilarCourses = courses; 
           },
           error: (err) => {
