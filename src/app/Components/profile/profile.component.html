@@ -91,10 +91,10 @@
           <h5>Personal details</h5>
           <div class="profile-img" *ngIf="userData">{{ userData.username.charAt(0) }}</div>
           <h5 class="profile-name" *ngIf="userData">{{ userData.username }}</h5>
-          <h6 class="profile-name" *ngIf="userData">{{ userData.location }}</h6>
+          <h6 class="profile-name"  *ngIf="userData && userData.location" style="color: #5b6780; text-align: center; font-weight: normal;"><i class="fa-solid fa-location-dot"></i>  live in {{ userData.location }}</h6>
 
-          <!-- <button class="btn btn-outline-primary">Share profile link</button>
-          <a href="#" class="update-visibility">Update profile visibility</a> -->
+          <button class="btn btn-outline-primary my-4" onclick="document.getElementById('shareProfile')?.showModal()">Share profile link</button>
+          <a  class="update-visibility my-2" onclick="document.getElementById('profileVisibility')?.showModal()">Update profile visibility</a>
         </div>
       </div>
       <div class="card info-card">
@@ -291,6 +291,8 @@
 <app-edit-form-dialog></app-edit-form-dialog>
 <app-project-dialog></app-project-dialog>
 <app-credential-dialog></app-credential-dialog>
+<app-share-profile></app-share-profile>
+<app-profile-visibility></app-profile-visibility>
 
 
 
