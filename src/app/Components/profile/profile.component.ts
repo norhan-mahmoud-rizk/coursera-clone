@@ -7,10 +7,14 @@ import { Router, RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { UserServiceService } from '../../Services/user-service.service';
+import { Navbar2Component } from '../navbar2/navbar2.component';
+import { NavbarComponent } from '../navbar/navbar.component';
+import { ShareProfileComponent } from '../share-profile/share-profile.component';
+import { ProfileVisibilityComponent } from '../profile-visibility/profile-visibility.component';
 
 @Component({
   selector: 'app-profile',
-  imports: [EditFormDialogComponent,ProjectDialogComponent,CredentialDialogComponent,RouterModule,FormsModule,CommonModule],
+  imports: [ProfileVisibilityComponent,ShareProfileComponent,NavbarComponent,EditFormDialogComponent,ProjectDialogComponent,CredentialDialogComponent,RouterModule,FormsModule,CommonModule],
   templateUrl: './profile.component.html',
   styleUrl: './profile.component.scss'
 })
