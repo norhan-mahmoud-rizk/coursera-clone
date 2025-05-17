@@ -156,10 +156,9 @@
                                   'video-player/' +
                                   selectedModule?._id +
                                   '/' +
-                                  topic._id +
-                                  '/' +
-                                  video._id
+                                  topic._id
                                 "
+                                [queryParams]="{ videoId: video._id }"
                               >
                                 {{ video.videoTitle }}
                               </p>
