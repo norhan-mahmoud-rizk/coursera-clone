@@ -1,74 +1,80 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { CommonModule, Location } from '@angular/common';
-import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { NavbarComponent } from '../navbar/navbar.component';
+import { CourseData, Module, Topic, Video } from '../../Models/course-details';
+import { CoursesService } from '../../Services/courses.service';
+import { tap } from 'rxjs';
 
 @Component({
   selector: 'app-video-player',
   templateUrl: './video-player.component.html',
   styleUrls: ['./video-player.component.scss'],
-  imports: [CommonModule,NavbarComponent]
+  imports: [CommonModule, NavbarComponent],
 })
-
 export class VideoPlayerComponent implements OnInit {
-  course: any;
-  moduleTitle: string = '';
-  video: any;
+  course?: CourseData;
+  module?: Module;
+  topic?: Topic;
+  video?: Video;
 
-  currentVideoList: any[] = [];
-  currentIndex: number = 0;
+  currentVideoList: Video[] = [];
+  currentVideoIndex: number = 0;
 
-  constructor(private location: Location, private sanitizer: DomSanitizer) {}
+  constructor(
+    private location: Location,
+    private coursesService: CoursesService
+  ) {}
 
   ngOnInit(): void {
     const navigation = this.location.getState() as any;
 
     this.course = navigation?.course;
-    this.moduleTitle = navigation?.moduleTitle;
+    this.module = navigation?.module;
+    this.topic = navigation?.topic;
     this.video = navigation?.video;
 
-    console.log('Current Course:', this.course);
-    console.log('Current Module Title:', this.moduleTitle);
-    console.log('Current Video:', this.video);
-
-    if (this.course && this.moduleTitle && this.video) {
-      const matchingModule = this.course.modules.find((mod: any) =>
-        mod.videos.some((group: any) => group.title === this.moduleTitle)
+    if (this.course && this.module && this.video && this.topic) {
+      this.currentVideoList = this.module.topics.flatMap((x) => x.videos);
+      this.currentVideoIndex = this.currentVideoList.findIndex(
+        (v) => v._id === this.video?._id
       );
-
-      if (matchingModule) {
-        const group = matchingModule.videos.find((g: any) => g.title === this.moduleTitle);
-        if (group) {
-          this.currentVideoList = group.videos;
-          this.currentIndex = group.videos.findIndex((v: any) => v.videoID === this.video.videoID);
-        }
-      }
     }
   }
 
   goToNextVideo() {
-    if (this.currentIndex < this.currentVideoList.length - 1) {
-      this.currentIndex++;
-      this.video = this.currentVideoList[this.currentIndex];
-      console.log('Next Video:', this.video);
+    if (this.currentVideoIndex < this.currentVideoList.length - 1) {
+      this.currentVideoIndex++;
+      this.video = this.currentVideoList[this.currentVideoIndex];
+      this.videoPlayer.nativeElement.load();
     }
   }
 
   goToPreviousVideo() {
-    if (this.currentIndex > 0) {
-      this.currentIndex--;
-      this.video = this.currentVideoList[this.currentIndex];
-      console.log('Previous Video:', this.video);
+    if (this.currentVideoIndex > 0) {
+      this.currentVideoIndex--;
+      this.video = this.currentVideoList[this.currentVideoIndex];
+      this.videoPlayer.nativeElement.load();
     }
   }
 
   selectVideo(index: number) {
-    this.currentIndex = index;
-    this.video = this.currentVideoList[this.currentIndex];
-    console.log('Selected Video:', this.video);
+    this.currentVideoIndex = index;
+    this.video = this.currentVideoList[this.currentVideoIndex];
+    this.videoPlayer.nativeElement.load();
   }
 
-  // sanitizeUrl(url: string): SafeResourceUrl {
-  //   return this.sanitizer.bypassSecurityTrustResourceUrl(url);
-  // }
+  @ViewChild('videoPlayer') videoPlayer!: ElementRef<HTMLVideoElement>;
+
+  onVideoEnded() {
+    if (this.course && this.video) {
+      this.coursesService
+        .updateVideoCompletionStatus(this.course?._id, this.video?._id)
+        .pipe(
+          tap(() => {
+            this.video!.isCompleted = true;
+          })
+        )
+        .subscribe();
+    }
+  }
 }

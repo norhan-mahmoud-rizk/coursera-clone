@@ -21,32 +21,83 @@ import { userGuard } from './Guards/user.guard';
 
 export const routes: Routes = [
   // Default route to LandingPageComponent without navbar and footer
-  { path: '', component: LandingPageComponent, title: "LandingPage" },
+  { path: '', component: LandingPageComponent, title: 'LandingPage' },
 
   // Parent route for the Main Layout with navbar and footer
   {
     path: '',
     component: MainLayoutComponent, // Parent component with navbar and footer
     children: [
-      
-      { path: 'home', component: HomeComponent, title: "Home" ,canActivate:[userGuard]},
-      { path: 'my learning', component: MyLearningComponent, title: "my learning" ,canActivate:[userGuard] },
-      { path: 'onlinedegree', component: OnlineDegreesComponent, title: 'Online Degree',canActivate:[userGuard] },
-    
-      { path: 'careercourses', component: CareerParentComponent, title: 'Career Courses' ,canActivate:[userGuard]},
+      {
+        path: 'home',
+        component: HomeComponent,
+        title: 'Home',
+        canActivate: [userGuard],
+      },
+      {
+        path: 'my learning',
+        component: MyLearningComponent,
+        title: 'my learning',
+        canActivate: [userGuard],
+      },
+      {
+        path: 'onlinedegree',
+        component: OnlineDegreesComponent,
+        title: 'Online Degree',
+        canActivate: [userGuard],
+      },
 
-      { path: 'formDialog', component: LoginRegisterFormDialogComponent, title: "Login/Register" },
-    { path: 'courseDetails/:CourseId', component: CareerCourseDetailsComponent, title: 'Course Details' ,canActivate:[userGuard] },
-    
-      { path: 'leaderShip', component: LeaderShipComponent, title: 'leadership page ',canActivate:[userGuard] },
-      { path: 'about', component: AboutComponent, title: 'About Coursera' ,canActivate:[userGuard] },
-    ]
+      {
+        path: 'careercourses',
+        component: CareerParentComponent,
+        title: 'Career Courses',
+        canActivate: [userGuard],
+      },
+
+      {
+        path: 'formDialog',
+        component: LoginRegisterFormDialogComponent,
+        title: 'Login/Register',
+      },
+      {
+        path: 'courseDetails/:CourseId',
+        component: CareerCourseDetailsComponent,
+        title: 'Course Details',
+        canActivate: [userGuard],
+      },
+
+      {
+        path: 'leaderShip',
+        component: LeaderShipComponent,
+        title: 'leadership page ',
+        canActivate: [userGuard],
+      },
+      {
+        path: 'about',
+        component: AboutComponent,
+        title: 'About Coursera',
+        canActivate: [userGuard],
+      },
+    ],
   },
-  { path: 'ConfirmEmail', component: ConfirmEmailComponent, title: "ConfirmEmail" },
-     
+  {
+    path: 'ConfirmEmail',
+    component: ConfirmEmailComponent,
+    title: 'ConfirmEmail',
+  },
 
-  { path: 'courseExplanation', component: CourseExplanationComponent, title: 'courseExplanation' ,canActivate:[userGuard]},
-  { path: 'courseExplanation/video-player', component: VideoPlayerComponent, title: 'Video Player' ,canActivate:[userGuard] },
+  {
+    path: 'courseExplanation/:id',
+    component: CourseExplanationComponent,
+    title: 'courseExplanation',
+    canActivate: [userGuard],
+  },
+  {
+    path: 'video-player',
+    component: VideoPlayerComponent,
+    title: 'Video Player',
+    canActivate: [userGuard],
+  },
 
 { path: 'instructorDetails/:id', component: InstructorDetailsComponent, title: 'intructor Details' ,canActivate:[userGuard] },
   { path: 'homeDetails/:CourseId', component: HomeDetalisComponent, title: "Home Details"  },
