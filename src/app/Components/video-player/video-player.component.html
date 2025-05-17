@@ -221,8 +221,21 @@
               </div>
             </div>
           </div>
-          <button type="submit" class="btn btn-primary mt-3">Submit</button>
-          @if (errorMessage) {
+          <button
+            [disabled]="!assignement.canTakeAssignment"
+            type="submit"
+            class="btn btn-primary mt-3"
+          >
+            Submit
+          </button>
+          @if (!assignement.canTakeAssignment) {
+          <p class="text-danger mt-3">
+            You cannot retake the assignment yet.
+            <br />
+            You have to wait for {{ assignement.waitTimeInMinutes }} minutes
+            before retaking the assignment.
+          </p>
+          } @if (errorMessage) {
           <div class="alert alert-danger mt-3" role="alert">
             {{ errorMessage }}
           </div>

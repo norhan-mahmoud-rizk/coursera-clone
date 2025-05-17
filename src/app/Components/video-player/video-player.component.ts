@@ -204,15 +204,17 @@ export class VideoPlayerComponent implements OnInit, AfterViewChecked {
           this.errorMessage = error.error.message;
           return [];
         }),
-        tap((res) => {
+        tap((res: any) => {
           console.log(res);
 
           if (!res.success) {
             this.errorMessage = res.message;
           } else {
-            this.topic!.assignments.find(
-              (assignment) => assignment._id === this.assignmentId
-            )!.isCompleted = true;
+            if (res.data.passed) {
+              this.topic!.assignments.find(
+                (assignment) => assignment._id === this.assignmentId
+              )!.isCompleted = true;
+            }
           }
         })
       )
