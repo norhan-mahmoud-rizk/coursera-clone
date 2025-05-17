@@ -32,7 +32,7 @@
           All
         </button>
 
-        @for ( cat of CareerCoursescategories ; track cat.categoryID){
+        @for ( cat of CareerCoursescategories.slice(0,5) ; track cat.categoryID){
 
         <button
           class="btn rounded-pill btn-sm fw-semibold py-1 px-2"
