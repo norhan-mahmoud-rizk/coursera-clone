@@ -93,15 +93,39 @@ export const routes: Routes = [
     canActivate: [userGuard],
   },
   {
-    path: 'video-player',
+    path: 'courseExplanation/:courseId/video-player/:moduleId/:topicId/:videoId',
     component: VideoPlayerComponent,
     title: 'Video Player',
     canActivate: [userGuard],
   },
 
-{ path: 'instructorDetails/:id', component: InstructorDetailsComponent, title: 'intructor Details' ,canActivate:[userGuard] },
-  { path: 'homeDetails/:CourseId', component: HomeDetalisComponent, title: "Home Details"  },
-  { path: 'profile', component: ProfileComponent, title: 'Profile' ,canActivate:[userGuard]},
-  { path: 'HowDoesCouresraWorks', component: HowDoesCouresraWorks, title: 'How does coursraWorks' ,canActivate:[userGuard] },
-  { path: 'Payment/:CourseId', component: PaymentPageComponent, title: ' Payment Page ' ,canActivate:[userGuard]},
+  {
+    path: 'instructorDetails/:id',
+    component: InstructorDetailsComponent,
+    title: 'intructor Details',
+    canActivate: [userGuard],
+  },
+  {
+    path: 'homeDetails/:CourseId',
+    component: HomeDetalisComponent,
+    title: 'Home Details',
+  },
+  {
+    path: 'profile',
+    component: ProfileComponent,
+    title: 'Profile',
+    canActivate: [userGuard],
+  },
+  {
+    path: 'HowDoesCouresraWorks',
+    component: HowDoesCouresraWorks,
+    title: 'How does coursraWorks',
+    canActivate: [userGuard],
+  },
+  {
+    path: 'Payment/:CourseId',
+    component: PaymentPageComponent,
+    title: ' Payment Page ',
+    canActivate: [userGuard],
+  },
 ];

@@ -54,10 +54,10 @@ export interface Video {
 
 export interface Assignment {
   _id: string;
-  buffer: {
-    type: string;
-    data: number[];
-  };
+  title: string;
+  description: string;
+  passingScore: number;
+  retryDelay: number;
   isCompleted: boolean;
   score: number | null;
   submittedOn: string | null;
