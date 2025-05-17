@@ -48,7 +48,7 @@ export class LoginRegisterFormDialogComponent implements AfterViewInit {
   ngAfterViewInit(): void {
     // nothing needed here for now
   }
-// 
+//
 
 
 
@@ -78,7 +78,7 @@ login() {
 
 
 
-// 
+//
 
 
 
@@ -86,8 +86,8 @@ login() {
   //   this.authService.login(this.loginEmail, this.loginPassword).subscribe({
   //     next: (response) => {
   //       // Save token
-  //       this.authService.setToken(response.userToken);//Here we hold and store the token because i acces that from the coming response 
-  
+  //       this.authService.setToken(response.userToken);//Here we hold and store the token because i acces that from the coming response
+
   //       // Create dummy user for display
   //       const dummyUser: Iuser = {
   //         username: this.loginEmail.split('@')[0],
@@ -103,10 +103,10 @@ login() {
   //           progressCourses: []
   //         }
   //       };
-  
+
   //       // Set current user
   //       this.authService.setCurrentUser(dummyUser);
-  
+
   //       // Navigate to home if the user that logged in in the data base
   //       this.router.navigate(['/home']);
   //     },
