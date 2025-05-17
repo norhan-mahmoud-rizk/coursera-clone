@@ -35,7 +35,7 @@
           <div class="logo d-flex gap-2">
             <div>
               <img
-                [src]="course.logoImage"
+                [src]="course.courseImage"
                 alt=""
                 class="border rounded-3 p-2"
               />
@@ -48,7 +48,7 @@
             class="fw-semibold fs-5 coursename"
             [routerLink]="'/courseExplanation' + '/' + course._id"
           >
-            {{ course.description }}
+            {{ course.name }}
           </p>
           <p>Course . {{ course.progress }}% Completed</p>
           <div
