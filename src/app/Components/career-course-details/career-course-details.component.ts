@@ -58,21 +58,28 @@ GetCareerCourseById() {
 
 
   
-    GetSimilarCourses() {
-      if (this.CareerCourse?.categoryID) {
-        const categoryID = this.CareerCourse?.categoryID;
-        console.log('the category id of the current course :', categoryID);
-        this.CourseService.getCourseByCatId(categoryID).subscribe({
-          next: (courses) => {
-            // console.log('courses with the same category Id:', courses);
-            this.SimilarCourses = courses; 
-          },
-          error: (err) => {
-            console.error( err);
-          },
-        });
-      }
-    }
+ GetSimilarCourses() {
+  if (this.CareerCourse?.categoryID) {
+    const categoryID = this.CareerCourse.categoryID;
+    const currentCourseId = this.CareerCourse.id;//to exclude the current course from the similar courses
+
+    console.log('the category id of the current course:', categoryID);
+
+    this.CourseService.getCourseByCatId(categoryID).subscribe({
+      next: (data) => {
+        const courses = (data as any).courses;
+        // to exclude the current course from the similar courses
+        this.SimilarCourses = courses.filter((course: any) => course._id !== currentCourseId);
+
+        console.log(' Similar courses (excluding current):', this.SimilarCourses);
+      },
+      error: (err) => {
+        console.error(err);
+      },
+    });
+  }
+}
+
 
     goToHomeDetails(CourseID: string | undefined) {
       if (!CourseID) return; 

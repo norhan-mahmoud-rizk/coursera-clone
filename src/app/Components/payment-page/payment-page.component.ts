@@ -45,9 +45,9 @@ export class PaymentPageComponent implements OnInit {
     next: (res: any) => {
       this.CareerCourse = {
         ...res.data,
-        id: res.data._id, // لو عايزة id بدل _id
+        id: res.data._id, 
       };
-      console.log('Parsed course object:', this.CareerCourse);
+      console.log('Parsed course object:', this.CareerCourse,"and the id of the cours is ",this.CourseId);
      
     },
     error: (err) => {
