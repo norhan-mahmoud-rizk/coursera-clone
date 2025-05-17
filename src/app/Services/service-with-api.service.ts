@@ -25,11 +25,16 @@ export class ServiceWithApiService {
    }
 
   
-  baseURLCareerCourse:string=`${environment.backendURL}/course/allCourse`;
-  baseURLGetOneCareerCourse:string=`${environment.backendURL}/course`;
-  baseURLCareerCourseCategory:string=`${environment.backendURL}/Category/allCategories`;
-baseURLcareerResources: string = `${environment.backendURL}/careeerResource/allCareerResources`;
-baseURLcareerResourceCategories: string = `${environment.backendURL}/careeerResourceCategories/allCareerResourceCategories`;
+  baseURLCareerCourse:string=`${environment.backendURL}/course/allCourse`;//done
+  baseURLGetOneCareerCourse:string=`${environment.backendURL}/course`;//done
+  // get all the career courses and there category
+  baseURLCareerCourseCategory:string=`${environment.backendURL}/Category/allCategories`;//done in the buutons of the filteration
+  baseURLCareerCourseCategory2:string=`${environment.backendURL}/course/allCoursesByCat`;//this is sours of the issue i do not need it he must handle he filteration on the baseURLCareerCourse
+// get all career resourse and thair category 
+  baseURLcareerResources: string = `${environment.backendURL}/careeerResource/allCareerResources`;//done in career resourses
+baseURLcareerResourceCategories: string = `${environment.backendURL}/careeerResourceCategories/allCareerResourceCategories`;//done  with the operation of the filteration
+
+// get the sucees stories 
  baseURLsuccessStories:string=`${environment.backendURL}/successStory/allsuccessStories`;
   baseURLGains:string=`${environment.baseURL}/Gains`;
   baseURLAchieve:string=`${environment.baseURL}/Achieve`;
@@ -51,9 +56,12 @@ getCarerrCourseById(CourseId: string): Observable<ICareerCourses> {
   
   // query string to search by cat Id
 
-  getCourseByCatId(catValu:number):Observable<ICareerCourses[]> {
-    return this.httpclient.get<ICareerCourses[]>(`${this.baseURLCareerCourse}?categoryID=${catValu}`);
-  }
+getCourseByCatId(catValu: string): Observable<ICareerCourses[]> {
+  const filter = JSON.stringify({ categoryID: catValu });
+  const url = `${this.baseURLCareerCourseCategory2}?filter=${encodeURIComponent(filter)}`;
+  return this.httpclient.get<ICareerCourses[]>(url);
+}
+
 
 // Get all career resources // Get all career resources
   GetAllCareerResourses(): Observable<CareerResourses[]> {

@@ -1,15 +1,15 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment.development';
-import { Socket } from 'ngx-socket-io';
 import { Observable } from 'rxjs';
+import { Socket } from 'ngx-socket-io';
 import { ToastrService } from 'ngx-toastr';
 
 @Injectable({
   providedIn: 'root'
 })
 export class NotificationService {
- private apiUrl = `${environment.baseURL}/notifications`;
+ private apiUrl = `${environment.backendURL}/notifications`;
   constructor(private http: HttpClient,private socket: Socket ,  private toastr: ToastrService) {}
 
   getUserNotifications() {
