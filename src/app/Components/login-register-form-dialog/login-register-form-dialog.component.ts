@@ -127,7 +127,7 @@ login() {
   }
     this.authService.register(this.registerUser).subscribe({
       next: (response) => {
-        alert('Registration successful! Please check your email for a confirmation code.');
+        // alert('Registration successful! Please check your email for a confirmation code.');
         setTimeout(() => {
           const dialog = document.getElementById('confirmEmail') as HTMLDialogElement;
           dialog?.showModal();
