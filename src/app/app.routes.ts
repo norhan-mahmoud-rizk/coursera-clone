@@ -93,7 +93,7 @@ export const routes: Routes = [
     canActivate: [userGuard],
   },
   {
-    path: 'courseExplanation/:courseId/video-player/:moduleId/:topicId/:videoId',
+    path: 'courseExplanation/:courseId/video-player/:moduleId/:topicId',
     component: VideoPlayerComponent,
     title: 'Video Player',
     canActivate: [userGuard],

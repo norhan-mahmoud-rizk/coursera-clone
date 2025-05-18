@@ -10,4 +10,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 })
 export class FooterComponent {
 constructor( private translate: TranslateService) { }
+
+
+
 }

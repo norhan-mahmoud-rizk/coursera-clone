@@ -41,12 +41,22 @@ export class CareerCourseDetailsComponent implements OnInit {
 GetCareerCourseById() {
   this.CourseService.getCarerrCourseById(this.CourseId).subscribe({
     next: (res: any) => {
+     
+      const cleanRelatedCourses = res.data.relatedCourses?.map((course: any) => ({
+        relatedCourseID: course._doc?.relatedCourseID ?? course.relatedCourseID,
+    name: course._doc?.name?.en ?? course.name?.en ?? 'No Name',
+
+        relatedImage: course._doc?.relatedImage ?? course.relatedImage,
+        _id: course._doc?._id ?? course._id,
+      })) ?? [];
+
       this.CareerCourse = {
         ...res.data,
         id: res.data._id,
+        relatedCourses: cleanRelatedCourses,
         categoryID: res.data.categoryID,
-        
       };
+
       console.log('Parsed course object:', this.CareerCourse);
       this.GetSimilarCourses();
     },
@@ -57,22 +67,30 @@ GetCareerCourseById() {
 }
 
 
+
   
-    GetSimilarCourses() {
-      if (this.CareerCourse?.categoryID) {
-        const categoryID = Number(this.CareerCourse?.categoryID);
-        console.log('the category id of the current course :', categoryID);
-        this.CourseService.getCourseByCatId(categoryID).subscribe({
-          next: (courses) => {
-            console.log('courses with the same category Id:', courses);
-            this.SimilarCourses = courses; 
-          },
-          error: (err) => {
-            console.error( err);
-          },
-        });
-      }
-    }
+ GetSimilarCourses() {
+  if (this.CareerCourse?.categoryID) {
+    const categoryID = this.CareerCourse.categoryID;
+    const currentCourseId = this.CareerCourse.id;//to exclude the current course from the similar courses
+
+    console.log('the category id of the current course:', categoryID);
+
+    this.CourseService.getCourseByCatId(categoryID).subscribe({
+      next: (data) => {
+        const courses = (data as any).courses;
+        // to exclude the current course from the similar courses
+        this.SimilarCourses = courses.filter((course: any) => course._id !== currentCourseId);
+
+        console.log(' Similar courses (excluding current):', this.SimilarCourses);
+      },
+      error: (err) => {
+        console.error(err);
+      },
+    });
+  }
+}
+
 
     goToHomeDetails(CourseID: string | undefined) {
       if (!CourseID) return; 

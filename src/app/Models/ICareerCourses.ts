@@ -2,7 +2,7 @@ export interface ICareerCourses {
  id: string;
   name: string;
   description: string;
-  
+  jobTitle: string;
 categoryID: string;
   courseImage: string;
   IfYouLike: string;
@@ -12,13 +12,20 @@ categoryID: string;
   logoImage: string;
   organization: string;
   views: number;
+    Skills: string[];
   reviews: any[];
   enrolled: number;
   instructor:string;
-  relatedCourses: {
-    RelatedCourseID: string;
+   WhatYouWillLearn: string[];
+  outComes: {
+    outComesTitle: string;
+    outComesDescription: string[];
+  };
+ relatedCourses: {
+    relatedCourseID: string;
     name: string;
-    imgUrl: string;
+    relatedImage: string;
+    _id: string;
   }[];
  modules: string[];
     createdAt?: Date;

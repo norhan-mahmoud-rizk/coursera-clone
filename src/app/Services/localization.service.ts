@@ -10,23 +10,24 @@ export class LocalizationService {
 
   constructor(private translate: TranslateService) {}
 
+  // تحديث اللغة وتخزينها في localStorage
   setLanguage(lang: string) {
     localStorage.setItem(this.LANGUAGE_KEY, lang);
     this.translate.use(lang);
     
-    // ✅ غيّر اتجاه الصفحة بالكامل بناءً على اللغة
+    // تغيير اتجاه الصفحة بناءً على اللغة
     document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
   }
 
+  // استرجاع اللغة الحالية من localStorage
   getLanguage(): string {
     return localStorage.getItem(this.LANGUAGE_KEY) || 'en';
   }
 
+  // تهيئة اللغة عند تحميل التطبيق
   initLanguage(): void {
     const savedLang = this.getLanguage();
     this.translate.use(savedLang);
-
-    // ✅ برضو نضبط الاتجاه لما التطبيق يشتغل
     document.documentElement.dir = savedLang === 'ar' ? 'rtl' : 'ltr';
   }
 }

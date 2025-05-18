@@ -11,6 +11,31 @@
       "Categories": "Categories",
       "Course": "Courses"
 
+    },
+  "HomeDetails": 
+    {
+      "InstructorName": "Instructors",
+      "Includedwith": "Included with ",
+      " Learnmore": " Learn more ",
+      "FirstItem": "Explain the fundamental concepts, capabilities, models, tools, applications, and platforms of generative AI foundation models.",
+      "SecondItem": "Apply powerful prompt engineering techniques to write effective prompts and generate desired outcomes from AI models.",
+      "ThirdItem": "Discuss the limitations of generative AI and explain the ethical concerns and considerations for the responsible use of generative AI.",
+      "FourthItem": "Recognize the ability of generative AI to enhance your career and help implement improvements at your workplace.",
+      "Skillsyoullgain": "Skills you'll gain",
+    "Detailstoknow":"Details to know",
+    "DetailstoknowFirstCardTitile":"Shareable certificate",
+    "DetailstoknowFirstCardSubTitle":"Add to your LinkedIn profile",
+    "DetailstoknowSecondCardTitile":"Taught in English",
+    "DetailstoknowSecondCardSubTitle":"24 languages available",
+    "howemployees":"See how employees at top companies are mastering in-demand skills",
+    "learnmoreAboutBusiness":"Learn more about Coursera for Business",
+    "Advanced":"Advance your subject-matter expertise",
+    "expert":"Learn in-demand skills from university and industry experts",
+    "master":"Master a subject or tool with hands-on projects",
+    "develop":"Develop a deep understanding of key concepts",
+    "earn":"Earn a career certificate from IBM",
+    "whyPeople":"Why people choose Coursera for their career"
+
     }
   ,
   "FirstCard": 

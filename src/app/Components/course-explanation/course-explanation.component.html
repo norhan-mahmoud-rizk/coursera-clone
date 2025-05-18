@@ -156,10 +156,9 @@
                                   'video-player/' +
                                   selectedModule?._id +
                                   '/' +
-                                  topic._id +
-                                  '/' +
-                                  video._id
+                                  topic._id
                                 "
+                                [queryParams]="{ videoId: video._id }"
                               >
                                 {{ video.videoTitle }}
                               </p>
@@ -186,12 +185,13 @@
                             <div class="col-11 video-title">
                               <p
                                 class="fw-bold"
-                                [routerLink]="'/video-player/'"
-                                [state]="{
-                course: this.courseDetails,
-                module: this.selectedModule,
-                topic: topic,
-              }"
+                                [routerLink]="
+                                  'video-player/' +
+                                  selectedModule?._id +
+                                  '/' +
+                                  topic._id
+                                "
+                                [queryParams]="{ assignmentId: assignment._id }"
                               >
                                 {{ assignment.title }}
                               </p>

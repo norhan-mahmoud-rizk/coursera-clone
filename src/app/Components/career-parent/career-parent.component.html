@@ -32,12 +32,12 @@
           All
         </button>
 
-        @for ( cat of CareerCoursescategories ; track cat.categoryID){
+        @for ( cat of CareerCoursescategories.slice(0,5) ; track cat.categoryID){
 
         <button
           class="btn rounded-pill btn-sm fw-semibold py-1 px-2"
           [class.active]="sendedValueFromParent === cat.categoryID"
-          (click)="sendedValueFromParent = cat.categoryID"
+          (click)="sendedValueFromParent = cat.categoryID;"
         >
           {{ cat.categoryName }}
         </button>
@@ -49,7 +49,7 @@
    
     </div>
   
-    <app-career [filtervalue]="sendedValueFromParent"></app-career>
+    <app-career  [attr.key]="sendedValueFromParent" [filtervalue]="sendedValueFromParent"></app-career>
   
     <!-- career resources
     <div class="CareerResourse">
@@ -98,6 +98,8 @@
   <app-career-resourses></app-career-resourses>
   
 <!-- success stories -->
+      <h2 class="mb-4">Success Stories</h2>
+       
   <app-success-stories></app-success-stories>
     <!-- last part  -->
   

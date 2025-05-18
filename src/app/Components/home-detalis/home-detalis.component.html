@@ -17,7 +17,7 @@
           </p>
           <div style="display: flex; align-items: center; gap: 10px;" class="Instructors">
             <img class="imageInstructor" src="{{getInstructor?.instructorImage}}" alt="">
-            <p style="margin: 0;">Instructors:</p>
+            <p style="margin: 0;">{{'HomeDetails.InstructorName' | translate}}</p>
             <a class="linkInstructor" (click)="instructorDitals(CareerCourse?.instructor)">
               <span>{{ getInstructor?.Name }}</span>
             </a>
@@ -27,12 +27,12 @@
           <div class="row">
             <div class="col-12 col-lg-4">
 
-              <button class="btn btn-primary NavButton" (click)="enrollCourse()">
+              <button class="btn btn-primary NavButton" onclick="document.getElementById('EnrollDialog')?.showModal()">
                 Enroll for Free
                 <p class="textBTN">Starts Mar 2</p>
               </button>
 
-              <span style=" font-size: .875rem;font-weight: 500;" onclick="document.getElementById('EnrollDialog')?.showModal()">Enroll for free</span>
+              <!-- <span style=" font-size: .875rem;font-weight: 500;" onclick="document.getElementById('EnrollDialog')?.showModal()">Enroll for free</span> -->
             </div>
             <div class="col-12 col-lg-8 mb-3 trytToFreeText">
               <p>Try for Free: Enroll to start your 7-day full access free trial</p>
@@ -46,12 +46,12 @@
             <span class="salary">{{CareerCourse?.views}}</span>  already enrolled
           </div>
           <div class="pt-3 mb-5">
-            Included with
+            {{'HomeDetails.Includedwith' | translate}}
             <img
               src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera_assets.s3.amazonaws.com/coursera_plus/landing_page/coursera-plus-blue.png?auto=format%2Ccompress&dpr=1&h=10"
               alt="">
             <a href="" class="link">
-              Learn more</a>
+               {{'HomeDetails.Learnmore' | translate}}</a>
           </div>
         </div>
       </div>
@@ -77,8 +77,7 @@
         <i class="fa-solid fa-check"></i>
       </div>
       <div class="col-11">
-        <span class="">Explain the fundamental concepts, capabilities, models, tools, applications, and platforms of
-          generative AI foundation models.</span>
+        <span class="">  {{'HomeDetails.FirstItem' | translate}}</span>
       </div>
 
     </div>
@@ -90,8 +89,7 @@
         <i class="fa-solid fa-check"></i>
       </div>
       <div class="col-11">
-        <span class="">Apply powerful prompt engineering techniques to write effective prompts and generate desired
-          outcomes from AI models.
+        <span class=""> {{'HomeDetails.SecondItem' | translate}}
 
         </span>
       </div>
@@ -109,8 +107,7 @@
         <i class="fa-solid fa-check"></i>
       </div>
       <div class="col-11">
-        <span class="">Discuss the limitations of generative AI and explain the ethical concerns and considerations for
-          the responsible use of generative AI.</span>
+        <span class=""> {{'HomeDetails.ThirdItem' | translate}}</span>
       </div>
 
     </div>
@@ -122,8 +119,7 @@
         <i class="fa-solid fa-check"></i>
       </div>
       <div class="col-11">
-        <span class="">Recognize the ability of generative AI to enhance your career and help implement improvements at
-          your workplace.
+        <span class="">{{'HomeDetails.FourthItem' | translate}}
 
         </span>
       </div>
@@ -138,21 +134,15 @@
 <!-- skill -->
 <div class="paddingPage ">
   <h2 class="mb-3">
-    Skills you'll gain
+  {{'HomeDetails.Skillsyoullgain' | translate}}
   </h2>
   <div class="row">
     <div class="col-8">
       <ul class="allSkils">
-        <li class="skillsLI">Artificial Intelligence (AI)</li>
-        <li class="skillsLI">Prompt Engineering</li>
-        <li class="skillsLI">ChatGPT</li>
-        <li class="skillsLI">hugging face</li>
-        <li class="skillsLI">Generative AI Careers</li>
-        <li class="skillsLI">Generative AI</li>
-        <li class="skillsLI">Stable Diffusion</li>
-        <li class="skillsLI">Hugging Face</li>
-        <li class="skillsLI">Foundation Models</li>
-        <li class="skillsLI">Responsible Generative AI</li>
+         @for(prod of CareerCourse?.Skills; track CareerCourse?.id){
+          <li class="skillsLI"> {{prod}}</li>
+         }
+
       </ul>
 
     </div>
@@ -161,20 +151,20 @@
 
 
 <div class="row DetailsTO">
-  <h3 class="mb-4">Details to know</h3>
+  <h3 class="mb-4">  {{'HomeDetails.Detailstoknow' | translate}}</h3>
 
   <div class="col-3">
     <img class="mb-1"
       src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera_assets.s3.amazonaws.com/images/31ebcba3851b87d1d8609abf15d0ff7e.png?auto=format%2Ccompress&dpr=1&w=24&h=24"
       alt="">
-    <div>Shareable certificate</div>
-    <p class="linkedIn">Add to your LinkedIn profile</p>
+    <div>{{'HomeDetails.DetailstoknowFirstCardTitile' | translate}}</div>
+    <p class="linkedIn">{{'HomeDetails.DetailstoknowFirstCardSubTitle' | translate}}</p>
   </div>
 
   <div class="col-3">
     <i class="fa-solid fa-language"></i>
-    <div>Taught in English</div>
-    <a class="languagesLink">24 languages availa</a>
+    <div>{{'HomeDetails.DetailstoknowSecondCardTitile' | translate}}</div>
+    <a class="languagesLink">{{'HomeDetails.DetailstoknowSecondCardSubTitle' | translate}}</a>
   </div>
 </div>
 
@@ -186,8 +176,8 @@
       <div class="col-12 col-lg-8">
 
         <div class="card-body ms-5 mt-3">
-          <h1>See how employees at top companies are mastering in-demand skills</h1>
-          <a href="" class="languagesLink">Learn more about Coursera for Business</a>
+          <h1>{{'HomeDetails.howemployees' | translate}}</h1>
+          <a href="" class="languagesLink">{{'HomeDetails.learnmoreAboutBusiness' | translate}}</a>
 
 
         </div>
@@ -210,12 +200,12 @@
   <div class="row">
 
     <div class="col-12 col-lg-6">
-      <h2  class="mb-4">Advance your subject-matter expertise</h2>
+      <h2  class="mb-4">{{'HomeDetails.Advanced' | translate}}</h2>
       <ul>
-        <li  class="mb-2">Learn in-demand skills from university and industry experts</li>
-        <li  class="mb-2">Master a subject or tool with hands-on projects</li>
-        <li  class="mb-2">Develop a deep understanding of key concepts</li>
-        <li  class="mb-2">Earn a career certificate from IBM</li>
+        <li  class="mb-2">{{'HomeDetails.expert' | translate}}</li>
+        <li  class="mb-2">{{'HomeDetails.master' | translate}}</li>
+        <li  class="mb-2">{{'HomeDetails.develop' | translate}}</li>
+        <li  class="mb-2">{{'HomeDetails.earn' | translate}}</li>
       </ul>
     </div>
 
@@ -240,10 +230,10 @@
 </div> -->
 
 <div class="row ms-4 paddingPage">
-  <h2 class="mb-4 mt-5">Why people choose Coursera for their career</h2>
+  <h2 class="mb-4 mt-5">{{'HomeDetails.whyPeople' | translate}}</h2>
 
 <!-- 1 -->
-  <div class="CardWidth">
+  <!-- <div class="CardWidth">
     <div class="people">
       <div class="row ms-2 mt-2">
         <div class="col-4">
@@ -261,9 +251,9 @@
       <p class="ms-3 linkedIn">"To be able to take courses at my own pace and rhythm has been an amazing experience. I can learn
         whenever it fits my schedule and mood."</p>
     </div>
-  </div>
+  </div> -->
 <!-- 2 -->
-<div class="CardWidth">
+<!-- <div class="CardWidth">
   <div class="people">
     <div class="row ms-2 mt-2">
       <div class="col-4">
@@ -280,9 +270,9 @@
     </div>
     <p class="ms-3 linkedIn">"I directly applied the concepts and skills I learned from my courses to an exciting new project at work."</p>
   </div>
-</div>
+</div> -->
  <!-- 3 -->
- <div class="CardWidth">
+ <!-- <div class="CardWidth">
   <div class="people">
     <div class="row ms-2 mt-2">
       <div class="col-4">
@@ -299,9 +289,9 @@
     </div>
     <p class="ms-3 linkedIn">"When I need courses on topics that my university doesn't offer, Coursera is one of the best places to go."</p>
   </div>
-</div>
+</div> -->
   <!-- 4 -->
-  <div class="CardWidth">
+  <!-- <div class="CardWidth">
     <div class="people">
       <div class="row ms-2 mt-2">
         <div class="col-4">
@@ -318,9 +308,9 @@
       </div>
       <p class="ms-3 linkedIn">"Learning isn't just about being better at your job: it's so much more than that. Coursera allows me to learn without limits."</p>
     </div>
-  </div>
+  </div> -->
 
-
+<app-success-stories></app-success-stories>
 </div>
 
 <app-enroll-dialog></app-enroll-dialog>

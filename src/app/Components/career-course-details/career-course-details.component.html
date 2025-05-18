@@ -8,7 +8,8 @@
             <a class="text-decoration-none" routerLink="/careercourses">Career</a>
 
           </div>
-          <h1>{{ CareerCourse?.name }}</h1>
+          <h1>{{ CareerCourse?.jobTitle }}</h1>
+    
           <div class="pe-5 me-5 pb-4">
             <p>{{ CareerCourse?.IfYouLike }}</p>
             <p>{{ CareerCourse?.IfYouLikeValue }}</p>
@@ -39,7 +40,7 @@
                   <div class="w-25 IconPart">
                     <img
                       class="border rounded-2"
-                      src="http://coursera-university-assets.s3.amazonaws.com/d9/7ac5ee1c0247dab299ec6a8343f16d/Adobe-A-square.png"
+                      src="{{ CareerCourse?.logoImage }}"
                       alt=""
                     />
                   </div>
@@ -49,7 +50,7 @@
                     <div class="Recommended_First_Rating_reviews_div">
                       <i class="fa-solid fa-star text-primary me-3"></i>
                       <span class="fw-bold me-2">4.6</span
-                      ><span>(240 review)</span>
+                      ><span>({{ CareerCourse?.reviews}} review)</span>
                     </div>
                     <div class="Recommended_second_Rating_reviews_div">
                       <span>Beginner .4 months</span>
@@ -85,14 +86,15 @@
                   <div class="col-12 col-md-3 me-3 d-flex d-md-block my-2">
                     <div>
                       <img
-                        src="{{ relatedCourses.imgUrl }}"
+                        src="{{ relatedCourses.relatedImage }}"
                         alt=""
                         class="img-fluid rounded-4"
                       />
                     </div>
                     <div class="ImageSide_Content_div ms-2">
                       <h6 style="font-size: .875rem;" class="my-2 h-25">{{ relatedCourses.name }}</h6>
-                      <p style="font-size: .875rem;">Course {{ $index + 1 }} of 4</p>
+                  
+                      <p style="font-size: .875rem;">Course {{ $index + 1 }} of 3</p>
                     </div>
                   </div>
                   }

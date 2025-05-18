@@ -9,10 +9,12 @@ import { EnrollDialogComponent } from '../enroll-dialog/enroll-dialog.component'
 import { Navbar2Component } from '../navbar2/navbar2.component';
 import { NavbarComponent } from '../navbar/navbar.component';
 import { ServiceWithApiService } from '../../Services/service-with-api.service';
+import { TranslateModule } from '@ngx-translate/core';
+import { SuccessStoriesComponent } from '../success-stories/success-stories.component';
 
 @Component({
   selector: 'app-home-detalis',
-  imports: [RouterModule, EnrollDialogComponent, NavbarComponent],
+  imports: [RouterModule, EnrollDialogComponent, NavbarComponent,TranslateModule,SuccessStoriesComponent],
   templateUrl: './home-detalis.component.html',
   styleUrl: './home-detalis.component.scss'
 })

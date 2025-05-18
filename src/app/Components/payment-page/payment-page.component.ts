@@ -80,18 +80,20 @@ export class PaymentPageComponent implements OnInit {
     this.router.navigate(['/']); // Redirect to landing page the default route after logout
   }
 
-  GetCareerCourseById() {
-    this.CourseService.getCarerrCourseById(this.CourseId).subscribe({
-      next: (res: any) => {
-        this.CareerCourse = {
-          ...res.data,
-          id: res.data._id, // لو عايزة id بدل _id
-        };
-        console.log('Parsed course object:', this.CareerCourse);
-      },
-      error: (err) => {
-        console.error('Error fetching career course:', err);
-      },
-    });
-  }
+
+ GetCareerCourseById() {
+  this.CourseService.getCarerrCourseById(this.CourseId).subscribe({
+    next: (res: any) => {
+      this.CareerCourse = {
+        ...res.data,
+        id: res.data._id,
+      };
+      console.log('Parsed course object:', this.CareerCourse,"and the id of the cours is ",this.CourseId);
+
+    },
+    error: (err) => {
+      console.error('Error fetching career course:', err);
+    },
+  });
+}
 }
