@@ -18,6 +18,7 @@ import { LoginRegisterFormDialogComponent } from './Components/login-register-fo
 import { PaymentPageComponent } from './Components/payment-page/payment-page.component';
 import { ConfirmEmailComponent } from './Components/confirm-email/confirm-email.component';
 import { userGuard } from './Guards/user.guard';
+import { PaymentSuccessComponent } from './Components/payment-success/payment-success.component';
 
 export const routes: Routes = [
   // Default route to LandingPageComponent without navbar and footer
@@ -128,4 +129,8 @@ export const routes: Routes = [
     title: ' Payment Page ',
     canActivate: [userGuard],
   },
+  { path: 'payment-success', component: PaymentSuccessComponent, title: 'Payment Success' },
+  // Fallback route for 404 Not Found
+  { path: '**', component: LandingPageComponent, title: 'LandingPage' },
+
 ];

@@ -4,7 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ICareerCourses } from '../../Models/ICareerCourses';
 import { ServiceWithApiService } from '../../Services/service-with-api.service';
 import { UserServiceService } from '../../Services/user-service.service';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -62,6 +62,20 @@ export class PaymentPageComponent implements OnInit {
     priceId,
     planType,
   };
+  const url = `https://coursera-clone-iti-production.up.railway.app/progress/enroll/${this.CourseId}`;
+  const headers = new HttpHeaders().set('Authorization', `Bearer ${localStorage.getItem('token')}`);
+
+  this.http.post(url, {}, { headers, responseType: 'json' })
+    .subscribe({
+      next: (response: any) => {
+        console.log('Free trial started successfully', response);
+        
+      },
+      error: (err) => {
+        console.error('فشل في بدء الفترة التجريبية', err);
+        alert('فشل في بدء الفترة التجريبية. حاول مرة أخرى.');
+      }
+    });
 
   this.http.post('https://coursera-clone-iti-production.up.railway.app/stripe/checkout', payload, { responseType: 'json' })
     .subscribe({
@@ -79,6 +93,24 @@ export class PaymentPageComponent implements OnInit {
     this.authService.logout();
     this.router.navigate(['/']); // Redirect to landing page the default route after logout
   }
+  startFreeTrial() {
+  const url = `https://coursera-clone-iti-production.up.railway.app/progress/enroll/${this.CourseId}`;
+  const headers = new HttpHeaders().set('Authorization', `Bearer ${localStorage.getItem('token')}`);
+
+  this.http.post(url, {}, { headers, responseType: 'json' })
+    .subscribe({
+      next: (response: any) => {
+        console.log('Free trial started successfully', response);
+        alert('تم بدء الفترة التجريبية بنجاح!');
+        // يمكنك هنا التوجيه لصفحة جديدة بعد النجاح
+        this.router.navigate(['/courseExplanation/' + this.CourseId]);
+      },
+      error: (err) => {
+        console.error('فشل في بدء الفترة التجريبية', err);
+        alert('فشل في بدء الفترة التجريبية. حاول مرة أخرى.');
+      }
+    });
+}
 
 
  GetCareerCourseById() {
