@@ -41,13 +41,23 @@ export class CareerCourseDetailsComponent implements OnInit {
 GetCareerCourseById() {
   this.CourseService.getCarerrCourseById(this.CourseId).subscribe({
     next: (res: any) => {
+     
+      const cleanRelatedCourses = res.data.relatedCourses?.map((course: any) => ({
+        relatedCourseID: course._doc?.relatedCourseID ?? course.relatedCourseID,
+    name: course._doc?.name?.en ?? course.name?.en ?? 'No Name',
+
+        relatedImage: course._doc?.relatedImage ?? course.relatedImage,
+        _id: course._doc?._id ?? course._id,
+      })) ?? [];
+
       this.CareerCourse = {
         ...res.data,
         id: res.data._id,
+        relatedCourses: cleanRelatedCourses,
         categoryID: res.data.categoryID,
-        
       };
-      // console.log('Parsed course object:', this.CareerCourse);
+
+      console.log('Parsed course object:', this.CareerCourse);
       this.GetSimilarCourses();
     },
     error: (err) => {
@@ -55,6 +65,7 @@ GetCareerCourseById() {
     },
   });
 }
+
 
 
   

@@ -8,7 +8,8 @@
             <a class="text-decoration-none" routerLink="/careercourses">Career</a>
 
           </div>
-          <h1>{{ CareerCourse?.name }}</h1>
+          <h1>{{ CareerCourse?.jobTitle }}</h1>
+    
           <div class="pe-5 me-5 pb-4">
             <p>{{ CareerCourse?.IfYouLike }}</p>
             <p>{{ CareerCourse?.IfYouLikeValue }}</p>
@@ -85,14 +86,15 @@
                   <div class="col-12 col-md-3 me-3 d-flex d-md-block my-2">
                     <div>
                       <img
-                        src="{{ relatedCourses.imgUrl }}"
+                        src="{{ relatedCourses.relatedImage }}"
                         alt=""
                         class="img-fluid rounded-4"
                       />
                     </div>
                     <div class="ImageSide_Content_div ms-2">
                       <h6 style="font-size: .875rem;" class="my-2 h-25">{{ relatedCourses.name }}</h6>
-                      <p style="font-size: .875rem;">Course {{ $index + 1 }} of 4</p>
+                  
+                      <p style="font-size: .875rem;">Course {{ $index + 1 }} of 3</p>
                     </div>
                   </div>
                   }
