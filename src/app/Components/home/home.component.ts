@@ -25,6 +25,10 @@ filteredListfrombackend:ICareerCourses[]=[];
   visibleCount5=4;
 
 
+  //search
+   searchTerm: string = '';
+
+
 
 
 
@@ -45,12 +49,13 @@ filteredListfrombackend:ICareerCourses[]=[];
   }
 
   ngOnInit(): void {
-    // this.api.getAllProduct().subscribe(
-    //   data => {
-    //     console.log('Data received from API:', data);
-    //     this.filterArray = data;
-    //   }
-    // );
+
+
+    this.courseServiceWithApi.currentSearchTerm.subscribe(term => {
+      this.searchTerm = term;
+      console.log('Received search term in HomeComponent:', term);
+      this.applyFilter(term);
+    });
 
 
   this.courseServiceWithApi.GetAllCareerCourses().subscribe({
@@ -62,15 +67,26 @@ filteredListfrombackend:ICareerCourses[]=[];
       ...item,
       id: item._id
     }));
+     this.filteredListfrombackend = [...this.filterArray];
   },
   error: (err) => {
     console.error('Error fetching data from backend:', err);
   }
 });
 
+
+
   }
 
-
+applyFilter(term: string) {
+    if (!term) {
+      this.filteredListfrombackend = this.filterArray; // لو مفيش فلترة، ارجع الكل
+    } else {
+      this.filteredListfrombackend = this.filterArray.filter(course =>
+        course.name.toLowerCase().includes(term.toLowerCase())
+      );
+    }
+  }
   // get the data from the backend
 
     // fetchAllCareerCoursesFromBackend() {

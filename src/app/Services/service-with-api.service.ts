@@ -2,7 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from '../../environments/environment.development';
 
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { ICareerCourses } from '../Models/ICareerCourses';
 import { CoursesCategories } from '../Models/CoursesCategories';
 import { CareerResourses } from '../Models/career-resourses';
@@ -17,6 +17,9 @@ import { LocalizationService } from './localization.service';
   providedIn: 'root'
 })
 export class ServiceWithApiService {
+
+     private searchTerm = new BehaviorSubject<string>('');
+  currentSearchTerm = this.searchTerm.asObservable();
   httpheaders={};
   constructor(public httpclient:HttpClient,    private localizationService: LocalizationService ) {
 
@@ -105,7 +108,10 @@ getCourseByCatId(catValu: string): Observable<ICareerCourses[]> {
   }
 
 
-
+  //search in navbar
+   changeSearchTerm(term: string) {
+    this.searchTerm.next(term);
+  }
   
  
 }

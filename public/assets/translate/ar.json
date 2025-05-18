@@ -8,7 +8,18 @@
   "BuildInDemandBusinessAnalysisSkills": "طوّر مهارات تحليل الأعمال المطلوبة",
   "ExploreWithACourseraPlusSubscription": "استكشف باستخدام اشتراك Coursera Plus",
   "Categories": "الفئات",
-  "Course": "الدورات"
+  "Course": "الدورات",
+  "ArtsAndHumanities": "الفنون والعلوم الإنسانية",
+"Business": "الأعمال",
+"ComputerScience": "علوم الحاسوب",
+"DataScience": "علوم البيانات",
+"InformationTechnology": "تكنولوجيا المعلومات",
+"Health": "الصحة",
+"MathAndLogic": "الرياضيات والمنطق",
+"PersonalDevelopment": "التطوير الشخصي",
+"PhysicalScienceAndEngineering": "العلوم الفيزيائية والهندسة",
+"SocialScience": "العلوم الاجتماعية"
+
 },
 
 "HomeDetails": {
