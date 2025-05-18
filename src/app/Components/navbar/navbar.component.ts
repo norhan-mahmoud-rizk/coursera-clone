@@ -146,5 +146,6 @@ export class NavbarComponent implements OnInit {
 
   changeLanguage(lang: string) {
    this.localization.setLanguage(lang);
+    window.location.reload();// to relaod the website after choose the laguage for the data from the backend 
   }
 }
