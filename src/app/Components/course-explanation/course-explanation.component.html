@@ -137,7 +137,16 @@
                       >
                         <div class="accordion-body">
                           @for (video of topic.videos; track $index) {
-                          <div class="row body px-2">
+                          <div
+                            class="row body px-2"
+                            [routerLink]="
+                              'video-player/' +
+                              selectedModule?._id +
+                              '/' +
+                              topic._id
+                            "
+                            [queryParams]="{ videoId: video._id }"
+                          >
                             <div
                               class="col-1 d-flex align-items-center justify-content-center"
                             >
@@ -150,16 +159,7 @@
                               }
                             </div>
                             <div class="col-11 video-title">
-                              <p
-                                class="fw-bold"
-                                [routerLink]="
-                                  'video-player/' +
-                                  selectedModule?._id +
-                                  '/' +
-                                  topic._id
-                                "
-                                [queryParams]="{ videoId: video._id }"
-                              >
+                              <p class="fw-bold">
                                 {{ video.videoTitle }}
                               </p>
 
@@ -170,7 +170,16 @@
                           </div>
                           } @for (assignment of topic.assignments; track $index)
                           {
-                          <div class="row body px-2">
+                          <div
+                            class="row body px-2"
+                            [routerLink]="
+                              'video-player/' +
+                              selectedModule?._id +
+                              '/' +
+                              topic._id
+                            "
+                            [queryParams]="{ assignmentId: assignment._id }"
+                          >
                             <div
                               class="col-1 d-flex align-items-center justify-content-center"
                             >
@@ -183,16 +192,7 @@
                               }
                             </div>
                             <div class="col-11 video-title">
-                              <p
-                                class="fw-bold"
-                                [routerLink]="
-                                  'video-player/' +
-                                  selectedModule?._id +
-                                  '/' +
-                                  topic._id
-                                "
-                                [queryParams]="{ assignmentId: assignment._id }"
-                              >
+                              <p class="fw-bold">
                                 {{ assignment.title }}
                               </p>
 
@@ -213,22 +213,6 @@
                 </div>
               </div>
             </div>
-
-            <!-- <h2 class="ps-2">Grades</h2>
-                <p>Check your grades here.</p> -->
-
-            <!--
-                <h2 class="ps-2">Notes</h2>
-                <p>Here are your notes.</p>
-
-                <h2 class="ps-2">Discussion Forums</h2>
-                <p>Join the discussion!</p>
-
-                <h2 class="ps-2">Messages</h2>
-                <p>Read your messages here.</p>
-
-                <h2 class="ps-2">Course Info</h2>
-                <p>Course information goes here.</p> -->
           </div>
         </div>
         <div

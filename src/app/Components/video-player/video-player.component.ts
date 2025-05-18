@@ -48,6 +48,7 @@ export class VideoPlayerComponent implements OnInit, AfterViewChecked {
   assignement?: AssignmentResponse;
   userAnswers: any;
   errorMessage: any;
+  successMessage?: string;
 
   constructor(
     private coursesService: CoursesService,
@@ -209,11 +210,17 @@ export class VideoPlayerComponent implements OnInit, AfterViewChecked {
 
           if (!res.success) {
             this.errorMessage = res.message;
+            this.successMessage = undefined;
           } else {
             if (res.data.passed) {
               this.topic!.assignments.find(
                 (assignment) => assignment._id === this.assignmentId
               )!.isCompleted = true;
+              this.successMessage = 'Assigment submitted successfully';
+              this.errorMessage = undefined;
+            } else {
+              this.errorMessage = 'You have not passed the assignment';
+              this.successMessage = undefined;
             }
           }
         })
