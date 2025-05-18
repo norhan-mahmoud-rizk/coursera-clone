@@ -34,7 +34,6 @@
 
               <!-- <span style=" font-size: .875rem;font-weight: 500;" onclick="document.getElementById('EnrollDialog')?.showModal()">Enroll for free</span> -->
             </div>
-            
             <div class="col-12 col-lg-8 mb-3 trytToFreeText">
               <p>Try for Free: Enroll to start your 7-day full access free trial</p>
               <a href="" class="link">Financial aid available</a>
@@ -144,16 +143,10 @@
   <div class="row">
     <div class="col-8">
       <ul class="allSkils">
-        <li class="skillsLI">Artificial Intelligence (AI)</li>
-        <li class="skillsLI">Prompt Engineering</li>
-        <li class="skillsLI">ChatGPT</li>
-        <li class="skillsLI">hugging face</li>
-        <li class="skillsLI">Generative AI Careers</li>
-        <li class="skillsLI">Generative AI</li>
-        <li class="skillsLI">Stable Diffusion</li>
-        <li class="skillsLI">Hugging Face</li>
-        <li class="skillsLI">Foundation Models</li>
-        <li class="skillsLI">Responsible Generative AI</li>
+         @for(prod of CareerCourse?.Skills; track CareerCourse?.id){
+          <li class="skillsLI"> {{prod}}</li>
+         }
+
       </ul>
 
     </div>

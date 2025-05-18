@@ -40,18 +40,18 @@
 
       <h2 class="mostPopular exploreText">Explore Coursera</h2>
 
-      @for(explore of filterCategory; track ArrayData[0].id){
-        <div class="col-sm-12 col-md-6 col-lg-3 mb-3 explorePartTwo">
-          <div class="d-flex align-items-center exploreCard border rounded shadow-sm overflow-hidden cardExplore">
-            <img class="exploreImage no-left-radius" src="{{explore.categoryImage}}" alt="Data Science">
+       @for(explore of filterCategory; track explore.categoryID){
+      <div class="col-sm-12 col-md-6 col-lg-4 mb-3">
+        <div class="d-flex align-items-center exploreCard border rounded shadow-sm overflow-hidden">
+          <img class="exploreImage no-left-radius" src="{{explore.categoryImage}}" alt="Data Science">
 
-            <div class="p-3 testExplore">
-              <div class="fw-bold desExplore">{{explore.categoryName}}</div>
-              <span class="text-muted">{{explore.courses.length}} courses</span>
-            </div>
+          <div class="p-3">
+            <div class="fw-bold">{{explore.categoryName}}</div>
+            <span class="text-muted">{{explore.courses.length}} courses</span>
           </div>
         </div>
-      }
+      </div>
+    }
 
     </div>
   </div>
