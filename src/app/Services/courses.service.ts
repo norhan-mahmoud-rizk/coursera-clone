@@ -40,4 +40,46 @@ export class CoursesService {
         })
       );
   }
+
+  getAssignmentById(assignmentId: string) {
+    return this.httpClient.get<AssignmentResponse>(
+      `${environment.backendURL}/assignments/${assignmentId}`
+    );
+  }
+
+  submitAssignment(answers: any) {
+    return this.httpClient.post<{ success: boolean; message: string }>(
+      `${environment.backendURL}/assignments/submit`,
+      answers
+    );
+  }
+}
+export interface AssignmentQuestion {
+  _id: string;
+  content: string;
+  type: string;
+  options: string[];
+  explanation: string;
+  difficulty: string;
+  createdAt: string;
+  __v: number;
+}
+
+export interface AssignmentData {
+  _id: string;
+  title: string;
+  description: string;
+  courseId: string;
+  questions: AssignmentQuestion[];
+  passingScore: number;
+  timeLimit: number;
+  retryDelay: number;
+  createdAt: string;
+  __v: number;
+}
+
+export interface AssignmentResponse {
+  data: AssignmentData;
+  canTakeAssignment: boolean;
+  waitTimeInMinutes: number;
 }
