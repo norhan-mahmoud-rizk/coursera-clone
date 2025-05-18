@@ -257,7 +257,9 @@
             </div>
           </div>
           <button
-            [disabled]="!assignement.canTakeAssignment"
+            [disabled]="
+              !assignement.canTakeAssignment || successMessage || errorMessage
+            "
             type="submit"
             class="btn btn-primary mt-3"
           >
@@ -265,10 +267,10 @@
           </button>
           @if (!assignement.canTakeAssignment) {
           <p class="text-danger mt-3">
-            You cannot retake the assignment yet.
+            You cannot retake the assigment yet.
             <br />
             You have to wait for {{ assignement.waitTimeInMinutes }} minutes
-            before retaking the assignment.
+            before retaking the assigment.
           </p>
           } @if (successMessage) {
           <div class="alert alert-success mt-3" role="alert">
