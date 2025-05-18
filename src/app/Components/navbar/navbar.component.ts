@@ -9,6 +9,7 @@ import { LocalizationService } from '../../Services/localization.service';
 import { NotificationService } from '../../Services/notification.service';
 import { ToastrService } from 'ngx-toastr';
 import { trigger, transition, style, animate } from '@angular/animations';
+import { ServiceWithApiService } from '../../Services/service-with-api.service';
 
 @Component({
   selector: 'app-navbar',
@@ -41,7 +42,18 @@ export class NavbarComponent implements OnInit {
  showNotifications = false;
   notifications: any[] = [];
   unreadCount = 0;
-  constructor(public authService: AuthService, private router: Router,public userService :UserServiceService ,public localization:LocalizationService,  private notificationService: NotificationService,private toastr: ToastrService) {}
+ searchValue: string = '';
+
+
+  constructor(
+    public authService: AuthService,
+     private router: Router,
+     public userService :UserServiceService ,
+     public localization:LocalizationService,
+      private notificationService: NotificationService,
+      private toastr: ToastrService,
+      public searchService:ServiceWithApiService
+    ) {}
   ngOnInit(): void {
    this.userService.getUserById().subscribe((res: any) => {
     // console.log(" Current logged-in user form the career page :", res);
@@ -146,6 +158,12 @@ export class NavbarComponent implements OnInit {
 
   changeLanguage(lang: string) {
    this.localization.setLanguage(lang);
-    window.location.reload();// to relaod the website after choose the laguage for the data from the backend 
+    window.location.reload();// to relaod the website after choose the laguage for the data from the backend
+  }
+
+  //sreach
+  onSearchClick() {
+     console.log('Search value:', this.searchValue);
+    this.searchService.changeSearchTerm(this.searchValue);
   }
 }

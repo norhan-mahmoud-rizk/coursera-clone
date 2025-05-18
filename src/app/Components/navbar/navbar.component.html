@@ -101,9 +101,10 @@
           type="text"
           placeholder="{{ 'Navbar1.searchBar' | translate }}"
           class="seaechText"
+           [(ngModel)]="searchValue"
         />
 
-        <div class="icon">
+        <div class="icon"  (click)="onSearchClick()">
           <svg
             width="16px"
             height="16px"
