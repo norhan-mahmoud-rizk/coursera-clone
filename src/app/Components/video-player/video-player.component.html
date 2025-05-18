@@ -79,7 +79,12 @@
     @if (video) {
     <div class="col-12 col-md-9 main-content">
       <div class="d-flex justify-content-between align-items-center mb-3">
-        <h3>{{ video.videoTitle }}</h3>
+        <div>
+          <h3>{{ video.videoTitle }}</h3>
+          <p class="text-muted">
+            {{ video.discuseion }}
+          </p>
+        </div>
         <div>
           <a
             class="btn btn-outline-primary me-2"
@@ -118,6 +123,36 @@
             <source [src]="video.url" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
+        </div>
+      </div>
+      <div class="transcript-section mt-4 p-3 bg-light rounded">
+        <h5>Transcript</h5>
+        <div
+          class="transcript-scrollable"
+          style="max-height: 200px; overflow-y: auto"
+        >
+          <ul class="list-unstyled mb-0">
+            <li class="transcript-sentence">{{ video.transeScript }}</li>
+            <li class="transcript-sentence">
+              Sed euismod, urna eu tincidunt consectetur, nisi nisl aliquam
+              enim.
+            </li>
+            <li class="transcript-sentence">
+              Eget facilisis quam felis id mauris.
+            </li>
+            <li class="transcript-sentence">
+              Pellentesque habitant morbi tristique senectus et netus et
+              malesuada fames ac turpis egestas.
+            </li>
+            <li class="transcript-sentence">
+              Suspendisse potenti. Etiam ac mauris vitae urna fermentum
+              tincidunt.
+            </li>
+            <li class="transcript-sentence">
+              Mauris euismod, sapien nec laoreet dictum, enim erat dictum erat,
+              nec dictum erat enim nec erat.
+            </li>
+          </ul>
         </div>
       </div>
     </div>
