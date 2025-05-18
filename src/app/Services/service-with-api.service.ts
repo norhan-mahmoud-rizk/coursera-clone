@@ -10,6 +10,7 @@ import { CareerResoursesCategory } from '../Models/career-resourses-category';
 import { SucessStories } from '../Models/sucess-stories';
 import { WhatWeGains } from '../Models/WhatWeGains';
 import { Achieve } from '../Models/achieve';
+import { LocalizationService } from './localization.service';
 
 
 @Injectable({
@@ -17,7 +18,7 @@ import { Achieve } from '../Models/achieve';
 })
 export class ServiceWithApiService {
   httpheaders={};
-  constructor(public httpclient:HttpClient) {
+  constructor(public httpclient:HttpClient,    private localizationService: LocalizationService ) {
 
    
     this.httpheaders={
@@ -38,15 +39,23 @@ baseURLcareerResourceCategories: string = `${environment.backendURL}/careeerReso
  baseURLsuccessStories:string=`${environment.backendURL}/successStory/allsuccessStories`;
   baseURLGains:string=`${environment.baseURL}/Gains`;
   baseURLAchieve:string=`${environment.baseURL}/Achieve`;
-
-
-  // /get all career courses
-  GetAllCareerCourses(): Observable<ICareerCourses[]> {
-    return this.httpclient.get<ICareerCourses[]>(this.baseURLCareerCourse);
+// change the language 
+  //function to add the parameter at the end to the url to change the language from the backend 
+  private getLangParam(): string {
+    const lang = this.localizationService.getLanguage();//get the language from the local storage
+    return `?lang=${lang}`;//send the value that choosed from the local storage in the query string to change the language 
   }
-// get course by id
-getCarerrCourseById(CourseId: string): Observable<ICareerCourses> {
-    return this.httpclient.get<ICareerCourses>(`${this.baseURLGetOneCareerCourse}/${CourseId}`);
+
+  // /get all career courses with the query string to change the language
+ 
+  GetAllCareerCourses(): Observable<ICareerCourses[]> {
+    const url = `${this.baseURLCareerCourse}${this.getLangParam()}`;
+    return this.httpclient.get<ICareerCourses[]>(url);
+  }
+// get course by id with the query string to change the language
+   getCarerrCourseById(CourseId: string): Observable<ICareerCourses> {
+    const url = `${this.baseURLGetOneCareerCourse}/${CourseId}${this.getLangParam()}`;
+    return this.httpclient.get<ICareerCourses>(url);
   }
 
 // get all catgories of career courses
