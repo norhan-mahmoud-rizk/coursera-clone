@@ -48,7 +48,7 @@
             class="fw-semibold fs-5 coursename"
             [routerLink]="'/courseExplanation' + '/' + course._id"
           >
-            {{ course.name }}
+            {{ course.name[language] }}
           </p>
           <p>Course . {{ course.progress }}% Completed</p>
           <div

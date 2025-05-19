@@ -85,9 +85,9 @@
             {{ video.discuseion }}
           </p>
         </div>
-        <div>
+        <div class="d-flex gap-2">
           <a
-            class="btn btn-outline-primary me-2"
+            class="btn btn-outline-primary"
             [routerLink]="previousVideoRoute?.route"
             [queryParams]="previousVideoRoute?.queryParams"
             [class.disabled]="!previousVideoRoute"
@@ -160,7 +160,7 @@
     <div class="col-12 col-md-9 main-content">
       <div class="d-flex justify-content-between align-items-center mb-3">
         <h3>{{ assignement.data.title }}</h3>
-        <div>
+        <div class="d-flex gap-2">
           <a
             class="btn btn-outline-primary me-2"
             [routerLink]="previousVideoRoute?.route"

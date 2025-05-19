@@ -17,6 +17,7 @@ export class CourseExplanationComponent implements OnInit {
   id: string = '';
   courseDetails?: CourseData;
   selectedModule?: Module;
+  language: 'en' | 'ar' = 'en';
 
   constructor(
     private route: ActivatedRoute,
@@ -25,6 +26,7 @@ export class CourseExplanationComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    this.language = (localStorage.getItem('language') as 'en' | 'ar') || 'en';
     this.route.params
       .pipe(
         map((params) => params['id']),
