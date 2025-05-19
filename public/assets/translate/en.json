@@ -31,6 +31,11 @@
     {
       "InstructorName": "Instructors",
       "Includedwith": "Included with ",
+      "  Enroll": "  Enroll for Free",
+   
+      "TryforFree": "Try for Free: Enroll to start your 7-day full access free trial",
+      "Financialavailable": "Financial aid available",
+      " alreadyenrolled": " already enrolled",
       " Learnmore": " Learn more ",
       "FirstItem": "Explain the fundamental concepts, capabilities, models, tools, applications, and platforms of generative AI foundation models.",
       "SecondItem": "Apply powerful prompt engineering techniques to write effective prompts and generate desired outcomes from AI models.",

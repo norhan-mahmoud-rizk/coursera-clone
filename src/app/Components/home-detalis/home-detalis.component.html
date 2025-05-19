@@ -28,22 +28,22 @@
             <div class="col-12 col-lg-4">
 
               <button class="btn btn-primary NavButton" onclick="document.getElementById('EnrollDialog')?.showModal()">
-                Enroll for Free
-                <p class="textBTN">Starts Mar 2</p>
+              {{'HomeDetails.Enroll' | translate}}
+                <!-- <p class="textBTN">Starts Mar 2</p> -->
               </button>
 
               <!-- <span style=" font-size: .875rem;font-weight: 500;" onclick="document.getElementById('EnrollDialog')?.showModal()">Enroll for free</span> -->
             </div>
             <div class="col-12 col-lg-8 mb-3 trytToFreeText">
-              <p>Try for Free: Enroll to start your 7-day full access free trial</p>
-              <a href="" class="link">Financial aid available</a>
+              <p>{{'HomeDetails.TryforFree' | translate}}</p>
+              <a href="" class="link">{{'HomeDetails.Financialavailable' | translate}}</a>
             </div>
 
 
           </div>
 
           <div class="pt-3  ">
-            <span class="salary">{{CareerCourse?.views}}</span>  already enrolled
+            <span class="salary">{{CareerCourse?.views}}</span>  {{'HomeDetails.alreadyenrolled' | translate}}
           </div>
           <div class="pt-3 mb-5">
             {{'HomeDetails.Includedwith' | translate}}
@@ -71,63 +71,25 @@
 
 <div class="row mx-auto paddingPage">
 
-  <div class="col-4 py-1">
+  <div class="col-10 py-1">
     <div class="row">
+
+       @for(prod of CareerCourse?.WhatYouWillLearn; track CareerCourse?.id){
+<div class="col-5 marginlearnAll">
       <div class="col-1">
-        <i class="fa-solid fa-check"></i>
+        <i class="fa-solid fa-check "></i>
       </div>
-      <div class="col-11">
-        <span class="">  {{'HomeDetails.FirstItem' | translate}}</span>
+      <div class="col-11 marginLearn">
+        <span class="marginLearnText">{{prod}}</span>
       </div>
+      </div>
+
+    }
+
 
     </div>
   </div>
 
-  <div class="col-4 py-1">
-    <div class="row">
-      <div class="col-1">
-        <i class="fa-solid fa-check"></i>
-      </div>
-      <div class="col-11">
-        <span class=""> {{'HomeDetails.SecondItem' | translate}}
-
-        </span>
-      </div>
-
-    </div>
-  </div>
-
-  <div class="col-4"></div>
-
-
-
-  <div class="col-4 py-4">
-    <div class="row">
-      <div class="col-1">
-        <i class="fa-solid fa-check"></i>
-      </div>
-      <div class="col-11">
-        <span class=""> {{'HomeDetails.ThirdItem' | translate}}</span>
-      </div>
-
-    </div>
-  </div>
-
-  <div class="col-4 py-4">
-    <div class="row">
-      <div class="col-1">
-        <i class="fa-solid fa-check"></i>
-      </div>
-      <div class="col-11">
-        <span class="">{{'HomeDetails.FourthItem' | translate}}
-
-        </span>
-      </div>
-
-    </div>
-  </div>
-
-  <div class="col-4"></div>
 
 </div>
 
@@ -200,19 +162,23 @@
   <div class="row">
 
     <div class="col-12 col-lg-6">
-      <h2  class="mb-4">{{ CareerCourse?.outComes?.outComesTitle }}</h2>
+      <h2  class="mb-4">{{CareerCourse?.outComes?.outComesTitle}}</h2>
       <ul>
-        <li  class="mb-2">{{'HomeDetails.expert' | translate}}</li>
-        <li  class="mb-2">{{'HomeDetails.master' | translate}}</li>
-        <li  class="mb-2">{{'HomeDetails.develop' | translate}}</li>
-        <li  class="mb-2">{{'HomeDetails.earn' | translate}}</li>
+              @for(prod of CareerCourse?.outComes?.outComesDescription; track CareerCourse?.id){
+                 <li  class="mb-2">
+{{prod}}
+
+        </li>
+
+    }
+
+
       </ul>
     </div>
 
     <div class="col-12 col-lg-6">
       <img class="borderIMG img-fluid"
-        src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera_assets.s3.amazonaws.com/images/f9981360ed304b477666954b42d5586f.png?auto=format%2Ccompress&dpr=1&w=562&h=221&q=40&fit=crop"
-        alt="">
+        [src]="CareerCourse?.outcomesImage"alt="">
     </div>
   </div>
 </div>
