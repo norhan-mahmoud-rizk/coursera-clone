@@ -1,5 +1,5 @@
 {
-  "Home": 
+  "Home":
     {
       "RecentlyViewedCoursess": "Recently Viewed Coursess",
       "button": "show 4 more ",
@@ -27,16 +27,16 @@
   "SocialScience": "Social Science"
 
     },
-  "HomeDetails": 
+  "HomeDetails":
     {
       "InstructorName": "Instructors",
       "Includedwith": "Included with ",
-      "  Enroll": "  Enroll for Free",
-   
+      "Enroll": "  Enroll for Free",
+
       "TryforFree": "Try for Free: Enroll to start your 7-day full access free trial",
       "Financialavailable": "Financial aid available",
-      " alreadyenrolled": " already enrolled",
-      " Learnmore": " Learn more ",
+      "alreadyenrolled": " already enrolled",
+      "Learnmore": " Learn more ",
       "FirstItem": "Explain the fundamental concepts, capabilities, models, tools, applications, and platforms of generative AI foundation models.",
       "SecondItem": "Apply powerful prompt engineering techniques to write effective prompts and generate desired outcomes from AI models.",
       "ThirdItem": "Discuss the limitations of generative AI and explain the ethical concerns and considerations for the responsible use of generative AI.",
@@ -58,7 +58,7 @@
 
     }
   ,
-  "FirstCard": 
+  "FirstCard":
     {
       "Title": "Get started With GenAI",
       "SubTitle": "Explore",
@@ -69,26 +69,26 @@
       "button2": "Popular",
       "button3": "New",
       "button4": "Tools"
-      
+
     }
   ,
-  "SecondCard": 
+  "SecondCard":
     {
       "Title": "University of London",
       "subject": "Ready to advance your career in cybersecurity? Gain practical experience through lab sessions that simulate real-life scenarios.",
-      "Button": "learn more" 
+      "Button": "learn more"
     }
   ,
-  "CardThree": 
+  "CardThree":
     {
          "Title": "Coursera Coach",
       "subject": "Master new skills with AI-powered guidance Get interactive, on-demand assistance that’s tailored to your unique goals.",
-      "Button": "learn more" 
-      
-      
+      "Button": "learn more"
+
+
     }
   ,
-  "Navbar1": 
+  "Navbar1":
     {
       "coursera": "Coursera",
       "Explore": "Explore",
@@ -163,5 +163,5 @@
   }
 
 
-  
+
 }
