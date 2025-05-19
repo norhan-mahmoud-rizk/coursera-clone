@@ -92,9 +92,9 @@
                       />
                     </div>
                     <div class="ImageSide_Content_div ms-2">
-                      <h6 style="font-size: .875rem;" class="my-2 h-25">{{ relatedCourses.name }}</h6>
+                      <h6  class="my-2 h-25">{{ relatedCourses.name }}</h6>
                   
-                      <p style="font-size: .875rem;">Course {{ $index + 1 }} of {{ CareerCourse?.relatedCourses?.length }}</p>
+                      <p >Course {{ $index + 1 }} of {{ CareerCourse?.relatedCourses?.length }}</p>
                     </div>
                   </div>
                   }
@@ -107,8 +107,8 @@
     </div>
   
     <div class="RolesSimilarContainer p-5 mt-4">
-      <h2>Roles similar to Content Creator</h2>
-  
+      <h2>Roles similar to {{ CareerCourse?.name }}</h2>
+
       <div class="row mt-5">
         @for (course of SimilarCourses.slice(0, visibleCoursesCount); track
         course.id) {

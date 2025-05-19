@@ -44,8 +44,10 @@ export class CareerComponent implements OnInit {
       next: (data) => {
         console.log('📦 All courses fetched:', data);
         this.filteredList = data.map((item: any) => ({
+          
           ...item,
-          id: item._id
+          id: item._id,
+          
         }));
       },
       error: (err) => {
