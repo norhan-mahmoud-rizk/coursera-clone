@@ -60,7 +60,11 @@ baseURLcareerResourceCategories: string = `${environment.backendURL}/careeerReso
     const url = `${this.baseURLGetOneCareerCourse}/${CourseId}${this.getLangParam()}`;
     return this.httpclient.get<ICareerCourses>(url);
   }
-
+ // get all success stories 
+   GetAllSuccessStories():Observable<SucessStories[]>{
+        const url = `${this.baseURLsuccessStories}${this.getLangParam()}`;
+    return this.httpclient.get<SucessStories[]>(url);
+   }
 // get all catgories of career courses
   getCareerCourseCategory(): Observable<CoursesCategories[]> {
     return this.httpclient.get<CoursesCategories[]>(this.baseURLCareerCourseCategory);
@@ -91,10 +95,7 @@ getCourseByCatId(catValu: string): Observable<ICareerCourses[]> {
   }
 
 
-  // get all success stories 
-   GetAllSuccessStories():Observable<SucessStories[]>{
-    return this.httpclient.get<SucessStories[]>(`${this.baseURLsuccessStories}`)
-   }
+ 
 
 
   //  get all what we offer

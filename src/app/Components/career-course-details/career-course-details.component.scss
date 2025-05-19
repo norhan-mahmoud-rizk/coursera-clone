@@ -108,16 +108,35 @@ $whiteColor:white;
 .ImageSideDiv{
    flex-wrap: nowrap; overflow-x: hidden;
 
-.ImageSide_Content_div{
-   width: 91%;
-   h6{
+.ImageSide_Content_div {
+  width: 91%;
 
-   height: 70px; margin-top: 9%;
-   }
-   p{
+  h6 {
+    height: 70px;
+    margin-top: 9%;
+     min-height: 30px; 
+    // overflow: hidden;
+    font-size: .875rem; 
+  }
+
+  p {
     color: $baseGray;
-   }
+    font-size: .875rem;
+     min-height: 30px;
+    overflow: hidden; 
+  }
+
+  // less than 580
+  @media (max-width: 580px) {
+    h6 {
+      font-size: 0.43rem !important; 
+    }
+    p {
+      font-size: 0.5rem !important; 
+    }
+  }
 }
+
 }
 
 }
@@ -133,11 +152,11 @@ $whiteColor:white;
 // $baseGray: #5b6780;
 // $whiteColor: white;
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+// * {
+//   box-sizing: border-box;
+//   margin: 0;
+//   padding: 0;
+// }
 
 .CourseParent {
   min-height: 100%;
@@ -177,6 +196,7 @@ $whiteColor:white;
     box-shadow: 0 0 12px $lightGray;
     cursor: pointer;
   }
+
   @media (max-width: 750px) {
     flex-direction: row-reverse !important;
 
@@ -188,19 +208,40 @@ $whiteColor:white;
         border-radius: 12px;
         height: 100%;
         width: 100%;
-        // object-fit: contain;
-        // object-fit: cover;
         object-fit: scale-down;
-        // object-fit: fill;
-        // object-fit: none;
       }
     }
 
     .CourseContent {
       width: 70%;
+
+      p {
+        font-size: 0.875rem;
+      }
+    }
+  }
+
+  // less than 563px
+  @media (max-width: 563px) {
+    .CourseContent {
+      h5 {
+        font-size: .8rem !important;
+      }
+
+      p {
+        font-size: 0.5rem !important;
+      }
+
+      .LikeContainer {
+        span {
+          font-size: 0.5rem !important;
+        }
+      }
     }
   }
 }
+
+
 
 
 .lastPartContainer{
