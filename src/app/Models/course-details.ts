@@ -1,7 +1,10 @@
 export interface CourseData {
   _id: string;
   instructor: string;
-  name: string;
+  name: {
+    en: string;
+    ar: string;
+  };
   categoryID: string;
   IfYouLike: string;
   IfYouLikeValue: string;
@@ -13,7 +16,10 @@ export interface CourseData {
   enrolled: boolean;
   progress: number;
   modules: Module[];
-  description: string;
+  description: {
+    en: string;
+    ar: string;
+  };
   reviews: any[]; // You can define a Review interface if needed
   courseImage: string;
   relatedCourses: any[]; // You can define a RelatedCourse interface if needed

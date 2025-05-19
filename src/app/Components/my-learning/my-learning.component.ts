@@ -19,12 +19,14 @@ export class MyLearningComponent implements OnInit {
   selectedCourses: CourseData[] = [];
   userData: any;
   userName: string | null = null; //to display the username  of the user
+  language: 'en' | 'ar' = 'en';
   constructor(
     public authService: AuthService,
     private coursesService: CoursesService,
     public userService: UserServiceService
   ) {}
   ngOnInit(): void {
+    this.language = (localStorage.getItem('language') as 'en' | 'ar') || 'en';
     this.coursesService
       .getCourses()
       .pipe(
