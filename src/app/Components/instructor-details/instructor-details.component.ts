@@ -10,10 +10,11 @@ import { ICareerCourses } from '../../Models/ICareerCourses';
 import { ServiceWithApiService } from '../../Services/service-with-api.service';
 import { CoursesCategories } from '../../Models/CoursesCategories';
 import { CommonModule } from '@angular/common';
+import { FooterComponent } from "../footer/footer.component";
 
 @Component({
   selector: 'app-instructor-details',
-  imports: [NavbarComponent, RouterModule, CommonModule],
+  imports: [NavbarComponent, RouterModule, CommonModule, FooterComponent],
   templateUrl: './instructor-details.component.html',
   styleUrl: './instructor-details.component.scss'
 })

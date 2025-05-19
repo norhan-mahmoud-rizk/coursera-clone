@@ -11,10 +11,11 @@ import { NavbarComponent } from '../navbar/navbar.component';
 import { ServiceWithApiService } from '../../Services/service-with-api.service';
 import { TranslateModule } from '@ngx-translate/core';
 import { SuccessStoriesComponent } from '../success-stories/success-stories.component';
+import { FooterComponent } from "../footer/footer.component";
 
 @Component({
   selector: 'app-home-detalis',
-  imports: [RouterModule, EnrollDialogComponent, NavbarComponent,TranslateModule,SuccessStoriesComponent],
+  imports: [RouterModule, EnrollDialogComponent, NavbarComponent, TranslateModule, SuccessStoriesComponent, FooterComponent],
   templateUrl: './home-detalis.component.html',
   styleUrl: './home-detalis.component.scss'
 })
@@ -79,7 +80,7 @@ export class HomeDetalisComponent implements OnInit {
         }
       },
       error: (err) => {
-        
+
         console.error('Error fetching career course:', err);
       },
     });
