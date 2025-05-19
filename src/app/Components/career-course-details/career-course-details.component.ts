@@ -5,10 +5,11 @@ import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { ICareerCourses } from '../../Models/ICareerCourses';
 import { ServiceWithApiService } from '../../Services/service-with-api.service';
 import { EnrollDialogComponent } from '../enroll-dialog/enroll-dialog.component';
+import { CareerResoursesComponent } from '../career-resourses/career-resourses.component';
 
 @Component({
   selector: 'app-career-course-details',
-  imports: [CommonModule, FormsModule,RouterLink,EnrollDialogComponent],
+  imports: [CommonModule, FormsModule,RouterLink,EnrollDialogComponent,CareerResoursesComponent],
   templateUrl: './career-course-details.component.html',
   styleUrl: './career-course-details.component.scss'
 })
