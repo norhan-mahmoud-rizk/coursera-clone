@@ -51,7 +51,7 @@ export class PaymentPageComponent implements OnInit {
   const priceId = this.priceIds[planType];
 
   if (!priceId) {
-    alert('Price ID غير متوفر');
+    // alert('Price ID غير متوفر');
     return;
   }
   console.log('Selected plan:', planType);
@@ -73,7 +73,7 @@ export class PaymentPageComponent implements OnInit {
       },
       error: (err) => {
         console.error('فشل في بدء الفترة التجريبية', err);
-        alert('فشل في بدء الفترة التجريبية. حاول مرة أخرى.');
+        // alert('فشل في بدء الفترة التجريبية. حاول مرة أخرى.');
       }
     });
 
@@ -84,7 +84,7 @@ export class PaymentPageComponent implements OnInit {
       },
       error: (err) => {
         console.error('Error creating checkout session:', err);
-        alert('فشل في بدء عملية الدفع');
+        // alert('فشل في بدء عملية الدفع');
       }
     });
 }
@@ -101,13 +101,13 @@ export class PaymentPageComponent implements OnInit {
     .subscribe({
       next: (response: any) => {
         console.log('Free trial started successfully', response);
-        alert('تم بدء الفترة التجريبية بنجاح!');
+        // alert('تم بدء الفترة التجريبية بنجاح!');
         // يمكنك هنا التوجيه لصفحة جديدة بعد النجاح
         this.router.navigate(['/courseExplanation/' + this.CourseId]);
       },
       error: (err) => {
         console.error('فشل في بدء الفترة التجريبية', err);
-        alert('فشل في بدء الفترة التجريبية. حاول مرة أخرى.');
+        // alert('فشل في بدء الفترة التجريبية. حاول مرة أخرى.');
       }
     });
 }
