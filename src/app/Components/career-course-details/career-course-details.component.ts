@@ -70,20 +70,23 @@ GetCareerCourseById() {
 
 
   
- GetSimilarCourses() {
+GetSimilarCourses() {
   if (this.CareerCourse?.categoryID) {
     const categoryID = this.CareerCourse.categoryID;
-    // const currentCourseId = this.CareerCourse.id;//to exclude the current course from the similar courses
 
     console.log('the category id of the current course:', categoryID);
 
     this.CourseService.getCourseByCatId(categoryID).subscribe({
       next: (data) => {
         const courses = (data as any).courses;
-        // to exclude the current course from the similar courses
-        this.SimilarCourses = courses;
 
-        console.log(' Similar courses (excluding current):', this.SimilarCourses);
+    
+        this.SimilarCourses = courses.map((course: any) => ({
+          ...course,
+          id: course._id,
+        }));
+
+        console.log('✅ Similar courses with id:', this.SimilarCourses);
       },
       error: (err) => {
         console.error(err);
@@ -93,11 +96,18 @@ GetCareerCourseById() {
 }
 
 
+
     goToHomeDetails(CourseID: string | undefined) {
       if (!CourseID) return; 
       this.router.navigate(['/homeDetails', CourseID]);
     }
     
+  goToCareerDetails(courseId: string): void {
+    this.router.navigate(['/courseDetails', courseId]);
+    console.log('Navigating to course details for course ID:', courseId);
+  }
+
+  
 
 
 }
