@@ -45,6 +45,7 @@
       <button type="button" class="btn btn-primary">{{'FirstCard.Button' | translate}}</button>
     </div>
 
+
     <div class="col-12 col-lg-9 ">
       <div class="StartBTN">
         <button type="button" class="btn btnStart">{{'FirstCard.button1' | translate}}</button>
@@ -76,6 +77,52 @@
                     <p class="last-section">{{'FirstCard.Specialization' | translate}}</p>
                   </div>
                 </div>
+
+
+              </div>
+
+<div class="col-12 col-md-6 col-lg-4 MultCard">
+
+                <!-- for -->
+                <div class="custom-card">
+                  <img class="img-fluid CardImageStar"
+                    src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://d15cw65ipctsrr.cloudfront.net/61/edc4c8538e49fd97efecab1665e969/GenAI_Logo-Image_1200x1200pxl-copy.jpg?auto=format%2Ccompress%2C%20enhance&dpr=1&w=265&h=204&fit=crop&q=50"
+                    alt="...">
+                  <div class="CardBody">
+                    <div class="card-header">
+                      <img class="img-fluid logo-card"
+                        src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/bb/f5ced2bdd4437aa79f00eb1bf7fbf0/IBM-Logo-Blk---Square.png?auto=format%2Ccompress&dpr=3&w=24&h=24"
+                        alt="">
+                      <a class="CardLink" href="">IBM</a>
+                    </div>
+                    <h6 class="card-text">{{'FirstCard.Button' | translate}}</h6>
+                    <p class="last-section">{{'FirstCard.Specialization' | translate}}</p>
+                  </div>
+                </div>
+
+
+              </div>
+
+              <div class="col-12 col-md-6 col-lg-4 MultCard">
+
+                <!-- for -->
+                <div class="custom-card">
+                  <img class="img-fluid CardImageStar"
+                    src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://d15cw65ipctsrr.cloudfront.net/61/edc4c8538e49fd97efecab1665e969/GenAI_Logo-Image_1200x1200pxl-copy.jpg?auto=format%2Ccompress%2C%20enhance&dpr=1&w=265&h=204&fit=crop&q=50"
+                    alt="...">
+                  <div class="CardBody">
+                    <div class="card-header">
+                      <img class="img-fluid logo-card"
+                        src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/bb/f5ced2bdd4437aa79f00eb1bf7fbf0/IBM-Logo-Blk---Square.png?auto=format%2Ccompress&dpr=3&w=24&h=24"
+                        alt="">
+                      <a class="CardLink" href="">IBM</a>
+                    </div>
+                    <h6 class="card-text">{{'FirstCard.Button' | translate}}</h6>
+                    <p class="last-section">{{'FirstCard.Specialization' | translate}}</p>
+                  </div>
+                </div>
+
+
               </div>
 
               <!-- كرر باقي الكروت بنفس الطريقة -->
@@ -194,7 +241,7 @@
     <h2 class="sectionOne">{{'Home.ExploreWithACourseraPlusSubscription' | translate}}</h2>
     <div class="container-fluid">
       <div id="SubscriptionSection" class="row">
-        @for(prod of filterArray.slice(0, visibleCount5) ; track prod.id){
+        @for(prod of filteredListfrombackend.slice(0, visibleCount5) ; track prod.id){
         <div class="col-12 col-sm-6 col-lg-3  mt-5">
           <div class="custom-card">
             <img class="card-image" [src]="prod.courseImage" alt="Course Image" (click)="goToDetails(prod.id)">
@@ -264,48 +311,219 @@
 <!-- Categories -->
 <div class="container-fluid">
   <div class="row CategoriesCenter">
-    <h2 class="ps-5">{{'Home.Categories' | translate}}</h2>
-<div class="col-12 col-lg-5 Categories CategoriesLink rightSide">
-  <h5><a href="">{{ 'Home.ArtsAndHumanities' | translate }}</a></h5>
-</div>
+    <h2 class="ps-5">Categories</h2>
+    <div class="col-12 col-lg-5 Categories CategoriesLink rightSide">
+      <h5><a href="">Arts and Humanities</a></h5>
+    </div>
 
-<div class="col-12 col-lg-5 Categories CategoriesLink leftSide">
-  <h5><a href="">{{ 'Home.Business' | translate }}</a></h5>
-</div>
+    <div class="col-12 col-lg-5 Categories CategoriesLink leftSide">
+      <h5><a href="">Business</a></h5>
+    </div>
 
-<div class="col-12 col-lg-5 Categories CategoriesLink rightSide">
-  <h5><a href="">{{ 'Home.ComputerScience' | translate }}</a></h5>
-</div>
+    <div class="col-12 col-lg-5 Categories CategoriesLink rightSide">
+      <h5><a href="">Computer Science</a></h5>
+    </div>
 
-<div class="col-12 col-lg-5 Categories CategoriesLink leftSide">
-  <h5 class="CardLink"><a href="">{{ 'Home.DataScience' | translate }}</a></h5>
-</div>
+    <div class="col-12 col-lg-5 Categories CategoriesLink leftSide">
+      <h5 class="CardLink"><a href="">Data Science</a></h5>
+    </div>
 
-<div class="col-12 col-lg-5 Categories CategoriesLink rightSide">
-  <h5><a href="">{{ 'Home.InformationTechnology' | translate }}</a></h5>
-</div>
+    <div class="col-12 col-lg-5 Categories CategoriesLink rightSide">
+      <h5><a href="">Information Technology</a></h5>
+    </div>
 
-<div class="col-12 col-lg-5 Categories CategoriesLink leftSide">
-  <h5><a href="">{{ 'Home.Health' | translate }}</a></h5>
-</div>
+    <div class="col-12 col-lg-5 Categories CategoriesLink leftSide">
+      <h5><a href="">Health</a></h5>
+    </div>
 
-<div class="col-12 col-lg-5 Categories CategoriesLink rightSide">
-  <h5><a href="">{{ 'Home.MathAndLogic' | translate }}</a></h5>
-</div>
+    <div class="col-12 col-lg-5 Categories CategoriesLink rightSide">
+      <h5><a href="">Math and Logic</a></h5>
+    </div>
 
-<div class="col-12 col-lg-5 Categories CategoriesLink leftSide">
-  <h5><a href="">{{ 'Home.PersonalDevelopment' | translate }}</a></h5>
-</div>
+    <div class="col-12 col-lg-5 Categories CategoriesLink leftSide">
+      <h5><a href="">Personal Development</a></h5>
+    </div>
+    <div class="col-12 col-lg-5 Categories CategoriesLink rightSide">
+      <h5><a href="">Physical Science and Engineering</a></h5>
+    </div>
 
-<div class="col-12 col-lg-5 Categories CategoriesLink rightSide">
-  <h5><a href="">{{ 'Home.PhysicalScienceAndEngineering' | translate }}</a></h5>
-</div>
-
-<div class="col-12 col-lg-5 Categories CategoriesLink leftSide">
-  <h5><a href="">{{ 'Home.SocialScience' | translate }}</a></h5>
-</div>
-
+    <div class="col-12 col-lg-5 Categories CategoriesLink leftSide">
+      <h5><a href="">Social Science</a></h5>
+    </div>
 
 
   </div>
 </div>
+
+<!-- 19 -->
+
+
+<div class="container-fluid marginTopFirst paddingCard">
+  <div class="row margin">
+    <h2 class="sectionOne">  {{'Home.RecentlyViewedCoursess' | translate}}</h2>
+    <div class="container-fluid">
+      <div id="course-container" class="row">
+
+        @for(prod of filteredListfrombackend.slice(0, visibleCount6); track prod.id){
+        <div class="col-12 col-sm-6 col-lg-3 mt-5">
+          <div class="custom-card">
+            <img class="card-image" [src]="prod.courseImage" alt="Course Image" (click)="goToDetails(prod.id)">
+            <div class="CardBody">
+              <div class="card-header">
+                <img class="logo-card" [src]="prod.logoImage" alt="">
+                <a class="card-link" href="#">{{prod.organization}}</a>
+              </div>
+              <h6 class="card-text">{{prod.name}}</h6>
+              <p class="last-section">Course</p>
+            </div>
+          </div>
+        </div>
+        }
+      </div>
+      @if(visibleCount < filterArray.length){ <button class="showBtn" (click)="showMoreCard6()">{{'Home.button' | translate}}</button>
+        } @else {
+        <button class="showBtn" (click)="showfewerCard6()">{{'Home.button2' | translate}}</button>
+        }
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="container-fluid marginTopFirst paddingCard">
+  <div class="row margin">
+    <h2 class="sectionOne">  {{'Home.RecentlyViewedCoursess' | translate}}</h2>
+    <div class="container-fluid">
+      <div id="course-container" class="row">
+
+        @for(prod of filteredListfrombackend.slice(0, visibleCount7); track prod.id){
+        <div class="col-12 col-sm-6 col-lg-3 mt-5">
+          <div class="custom-card">
+            <img class="card-image" [src]="prod.courseImage" alt="Course Image" (click)="goToDetails(prod.id)">
+            <div class="CardBody">
+              <div class="card-header">
+                <img class="logo-card" [src]="prod.logoImage" alt="">
+                <a class="card-link" href="#">{{prod.organization}}</a>
+              </div>
+              <h6 class="card-text">{{prod.name}}</h6>
+              <p class="last-section">Course</p>
+            </div>
+          </div>
+        </div>
+        }
+      </div>
+      @if(visibleCount < filterArray.length){ <button class="showBtn" (click)="showMoreCard7()">{{'Home.button' | translate}}</button>
+        } @else {
+        <button class="showBtn" (click)="showfewerCard7()">{{'Home.button2' | translate}}</button>
+        }
+
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid marginTopFirst paddingCard">
+  <div class="row margin">
+    <h2 class="sectionOne">  {{'Home.RecentlyViewedCoursess' | translate}}</h2>
+    <div class="container-fluid">
+      <div id="course-container" class="row">
+
+        @for(prod of filteredListfrombackend.slice(0, visibleCount8); track prod.id){
+        <div class="col-12 col-sm-6 col-lg-3 mt-5">
+          <div class="custom-card">
+            <img class="card-image" [src]="prod.courseImage" alt="Course Image" (click)="goToDetails(prod.id)">
+            <div class="CardBody">
+              <div class="card-header">
+                <img class="logo-card" [src]="prod.logoImage" alt="">
+                <a class="card-link" href="#">{{prod.organization}}</a>
+              </div>
+              <h6 class="card-text">{{prod.name}}</h6>
+              <p class="last-section">Course</p>
+            </div>
+          </div>
+        </div>
+        }
+      </div>
+      @if(visibleCount < filterArray.length){ <button class="showBtn" (click)="showMoreCard8()">{{'Home.button' | translate}}</button>
+        } @else {
+        <button class="showBtn" (click)="showfewerCard8()">{{'Home.button2' | translate}}</button>
+        }
+
+
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container-fluid marginTopFirst paddingCard">
+  <div class="row margin">
+    <h2 class="sectionOne">  {{'Home.RecentlyViewedCoursess' | translate}}</h2>
+    <div class="container-fluid">
+      <div id="course-container" class="row">
+
+        @for(prod of filteredListfrombackend.slice(0, visibleCount9); track prod.id){
+        <div class="col-12 col-sm-6 col-lg-3 mt-5">
+          <div class="custom-card">
+            <img class="card-image" [src]="prod.courseImage" alt="Course Image" (click)="goToDetails(prod.id)">
+            <div class="CardBody">
+              <div class="card-header">
+                <img class="logo-card" [src]="prod.logoImage" alt="">
+                <a class="card-link" href="#">{{prod.organization}}</a>
+              </div>
+              <h6 class="card-text">{{prod.name}}</h6>
+              <p class="last-section">Course</p>
+            </div>
+          </div>
+        </div>
+        }
+      </div>
+      @if(visibleCount < filterArray.length){ <button class="showBtn" (click)="showMoreCard9()">{{'Home.button' | translate}}</button>
+        } @else {
+        <button class="showBtn" (click)="showfewerCard9()">{{'Home.button2' | translate}}</button>
+        }
+
+
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container-fluid marginTopFirst paddingCard">
+  <div class="row margin">
+    <h2 class="sectionOne">  {{'Home.RecentlyViewedCoursess' | translate}}</h2>
+    <div class="container-fluid">
+      <div id="course-container" class="row">
+
+        @for(prod of filteredListfrombackend.slice(0, visibleCount10); track prod.id){
+        <div class="col-12 col-sm-6 col-lg-3 mt-5">
+          <div class="custom-card">
+            <img class="card-image" [src]="prod.courseImage" alt="Course Image" (click)="goToDetails(prod.id)">
+            <div class="CardBody">
+              <div class="card-header">
+                <img class="logo-card" [src]="prod.logoImage" alt="">
+                <a class="card-link" href="#">{{prod.organization}}</a>
+              </div>
+              <h6 class="card-text">{{prod.name}}</h6>
+              <p class="last-section">Course</p>
+            </div>
+          </div>
+        </div>
+        }
+      </div>
+      @if(visibleCount < filterArray.length){ <button class="showBtn" (click)="showMoreCard10()">{{'Home.button' | translate}}</button>
+        } @else {
+        <button class="showBtn" (click)="showfewerCard10()">{{'Home.button2' | translate}}</button>
+        }
+
+
+    </div>
+  </div>
+</div>
+
+

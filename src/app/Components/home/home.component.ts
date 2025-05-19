@@ -23,6 +23,15 @@ filteredListfrombackend:ICareerCourses[]=[];
   visibleCount3=4;
   visibleCount4=4;
   visibleCount5=4;
+  visibleCount6=4;
+  visibleCount7=4;
+  visibleCount8=4;
+  visibleCount9=4;
+  visibleCount10=4;
+
+
+
+
 
 
   //search
@@ -80,7 +89,7 @@ filteredListfrombackend:ICareerCourses[]=[];
 
 applyFilter(term: string) {
     if (!term) {
-      this.filteredListfrombackend = this.filterArray; // لو مفيش فلترة، ارجع الكل
+      this.filteredListfrombackend = this.filterArray;
     } else {
       this.filteredListfrombackend = this.filterArray.filter(course =>
         course.name.toLowerCase().includes(term.toLowerCase())
@@ -133,6 +142,40 @@ applyFilter(term: string) {
   }
   showfewerCard5(){
     this.visibleCount5 = 4
+  }
+
+   showMoreCard6(){
+    this.visibleCount6 += 4
+  }
+  showfewerCard6(){
+    this.visibleCount6 = 4
+  }
+
+  showMoreCard7(){
+    this.visibleCount7 += 4
+  }
+  showfewerCard7(){
+    this.visibleCount7 = 4
+  }
+   showMoreCard8(){
+    this.visibleCount8 += 4
+  }
+  showfewerCard8(){
+    this.visibleCount8 = 4
+  }
+
+   showMoreCard9(){
+    this.visibleCount9 += 4
+  }
+  showfewerCard9(){
+    this.visibleCount9 = 4
+  }
+
+    showMoreCard10(){
+    this.visibleCount10 += 4
+  }
+  showfewerCard10(){
+    this.visibleCount10 = 4
   }
 
 
