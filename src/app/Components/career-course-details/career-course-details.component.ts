@@ -72,7 +72,7 @@ GetCareerCourseById() {
  GetSimilarCourses() {
   if (this.CareerCourse?.categoryID) {
     const categoryID = this.CareerCourse.categoryID;
-    const currentCourseId = this.CareerCourse.id;//to exclude the current course from the similar courses
+    // const currentCourseId = this.CareerCourse.id;//to exclude the current course from the similar courses
 
     console.log('the category id of the current course:', categoryID);
 
@@ -80,7 +80,7 @@ GetCareerCourseById() {
       next: (data) => {
         const courses = (data as any).courses;
         // to exclude the current course from the similar courses
-        this.SimilarCourses = courses.filter((course: any) => course._id !== currentCourseId);
+        this.SimilarCourses = courses;
 
         console.log(' Similar courses (excluding current):', this.SimilarCourses);
       },

@@ -16,6 +16,7 @@ categoryID: string;
   reviews: any[];
   enrolled: number;
   outcomesImage: string;
+careerImage:string;
 
   instructor:string;
    WhatYouWillLearn: string[];

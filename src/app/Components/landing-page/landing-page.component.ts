@@ -15,6 +15,7 @@ import { LoginRegisterFormDialogComponent } from '../login-register-form-dialog/
 import { ConfirmEmailComponent } from '../confirm-email/confirm-email.component';
 import { ServiceWithApiService } from '../../Services/service-with-api.service';
 import { CoursesCategories } from '../../Models/CoursesCategories';
+import { FooterComponent } from '../footer/footer.component';
 
 @Component({
   selector: 'app-landing-page',
@@ -26,6 +27,7 @@ import { CoursesCategories } from '../../Models/CoursesCategories';
     RouterLink,
     FormsModule,
     LoginRegisterFormDialogComponent,
+    FooterComponent
   ],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.scss'

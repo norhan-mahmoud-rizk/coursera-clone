@@ -48,13 +48,14 @@ export class HomeDetalisComponent implements OnInit {
   loadCourseAndInstructor(courseId: string): void {
     this.courseServiceWithApi.getCarerrCourseById(courseId).subscribe({
       next: (res: any) => {
+        // console.log('Course Data from the home details:', res.data);
         // تحويل _id إلى id للكورس
         this.CareerCourse = {
           ...res.data,
           id: res.data._id,
         };
 
-        console.log('Course Details:', this.CareerCourse);
+        console.log('Course Details from the home details:', this.CareerCourse);
 
         // جلب بيانات الانستركتور باستخدام الـ instructorId اللي جاي من الكورس
         const instructorId = this.CareerCourse?.instructor;
