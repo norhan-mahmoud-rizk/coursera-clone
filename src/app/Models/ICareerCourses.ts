@@ -15,6 +15,8 @@ categoryID: string;
     Skills: string[];
   reviews: any[];
   enrolled: number;
+  outcomesImage: string;
+
   instructor:string;
    WhatYouWillLearn: string[];
   outComes: {
